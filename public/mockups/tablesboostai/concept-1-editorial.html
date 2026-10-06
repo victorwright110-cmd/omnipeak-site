@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TablesBoostAI | Turn More Tables Into Sustainable Growth — Concept 01</title>
+  <meta name="description" content="TablesBoostAI helps restaurant owners and hospitality operators attract high-intent local guests, fill slow shifts, and build lasting customer loyalty.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Premium Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#0C0D0E',
+              obsidian: '#141517',
+              charcoal: '#1E2024',
+              beige: '#F7F3EE',
+              stone: '#EFE9E0',
+              sand: '#DFD7CA',
+              warmgray: '#8C857B',
+              pastel: '#F28C38',
+              pastelHover: '#E07B28',
+              pastelLight: '#FFF2E8',
+              pastelMuted: '#FAAF73',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0C0D0E;
+      color: #F7F3EE;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .font-editorial {
+      font-family: 'Newsreader', Georgia, serif;
+    }
+
+    /* Subtle ambient grain texture */
+    .bg-grain {
+      background-image: radial-gradient(rgba(242, 140, 56, 0.04) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+
+    /* Custom smooth transition */
+    .editorial-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .editorial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0C0D0E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2A2C31;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F28C38;
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-pastel selection:text-brand-black bg-grain">
+
+  <!-- ========================================================================= -->
+  <!-- TOP AGENCY PRESENTATION BANNER (OmniPeak Digital) -->
+  <!-- ========================================================================= -->
+  <aside class="w-full bg-brand-obsidian/95 border-b border-brand-charcoal text-xs px-4 sm:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3 sticky top-0 z-50 backdrop-blur-md">
+    <div class="flex items-center gap-3">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-brand-pastel/15 text-brand-pastel font-medium tracking-wide uppercase text-[11px] border border-brand-pastel/30">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel animate-pulse"></span>
+        Concept 01 &bull; The Culinary Atelier
+      </span>
+      <span class="text-brand-warmgray hidden md:inline">Editorial Hospitality &bull; High-Contrast Black, Warm Beige &amp; Pastel Orange</span>
+    </div>
+    <div class="flex items-center gap-4 text-brand-warmgray text-xs">
+      <span>Crafted by <strong class="text-brand-beige">OmniPeak Digital</strong> for <strong class="text-brand-beige">TablesBoostAI</strong></span>
+      <a href="./index.html" class="text-brand-pastel hover:underline font-medium flex items-center gap-1">
+        <span>Concept Switcher</span>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN NAVIGATION -->
+  <!-- ========================================================================= -->
+  <header class="w-full border-b border-white/5 bg-brand-black/80 backdrop-blur-lg sticky top-[37px] z-40">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-lg bg-brand-charcoal border border-brand-pastel/30 flex items-center justify-center transition-colors group-hover:border-brand-pastel">
+          <svg class="w-5 h-5 text-brand-pastel" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="12" rx="2" stroke-width="1.8"/>
+            <path d="M7 16v4M17 16v4M12 16v2" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="12" cy="10" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg font-semibold tracking-tight text-white flex items-center gap-1">
+            TablesBoost<span class="text-brand-pastel font-bold">AI</span>
+          </span>
+          <span class="text-[10px] uppercase tracking-widest text-brand-warmgray font-medium -mt-1">
+            Restaurant Growth
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-9 text-sm font-medium text-brand-stone/80">
+        <a href="#hero" class="hover:text-brand-pastel transition-colors">Home</a>
+        <a href="#problem" class="hover:text-brand-pastel transition-colors">The Dilemma</a>
+        <a href="#growth-system" class="hover:text-brand-pastel transition-colors">How It Works</a>
+        <a href="#services" class="hover:text-brand-pastel transition-colors">Solutions</a>
+        <a href="#approach" class="hover:text-brand-pastel transition-colors">About Us</a>
+        <a href="#consultation" class="hover:text-brand-pastel transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="#consultation" class="text-xs font-semibold text-brand-stone hover:text-white px-3 py-2 transition-colors">
+          Operator Log In
+        </a>
+        <a href="#consultation" class="inline-flex items-center gap-2 bg-brand-pastel hover:bg-brand-pastelHover text-brand-black px-5 py-2.5 rounded-full font-semibold text-xs tracking-wide transition-all shadow-lg shadow-brand-pastel/10 hover:shadow-brand-pastel/25 hover:scale-[1.02] active:scale-[0.98]">
+          <span>Grow Your Restaurant</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-brand-stone hover:text-white hover:bg-brand-charcoal transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-brand-charcoal bg-brand-obsidian px-6 py-6 space-y-4">
+      <a href="#hero" class="block text-sm font-medium text-brand-stone hover:text-brand-pastel">Home</a>
+      <a href="#problem" class="block text-sm font-medium text-brand-stone hover:text-brand-pastel">The Dilemma</a>
+      <a href="#growth-system" class="block text-sm font-medium text-brand-stone hover:text-brand-pastel">How It Works</a>
+      <a href="#services" class="block text-sm font-medium text-brand-stone hover:text-brand-pastel">Solutions</a>
+      <a href="#approach" class="block text-sm font-medium text-brand-stone hover:text-brand-pastel">About Us</a>
+      <a href="#consultation" class="block text-sm font-medium text-brand-stone hover:text-brand-pastel">Contact</a>
+      <div class="pt-4 border-t border-brand-charcoal">
+        <a href="#consultation" class="block text-center bg-brand-pastel text-brand-black font-semibold text-xs py-3 rounded-full">
+          Grow Your Restaurant
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden">
+    
+    <!-- Ambient subtle background glow -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-brand-pastel/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+      
+      <!-- Top Sub-Badge -->
+      <div class="flex items-center gap-3 mb-6">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-charcoal border border-brand-stone/15 text-xs text-brand-stone">
+          <span class="w-2 h-2 rounded-full bg-brand-pastel"></span>
+          Hospitality Growth Advisory &amp; Engine
+        </span>
+        <span class="text-brand-warmgray text-xs hidden sm:inline">&bull; Built Exclusively for Dining Rooms</span>
+      </div>
+
+      <!-- Main Headline Grid (Editorial Asymmetry) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Editorial Copy -->
+        <div class="lg:col-span-7 space-y-8">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-editorial tracking-tight text-white leading-[1.08]">
+            Turn More Tables <br class="hidden sm:inline">
+            Into <span class="italic text-brand-pastel font-normal">Predictable Growth.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-brand-sand/80 max-w-xl leading-relaxed font-light">
+            TablesBoostAI helps restaurant owners attract high-intent local guests, eliminate dead weeknight shifts, and convert one-time diners into loyal regulars without wasting capital on generic agencies.
+          </p>
+
+          <!-- CTAs & Trust Cue -->
+          <div class="space-y-6 pt-2">
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#consultation" class="inline-flex items-center gap-3 bg-brand-pastel hover:bg-brand-pastelHover text-brand-black px-7 py-3.5 rounded-full font-semibold text-sm tracking-wide transition-all shadow-xl shadow-brand-pastel/15 hover:shadow-brand-pastel/30 hover:scale-[1.02]">
+                <span>Grow Your Restaurant</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+              <a href="#growth-system" class="inline-flex items-center gap-2 bg-brand-charcoal hover:bg-brand-charcoal/80 border border-brand-stone/15 text-brand-beige px-6 py-3.5 rounded-full font-medium text-sm transition-colors">
+                <svg class="w-4 h-4 text-brand-pastel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>See How It Works</span>
+              </a>
+            </div>
+
+            <div class="flex items-center gap-6 pt-3 text-xs text-brand-warmgray border-t border-brand-charcoal/80 max-w-md">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-pastel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>No generic SaaS clutter</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-brand-pastel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>Hospitality-tested frameworks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Editorial Restaurant Composition -->
+        <div class="lg:col-span-5 relative">
+          
+          <!-- Outer Framed Photography Card -->
+          <div class="relative rounded-2xl overflow-hidden border border-brand-stone/20 bg-brand-obsidian shadow-2xl p-3">
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" 
+                alt="Atmospheric restaurant dining room with warm lighting and dining tables" 
+                class="w-full h-full object-cover filter brightness-95 contrast-105 transition-transform duration-700 hover:scale-105"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-black/20"></div>
+
+              <!-- Floating Editorial Badge (Service Status) -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                <div class="bg-brand-black/85 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span class="text-[11px] font-medium tracking-wide text-brand-stone">Friday Service: 94% Seated</span>
+                </div>
+                <div class="bg-brand-pastel/90 backdrop-blur-md px-3 py-1 rounded-full text-brand-black font-semibold text-[11px]">
+                  Turnover +28%
+                </div>
+              </div>
+
+              <!-- Bottom Editorial Inset -->
+              <div class="absolute bottom-4 left-4 right-4 bg-brand-obsidian/90 backdrop-blur-md border border-brand-stone/15 rounded-xl p-4">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <p class="text-xs font-semibold text-white">The Capacity Formula</p>
+                    <p class="text-[11px] text-brand-sand/80 mt-0.5">Focusing on high-margin covers, not discount seekers.</p>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-brand-pastel font-bold text-xs uppercase tracking-wider">Zero Spoilage</span>
+                  </div>
+                </div>
+                <!-- Subtle Progress Indicator -->
+                <div class="w-full bg-brand-charcoal h-1.5 rounded-full mt-3 overflow-hidden">
+                  <div class="bg-brand-pastel h-full rounded-full" style="width: 82%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Overlapping Editorial Note -->
+          <div class="hidden sm:block absolute -bottom-6 -left-8 bg-brand-charcoal border border-brand-stone/20 rounded-xl p-4 shadow-xl max-w-[240px]">
+            <p class="text-[11px] text-brand-warmgray font-medium uppercase tracking-wider">Hospitality Reality</p>
+            <p class="text-xs text-brand-stone mt-1 font-serif italic">
+              "An empty table at 7:30 PM is lost revenue you can never reclaim."
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- PROBLEM SECTION (The Real Hospitality Struggle) -->
+  <!-- ========================================================================= -->
+  <section id="problem" class="py-24 border-t border-brand-charcoal bg-brand-obsidian/40 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-semibold text-brand-pastel tracking-widest uppercase">The Industry Reality</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-editorial tracking-tight text-white mt-3 leading-tight">
+          Most Restaurants Don't Have a Food Problem.<br>
+          <span class="italic text-brand-sand">They Have an Unreliable Guest Pipeline.</span>
+        </h2>
+        <p class="text-brand-warmgray text-sm sm:text-base mt-4 leading-relaxed font-light">
+          Running a kitchen requires culinary precision. Yet most operators are forced to rely on hit-or-miss word-of-mouth and predatory delivery apps that drain margins while leaving dining rooms half-empty.
+        </p>
+      </div>
+
+      <!-- Problem Cards Grid (Editorial Blocks, Not Generic Icon Grids) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Problem Block 1 -->
+        <div class="editorial-card p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/10 hover:border-brand-pastel/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-brand-warmgray font-mono mb-4">
+              <span>FRICTION // 01</span>
+              <span class="text-brand-pastel/80">Table Yield</span>
+            </div>
+            <h3 class="text-xl font-editorial text-white mb-3">Empty Tables on Mid-Week Shifts</h3>
+            <p class="text-sm text-brand-sand/70 leading-relaxed font-light">
+              Friday and Saturday take care of themselves, but Tuesdays and Wednesdays bleed fixed labor and utility costs without enough covers to clear operating breakeven.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-brand-warmgray">Impact:</span>
+            <span class="text-rose-400 font-medium">Unrecovered Fixed Overhead</span>
+          </div>
+        </div>
+
+        <!-- Problem Block 2 -->
+        <div class="editorial-card p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/10 hover:border-brand-pastel/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-brand-warmgray font-mono mb-4">
+              <span>FRICTION // 02</span>
+              <span class="text-brand-pastel/80">Guest Retention</span>
+            </div>
+            <h3 class="text-xl font-editorial text-white mb-3">The "One-and-Done" Patron Cycle</h3>
+            <p class="text-sm text-brand-sand/70 leading-relaxed font-light">
+              First-time guests love the culinary experience, tip generously, leave happy, but never return simply because there is no system nudging them back to your dining room.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-brand-warmgray">Impact:</span>
+            <span class="text-rose-400 font-medium">Zero Lifetime Customer Value</span>
+          </div>
+        </div>
+
+        <!-- Problem Block 3 -->
+        <div class="editorial-card p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/10 hover:border-brand-pastel/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-brand-warmgray font-mono mb-4">
+              <span>FRICTION // 03</span>
+              <span class="text-brand-pastel/80">Discovery</span>
+            </div>
+            <h3 class="text-xl font-editorial text-white mb-3">Invisibility in Your Own Neighborhood</h3>
+            <p class="text-sm text-brand-sand/70 leading-relaxed font-light">
+              Local diners within a 15-minute radius search for date-night spots, business dinners, and casual bites every evening, but discover your competitors instead.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-brand-warmgray">Impact:</span>
+            <span class="text-rose-400 font-medium">Lost High-Intent Diners</span>
+          </div>
+        </div>
+
+        <!-- Problem Block 4 -->
+        <div class="editorial-card p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/10 hover:border-brand-pastel/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-brand-warmgray font-mono mb-4">
+              <span>FRICTION // 04</span>
+              <span class="text-brand-pastel/80">Booking Flow</span>
+            </div>
+            <h3 class="text-xl font-editorial text-white mb-3">High-Commission Platform Slavery</h3>
+            <p class="text-sm text-brand-sand/70 leading-relaxed font-light">
+              Third-party reservation portals and delivery giants hold your customer relationships hostage, skimming \$1-\$5 per seated diner while owning your patron data.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-brand-warmgray">Impact:</span>
+            <span class="text-rose-400 font-medium">Cannibalized Profit Margins</span>
+          </div>
+        </div>
+
+        <!-- Problem Block 5 -->
+        <div class="editorial-card p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/10 hover:border-brand-pastel/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-brand-warmgray font-mono mb-4">
+              <span>FRICTION // 05</span>
+              <span class="text-brand-pastel/80">Agency Noise</span>
+            </div>
+            <h3 class="text-xl font-editorial text-white mb-3">Vanity Social Media Without Seated Guests</h3>
+            <p class="text-sm text-brand-sand/70 leading-relaxed font-light">
+              Posting random food reels and collecting likes from people three states away feels productive, but does not put paying diners into your chairs on Thursday night.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
+            <span class="text-brand-warmgray">Impact:</span>
+            <span class="text-rose-400 font-medium">Wasted Marketing Dollars</span>
+          </div>
+        </div>
+
+        <!-- Problem Block 6 (The Shift) -->
+        <div class="editorial-card p-8 rounded-2xl bg-gradient-to-br from-brand-charcoal to-brand-obsidian border border-brand-pastel/40 flex flex-col justify-between relative overflow-hidden">
+          <div class="relative z-10">
+            <div class="flex items-center justify-between text-xs text-brand-pastel font-mono mb-4">
+              <span>THE SOLUTION</span>
+              <span>Growth Architecture</span>
+            </div>
+            <h3 class="text-xl font-editorial text-white mb-3">TablesBoostAI: Built For The Hospitality Floor</h3>
+            <p class="text-sm text-brand-sand leading-relaxed font-light">
+              A specialized restaurant growth engine designed around table utilization, average check value, local map supremacy, and frictionless direct table reservations.
+            </p>
+          </div>
+          <div class="relative z-10 mt-6 pt-4 border-t border-brand-pastel/20 flex items-center justify-between text-xs">
+            <span class="text-brand-stone font-medium">Outcome:</span>
+            <span class="text-brand-pastel font-semibold">Consistent Dining Capacity</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- THE GROWTH SYSTEM (4 Stages: Attract, Convert, Retain, Grow) -->
+  <!-- ========================================================================= -->
+  <section id="growth-system" class="py-24 border-t border-brand-charcoal relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-semibold text-brand-pastel tracking-widest uppercase">The Methodology</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-editorial tracking-tight text-white mt-3">
+            The Restaurant Growth Framework
+          </h2>
+        </div>
+        <p class="text-brand-warmgray text-sm max-w-md font-light leading-relaxed">
+          Four interconnected growth disciplines engineered to take hospitality brands from unpredictable shifts to consistent, profitable dining room capacity.
+        </p>
+      </div>
+
+      <!-- 4 Stages Interactive Timeline Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Stage 1: ATTRACT -->
+        <div class="p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/10 hover:border-brand-pastel transition-all group relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-charcoal border border-brand-stone/15 flex items-center justify-center text-brand-pastel font-editorial text-xl font-bold mb-6 group-hover:bg-brand-pastel group-hover:text-brand-black transition-colors">
+            01
+          </div>
+          <span class="text-xs font-mono uppercase tracking-wider text-brand-pastel font-semibold">Stage 01</span>
+          <h3 class="text-2xl font-editorial text-white mt-2 mb-3">Attract</h3>
+          <p class="text-sm text-brand-sand/70 leading-relaxed font-light mb-6">
+            Hyper-localized discovery that positions your dining room in front of hungry, high-intent diners right when they are deciding where to eat tonight.
+          </p>
+          <ul class="text-xs text-brand-warmgray space-y-2.5 border-t border-white/5 pt-4">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              Google Maps &amp; Local Pack Dominance
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              High-intent geo-targeted reach
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              Culinary visual storytelling
+            </li>
+          </ul>
+        </div>
+
+        <!-- Stage 2: CONVERT -->
+        <div class="p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/10 hover:border-brand-pastel transition-all group relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-charcoal border border-brand-stone/15 flex items-center justify-center text-brand-pastel font-editorial text-xl font-bold mb-6 group-hover:bg-brand-pastel group-hover:text-brand-black transition-colors">
+            02
+          </div>
+          <span class="text-xs font-mono uppercase tracking-wider text-brand-pastel font-semibold">Stage 02</span>
+          <h3 class="text-2xl font-editorial text-white mt-2 mb-3">Convert</h3>
+          <p class="text-sm text-brand-sand/70 leading-relaxed font-light mb-6">
+            Eliminate booking friction so casual browsers immediately commit to a table reservation, private event inquiry, or direct order.
+          </p>
+          <ul class="text-xs text-brand-warmgray space-y-2.5 border-t border-white/5 pt-4">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              Friction-free direct table booking
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              Menu appeal &amp; tasting previews
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              Instant reservation confirmation
+            </li>
+          </ul>
+        </div>
+
+        <!-- Stage 3: RETAIN -->
+        <div class="p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/10 hover:border-brand-pastel transition-all group relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-charcoal border border-brand-stone/15 flex items-center justify-center text-brand-pastel font-editorial text-xl font-bold mb-6 group-hover:bg-brand-pastel group-hover:text-brand-black transition-colors">
+            03
+          </div>
+          <span class="text-xs font-mono uppercase tracking-wider text-brand-pastel font-semibold">Stage 03</span>
+          <h3 class="text-2xl font-editorial text-white mt-2 mb-3">Retain</h3>
+          <p class="text-sm text-brand-sand/70 leading-relaxed font-light mb-6">
+            Transform first-time table guests into habitual diners with bespoke hospitality follow-ups, VIP invitations, and personalized anniversary prompts.
+          </p>
+          <ul class="text-xs text-brand-warmgray space-y-2.5 border-t border-white/5 pt-4">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              Direct patron list ownership
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              Automated seasonal invitations
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              Private dining &amp; wine club loyalty
+            </li>
+          </ul>
+        </div>
+
+        <!-- Stage 4: GROW -->
+        <div class="p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/10 hover:border-brand-pastel transition-all group relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-charcoal border border-brand-stone/15 flex items-center justify-center text-brand-pastel font-editorial text-xl font-bold mb-6 group-hover:bg-brand-pastel group-hover:text-brand-black transition-colors">
+            04
+          </div>
+          <span class="text-xs font-mono uppercase tracking-wider text-brand-pastel font-semibold">Stage 04</span>
+          <h3 class="text-2xl font-editorial text-white mt-2 mb-3">Grow</h3>
+          <p class="text-sm text-brand-sand/70 leading-relaxed font-light mb-6">
+            Optimize table turnover pace, balance mid-week ticket sizes, and expand catering and private buyout revenues for compound profitability.
+          </p>
+          <ul class="text-xs text-brand-warmgray space-y-2.5 border-t border-white/5 pt-4">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              Off-peak shift yield optimization
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              High-margin private dining buyouts
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-pastel"></span>
+              Sustainable hospitality expansion
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SERVICES & SOLUTIONS SECTION -->
+  <!-- ========================================================================= -->
+  <section id="services" class="py-24 border-t border-brand-charcoal bg-brand-obsidian/30 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-semibold text-brand-pastel tracking-widest uppercase">Tailored Solutions</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-editorial tracking-tight text-white mt-3">
+          Specialized Services Built for Restaurant Realities
+        </h2>
+        <p class="text-brand-warmgray text-sm sm:text-base mt-4 font-light leading-relaxed">
+          We don't offer generic marketing packages. Every capability is tailored to fill seats, strengthen ticket averages, and elevate your dining room's local reputation.
+        </p>
+      </div>
+
+      <!-- Solutions Matrix (6 Premium Blocks) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Solution 1 -->
+        <div class="p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/15 hover:border-brand-pastel/60 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-brand-pastel/10 border border-brand-pastel/20 flex items-center justify-center text-brand-pastel mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-editorial text-white mb-2">Local Visibility &amp; Map Supremacy</h3>
+          <p class="text-sm text-brand-sand/70 font-light leading-relaxed">
+            Position your restaurant as the definitive answer for diners searching "best dinner near me", private room dining, and cuisine-specific dining queries within your radius.
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/5 text-xs text-brand-pastel font-medium">
+            &bull; Google Business &amp; Local Pack Optimization
+          </div>
+        </div>
+
+        <!-- Solution 2 -->
+        <div class="p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/15 hover:border-brand-pastel/60 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-brand-pastel/10 border border-brand-pastel/20 flex items-center justify-center text-brand-pastel mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-editorial text-white mb-2">High-Intent Diner Acquisition</h3>
+          <p class="text-sm text-brand-sand/70 font-light leading-relaxed">
+            Targeted culinary campaigns crafted around prime dining hours, date nights, corporate dining, and weekend celebrations, capturing patrons ready to reserve immediately.
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/5 text-xs text-brand-pastel font-medium">
+            &bull; Shift-Targeted Guest Funnels
+          </div>
+        </div>
+
+        <!-- Solution 3 -->
+        <div class="p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/15 hover:border-brand-pastel/60 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-brand-pastel/10 border border-brand-pastel/20 flex items-center justify-center text-brand-pastel mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-editorial text-white mb-2">Guest Loyalty &amp; Retention Architecture</h3>
+          <p class="text-sm text-brand-sand/70 font-light leading-relaxed">
+            Direct-to-guest communication channels that keep your restaurant top-of-mind without cheap discount flyers. Elegant invitations to chef tastings, seasonal menus, and special events.
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/5 text-xs text-brand-pastel font-medium">
+            &bull; Repeat Cover Acceleration
+          </div>
+        </div>
+
+        <!-- Solution 4 -->
+        <div class="p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/15 hover:border-brand-pastel/60 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-brand-pastel/10 border border-brand-pastel/20 flex items-center justify-center text-brand-pastel mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="text-xl font-editorial text-white mb-2">Direct Reservation Experience</h3>
+          <p class="text-sm text-brand-sand/70 font-light leading-relaxed">
+            Eliminate commission-draining third-party middlemen. Equip your website with a seamless, mobile-optimized booking flow that keeps your guest contact data under your control.
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/5 text-xs text-brand-pastel font-medium">
+            &bull; Zero Per-Cover Platform Fees
+          </div>
+        </div>
+
+        <!-- Solution 5 -->
+        <div class="p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/15 hover:border-brand-pastel/60 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-brand-pastel/10 border border-brand-pastel/20 flex items-center justify-center text-brand-pastel mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <h3 class="text-xl font-editorial text-white mb-2">Mid-Week Shift Yield Optimization</h3>
+          <p class="text-sm text-brand-sand/70 font-light leading-relaxed">
+            Tactical programming for low-density shifts: pairing dinners, industry nights, neighborhood tasting hours, and business lunch activations to lift Tuesday-Thursday margins.
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/5 text-xs text-brand-pastel font-medium">
+            &bull; Off-Peak Yield &amp; Cover Balancing
+          </div>
+        </div>
+
+        <!-- Solution 6 -->
+        <div class="p-8 rounded-2xl bg-brand-obsidian border border-brand-stone/15 hover:border-brand-pastel/60 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-brand-pastel/10 border border-brand-pastel/20 flex items-center justify-center text-brand-pastel mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="text-xl font-editorial text-white mb-2">Hospitality Brand &amp; Digital Presence</h3>
+          <p class="text-sm text-brand-sand/70 font-light leading-relaxed">
+            A bespoke digital storefront that captures the true atmosphere of your room, menu philosophy, cocktail craft, and hospitality culture with editorial sophistication.
+          </p>
+          <div class="mt-6 pt-4 border-t border-white/5 text-xs text-brand-pastel font-medium">
+            &bull; High-Conversion Hospitality Design
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- EDITORIAL RESTAURANT SHOWCASE / ATMOSPHERE SECTION -->
+  <!-- ========================================================================= -->
+  <section class="py-24 border-t border-brand-charcoal overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Photography Collage -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="aspect-[4/5] rounded-xl overflow-hidden border border-brand-stone/15">
+              <img 
+                src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" 
+                alt="Table glassware and intimate restaurant setting" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-4 rounded-xl bg-brand-obsidian border border-brand-stone/10">
+              <span class="text-[11px] text-brand-pastel font-mono uppercase tracking-wider">Table Detail</span>
+              <p class="text-xs text-brand-stone mt-1 font-serif">Every cover is an opportunity to forge a brand advocate.</p>
+            </div>
+          </div>
+          <div class="space-y-4 pt-8">
+            <div class="p-4 rounded-xl bg-brand-charcoal border border-brand-stone/10">
+              <span class="text-[11px] text-brand-warmgray font-mono uppercase tracking-wider">The Kitchen Pass</span>
+              <p class="text-xs text-brand-beige mt-1">Consistency on the line meets consistency in front-of-house reservations.</p>
+            </div>
+            <div class="aspect-[4/5] rounded-xl overflow-hidden border border-brand-stone/15">
+              <img 
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" 
+                alt="Refined culinary plating and restaurant service" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: The Philosophy -->
+        <div id="approach" class="lg:col-span-6 space-y-6 lg:pl-6">
+          <span class="text-xs font-semibold text-brand-pastel tracking-widest uppercase">Our Hospitality Stance</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-editorial tracking-tight text-white leading-tight">
+            We Treat Your Dining Room Like An Investment Asset, Not An Ad Experiment.
+          </h2>
+          <p class="text-brand-sand/80 text-sm sm:text-base leading-relaxed font-light">
+            Hospitality is one of the world's most demanding businesses. Razor-thin margins, perishable inventory, and staff turnover mean you cannot afford agencies that play guessing games with ad budgets.
+          </p>
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-obsidian/70 border border-brand-stone/10">
+              <div class="w-8 h-8 rounded-lg bg-brand-pastel/15 text-brand-pastel flex items-center justify-center shrink-0 text-sm font-bold">
+                ✓
+              </div>
+              <div>
+                <h4 class="text-sm font-semibold text-white">Direct Guest Data Ownership</h4>
+                <p class="text-xs text-brand-warmgray mt-0.5">Your customer lists belong to you. We build your direct guest relationship database rather than feeding delivery app walled gardens.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-obsidian/70 border border-brand-stone/10">
+              <div class="w-8 h-8 rounded-lg bg-brand-pastel/15 text-brand-pastel flex items-center justify-center shrink-0 text-sm font-bold">
+                ✓
+              </div>
+              <div>
+                <h4 class="text-sm font-semibold text-white">Focus on High-Margin Covers</h4>
+                <p class="text-xs text-brand-warmgray mt-0.5">We prioritize bottle service, date nights, multi-course dinners, and group celebrations over discount-seeking one-time patrons.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SOCIAL PROOF / CASE STUDY BLUEPRINTS (Ethical Placeholders) -->
+  <!-- ========================================================================= -->
+  <section class="py-24 border-t border-brand-charcoal bg-brand-obsidian/40 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-semibold text-brand-pastel tracking-widest uppercase">Proof Architecture</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-editorial tracking-tight text-white mt-3">
+          Designed for Measurable Dining Room Performance
+        </h2>
+        <p class="text-brand-warmgray text-sm mt-3 font-light">
+          Real restaurant performance metrics and partner benchmarks (Client onboarding data &amp; verified case studies in progress).
+        </p>
+      </div>
+
+      <!-- Case Study Placeholder Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Case Placeholder 1 -->
+        <div class="p-6 rounded-2xl bg-brand-obsidian border border-brand-stone/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-4">
+              <span class="px-2.5 py-1 rounded bg-brand-charcoal text-brand-stone border border-brand-stone/15">Bistro &amp; Wine Bar</span>
+              <span class="text-brand-pastel font-mono text-[11px]">Metropolitan Area</span>
+            </div>
+            <h4 class="text-lg font-editorial text-white mb-2">Mid-Week Shift Stabilization</h4>
+            <p class="text-xs text-brand-sand/70 font-light leading-relaxed">
+              Targeted neighborhood dinner campaigns and wine-flight pairing activations filled Tuesday and Wednesday dining rooms from 42% capacity to consistent 85%+ seatings.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-brand-warmgray">
+            <span>Primary Focus:</span>
+            <span class="text-brand-stone font-medium">Off-Peak Yield</span>
+          </div>
+        </div>
+
+        <!-- Case Placeholder 2 -->
+        <div class="p-6 rounded-2xl bg-brand-obsidian border border-brand-stone/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-4">
+              <span class="px-2.5 py-1 rounded bg-brand-charcoal text-brand-stone border border-brand-stone/15">Upscale Italian Trattoria</span>
+              <span class="text-brand-pastel font-mono text-[11px]">Suburban District</span>
+            </div>
+            <h4 class="text-lg font-editorial text-white mb-2">Local Discovery Domination</h4>
+            <p class="text-xs text-brand-sand/70 font-light leading-relaxed">
+              Google Maps optimization and high-intent dining queries positioned this venue in the top 3 local positions for fresh pasta and date night searches within 12 miles.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-brand-warmgray">
+            <span>Primary Focus:</span>
+            <span class="text-brand-stone font-medium">Map Pack Placement</span>
+          </div>
+        </div>
+
+        <!-- Case Placeholder 3 -->
+        <div class="p-6 rounded-2xl bg-brand-obsidian border border-brand-stone/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-4">
+              <span class="px-2.5 py-1 rounded bg-brand-charcoal text-brand-stone border border-brand-stone/15">Contemporary Seafood Grill</span>
+              <span class="text-brand-pastel font-mono text-[11px]">Coastal District</span>
+            </div>
+            <h4 class="text-lg font-editorial text-white mb-2">Direct Reservation Migration</h4>
+            <p class="text-xs text-brand-sand/70 font-light leading-relaxed">
+              Migrated booking flow away from high-commission portal aggregators directly onto a branded high-speed reservation experience, saving thousands in booking commissions.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-brand-warmgray">
+            <span>Primary Focus:</span>
+            <span class="text-brand-stone font-medium">Direct Patron Channel</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FINAL CTA SECTION (Ready to Put More People at Your Tables?) -->
+  <!-- ========================================================================= -->
+  <section id="consultation" class="py-24 border-t border-brand-charcoal relative overflow-hidden bg-brand-obsidian">
+    
+    <div class="max-w-5xl mx-auto px-6 sm:px-8 relative z-10 text-center">
+      
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-pastel/15 border border-brand-pastel/30 text-xs font-semibold text-brand-pastel uppercase tracking-wider mb-6">
+        Hospitality Growth Consultation
+      </span>
+
+      <h2 class="text-3xl sm:text-5xl md:text-6xl font-editorial tracking-tight text-white max-w-3xl mx-auto leading-tight">
+        Ready to Put More People at Your Tables?
+      </h2>
+
+      <p class="text-brand-sand/80 text-base sm:text-lg max-w-2xl mx-auto mt-6 font-light leading-relaxed">
+        Let's assess your restaurant's current table capacity, local visibility, and mid-week cover flow. We'll map out a clear, actionable growth framework tailored to your dining room.
+      </p>
+
+      <!-- Consultation Form (Tasteful, High-Conversion) -->
+      <div class="mt-12 max-w-xl mx-auto p-8 rounded-2xl bg-brand-charcoal/80 border border-brand-stone/20 shadow-2xl backdrop-blur-sm text-left">
+        <form id="consultationForm" onsubmit="event.preventDefault(); handleConsultationSubmit();" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-brand-stone mb-1.5">Your Name</label>
+              <input type="text" required placeholder="Chef or Operator Name" class="w-full px-4 py-2.5 rounded-lg bg-brand-obsidian border border-brand-stone/15 text-sm text-white placeholder-brand-warmgray focus:outline-none focus:border-brand-pastel transition-colors">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-brand-stone mb-1.5">Restaurant Name</label>
+              <input type="text" required placeholder="e.g. L'Atelier Bistro" class="w-full px-4 py-2.5 rounded-lg bg-brand-obsidian border border-brand-stone/15 text-sm text-white placeholder-brand-warmgray focus:outline-none focus:border-brand-pastel transition-colors">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-brand-stone mb-1.5">Email Address</label>
+              <input type="email" required placeholder="name@restaurant.com" class="w-full px-4 py-2.5 rounded-lg bg-brand-obsidian border border-brand-stone/15 text-sm text-white placeholder-brand-warmgray focus:outline-none focus:border-brand-pastel transition-colors">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-brand-stone mb-1.5">Primary Challenge</label>
+              <select class="w-full px-4 py-2.5 rounded-lg bg-brand-obsidian border border-brand-stone/15 text-sm text-white focus:outline-none focus:border-brand-pastel transition-colors">
+                <option>Slow mid-week shifts</option>
+                <option>Low local search visibility</option>
+                <option>Customers don't return</option>
+                <option>High third-party commissions</option>
+                <option>Full dining room growth strategy</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full mt-4 bg-brand-pastel hover:bg-brand-pastelHover text-brand-black font-semibold text-sm py-3.5 rounded-xl transition-all shadow-lg shadow-brand-pastel/20 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2">
+            <span>Request Private Restaurant Growth Audit</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+          
+          <p class="text-[11px] text-center text-brand-warmgray mt-2">
+            Confidential consultation. No pushy sales calls &bull; Exclusively for restaurant operators.
+          </p>
+        </form>
+
+        <div id="formSuccessToast" class="hidden mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs text-center font-medium">
+          ✓ Request received! An executive growth consultant from TablesBoostAI will be in touch within 24 hours.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-brand-charcoal bg-brand-black py-12 text-xs text-brand-warmgray">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <!-- Left: Brand Info -->
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-brand-charcoal border border-brand-pastel/30 flex items-center justify-center">
+          <svg class="w-4 h-4 text-brand-pastel" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="12" rx="2" stroke-width="1.8"/>
+            <path d="M7 16v4M17 16v4M12 16v2" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="text-sm font-semibold text-brand-stone">TablesBoostAI</span>
+        <span class="text-brand-charcoal">&bull;</span>
+        <span>The Restaurant Growth Partner</span>
+      </div>
+
+      <!-- Center Links -->
+      <div class="flex items-center gap-6">
+        <a href="#hero" class="hover:text-brand-pastel transition-colors">Home</a>
+        <a href="#growth-system" class="hover:text-brand-pastel transition-colors">How It Works</a>
+        <a href="#services" class="hover:text-brand-pastel transition-colors">Solutions</a>
+        <a href="#approach" class="hover:text-brand-pastel transition-colors">About</a>
+        <a href="#consultation" class="hover:text-brand-pastel transition-colors">Contact</a>
+      </div>
+
+      <!-- Right: Agency Credit -->
+      <div class="text-right">
+        <p>Concept &copy; <span id="yearSpan"></span> TablesBoostAI.</p>
+        <p class="text-[11px] text-brand-stone/60 mt-0.5">Designed by <strong class="text-brand-pastel">OmniPeak Digital</strong></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yearSpan').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Form submission interaction
+    function handleConsultationSubmit() {
+      const toast = document.getElementById('formSuccessToast');
+      toast.classList.remove('hidden');
+      document.getElementById('consultationForm').reset();
+    }
+  </script>
+
+</body>
+</html>

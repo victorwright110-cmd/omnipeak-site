@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TablesBoostAI | High-Performance Restaurant Growth Engine — Concept 02</title>
+  <meta name="description" content="TablesBoostAI engineers customer acquisition and guest retention systems built exclusively for ambitious restaurant operators and hospitality venues.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Modern Architectural Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Outfit', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            carbon: {
+              950: '#08090A',
+              900: '#0E1013',
+              850: '#15171C',
+              800: '#1D2026',
+              700: '#2A2E36',
+            },
+            warm: {
+              cream: '#F8F5F0',
+              beige: '#ECE4D8',
+              tan: '#D4C6B3',
+              muted: '#8A8276',
+            },
+            orange: {
+              pastel: '#FF8A3D',
+              pastelSoft: '#FFA05C',
+              glow: 'rgba(255, 138, 61, 0.15)',
+              accent: '#E07226',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #08090A;
+      color: #F8F5F0;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .font-display {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Architectural grid background */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+
+    /* Interactive hover card glow */
+    .studio-card {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .studio-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 138, 61, 0.5);
+      box-shadow: 0 15px 35px -10px rgba(255, 138, 61, 0.12);
+    }
+
+    /* Range slider custom styling */
+    input[type=range] {
+      -webkit-appearance: none;
+      background: #1D2026;
+      height: 6px;
+      border-radius: 9999px;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: #FF8A3D;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 138, 61, 0.5);
+    }
+  </style>
+</head>
+<body class="selection:bg-orange-pastel selection:text-carbon-950 bg-grid">
+
+  <!-- ========================================================================= -->
+  <!-- TOP AGENCY PRESENTATION BANNER (OmniPeak Digital) -->
+  <!-- ========================================================================= -->
+  <aside class="w-full bg-carbon-900/95 border-b border-carbon-800 text-xs px-4 sm:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3 sticky top-0 z-50 backdrop-blur-md">
+    <div class="flex items-center gap-3">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-orange-pastel/15 text-orange-pastel font-semibold tracking-wide uppercase text-[11px] border border-orange-pastel/30">
+        <span class="w-1.5 h-1.5 rounded-full bg-orange-pastel animate-pulse"></span>
+        Concept 02 &bull; The Modern Culinary Engine
+      </span>
+      <span class="text-warm-muted hidden md:inline">Bold Contemporary Studio &bull; Dark Carbon, Sand Beige &amp; High-Impact Pastel Orange</span>
+    </div>
+    <div class="flex items-center gap-4 text-warm-muted text-xs">
+      <span>Crafted by <strong class="text-warm-cream">OmniPeak Digital</strong> for <strong class="text-warm-cream">TablesBoostAI</strong></span>
+      <a href="./index.html" class="text-orange-pastel hover:underline font-semibold flex items-center gap-1">
+        <span>Concept Switcher</span>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- NAVIGATION -->
+  <!-- ========================================================================= -->
+  <header class="w-full border-b border-white/5 bg-carbon-950/85 backdrop-blur-lg sticky top-[37px] z-40">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-carbon-850 to-carbon-900 border border-orange-pastel/30 flex items-center justify-center transition-all group-hover:border-orange-pastel group-hover:shadow-lg group-hover:shadow-orange-pastel/20">
+          <svg class="w-5 h-5 text-orange-pastel" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="text-xl font-display font-extrabold tracking-tight text-white flex items-center">
+            TablesBoost<span class="text-orange-pastel">AI</span>
+          </span>
+          <span class="block text-[10px] uppercase tracking-widest text-warm-muted font-bold -mt-1">
+            Hospitality Growth
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-warm-cream/80">
+        <a href="#hero" class="hover:text-orange-pastel transition-colors">Home</a>
+        <a href="#engine" class="hover:text-orange-pastel transition-colors">The Problem</a>
+        <a href="#framework" class="hover:text-orange-pastel transition-colors">Growth System</a>
+        <a href="#simulator" class="hover:text-orange-pastel transition-colors">Table Simulator</a>
+        <a href="#services" class="hover:text-orange-pastel transition-colors">Solutions</a>
+        <a href="#contact" class="hover:text-orange-pastel transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="#simulator" class="text-xs font-semibold text-warm-beige hover:text-white px-3 py-2 transition-colors">
+          Growth Estimator
+        </a>
+        <a href="#contact" class="inline-flex items-center gap-2 bg-orange-pastel hover:bg-orange-accent text-carbon-950 px-6 py-2.5 rounded-xl font-bold text-xs tracking-wider uppercase transition-all shadow-lg shadow-orange-pastel/20 hover:scale-[1.02] active:scale-[0.98]">
+          <span>Grow Your Restaurant</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-lg text-warm-cream hover:bg-carbon-850">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileNavMenu" class="hidden lg:hidden border-b border-carbon-800 bg-carbon-900 px-6 py-6 space-y-4">
+      <a href="#hero" class="block text-sm font-medium text-warm-cream hover:text-orange-pastel">Home</a>
+      <a href="#engine" class="block text-sm font-medium text-warm-cream hover:text-orange-pastel">The Problem</a>
+      <a href="#framework" class="block text-sm font-medium text-warm-cream hover:text-orange-pastel">Growth System</a>
+      <a href="#simulator" class="block text-sm font-medium text-warm-cream hover:text-orange-pastel">Table Simulator</a>
+      <a href="#services" class="block text-sm font-medium text-warm-cream hover:text-orange-pastel">Solutions</a>
+      <a href="#contact" class="block text-sm font-medium text-warm-cream hover:text-orange-pastel">Contact</a>
+      <div class="pt-4 border-t border-carbon-800">
+        <a href="#contact" class="block text-center bg-orange-pastel text-carbon-950 font-bold text-xs py-3 rounded-xl uppercase tracking-wider">
+          Grow Your Restaurant
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="relative pt-16 pb-24 md:pt-24 md:pb-36 overflow-hidden">
+    
+    <!-- Top Orange Horizon Ambient Lighting -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-orange-pastel/15 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+      
+      <!-- Eyebrow Tag -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-carbon-850 border border-carbon-700 text-xs font-semibold text-warm-beige mb-8">
+        <span class="w-2 h-2 rounded-full bg-orange-pastel"></span>
+        <span>The High-Yield Hospitality Engine</span>
+        <span class="text-warm-muted">&bull;</span>
+        <span class="text-orange-pastel font-mono text-[11px]">Direct Reservations &bull; Repeat Covers</span>
+      </div>
+
+      <!-- Two-Column Studio Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Bold Modern Typography -->
+        <div class="lg:col-span-7 space-y-7">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[66px] font-display font-extrabold tracking-tight text-white leading-[1.05]">
+            Turn More Tables <br>
+            Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-pastel via-orange-pastelSoft to-warm-beige">Unstoppable Growth.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-warm-beige/85 max-w-xl leading-relaxed font-normal">
+            TablesBoostAI helps restaurant owners attract steady high-intent local guests, boost slow mid-week covers, and build compounding patron loyalty — without paying predatory third-party commissions.
+          </p>
+
+          <!-- Interactive Actions -->
+          <div class="pt-2 space-y-6">
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#contact" class="inline-flex items-center gap-3 bg-orange-pastel hover:bg-orange-accent text-carbon-950 px-8 py-4 rounded-xl font-bold text-sm tracking-wide uppercase transition-all shadow-xl shadow-orange-pastel/25 hover:scale-[1.02]">
+                <span>Grow Your Restaurant</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a href="#simulator" class="inline-flex items-center gap-2.5 bg-carbon-850 hover:bg-carbon-800 border border-carbon-700 text-warm-cream px-6 py-4 rounded-xl font-semibold text-sm transition-all hover:border-orange-pastel/40">
+                <svg class="w-4 h-4 text-orange-pastel" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                <span>Calculate Your Upside</span>
+              </a>
+            </div>
+
+            <!-- Value Bullets -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-carbon-800 text-xs">
+              <div>
+                <p class="font-display font-bold text-white text-base">Zero</p>
+                <p class="text-warm-muted mt-0.5">Per-cover booking fees</p>
+              </div>
+              <div>
+                <p class="font-display font-bold text-white text-base">Direct</p>
+                <p class="text-warm-muted mt-0.5">Guest data ownership</p>
+              </div>
+              <div>
+                <p class="font-display font-bold text-white text-base">Full-Shift</p>
+                <p class="text-warm-muted mt-0.5">Mid-week yield balancing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Modern Restaurant Visual Composite -->
+        <div class="lg:col-span-5 relative">
+          
+          <!-- Outer Architectural Container -->
+          <div class="relative rounded-2xl bg-carbon-900 border border-carbon-800 p-3 shadow-2xl">
+            
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80" 
+                alt="Buzzing evening service in modern restaurant" 
+                class="w-full h-full object-cover filter brightness-90 hover:scale-105 transition-transform duration-700"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-carbon-950 via-carbon-950/40 to-transparent"></div>
+
+              <!-- Top Live Service Monitor Badge -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                <div class="bg-carbon-950/85 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-carbon-700 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span class="text-[11px] font-semibold text-warm-cream uppercase tracking-wider">Service Active</span>
+                </div>
+                <div class="bg-orange-pastel text-carbon-950 font-display font-extrabold text-xs px-3 py-1 rounded-lg shadow-lg">
+                  Peak Velocity
+                </div>
+              </div>
+
+              <!-- Bottom Floating Interactive Floor Matrix -->
+              <div class="absolute bottom-4 left-4 right-4 bg-carbon-900/95 backdrop-blur-md border border-carbon-700 rounded-xl p-4 space-y-3">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider">Dining Floor Dynamics</h4>
+                    <p class="text-[11px] text-warm-muted mt-0.5">Live Shift Utilization Matrix</p>
+                  </div>
+                  <span class="px-2 py-0.5 rounded bg-orange-pastel/15 text-orange-pastel font-mono text-[11px] font-bold">
+                    91% Capacity
+                  </span>
+                </div>
+
+                <!-- Visual Table Utilization Grid -->
+                <div class="grid grid-cols-6 gap-1.5 pt-1">
+                  <div class="h-6 rounded bg-orange-pastel flex items-center justify-center text-[10px] font-bold text-carbon-950" title="Table 1 Seated">T1</div>
+                  <div class="h-6 rounded bg-orange-pastel flex items-center justify-center text-[10px] font-bold text-carbon-950" title="Table 2 Seated">T2</div>
+                  <div class="h-6 rounded bg-orange-pastel flex items-center justify-center text-[10px] font-bold text-carbon-950" title="Table 3 Seated">T3</div>
+                  <div class="h-6 rounded bg-orange-pastel flex items-center justify-center text-[10px] font-bold text-carbon-950" title="Table 4 Seated">T4</div>
+                  <div class="h-6 rounded bg-orange-pastel flex items-center justify-center text-[10px] font-bold text-carbon-950" title="Table 5 Seated">T5</div>
+                  <div class="h-6 rounded bg-carbon-750 border border-carbon-600 flex items-center justify-center text-[10px] text-warm-muted" title="Table 6 Turning">T6</div>
+                </div>
+
+                <div class="flex items-center justify-between text-[11px] text-warm-muted pt-1 border-t border-carbon-800">
+                  <span>Target: Zero Idle Turns</span>
+                  <span class="text-orange-pastel font-semibold">Compounding Covers</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Bottom Floating Accent Card -->
+          <div class="hidden sm:flex items-center gap-3 absolute -bottom-5 -left-6 bg-carbon-850 border border-orange-pastel/30 rounded-xl px-4 py-3 shadow-xl">
+            <div class="w-8 h-8 rounded-lg bg-orange-pastel/20 text-orange-pastel flex items-center justify-center font-bold">
+              ★
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">High-Value Diners First</p>
+              <p class="text-[10px] text-warm-muted">Focusing on check averages, not cheap discounts</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- THE RESTAURANT PROBLEM MATRIX (The Empty Table Reality) -->
+  <!-- ========================================================================= -->
+  <section id="engine" class="py-24 border-t border-carbon-800 bg-carbon-900/60 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-bold text-orange-pastel tracking-widest uppercase">The Industry Reality</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-white mt-3">
+          Why Incredible Food Still Results In Empty Seats
+        </h2>
+        <p class="text-warm-beige/70 text-sm sm:text-base mt-4 leading-relaxed font-light">
+          Restaurant failure isn't caused by poor recipes. It's caused by friction in the guest journey and unpredictable cover volume on 4 out of 7 days a week.
+        </p>
+      </div>
+
+      <!-- Problem Cards Matrix -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Problem Card 1 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-red-950/50 border border-red-800/40 text-red-400 flex items-center justify-center mb-5 text-sm font-bold font-mono">
+              01
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-2">The Tuesday Night Void</h3>
+            <p class="text-sm text-warm-beige/70 leading-relaxed font-light">
+              Your kitchen staff is paid, prep is ready, lights are on, but tables sit empty. Fixed overhead keeps accumulating while dinner shifts run at a net loss.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-carbon-800 flex items-center justify-between text-xs">
+            <span class="text-warm-muted">Core Problem</span>
+            <span class="text-red-400 font-semibold">Dead Mid-Week Shifts</span>
+          </div>
+        </div>
+
+        <!-- Problem Card 2 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-amber-950/50 border border-amber-800/40 text-amber-400 flex items-center justify-center mb-5 text-sm font-bold font-mono">
+              02
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-2">The One-Visit Trap</h3>
+            <p class="text-sm text-warm-beige/70 leading-relaxed font-light">
+              Guests compliment the food, leave glowing remarks, but 80% never return within 90 days because you have no direct mechanism to draw them back.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-carbon-800 flex items-center justify-between text-xs">
+            <span class="text-warm-muted">Core Problem</span>
+            <span class="text-amber-400 font-semibold">Zero Guest Retention Flow</span>
+          </div>
+        </div>
+
+        <!-- Problem Card 3 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-orange-950/50 border border-orange-800/40 text-orange-pastel flex items-center justify-center mb-5 text-sm font-bold font-mono">
+              03
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-2">Invisible to Local Diners</h3>
+            <p class="text-sm text-warm-beige/70 leading-relaxed font-light">
+              Neighborhood patrons open maps looking for dinner options every single evening, but your competitor with inferior food ranks above you and wins the cover.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-carbon-800 flex items-center justify-between text-xs">
+            <span class="text-warm-muted">Core Problem</span>
+            <span class="text-orange-pastel font-semibold">Suppressed Local Discovery</span>
+          </div>
+        </div>
+
+        <!-- Problem Card 4 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-red-950/50 border border-red-800/40 text-red-400 flex items-center justify-center mb-5 text-sm font-bold font-mono">
+              04
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-2">Third-Party Skimming</h3>
+            <p class="text-sm text-warm-beige/70 leading-relaxed font-light">
+              Middlemen platforms charge you dollars per head just to seat diners who already knew your restaurant, taking the lion's share of your operating profit.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-carbon-800 flex items-center justify-between text-xs">
+            <span class="text-warm-muted">Core Problem</span>
+            <span class="text-red-400 font-semibold">Middleman Margin Bleed</span>
+          </div>
+        </div>
+
+        <!-- Problem Card 5 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-amber-950/50 border border-amber-800/40 text-amber-400 flex items-center justify-center mb-5 text-sm font-bold font-mono">
+              05
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-2">Vanity Marketing Illusions</h3>
+            <p class="text-sm text-warm-beige/70 leading-relaxed font-light">
+              Agencies promise impressions, likes, and aesthetic grids. But at the end of the month, your POS system shows the exact same cover numbers.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-carbon-800 flex items-center justify-between text-xs">
+            <span class="text-warm-muted">Core Problem</span>
+            <span class="text-amber-400 font-semibold">Unaccountable Ad Agencies</span>
+          </div>
+        </div>
+
+        <!-- Problem Card 6 (The TablesBoostAI Answer) -->
+        <div class="studio-card p-8 rounded-2xl bg-gradient-to-br from-carbon-800 via-carbon-850 to-carbon-900 border border-orange-pastel/50 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-orange-pastel text-carbon-950 flex items-center justify-center mb-5 text-sm font-bold font-mono">
+              AI
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-2">The TablesBoostAI Difference</h3>
+            <p class="text-sm text-warm-cream leading-relaxed font-light">
+              We focus entirely on the four metrics that matter: seated covers, table turnover, direct guest retention, and average check profitability.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-orange-pastel/30 flex items-center justify-between text-xs">
+            <span class="text-warm-cream">The Objective</span>
+            <span class="text-orange-pastel font-bold uppercase tracking-wider">Reliable Dining Room Density</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4-STAGE GROWTH SYSTEM SECTION -->
+  <!-- ========================================================================= -->
+  <section id="framework" class="py-24 border-t border-carbon-800 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-bold text-orange-pastel tracking-widest uppercase">The Pipeline</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-white mt-3">
+            The 4-Stage Restaurant Growth Engine
+          </h2>
+        </div>
+        <p class="text-warm-beige/70 text-sm max-w-md font-light leading-relaxed">
+          A continuous loop engineered to consistently funnel neighborhood diners through discovery, reservation, return visits, and high-margin dining events.
+        </p>
+      </div>
+
+      <!-- Pipeline Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Stage 1: ATTRACT -->
+        <div class="p-8 rounded-2xl bg-carbon-900 border border-carbon-800 hover:border-orange-pastel transition-all group">
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-3xl font-display font-black text-orange-pastel">01</span>
+            <span class="px-2.5 py-1 rounded bg-carbon-800 text-warm-muted font-mono text-xs group-hover:text-orange-pastel">DISCOVERY</span>
+          </div>
+          <h3 class="text-2xl font-display font-bold text-white mb-2">Attract</h3>
+          <p class="text-sm text-warm-beige/70 font-light leading-relaxed mb-6">
+            Put your venue directly in front of diners actively deciding where to eat within your local radius.
+          </p>
+          <div class="space-y-2 text-xs text-warm-muted border-t border-carbon-800 pt-4">
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> Google 3-Pack placement</p>
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> High-intent dinner search targeting</p>
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> Appetite-stimulating visual reach</p>
+          </div>
+        </div>
+
+        <!-- Stage 2: CONVERT -->
+        <div class="p-8 rounded-2xl bg-carbon-900 border border-carbon-800 hover:border-orange-pastel transition-all group">
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-3xl font-display font-black text-orange-pastel">02</span>
+            <span class="px-2.5 py-1 rounded bg-carbon-800 text-warm-muted font-mono text-xs group-hover:text-orange-pastel">RESERVATION</span>
+          </div>
+          <h3 class="text-2xl font-display font-bold text-white mb-2">Convert</h3>
+          <p class="text-sm text-warm-beige/70 font-light leading-relaxed mb-6">
+            Remove booking friction with high-speed, direct table reservation flows that turn intent into booked chairs.
+          </p>
+          <div class="space-y-2 text-xs text-warm-muted border-t border-carbon-800 pt-4">
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> Frictionless mobile reservation flow</p>
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> Dynamic menu &amp; wine card showcase</p>
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> Immediate SMS confirmation loop</p>
+          </div>
+        </div>
+
+        <!-- Stage 3: RETAIN -->
+        <div class="p-8 rounded-2xl bg-carbon-900 border border-carbon-800 hover:border-orange-pastel transition-all group">
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-3xl font-display font-black text-orange-pastel">03</span>
+            <span class="px-2.5 py-1 rounded bg-carbon-800 text-warm-muted font-mono text-xs group-hover:text-orange-pastel">LOYALTY</span>
+          </div>
+          <h3 class="text-2xl font-display font-bold text-white mb-2">Retain</h3>
+          <p class="text-sm text-warm-beige/70 font-light leading-relaxed mb-6">
+            Keep your regulars returning month after month through bespoke invitations, chef tastings, and seasonal alerts.
+          </p>
+          <div class="space-y-2 text-xs text-warm-muted border-t border-carbon-800 pt-4">
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> Direct diner list building</p>
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> Automated milestone &amp; anniversary cues</p>
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> VIP tasting table priority</p>
+          </div>
+        </div>
+
+        <!-- Stage 4: GROW -->
+        <div class="p-8 rounded-2xl bg-carbon-900 border border-carbon-800 hover:border-orange-pastel transition-all group">
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-3xl font-display font-black text-orange-pastel">04</span>
+            <span class="px-2.5 py-1 rounded bg-carbon-800 text-warm-muted font-mono text-xs group-hover:text-orange-pastel">SCALE</span>
+          </div>
+          <h3 class="text-2xl font-display font-bold text-white mb-2">Grow</h3>
+          <p class="text-sm text-warm-beige/70 font-light leading-relaxed mb-6">
+            Maximize revenue per square foot through private dining room buyouts, catering expansion, and shift optimization.
+          </p>
+          <div class="space-y-2 text-xs text-warm-muted border-t border-carbon-800 pt-4">
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> Private dining &amp; corporate buyout funnels</p>
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> Mid-week average check engineering</p>
+            <p class="flex items-center gap-2"><span class="text-orange-pastel">▸</span> Multi-venue expansion blueprints</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE TABLE REVENUE SIMULATOR (Live Math For Restaurant Owners) -->
+  <!-- ========================================================================= -->
+  <section id="simulator" class="py-24 border-t border-carbon-800 bg-carbon-900/40 relative">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold text-orange-pastel tracking-widest uppercase">Floor Economics</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white mt-2">
+          Calculate Your Unrecovered Table Yield
+        </h2>
+        <p class="text-warm-beige/70 text-sm mt-3 font-light">
+          See how filling just a few additional tables on your slower mid-week shifts translates into annual revenue.
+        </p>
+      </div>
+
+      <div class="p-8 sm:p-10 rounded-3xl bg-carbon-850 border border-carbon-700 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Controls -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <div class="flex justify-between text-sm font-semibold mb-2">
+                <span class="text-warm-cream">Unfilled Tables on Slow Nights</span>
+                <span id="tablesVal" class="text-orange-pastel font-mono font-bold text-base">4 Tables</span>
+              </div>
+              <input type="range" id="tablesRange" min="2" max="15" value="4" class="w-full">
+              <div class="flex justify-between text-[11px] text-warm-muted mt-1 font-mono">
+                <span>2 tables</span>
+                <span>8 tables</span>
+                <span>15 tables</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm font-semibold mb-2">
+                <span class="text-warm-cream">Average Guest Check / Cover</span>
+                <span id="checkVal" class="text-orange-pastel font-mono font-bold text-base">$65 per cover</span>
+              </div>
+              <input type="range" id="checkRange" min="30" max="150" step="5" value="65" class="w-full">
+              <div class="flex justify-between text-[11px] text-warm-muted mt-1 font-mono">
+                <span>$30 (Casual)</span>
+                <span>$75 (Bistro)</span>
+                <span>$150+ (Fine Dining)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-sm font-semibold mb-2">
+                <span class="text-warm-cream">Average Party Size per Table</span>
+                <span id="partyVal" class="text-orange-pastel font-mono font-bold text-base">2.6 Guests</span>
+              </div>
+              <input type="range" id="partyRange" min="2" max="4" step="0.2" value="2.6" class="w-full">
+              <div class="flex justify-between text-[11px] text-warm-muted mt-1 font-mono">
+                <span>2 (Couples)</span>
+                <span>3</span>
+                <span>4 (Groups)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Output Card -->
+          <div class="lg:col-span-5 p-6 rounded-2xl bg-carbon-900 border border-orange-pastel/40 text-center space-y-4">
+            <span class="text-xs uppercase tracking-wider text-warm-muted font-bold">Estimated Annual Table Yield</span>
+            
+            <div>
+              <div id="annualTotal" class="text-4xl sm:text-5xl font-display font-extrabold text-orange-pastel tracking-tight">
+                $105,456
+              </div>
+              <p class="text-xs text-warm-beige/80 mt-1">in previously lost dining room revenue</p>
+            </div>
+
+            <div class="pt-4 border-t border-carbon-800 space-y-2 text-xs text-warm-muted">
+              <div class="flex justify-between">
+                <span>Weekly Lift (3 slow shifts):</span>
+                <span id="weeklyTotal" class="text-warm-cream font-mono font-semibold">$2,028 / wk</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Additional Covers / Wk:</span>
+                <span id="coversTotal" class="text-warm-cream font-mono font-semibold">31 covers</span>
+              </div>
+            </div>
+
+            <a href="#contact" class="block w-full py-3 rounded-xl bg-orange-pastel hover:bg-orange-accent text-carbon-950 font-bold text-xs uppercase tracking-wider transition-all">
+              Reclaim This Revenue →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SERVICES & SPECIALIZED SOLUTIONS -->
+  <!-- ========================================================================= -->
+  <section id="services" class="py-24 border-t border-carbon-800 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-bold text-orange-pastel tracking-widest uppercase">Capabilities</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-white mt-3">
+          Specialized Restaurant Growth Solutions
+        </h2>
+        <p class="text-warm-beige/70 text-sm mt-3 font-light">
+          Everything required to dominate local dining decisions and establish dependable customer volume.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- S1 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 hover:border-orange-pastel/50 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-orange-pastel/15 text-orange-pastel flex items-center justify-center mb-6">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-white mb-2">Local Visibility &amp; Maps</h3>
+          <p class="text-sm text-warm-beige/70 font-light leading-relaxed">
+            Dominate high-intent local food searches. We position your venue at the top of Google Maps and local discovery feeds when patrons search nearby.
+          </p>
+        </div>
+
+        <!-- S2 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 hover:border-orange-pastel/50 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-orange-pastel/15 text-orange-pastel flex items-center justify-center mb-6">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-white mb-2">Diner Acquisition Campaigns</h3>
+          <p class="text-sm text-warm-beige/70 font-light leading-relaxed">
+            Targeted hospitality ad funnels triggered by daypart: lunch rushes, after-work cocktails, weekend dinner dates, and celebration parties.
+          </p>
+        </div>
+
+        <!-- S3 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 hover:border-orange-pastel/50 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-orange-pastel/15 text-orange-pastel flex items-center justify-center mb-6">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-white mb-2">Direct Reservation Experience</h3>
+          <p class="text-sm text-warm-beige/70 font-light leading-relaxed">
+            A fast, beautiful, responsive direct-booking web portal that cuts commission fees and establishes a clean guest relationship database.
+          </p>
+        </div>
+
+        <!-- S4 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 hover:border-orange-pastel/50 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-orange-pastel/15 text-orange-pastel flex items-center justify-center mb-6">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-white mb-2">Private Dining &amp; Event Funnels</h3>
+          <p class="text-sm text-warm-beige/70 font-light leading-relaxed">
+            Capture lucrative corporate buyouts, holiday banquets, and rehearsal dinners that yield five-figure ticket totals in a single evening.
+          </p>
+        </div>
+
+        <!-- S5 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 hover:border-orange-pastel/50 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-orange-pastel/15 text-orange-pastel flex items-center justify-center mb-6">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-white mb-2">Mid-Week Cover Engineering</h3>
+          <p class="text-sm text-warm-beige/70 font-light leading-relaxed">
+            Transform slow Tuesdays and Wednesdays with tactical prix-fixe activations, sommelier pairings, and neighborhood community nights.
+          </p>
+        </div>
+
+        <!-- S6 -->
+        <div class="studio-card p-8 rounded-2xl bg-carbon-850 border border-carbon-800 hover:border-orange-pastel/50 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-orange-pastel/15 text-orange-pastel flex items-center justify-center mb-6">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-xl font-display font-bold text-white mb-2">Automated Guest Retention</h3>
+          <p class="text-sm text-warm-beige/70 font-light leading-relaxed">
+            Turn one-time patrons into lifetime regulars with automated, high-touch invitations, birthday greetings, and seasonal menu previews.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- RESULTS & CASE STUDY PLACEHOLDERS -->
+  <!-- ========================================================================= -->
+  <section class="py-24 border-t border-carbon-800 bg-carbon-900/50 relative">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-bold text-orange-pastel tracking-widest uppercase">Verified Benchmarks</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white mt-3">
+          Hospitality Proof Framework
+        </h2>
+        <p class="text-warm-beige/70 text-sm mt-3 font-light">
+          Case study placeholders structured for active restaurant partners. Real metrics updated upon audit completion.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-carbon-850 border border-carbon-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3">
+              <span class="px-2.5 py-1 rounded bg-carbon-800 text-orange-pastel font-semibold">Urban Bistro</span>
+              <span class="text-warm-muted font-mono text-[11px]">85 Seats</span>
+            </div>
+            <h4 class="text-lg font-display font-bold text-white mb-2">Mid-Week Cover Lift</h4>
+            <p class="text-xs text-warm-beige/70 font-light leading-relaxed">
+              Implemented shift-targeted dining campaigns and wine flight tastings that lifted Tuesday and Wednesday occupancy from 45% to over 85%.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-carbon-800 text-xs flex justify-between text-warm-muted">
+            <span>Focus:</span>
+            <span class="text-warm-cream font-medium">Off-Peak Shifts</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-carbon-850 border border-carbon-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3">
+              <span class="px-2.5 py-1 rounded bg-carbon-800 text-orange-pastel font-semibold">Italian Trattoria</span>
+              <span class="text-warm-muted font-mono text-[11px]">120 Seats</span>
+            </div>
+            <h4 class="text-lg font-display font-bold text-white mb-2">Local Map Dominance</h4>
+            <p class="text-xs text-warm-beige/70 font-light leading-relaxed">
+              Optimized local search signals and digital menu profiles, establishing top-3 rankings across all major high-intent dining queries in their suburb.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-carbon-800 text-xs flex justify-between text-warm-muted">
+            <span>Focus:</span>
+            <span class="text-warm-cream font-medium">Map Pack Search</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-carbon-850 border border-carbon-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-3">
+              <span class="px-2.5 py-1 rounded bg-carbon-800 text-orange-pastel font-semibold">Coastal Seafood</span>
+              <span class="text-warm-muted font-mono text-[11px]">160 Seats</span>
+            </div>
+            <h4 class="text-lg font-display font-bold text-white mb-2">Commission Elimination</h4>
+            <p class="text-xs text-warm-beige/70 font-light leading-relaxed">
+              Transitioned 70%+ of portal bookings onto direct, branded reservation channels, reclaiming thousands in monthly third-party cover charges.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-carbon-800 text-xs flex justify-between text-warm-muted">
+            <span>Focus:</span>
+            <span class="text-warm-cream font-medium">Direct Booking Channel</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FINAL CTA & CONSULTATION SECTION -->
+  <!-- ========================================================================= -->
+  <section id="contact" class="py-24 border-t border-carbon-800 relative bg-carbon-950">
+    <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
+      
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-pastel/15 border border-orange-pastel/30 text-xs font-bold text-orange-pastel uppercase tracking-wider mb-6">
+        Growth Consultation
+      </span>
+
+      <h2 class="text-3xl sm:text-5xl md:text-6xl font-display font-extrabold tracking-tight text-white leading-tight">
+        Ready to Put More People at Your Tables?
+      </h2>
+
+      <p class="text-warm-beige/80 text-base sm:text-lg max-w-2xl mx-auto mt-6 font-light leading-relaxed">
+        Let's analyze your dining room capacity, local competitor visibility, and off-peak table yield. Get a custom restaurant growth plan built for your business.
+      </p>
+
+      <!-- Clean Form -->
+      <div class="mt-12 p-8 sm:p-10 rounded-2xl bg-carbon-900 border border-carbon-750 text-left shadow-2xl">
+        <form id="contactForm" onsubmit="event.preventDefault(); handleModernSubmit();" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-warm-cream mb-1.5 uppercase tracking-wider">Operator Name</label>
+              <input type="text" required placeholder="Your full name" class="w-full px-4 py-3 rounded-xl bg-carbon-850 border border-carbon-700 text-sm text-white placeholder-warm-muted focus:outline-none focus:border-orange-pastel transition-colors">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-warm-cream mb-1.5 uppercase tracking-wider">Restaurant Name &amp; City</label>
+              <input type="text" required placeholder="e.g. Osteria Moderna (Austin, TX)" class="w-full px-4 py-3 rounded-xl bg-carbon-850 border border-carbon-700 text-sm text-white placeholder-warm-muted focus:outline-none focus:border-orange-pastel transition-colors">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-warm-cream mb-1.5 uppercase tracking-wider">Email Address</label>
+              <input type="email" required placeholder="chef@restaurant.com" class="w-full px-4 py-3 rounded-xl bg-carbon-850 border border-carbon-700 text-sm text-white placeholder-warm-muted focus:outline-none focus:border-orange-pastel transition-colors">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-warm-cream mb-1.5 uppercase tracking-wider">Dining Seats Count</label>
+              <select class="w-full px-4 py-3 rounded-xl bg-carbon-850 border border-carbon-700 text-sm text-white focus:outline-none focus:border-orange-pastel transition-colors">
+                <option>Under 50 Seats</option>
+                <option>50 - 100 Seats</option>
+                <option>100 - 180 Seats</option>
+                <option>200+ Seats / Multi-Venue</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full mt-4 bg-orange-pastel hover:bg-orange-accent text-carbon-950 font-display font-extrabold text-sm py-4 rounded-xl tracking-wider uppercase transition-all shadow-xl shadow-orange-pastel/20 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2">
+            <span>Schedule Restaurant Growth Assessment</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </form>
+
+        <div id="modernSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs text-center font-medium">
+          ✓ Growth request submitted. A TablesBoostAI growth consultant will reach out with your personalized analysis.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-carbon-800 bg-carbon-950 py-12 text-xs text-warm-muted">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-carbon-850 border border-orange-pastel/30 flex items-center justify-center">
+          <svg class="w-4 h-4 text-orange-pastel" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <span class="text-sm font-display font-bold text-warm-cream">TablesBoostAI</span>
+        <span class="text-carbon-700">&bull;</span>
+        <span>Engineered for Dining Room Yield</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#hero" class="hover:text-orange-pastel transition-colors">Home</a>
+        <a href="#engine" class="hover:text-orange-pastel transition-colors">Problems</a>
+        <a href="#framework" class="hover:text-orange-pastel transition-colors">Growth System</a>
+        <a href="#simulator" class="hover:text-orange-pastel transition-colors">Calculator</a>
+        <a href="#services" class="hover:text-orange-pastel transition-colors">Solutions</a>
+        <a href="#contact" class="hover:text-orange-pastel transition-colors">Contact</a>
+      </div>
+
+      <div class="text-right">
+        <p>Concept &copy; <span id="yearSpan2"></span> TablesBoostAI.</p>
+        <p class="text-[11px] text-warm-muted mt-0.5">Crafted by <strong class="text-orange-pastel">OmniPeak Digital</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yearSpan2').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const toggleBtn = document.getElementById('mobileMenuToggle');
+    const navMenu = document.getElementById('mobileNavMenu');
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+
+    // Table Revenue Simulator Logic
+    const tablesRange = document.getElementById('tablesRange');
+    const checkRange = document.getElementById('checkRange');
+    const partyRange = document.getElementById('partyRange');
+
+    const tablesVal = document.getElementById('tablesVal');
+    const checkVal = document.getElementById('checkVal');
+    const partyVal = document.getElementById('partyVal');
+
+    const annualTotal = document.getElementById('annualTotal');
+    const weeklyTotal = document.getElementById('weeklyTotal');
+    const coversTotal = document.getElementById('coversTotal');
+
+    function updateSimulation() {
+      const tables = parseFloat(tablesRange.value);
+      const check = parseFloat(checkRange.value);
+      const party = parseFloat(partyRange.value);
+
+      tablesVal.textContent = tables + " Tables";
+      checkVal.textContent = "$" + check + " per cover";
+      partyVal.textContent = party.toFixed(1) + " Guests";
+
+      // 3 slow days per week (Tue, Wed, Thu)
+      const weeklyCovers = Math.round(tables * party * 3);
+      const weeklyRevenue = Math.round(weeklyCovers * check);
+      const annualRevenue = weeklyRevenue * 52;
+
+      coversTotal.textContent = weeklyCovers + " covers";
+      weeklyTotal.textContent = "$" + weeklyRevenue.toLocaleString() + " / wk";
+      annualTotal.textContent = "$" + annualRevenue.toLocaleString();
+    }
+
+    tablesRange.addEventListener('input', updateSimulation);
+    checkRange.addEventListener('input', updateSimulation);
+    partyRange.addEventListener('input', updateSimulation);
+
+    // Initial calculation
+    updateSimulation();
+
+    function handleModernSubmit() {
+      document.getElementById('modernSuccess').classList.remove('hidden');
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+
+</body>
+</html>
