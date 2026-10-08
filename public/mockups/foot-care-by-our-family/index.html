@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foot Care by Our Family, LLC — 2 Website Concepts | Presented by OmniPeak Digital</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            mono: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            agency: {
+              black: '#080C10',
+              dark: '#0E131A',
+              card: '#141B24',
+              border: '#1F2A38',
+              accent: '#1DB7BA',
+              cyan: '#00E5FF',
+              orange: '#FF7A45',
+              muted: '#7E8B9B',
+              light: '#F1F5F9'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #080C10;
+      color: #F1F5F9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .preview-frame {
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .pulse-subtle {
+      box-shadow: 0 0 15px rgba(29, 183, 186, 0.3);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#080C10] selection:bg-agency-accent selection:text-agency-black">
+
+  <!-- ========================================================================= -->
+  <!-- AGENCY TOP HEADER / BRAND BAR -->
+  <!-- ========================================================================= -->
+  <header class="border-b border-agency-border bg-agency-dark/95 backdrop-blur-md px-4 sm:px-6 py-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
+      
+      <!-- Agency & Client Brand Titles -->
+      <div class="flex items-center gap-4">
+        <!-- OmniPeak Badge -->
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-agency-accent to-agency-cyan flex items-center justify-center font-extrabold text-agency-black text-xs shadow-md">
+            OP
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] uppercase tracking-widest text-agency-accent font-bold">OmniPeak Digital</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-agency-card text-agency-muted border border-agency-border font-mono">Bespoke Mockups</span>
+            </div>
+            <span class="text-sm font-bold text-white block">Client Delivery Presentation</span>
+          </div>
+        </div>
+
+        <span class="text-agency-border hidden md:inline">|</span>
+
+        <!-- Client Identity with Logo Thumbnail -->
+        <div class="hidden sm:flex items-center gap-2.5 bg-agency-card px-3 py-1.5 rounded-xl border border-agency-border">
+          <div class="w-6 h-6 rounded-full overflow-hidden border border-agency-accent/50 flex-shrink-0">
+            <img src="./images/logo.png" alt="Client Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="text-xs">
+            <span class="text-agency-muted text-[10px] block">Client Business:</span>
+            <span class="text-white font-semibold">Foot Care by Our Family, LLC</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Concept Switcher Tabs -->
+      <div class="flex items-center gap-2 bg-agency-black p-1.5 rounded-2xl border border-agency-border">
+        
+        <button id="btnConcept1" onclick="switchConcept('concept1')" class="px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-agency-card text-agency-accent border border-agency-accent/40 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-agency-accent"></span>
+          <span>Concept 01: Warm Family Care</span>
+        </button>
+
+        <button id="btnConcept2" onclick="switchConcept('concept2')" class="px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white">
+          <span class="w-2 h-2 rounded-full bg-transparent border border-agency-muted"></span>
+          <span>Concept 02: Clinical Excellence</span>
+        </button>
+
+      </div>
+
+      <!-- Action: Open Directly & Viewport Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Viewport Controls -->
+        <div class="hidden md:flex items-center gap-1 bg-agency-card p-1 rounded-xl border border-agency-border text-xs">
+          <button onclick="setViewport('desktop')" id="vpDesk" class="p-1.5 rounded-lg text-agency-accent bg-agency-dark" title="Desktop 100%">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </button>
+          <button onclick="setViewport('tablet')" id="vpTab" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Tablet (768px)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </button>
+          <button onclick="setViewport('mobile')" id="vpMob" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Mobile (390px)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </button>
+        </div>
+
+        <!-- Fullscreen Link -->
+        <a id="openFullLink" href="./concept-1-family-care.html" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-agency-card hover:bg-agency-border border border-agency-border text-xs font-semibold text-agency-light transition-colors">
+          <span>Open Fullscreen</span>
+          <svg class="w-3.5 h-3.5 text-agency-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- CONCEPT BRIEFING HERO -->
+  <!-- ========================================================================= -->
+  <section class="border-b border-agency-border bg-agency-dark/60 py-6 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-agency-accent/15 border border-agency-accent/30 text-xs font-bold text-agency-accent uppercase tracking-wider mb-2">
+          Two Creative & Strategic Directions
+        </div>
+        <h1 class="text-xl sm:text-2xl font-heading font-extrabold text-white tracking-tight">
+          Website Mockups for Foot Care by Our Family, LLC
+        </h1>
+        <p class="text-xs sm:text-sm text-agency-muted mt-1 max-w-3xl leading-relaxed">
+          Crafted by <strong class="text-white">OmniPeak Digital</strong>. Both concepts incorporate your exact logo, official colors, and unique dual podiatrist + registered nurse model — tailored for high patient conversion, local trust, and distinct patient psychology.
+        </p>
+      </div>
+
+      <!-- Quick Concept Stats Pill -->
+      <div class="flex items-center gap-3 bg-agency-card px-4 py-2.5 rounded-2xl border border-agency-border text-xs">
+        <div>
+          <span class="text-agency-muted block text-[10px]">Active Concept:</span>
+          <span id="activeConceptPill" class="text-white font-bold">Concept 01 (Warm Family Care)</span>
+        </div>
+        <span class="text-agency-border">|</span>
+        <div>
+          <span class="text-agency-muted block text-[10px]">Status:</span>
+          <span class="text-emerald-400 font-bold flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Live Interactive
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- LIVE INTERACTIVE PREVIEW IFRAME -->
+  <!-- ========================================================================= -->
+  <main class="flex-1 bg-[#06090D] p-3 sm:p-6 flex flex-col items-center justify-start">
+    
+    <!-- Active Concept Description Ribbon -->
+    <div id="conceptSummaryBar" class="w-full max-w-7xl mb-4 p-4 rounded-2xl bg-agency-card border border-agency-border flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs">
+      <div>
+        <span id="activeBadge" class="font-bold text-agency-accent uppercase tracking-wider text-[11px]">
+          Concept 01 Active: The Compassionate Hearth & Mobile Nursing
+        </span>
+        <p id="activeDesc" class="text-agency-muted mt-0.5 text-xs">
+          Warm, reassuring aesthetic &bull; Calming teal & warm off-white &bull; Eliminates medical fear for seniors & caregivers &bull; Highlights In-Home House Calls & gentle debridement
+        </p>
+      </div>
+      <div class="flex items-center gap-2 text-xs">
+        <span class="text-agency-muted">Direct File:</span>
+        <code id="activeFilePath" class="bg-agency-black px-2.5 py-1 rounded-lg border border-agency-border font-mono text-[11px] text-agency-accent">concept-1-family-care.html</code>
+      </div>
+    </div>
+
+    <!-- The Iframe Viewport Container -->
+    <div id="frameWrapper" class="w-full max-w-7xl h-[850px] rounded-2xl overflow-hidden border border-agency-border bg-agency-black shadow-2xl relative transition-all duration-300">
+      <iframe 
+        id="previewIframe" 
+        src="./concept-1-family-care.html" 
+        class="w-full h-full border-0"
+        title="Foot Care by Our Family Concept Preview">
+      </iframe>
+    </div>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- OMNIPEAK STRATEGIC COMPARISON MATRIX -->
+  <!-- ========================================================================= -->
+  <section class="py-16 px-4 sm:px-6 border-t border-agency-border bg-agency-dark/80">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="mb-12">
+        <span class="text-xs font-bold text-agency-accent uppercase tracking-widest">OmniPeak Digital Strategic Matrix</span>
+        <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-white mt-1">
+          Comparing Concept 01 vs. Concept 02
+        </h2>
+        <p class="text-xs sm:text-sm text-agency-muted mt-1 max-w-2xl">
+          An objective breakdown of how each creative architecture speaks to different patient psychologies, clinical services, and conversion paths.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Concept 1 Deep Dive -->
+        <div class="p-8 rounded-3xl bg-agency-card border border-agency-border space-y-6 relative overflow-hidden">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full bg-agency-accent/15 text-agency-accent font-bold text-xs uppercase tracking-wider border border-agency-accent/30">
+              Direction 01
+            </span>
+            <span class="text-xs font-mono text-agency-muted">Empathetic Family Healthcare</span>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-heading text-white font-bold">The Compassionate Hearth & Mobile Nursing</h3>
+            <p class="text-xs text-agency-muted mt-2 leading-relaxed">
+              Designed around <strong>warmth, empathy, and dignity</strong>. Targets seniors, adult children managing elderly parents’ healthcare, and individuals anxious about painful foot procedures.
+            </p>
+          </div>
+
+          <div class="space-y-3 text-xs border-t border-agency-border pt-4">
+            <div class="flex justify-between items-start gap-3">
+              <span class="text-agency-muted font-medium w-32 flex-shrink-0">Visual Aesthetic</span>
+              <span class="text-white text-right">Soft warm white background, calming teal accents, gentle curves, comforting family photography.</span>
+            </div>
+            <div class="flex justify-between items-start gap-3">
+              <span class="text-agency-muted font-medium w-32 flex-shrink-0">Key Value Prop</span>
+              <span class="text-white text-right">"Healthcare that feels like family" &bull; Pain-free guarantee &bull; House calls for homebound patients.</span>
+            </div>
+            <div class="flex justify-between items-start gap-3">
+              <span class="text-agency-muted font-medium w-32 flex-shrink-0">Hero Conversion</span>
+              <span class="text-white text-right">Prominent direct phone number, gentle appointment modal, interactive 2-step symptom checker.</span>
+            </div>
+            <div class="flex justify-between items-start gap-3">
+              <span class="text-agency-muted font-medium w-32 flex-shrink-0">Tone of Voice</span>
+              <span class="text-white text-right">Reassuring, gentle, accessible, patient-centered, zero medical intimidation.</span>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <button onclick="switchConcept('concept1')" class="w-full py-3 rounded-xl bg-agency-dark hover:bg-agency-border border border-agency-border text-agency-accent font-bold text-xs transition-colors flex items-center justify-center gap-2">
+              <span>Preview Concept 01 in Frame</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Concept 2 Deep Dive -->
+        <div class="p-8 rounded-3xl bg-agency-card border border-agency-border space-y-6 relative overflow-hidden">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full bg-agency-cyan/15 text-agency-cyan font-bold text-xs uppercase tracking-wider border border-agency-cyan/30">
+              Direction 02
+            </span>
+            <span class="text-xs font-mono text-agency-muted">Modern Podiatric Medicine</span>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-heading text-white font-bold">The Clinical Precision & Mobility Institute</h3>
+            <p class="text-xs text-agency-muted mt-2 leading-relaxed">
+              Designed around <strong>technological authority and rapid recovery</strong>. Targets active adults, athletes, and patients demanding cutting-edge laser and shockwave therapies.
+            </p>
+          </div>
+
+          <div class="space-y-3 text-xs border-t border-agency-border pt-4">
+            <div class="flex justify-between items-start gap-3">
+              <span class="text-agency-muted font-medium w-32 flex-shrink-0">Visual Aesthetic</span>
+              <span class="text-white text-right">Deep midnight navy, luminous electric cyan accents, subtle cyber grid, high-contrast typography.</span>
+            </div>
+            <div class="flex justify-between items-start gap-3">
+              <span class="text-agency-muted font-medium w-32 flex-shrink-0">Key Value Prop</span>
+              <span class="text-white text-right">Sub-millimeter 3D gait scanning, FDA laser fungal eradication, 98.4% pain relief metrics.</span>
+            </div>
+            <div class="flex justify-between items-start gap-3">
+              <span class="text-agency-muted font-medium w-32 flex-shrink-0">Hero Conversion</span>
+              <span class="text-white text-right">Interactive digital triage console, 24/7 instant online slot reservation, acute relief routing.</span>
+            </div>
+            <div class="flex justify-between items-start gap-3">
+              <span class="text-agency-muted font-medium w-32 flex-shrink-0">Tone of Voice</span>
+              <span class="text-white text-right">Authoritative, scientific, outcome-driven, advanced, performance-focused.</span>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <button onclick="switchConcept('concept2')" class="w-full py-3 rounded-xl bg-agency-dark hover:bg-agency-border border border-agency-border text-agency-cyan font-bold text-xs transition-colors flex items-center justify-center gap-2">
+              <span>Preview Concept 02 in Frame</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Agency Recommendation Callout -->
+      <div class="mt-12 p-8 rounded-3xl bg-agency-dark border border-agency-border flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-agency-accent"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-white">OmniPeak Digital Creative Recommendation</span>
+          </div>
+          <p class="text-xs sm:text-sm text-agency-muted leading-relaxed max-w-3xl">
+            Because your business name is <strong>Foot Care by Our Family, LLC</strong> and features the tagline <em>"We care for every step of your journey"</em>, <strong>Concept 01</strong> creates the strongest emotional resonance with patients seeking gentle, trustworthy care. However, we can also create a <strong>hybrid</strong>: pairing Concept 01's warm welcoming tone with Concept 02's high-tech diagnostic showcases!
+          </p>
+        </div>
+        <div class="flex-shrink-0">
+          <a href="mailto:hello@omnipeakdigital.com?subject=Foot%20Care%20by%20Our%20Family%20Mockup%20Feedback" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-agency-accent to-agency-cyan text-agency-black font-extrabold text-xs uppercase tracking-wider shadow-lg hover:opacity-95 transition-all">
+            <span>Send Design Feedback</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- AGENCY FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-agency-border bg-agency-black py-8 px-4 sm:px-6 text-xs text-agency-muted">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-lg bg-agency-card border border-agency-border flex items-center justify-center font-bold text-[11px] text-white">
+          OP
+        </div>
+        <span>Designed & Presented by <strong>OmniPeak Digital</strong> for Foot Care by Our Family, LLC</span>
+      </div>
+      <p class="text-[11px]">
+        Live Mockup Deployment Suite &bull; mockups.omnipeakdigital.com
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT SWITCHER CONTROLS -->
+  <!-- ========================================================================= -->
+  <script>
+    const concepts = {
+      concept1: {
+        title: "Concept 01 Active: The Compassionate Hearth & Mobile Nursing",
+        desc: "Warm, reassuring aesthetic • Calming teal & warm off-white • Eliminates medical fear for seniors & caregivers • Highlights In-Home House Calls & gentle debridement",
+        file: "concept-1-family-care.html",
+        pill: "Concept 01 (Warm Family Care)",
+        colorClass: "text-agency-accent"
+      },
+      concept2: {
+        title: "Concept 02 Active: Clinical Precision & Mobility Institute",
+        desc: "High-precision medical tech • Deep midnight navy & electric cyan • Authoritative clinical outcomes • 3D gait analysis, laser fungal therapy, and acute pain triage",
+        file: "concept-2-clinical-excellence.html",
+        pill: "Concept 02 (Clinical Excellence)",
+        colorClass: "text-agency-cyan"
+      }
+    };
+
+    let activeKey = 'concept1';
+
+    function switchConcept(key) {
+      activeKey = key;
+      const data = concepts[key];
+      const iframe = document.getElementById('previewIframe');
+      const fullLink = document.getElementById('openFullLink');
+      const badge = document.getElementById('activeBadge');
+      const desc = document.getElementById('activeDesc');
+      const filePath = document.getElementById('activeFilePath');
+      const pill = document.getElementById('activeConceptPill');
+
+      const btn1 = document.getElementById('btnConcept1');
+      const btn2 = document.getElementById('btnConcept2');
+
+      iframe.src = `./${data.file}`;
+      fullLink.href = `./${data.file}`;
+      badge.innerText = data.title;
+      desc.innerHTML = data.desc;
+      filePath.innerText = data.file;
+      pill.innerText = data.pill;
+
+      if (key === 'concept1') {
+        btn1.className = "px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-agency-card text-agency-accent border border-agency-accent/40 shadow-sm";
+        btn1.querySelector('span:first-child').className = "w-2 h-2 rounded-full bg-agency-accent";
+
+        btn2.className = "px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white";
+        btn2.querySelector('span:first-child').className = "w-2 h-2 rounded-full bg-transparent border border-agency-muted";
+      } else {
+        btn2.className = "px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-agency-card text-agency-cyan border border-agency-cyan/40 shadow-sm";
+        btn2.querySelector('span:first-child').className = "w-2 h-2 rounded-full bg-agency-cyan";
+
+        btn1.className = "px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white";
+        btn1.querySelector('span:first-child').className = "w-2 h-2 rounded-full bg-transparent border border-agency-muted";
+      }
+    }
+
+    function setViewport(mode) {
+      const frame = document.getElementById('frameWrapper');
+      const vpDesk = document.getElementById('vpDesk');
+      const vpTab = document.getElementById('vpTab');
+      const vpMob = document.getElementById('vpMob');
+
+      [vpDesk, vpTab, vpMob].forEach(btn => {
+        btn.classList.remove('text-agency-accent', 'bg-agency-dark');
+        btn.classList.add('text-agency-muted');
+      });
+
+      if (mode === 'desktop') {
+        frame.style.maxWidth = '1280px';
+        vpDesk.classList.add('text-agency-accent', 'bg-agency-dark');
+        vpDesk.classList.remove('text-agency-muted');
+      } else if (mode === 'tablet') {
+        frame.style.maxWidth = '768px';
+        vpTab.classList.add('text-agency-accent', 'bg-agency-dark');
+        vpTab.classList.remove('text-agency-muted');
+      } else if (mode === 'mobile') {
+        frame.style.maxWidth = '390px';
+        vpMob.classList.add('text-agency-accent', 'bg-agency-dark');
+        vpMob.classList.remove('text-agency-muted');
+      }
+    }
+  </script>
+
+</body>
+</html>
