@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foot Care by Our Family, LLC — Advanced Podiatric Medicine & Precision Foot Care Nursing</title>
+  <meta name="description" content="Cutting-edge podiatric medicine, laser nail therapy, custom 3D orthotics, and certified foot care nursing. Restoring mobility and eliminating chronic foot pain.">
+
+  <!-- Tailwind CSS & Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            med: {
+              dark: '#070E17',
+              navy: '#0C1A2B',
+              surface: '#112238',
+              card: '#162C46',
+              cyan: '#00E5FF',
+              cyanDark: '#00B4D8',
+              cyanMuted: 'rgba(0, 229, 255, 0.12)',
+              slate: '#94A3B8',
+              border: '#1E3A5F',
+              accent: '#22D3EE'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #070E17;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .neon-glow {
+      box-shadow: 0 0 25px -5px rgba(0, 229, 255, 0.25);
+    }
+    .neon-border {
+      border: 1px solid rgba(0, 229, 255, 0.35);
+    }
+    .gradient-radial {
+      background: radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.15) 0%, rgba(7, 14, 23, 0) 70%);
+    }
+    .grid-bg {
+      background-size: 32px 32px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="selection:bg-med-cyan selection:text-med-dark grid-bg">
+
+  <!-- ========================================================================= -->
+  <!-- CLINICAL ALERT / APPOINTMENT AVAILABILITY TICKER -->
+  <!-- ========================================================================= -->
+  <div class="bg-gradient-to-r from-med-navy via-med-surface to-med-navy border-b border-med-border text-xs py-2.5 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-med-cyan/20 border border-med-cyan/40 text-[11px] font-mono font-bold text-med-cyan">
+          <span class="w-1.5 h-1.5 rounded-full bg-med-cyan animate-ping"></span>
+          REAL-TIME CLINIC STATUS
+        </span>
+        <span class="text-slate-300 text-xs">
+          ⚡ <strong>Same-Day Urgent Appointments</strong> for Acute Heel Pain, Ingrown Toenails & Diabetic Wound Evaluations
+        </span>
+      </div>
+      <div class="flex items-center gap-5 text-xs text-slate-300">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-med-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Medicare & PPO Accepted
+        </span>
+        <a href="tel:5553668227" class="text-med-cyan font-bold hover:underline flex items-center gap-1">
+          📞 (555) 366-8227
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- GLASSMORPHISM NAVIGATION HEADER -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-med-dark/90 backdrop-blur-xl border-b border-med-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand & Logo -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-full overflow-hidden bg-med-navy p-0.5 border border-med-cyan neon-glow flex-shrink-0 transition-all group-hover:scale-105">
+          <img src="./images/logo.png" alt="Foot Care by Our Family Logo" class="w-full h-full object-cover rounded-full">
+        </div>
+        <div>
+          <div class="font-bold text-base sm:text-lg text-white tracking-tight flex items-center gap-1.5">
+            <span>Foot Care</span>
+            <span class="text-xs px-2 py-0.5 rounded-md bg-med-surface border border-med-border text-med-cyan font-mono font-semibold">BY OUR FAMILY, LLC</span>
+          </div>
+          <p class="text-[10px] text-slate-400 font-mono tracking-wider uppercase">Podiatry & Certified Foot Care Nurses</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-slate-300">
+        <a href="#diagnostics" class="hover:text-med-cyan transition-colors">Interactive Diagnostic</a>
+        <a href="#technologies" class="hover:text-med-cyan transition-colors">Advanced Tech</a>
+        <a href="#clinical-programs" class="hover:text-med-cyan transition-colors">Clinical Programs</a>
+        <a href="#dual-model" class="hover:text-med-cyan transition-colors">Dual-Care Protocol</a>
+        <a href="#results" class="hover:text-med-cyan transition-colors">Clinical Outcomes</a>
+        <a href="#faq" class="hover:text-med-cyan transition-colors">Insurance</a>
+      </nav>
+
+      <!-- Action Area -->
+      <div class="flex items-center gap-3">
+        <a href="tel:5553668227" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-med-surface border border-med-border text-xs font-mono text-slate-200 hover:border-med-cyan transition-colors">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>(555) 366-8227</span>
+        </a>
+        <button onclick="openModernModal()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-med-cyan to-med-cyanDark text-med-dark font-bold text-xs uppercase tracking-wider shadow-lg shadow-med-cyan/20 hover:opacity-95 transition-all">
+          Book Online 24/7
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION: ADVANCED PODIATRIC MEDICINE & DIAGNOSTICS -->
+  <!-- ========================================================================= -->
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 gradient-radial overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-med-surface border border-med-border text-xs text-med-cyan font-mono">
+            <span class="w-2 h-2 rounded-full bg-med-cyan"></span>
+            <span>CLINICAL EXCELLENCE &bull; CERTIFIED FOOT CARE SPECIALISTS</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.12]">
+            Advanced Podiatric Medicine & Precision <span class="text-transparent bg-clip-text bg-gradient-to-r from-med-cyan via-teal-300 to-cyan-400">Foot Care Nursing.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+            Eliminating chronic foot pain and restoring unrestricted mobility through FDA-cleared laser therapies, 3D dynamic gait analysis, gentle minor procedures, and certified in-home clinical nursing.
+          </p>
+
+          <!-- Key Technical Metrics Grid -->
+          <div class="grid grid-cols-3 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-med-surface/60 border border-med-border">
+              <span class="block text-xl sm:text-2xl font-mono font-bold text-med-cyan">98.4%</span>
+              <span class="text-[11px] text-slate-400 leading-tight block mt-0.5">Pain Resolution Rate</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-med-surface/60 border border-med-border">
+              <span class="block text-xl sm:text-2xl font-mono font-bold text-white">Same-Day</span>
+              <span class="text-[11px] text-slate-400 leading-tight block mt-0.5">Ingrown Nail Relief</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-med-surface/60 border border-med-border">
+              <span class="block text-xl sm:text-2xl font-mono font-bold text-med-cyan">Dual Care</span>
+              <span class="text-[11px] text-slate-400 leading-tight block mt-0.5">Podiatrist + RN Team</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <button onclick="openModernModal()" class="px-7 py-3.5 rounded-xl bg-med-cyan hover:bg-med-cyanDark text-med-dark font-bold text-xs uppercase tracking-wider shadow-lg shadow-med-cyan/20 transition-all flex items-center justify-center gap-2">
+              <span>Schedule Clinical Assessment</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a href="#diagnostics" class="px-6 py-3.5 rounded-xl border border-med-border bg-med-surface/40 hover:bg-med-surface text-slate-200 text-xs font-mono font-semibold transition-all flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 text-med-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+              <span>Launch Pain Symptom Checker</span>
+            </a>
+          </div>
+
+          <!-- Verification Strip -->
+          <div class="flex items-center gap-4 pt-4 border-t border-med-border text-xs text-slate-400">
+            <span class="flex items-center gap-1.5"><strong class="text-white">APMA</strong> Member</span>
+            <span>&bull;</span>
+            <span class="flex items-center gap-1.5"><strong class="text-white">CFCN</strong> Board Certified</span>
+            <span>&bull;</span>
+            <span class="flex items-center gap-1.5"><strong class="text-white">CLIA</strong> Certified Laboratory</span>
+          </div>
+
+        </div>
+
+        <!-- Right Diagnostic Interactive Console Preview -->
+        <div class="lg:col-span-5">
+          <div class="bg-med-surface rounded-3xl border border-med-border p-6 shadow-2xl relative overflow-hidden">
+            
+            <div class="flex items-center justify-between pb-4 border-b border-med-border">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                <span class="text-xs font-mono text-slate-400 ml-2">TRIAGE_CONSOLE_v4.2</span>
+              </div>
+              <span class="text-[10px] font-mono text-med-cyan uppercase">Live Triage Ready</span>
+            </div>
+
+            <div class="my-5">
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block mb-2">Step 1: Select Pain / Concern Area</span>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <button onclick="selectConsolePain('Plantar Fascia (Heel)', 'Morning stabbing pain, heel spur, chronic fascia strain', this)" class="pain-btn p-3 rounded-xl bg-med-navy border border-med-border hover:border-med-cyan text-left transition-all">
+                  <div class="font-bold text-white">Heel / Arch</div>
+                  <div class="text-[10px] text-slate-400">Plantar Fasciitis</div>
+                </button>
+                <button onclick="selectConsolePain('Border Nail Matrix', 'Ingrown, curved, infected nail border needing pain-free relief', this)" class="pain-btn p-3 rounded-xl bg-med-navy border border-med-border hover:border-med-cyan text-left transition-all">
+                  <div class="font-bold text-white">Toenail Issue</div>
+                  <div class="text-[10px] text-slate-400">Ingrown / Fungal</div>
+                </button>
+                <button onclick="selectConsolePain('Neuropathy & Arterial', 'Loss of sensation, tingling, poor blood flow, ulcer risk', this)" class="pain-btn p-3 rounded-xl bg-med-navy border border-med-border hover:border-med-cyan text-left transition-all">
+                  <div class="font-bold text-white">Diabetic Foot</div>
+                  <div class="text-[10px] text-slate-400">Nerve / Circulation</div>
+                </button>
+                <button onclick="selectConsolePain('In-Home House Call', 'Mobility limited, senior or bedridden clinical nail care', this)" class="pain-btn p-3 rounded-xl bg-med-navy border border-med-border hover:border-med-cyan text-left transition-all">
+                  <div class="font-bold text-white">Senior Home Visit</div>
+                  <div class="text-[10px] text-slate-400">Mobile Foot RN</div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dynamic Console Output -->
+            <div class="p-4 rounded-xl bg-med-navy/90 border border-med-cyan/40 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-mono text-slate-400 uppercase">Selected Protocol:</span>
+                <span id="consoleProtocol" class="text-med-cyan font-bold font-mono">Plantar Fascia (Heel)</span>
+              </div>
+              <p id="consoleDetails" class="text-xs text-slate-300 leading-relaxed">
+                Initial evaluation includes ultrasound imaging, gait mechanics scan, and targeted shockwave or orthotic recommendation.
+              </p>
+            </div>
+
+            <div class="mt-5">
+              <button onclick="openModernModal(document.getElementById('consoleProtocol').innerText)" class="w-full py-3 rounded-xl bg-gradient-to-r from-med-cyan to-med-cyanDark text-med-dark font-bold text-xs uppercase tracking-wider shadow-lg transition-all hover:brightness-110">
+                Book Targeted Evaluation For This Condition &rarr;
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- ADVANCED CLINICAL TECHNOLOGIES (HIGH-TECH ADVANTAGE) -->
+  <!-- ========================================================================= -->
+  <section id="technologies" class="py-20 bg-med-navy/50 border-y border-med-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs font-mono text-med-cyan uppercase tracking-widest font-bold">Cutting-Edge Instrumentation</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+            Clinical Technology That Accelerates Recovery
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-400 max-w-md">
+          We combine modern medical technologies with conservative podiatry to achieve rapid pain relief without unnecessary surgery or downtime.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Tech 1 -->
+        <div class="p-6 rounded-2xl bg-med-surface border border-med-border hover:border-med-cyan transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-med-navy border border-med-border flex items-center justify-center text-xl text-med-cyan mb-4 group-hover:neon-glow transition-all">
+            📡
+          </div>
+          <span class="text-[10px] font-mono text-med-cyan uppercase">Biomechanical Suite</span>
+          <h3 class="text-base font-bold text-white mt-1">3D Dynamic Gait Scanning</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Sub-millimeter optical sensors measure pressure imbalances and strike angles during natural walking, fabricating custom orthotics with aerospace precision.
+          </p>
+        </div>
+
+        <!-- Tech 2 -->
+        <div class="p-6 rounded-2xl bg-med-surface border border-med-border hover:border-med-cyan transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-med-navy border border-med-border flex items-center justify-center text-xl text-med-cyan mb-4 group-hover:neon-glow transition-all">
+            ✨
+          </div>
+          <span class="text-[10px] font-mono text-med-cyan uppercase">Phototherapy</span>
+          <h3 class="text-base font-bold text-white mt-1">FDA Laser Nail Therapy</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Targeted wavelengths penetrate through thick nail plates to eradicate fungal pathogens without oral pills, toxic liver side effects, or burning sensations.
+          </p>
+        </div>
+
+        <!-- Tech 3 -->
+        <div class="p-6 rounded-2xl bg-med-surface border border-med-border hover:border-med-cyan transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-med-navy border border-med-border flex items-center justify-center text-xl text-med-cyan mb-4 group-hover:neon-glow transition-all">
+            💥
+          </div>
+          <span class="text-[10px] font-mono text-med-cyan uppercase">Regenerative Care</span>
+          <h3 class="text-base font-bold text-white mt-1">Acoustic Shockwave (ESWT)</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            High-energy sound waves stimulate micro-vascularization and collagen repair in chronic plantar fascia tissue, breaking scar tissue and chronic inflammation.
+          </p>
+        </div>
+
+        <!-- Tech 4 -->
+        <div class="p-6 rounded-2xl bg-med-surface border border-med-border hover:border-med-cyan transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-med-navy border border-med-border flex items-center justify-center text-xl text-med-cyan mb-4 group-hover:neon-glow transition-all">
+            💉
+          </div>
+          <span class="text-[10px] font-mono text-med-cyan uppercase">Minor Surgery Suite</span>
+          <h3 class="text-base font-bold text-white mt-1">Painless Partial Matrixectomy</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Comfortable local chemical cauterization permanently prevents ingrown nail margins from regrowing into tissue, done in 20 minutes with zero stitches.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- DUAL-CARE CLINICAL PROTOCOL (WHY DOCTORS + NURSES WIN) -->
+  <!-- ========================================================================= -->
+  <section id="dual-model" class="py-20 bg-med-dark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-br from-med-navy via-med-surface to-med-navy p-8 sm:p-12 rounded-3xl border border-med-border neon-border">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-6 space-y-5">
+            <span class="text-xs font-mono text-med-cyan uppercase tracking-widest font-bold">The Dual-Care Architecture</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
+              Why Podiatrist + Foot Nurse Collaboration <span class="text-med-cyan">Produces Superior Outcomes.</span>
+            </h2>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Traditional podiatry practices often rush patients through 5-minute doctor checks. At <strong>Foot Care by Our Family, LLC</strong>, we revolutionized this model by pairing board-certified podiatric physicians with certified foot care registered nurses.
+            </p>
+
+            <div class="space-y-3 pt-2 text-xs">
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-med-dark/70 border border-med-border">
+                <span class="text-med-cyan text-base font-bold font-mono">01</span>
+                <div>
+                  <h4 class="font-bold text-white">Physician Level Diagnostics & Prescriptions</h4>
+                  <p class="text-slate-400 mt-0.5">X-rays, surgical corrections, advanced wound staging, and custom orthotic biomechanical prescription.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-med-dark/70 border border-med-border">
+                <span class="text-med-cyan text-base font-bold font-mono">02</span>
+                <div>
+                  <h4 class="font-bold text-white">Dedicated In-Depth Nursing Debridement</h4>
+                  <p class="text-slate-400 mt-0.5">Unhurried 40-minute nail debridement, skin hydration, diabetic ulcer dressing changes, and compassionate mobile house calls.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <button onclick="openModernModal()" class="px-6 py-3 rounded-xl bg-med-cyan text-med-dark font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors">
+                Experience Our Integrated Protocol
+              </button>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-5 rounded-2xl bg-med-dark/80 border border-med-border">
+                <div class="w-10 h-10 rounded-lg bg-med-surface text-med-cyan flex items-center justify-center font-bold mb-3">
+                  👨‍⚕️
+                </div>
+                <h4 class="text-sm font-bold text-white">Board Certified Podiatrist (DPM)</h4>
+                <ul class="text-[11px] text-slate-400 mt-2 space-y-1 font-mono">
+                  <li>&bull; Surgical Interventions</li>
+                  <li>&bull; Structural Alignment</li>
+                  <li>&bull; Prescription Therapeutics</li>
+                </ul>
+              </div>
+
+              <div class="p-5 rounded-2xl bg-med-dark/80 border border-med-border">
+                <div class="w-10 h-10 rounded-lg bg-med-surface text-med-cyan flex items-center justify-center font-bold mb-3">
+                  👩‍⚕️
+                </div>
+                <h4 class="text-sm font-bold text-white">Certified Foot Care Nurse (CFCN)</h4>
+                <ul class="text-[11px] text-slate-400 mt-2 space-y-1 font-mono">
+                  <li>&bull; Painless Debridement</li>
+                  <li>&bull; Diabetic Preventive Care</li>
+                  <li>&bull; Mobile In-Home Rounds</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Client Logo Display in context -->
+            <div class="mt-4 p-4 rounded-xl bg-med-dark/90 border border-med-border flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img src="./images/logo.png" alt="Foot Care by Our Family" class="w-10 h-10 rounded-full border border-med-cyan">
+                <div>
+                  <span class="text-xs font-bold text-white block">We Care for Every Step</span>
+                  <span class="text-[10px] text-med-cyan font-mono">Foot Care by Our Family, LLC</span>
+                </div>
+              </div>
+              <span class="text-[10px] text-slate-400 font-mono">Accredited Practice</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CLINICAL PROGRAMS (DIABETIC, SENIOR, SPORTS, PROCEDURAL) -->
+  <!-- ========================================================================= -->
+  <section id="clinical-programs" class="py-20 bg-med-navy/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-mono text-med-cyan uppercase tracking-widest font-bold">Specialized Care Centers</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+          Targeted Clinical Programs for Every Foot Condition
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Program 1 -->
+        <div class="rounded-2xl bg-med-surface border border-med-border overflow-hidden hover:border-med-cyan/60 transition-all flex flex-col justify-between">
+          <div class="p-6">
+            <span class="text-[10px] font-mono text-med-cyan uppercase tracking-wider block mb-2">Program 01 &bull; Limb Preservation</span>
+            <h3 class="text-lg font-bold text-white">Comprehensive Diabetic Foot Center</h3>
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+              Early detection prevents 85% of diabetic foot amputations. We provide Semmes-Weinstein monofilament sensory assessments, ABI vascular checks, safe medical debridement, and custom extra-depth footwear.
+            </p>
+            <div class="mt-4 space-y-1.5 text-[11px] text-slate-400 font-mono">
+              <div class="flex items-center gap-2 text-slate-200">
+                <span class="text-med-cyan">✓</span> Medicare Qualifying Annual Screenings
+              </div>
+              <div class="flex items-center gap-2 text-slate-200">
+                <span class="text-med-cyan">✓</span> Rapid Wound Triage & Offloading Boots
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-med-navy border-t border-med-border">
+            <button onclick="openModernModal('Diabetic Care')" class="w-full py-2.5 rounded-lg bg-med-surface hover:bg-med-card text-med-cyan text-xs font-mono font-bold transition-colors">
+              Book Diabetic Screening &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="rounded-2xl bg-med-surface border border-med-border overflow-hidden hover:border-med-cyan/60 transition-all flex flex-col justify-between">
+          <div class="p-6">
+            <span class="text-[10px] font-mono text-med-cyan uppercase tracking-wider block mb-2">Program 02 &bull; House Call Concierge</span>
+            <h3 class="text-lg font-bold text-white">Mobile Clinical Foot Nursing</h3>
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+              For seniors unable to commute, post-rehab individuals, or memory care residents. Our Certified Foot Care Nurses bring sterile medical clippers, rotary drills, and wound care right into the patient’s home.
+            </p>
+            <div class="mt-4 space-y-1.5 text-[11px] text-slate-400 font-mono">
+              <div class="flex items-center gap-2 text-slate-200">
+                <span class="text-med-cyan">✓</span> In-Home Bedside & Armchair Visits
+              </div>
+              <div class="flex items-center gap-2 text-slate-200">
+                <span class="text-med-cyan">✓</span> Written Caregiver Status Reports
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-med-navy border-t border-med-border">
+            <button onclick="openModernModal('In-Home Nursing')" class="w-full py-2.5 rounded-lg bg-med-surface hover:bg-med-card text-med-cyan text-xs font-mono font-bold transition-colors">
+              Schedule Mobile Home Visit &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="rounded-2xl bg-med-surface border border-med-border overflow-hidden hover:border-med-cyan/60 transition-all flex flex-col justify-between">
+          <div class="p-6">
+            <span class="text-[10px] font-mono text-med-cyan uppercase tracking-wider block mb-2">Program 03 &bull; Acute Relief</span>
+            <h3 class="text-lg font-bold text-white">Ingrown Toenail & Laser Suite</h3>
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+              Stop suffering through agonizing throbbing toes. We offer same-day gentle local anesthetic procedures that eliminate curved nail borders permanently without incisions or disfiguring surgery.
+            </p>
+            <div class="mt-4 space-y-1.5 text-[11px] text-slate-400 font-mono">
+              <div class="flex items-center gap-2 text-slate-200">
+                <span class="text-med-cyan">✓</span> Immediate Pain Relief Within 30 Minutes
+              </div>
+              <div class="flex items-center gap-2 text-slate-200">
+                <span class="text-med-cyan">✓</span> Return to Work Next Morning
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-med-navy border-t border-med-border">
+            <button onclick="openModernModal('Ingrown Nail Suite')" class="w-full py-2.5 rounded-lg bg-med-surface hover:bg-med-card text-med-cyan text-xs font-mono font-bold transition-colors">
+              Same-Day Urgent Slot &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- REAL CLINICAL OUTCOMES & REVIEWS -->
+  <!-- ========================================================================= -->
+  <section id="results" class="py-20 bg-med-dark border-t border-med-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-mono text-med-cyan uppercase tracking-widest font-bold">Verified Patient Results</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+          Evidence-Based Patient Satisfaction
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-6 rounded-2xl bg-med-surface border border-med-border space-y-4">
+          <div class="flex items-center justify-between text-xs font-mono text-med-cyan">
+            <span>CHRONIC HEEL PAIN</span>
+            <span>★★★★★</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed italic">
+            "I couldn't stand for more than 10 minutes at my teaching job without severe heel burning. Their 3D scanning detected a collapsed medial arch and severe fasciitis. 3 weeks into custom orthotics and physical therapy exercises, I am 100% pain free."
+          </p>
+          <div class="pt-3 border-t border-med-border text-xs">
+            <strong class="text-white block">Marcus T.</strong>
+            <span class="text-[10px] text-slate-400 font-mono">High School Teacher &bull; Orthotic Patient</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-med-surface border border-med-border space-y-4">
+          <div class="flex items-center justify-between text-xs font-mono text-med-cyan">
+            <span>SENIOR IN-HOME CARE</span>
+            <span>★★★★★</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed italic">
+            "Booking their mobile foot care nurse for my father who has Parkinson's was the best healthcare decision we made this year. She treated his ram's horn nails with so much gentleness and respect. Zero bleeding, zero discomfort."
+          </p>
+          <div class="pt-3 border-t border-med-border text-xs">
+            <strong class="text-white block">Dr. Sarah W.</strong>
+            <span class="text-[10px] text-slate-400 font-mono">Daughter &bull; Mobile Nursing House Call</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-med-surface border border-med-border space-y-4">
+          <div class="flex items-center justify-between text-xs font-mono text-med-cyan">
+            <span>INGROWN NAIL REMOVAL</span>
+            <span>★★★★★</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed italic">
+            "I had a terribly infected big toenail that I avoided dealing with for months out of fear. The doctor numbed it with a tiny pinch and completed the border removal in minutes. Didn't feel a thing. Walked right back out!"
+          </p>
+          <div class="pt-3 border-t border-med-border text-xs">
+            <strong class="text-white block">Jason L.</strong>
+            <span class="text-[10px] text-slate-400 font-mono">Runner &bull; Matrixectomy Procedure</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- HIGH CONVERTING APPOINTMENT DISPATCH FORM -->
+  <!-- ========================================================================= -->
+  <section class="py-20 bg-med-surface border-t border-med-border relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-med-navy rounded-3xl p-8 sm:p-12 border border-med-border neon-glow relative">
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="text-xs font-mono text-med-cyan uppercase tracking-widest font-bold">Fast Online Intake</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">
+            Request Your Clinical Examination
+          </h2>
+          <p class="text-xs text-slate-400 mt-2">
+            Choose clinic visit or mobile home nurse. We confirm insurance verification within hours.
+          </p>
+        </div>
+
+        <form onsubmit="handleModernSubmit(event)" class="space-y-4 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-mono text-slate-300 mb-1 uppercase text-[11px]">Patient Name</label>
+              <input type="text" required placeholder="Full name" class="w-full px-4 py-3 rounded-xl bg-med-surface border border-med-border text-white focus:outline-none focus:border-med-cyan">
+            </div>
+            <div>
+              <label class="block font-mono text-slate-300 mb-1 uppercase text-[11px]">Contact Telephone</label>
+              <input type="tel" required placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl bg-med-surface border border-med-border text-white focus:outline-none focus:border-med-cyan">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-mono text-slate-300 mb-1 uppercase text-[11px]">Primary Clinical Need</label>
+              <select id="modernSelectNeed" class="w-full px-4 py-3 rounded-xl bg-med-surface border border-med-border text-white focus:outline-none focus:border-med-cyan">
+                <option value="Severe Heel Pain / Plantar Fasciitis">Heel Pain / Plantar Fasciitis</option>
+                <option value="Ingrown Toenail Urgent Relief">Ingrown Toenail Urgent Relief</option>
+                <option value="Diabetic Foot Assessment & Ulcer Prevention">Diabetic Foot Assessment</option>
+                <option value="Mobile In-Home Nursing Visit (House Call)">Mobile In-Home Nursing Visit</option>
+                <option value="Thick Nail Debridement & Corn Care">Thick Nail Debridement & Corns</option>
+                <option value="3D Custom Prescription Orthotics">3D Custom Prescription Orthotics</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-mono text-slate-300 mb-1 uppercase text-[11px]">Insurance Carrier</label>
+              <input type="text" placeholder="e.g. Medicare Part B, Blue Cross, Aetna, Self-Pay" class="w-full px-4 py-3 rounded-xl bg-med-surface border border-med-border text-white focus:outline-none focus:border-med-cyan">
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-mono text-slate-300 mb-1 uppercase text-[11px]">Symptoms & Preferred Schedule</label>
+            <textarea rows="2" placeholder="Briefly describe your symptoms or time preference..." class="w-full px-4 py-2.5 rounded-xl bg-med-surface border border-med-border text-white focus:outline-none focus:border-med-cyan"></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-med-cyan to-med-cyanDark text-med-dark font-extrabold text-sm uppercase tracking-wider shadow-lg hover:brightness-110 transition-all">
+              Transmit Appointment Request &rarr;
+            </button>
+            <p class="text-center text-[10px] text-slate-400 mt-2 font-mono">HIPAA Compliant &bull; Encrypted Clinical Routing</p>
+          </div>
+        </form>
+
+        <div id="modernSuccess" class="hidden text-center py-8 space-y-3">
+          <div class="w-14 h-14 rounded-full bg-med-cyan/20 border border-med-cyan text-med-cyan flex items-center justify-center mx-auto text-2xl font-bold">
+            ✓
+          </div>
+          <h4 class="text-lg font-bold text-white font-mono">Clinical Intake Dispatched</h4>
+          <p class="text-xs text-slate-300">Your information has been logged with our medical triage coordinator. We will reach out shortly via phone.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="bg-med-dark text-slate-400 text-xs py-12 border-t border-med-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <img src="./images/logo.png" alt="Foot Care by Our Family" class="w-10 h-10 rounded-full border border-med-cyan">
+            <div>
+              <span class="font-bold text-white text-sm block">Foot Care by Our Family, LLC</span>
+              <span class="text-[10px] text-med-cyan font-mono">Podiatry & Foot Care Nurses</span>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            High-precision podiatric medicine and certified clinical foot care nursing for seniors, diabetic patients, and active individuals.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs font-mono uppercase mb-3 text-med-cyan">Medical Services</h4>
+          <ul class="space-y-2 text-[11px]">
+            <li><a href="#technologies" class="hover:text-med-cyan">3D Gait & Custom Orthotics</a></li>
+            <li><a href="#technologies" class="hover:text-med-cyan">Laser Nail Eradication</a></li>
+            <li><a href="#clinical-programs" class="hover:text-med-cyan">Diabetic Wound Protocol</a></li>
+            <li><a href="#clinical-programs" class="hover:text-med-cyan">Mobile Nurse House Calls</a></li>
+            <li><a href="#clinical-programs" class="hover:text-med-cyan">Ingrown Nail Matrixectomy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs font-mono uppercase mb-3 text-med-cyan">Clinic & Home Rounds</h4>
+          <ul class="space-y-1.5 text-[11px] font-mono">
+            <li class="flex justify-between"><span>Mon – Thu:</span> <span class="text-slate-200">08:00 – 17:30</span></li>
+            <li class="flex justify-between"><span>Friday:</span> <span class="text-slate-200">08:00 – 16:30</span></li>
+            <li class="flex justify-between"><span>Home Rounds:</span> <span class="text-med-cyan">By Reservation</span></li>
+            <li class="flex justify-between"><span>Emergency:</span> <span class="text-slate-200">On Call 24/7</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs font-mono uppercase mb-3 text-med-cyan">Contact Medical Desk</h4>
+          <p class="text-[11px] text-slate-300 leading-relaxed font-mono">
+            Medical Arts Center &bull; Suite 210<br>
+            Direct: (555) 366-8227<br>
+            Email: clinical@footcarebyourfamily.com
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-med-border flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <p>&copy; 2026 Foot Care by Our Family, LLC. Clinical Excellence Architecture.</p>
+        <p class="text-slate-500">
+          Client Mockup Presented by <strong class="text-med-cyan">OmniPeak Digital</strong>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    function selectConsolePain(title, desc, btn) {
+      document.querySelectorAll('.pain-btn').forEach(b => b.classList.remove('border-med-cyan', 'bg-med-card'));
+      btn.classList.add('border-med-cyan', 'bg-med-card');
+      document.getElementById('consoleProtocol').innerText = title;
+      document.getElementById('consoleDetails').innerText = desc;
+    }
+
+    function openModernModal(condition) {
+      if (condition) {
+        const sel = document.getElementById('modernSelectNeed');
+        for (let i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].text.includes(condition) || sel.options[i].value.includes(condition)) {
+            sel.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      document.getElementById('modernSelectNeed').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function handleModernSubmit(e) {
+      e.preventDefault();
+      e.target.classList.add('hidden');
+      document.getElementById('modernSuccess').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>

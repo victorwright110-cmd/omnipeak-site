@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TablesBoostAI — 2 Website Concepts | Presented by OmniPeak Digital</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Outfit', 'sans-serif'],
+            serif: ['Newsreader', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#0A0B0D',
+              dark: '#121418',
+              card: '#181B22',
+              border: '#262A34',
+              orange: '#FF8A3D',
+              orangeSoft: '#FFA05C',
+              beige: '#F5EFEB',
+              sand: '#DFD7CA',
+              muted: '#8E877D',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0A0B0D;
+      color: #F5EFEB;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .preview-frame {
+      transition: width 0.3s ease, height 0.3s ease;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#0A0B0D] selection:bg-brand-orange selection:text-brand-black">
+
+  <!-- ========================================================================= -->
+  <!-- TOP HEADER / AGENCY BRAND BAR -->
+  <!-- ========================================================================= -->
+  <header class="border-b border-brand-border bg-brand-dark/95 backdrop-blur-md px-6 py-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Agency & Client Brand Titles -->
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center font-bold text-brand-orange text-xs">
+            OP
+          </div>
+          <div>
+            <span class="text-xs uppercase tracking-widest text-brand-muted font-bold block">Agency Presentation</span>
+            <span class="text-sm font-semibold text-white">OmniPeak Digital &bull; Client Delivery</span>
+          </div>
+        </div>
+        <span class="text-brand-border hidden md:inline">|</span>
+        <div class="hidden md:flex items-center gap-2">
+          <span class="text-xs text-brand-muted">Target Brand:</span>
+          <span class="px-2.5 py-0.5 rounded-full bg-brand-card border border-brand-border text-xs font-semibold text-brand-beige">TablesBoostAI</span>
+        </div>
+      </div>
+
+      <!-- Live Concept Switcher Tabs -->
+      <div class="flex items-center gap-2 bg-brand-black p-1.5 rounded-xl border border-brand-border">
+        <button id="btnConcept1" onclick="switchConcept('concept1')" class="px-4 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 bg-brand-card text-brand-orange border border-brand-orange/40 shadow">
+          <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+          <span>Concept 01: The Culinary Atelier</span>
+        </button>
+        <button id="btnConcept2" onclick="switchConcept('concept2')" class="px-4 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 text-brand-muted hover:text-white">
+          <span class="w-2 h-2 rounded-full bg-transparent border border-brand-muted"></span>
+          <span>Concept 02: Modern Culinary Engine</span>
+        </button>
+      </div>
+
+      <!-- Action: Open Directly -->
+      <div class="flex items-center gap-3">
+        <a id="openFullLink" href="./concept-1-editorial.html" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-brand-card hover:bg-brand-border border border-brand-border text-xs font-medium text-brand-beige transition-colors">
+          <span>Open Fullscreen</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- CONCEPT BRIEFING & COMPARISON HERO -->
+  <!-- ========================================================================= -->
+  <section class="border-b border-brand-border bg-brand-dark/40 py-8 px-6">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-xs font-bold text-brand-orange uppercase tracking-wider mb-3">
+            Two Bespoke Creative Directions
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
+            TablesBoostAI Restaurant Growth Concepts
+          </h1>
+          <p class="text-sm text-brand-muted mt-2 max-w-2xl leading-relaxed">
+            Prepared exclusively by <strong class="text-white">OmniPeak Digital</strong> for TablesBoostAI. Both concepts avoid generic SaaS patterns, AI templates, and agency tropes—presenting TablesBoostAI as an elite hospitality growth advisory that truly understands dining room economics.
+          </p>
+        </div>
+
+        <!-- Responsive Viewport Toggle Controls -->
+        <div class="lg:col-span-4 flex flex-col sm:flex-row items-start sm:items-center justify-end gap-3">
+          <span class="text-xs text-brand-muted">Simulate Viewport:</span>
+          <div class="flex items-center gap-1 bg-brand-black p-1 rounded-lg border border-brand-border">
+            <button onclick="setViewport('desktop')" id="vpDesk" class="p-2 rounded text-brand-orange bg-brand-card hover:text-white" title="Desktop View">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </button>
+            <button onclick="setViewport('tablet')" id="vpTab" class="p-2 rounded text-brand-muted hover:text-white" title="Tablet View">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </button>
+            <button onclick="setViewport('mobile')" id="vpMob" class="p-2 rounded text-brand-muted hover:text-white" title="Mobile View">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- LIVE INTERACTIVE PREVIEW CONTAINER -->
+  <!-- ========================================================================= -->
+  <main class="flex-1 bg-[#070809] p-4 sm:p-6 flex flex-col items-center justify-start">
+    
+    <!-- Active Concept Description Header -->
+    <div id="conceptSummaryBar" class="w-full max-w-7xl mb-4 p-4 rounded-xl bg-brand-card border border-brand-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+      <div>
+        <span id="activeBadge" class="font-bold text-brand-orange uppercase tracking-wider">Concept 01 Active: The Culinary Atelier</span>
+        <p id="activeDesc" class="text-brand-muted mt-0.5">
+          Warm editorial aesthetic &bull; Newsreader serif + Plus Jakarta Sans typography &bull; Michelin guide sophistication &bull; Empathetic hospitality tone
+        </p>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-brand-muted">Direct File:</span>
+        <code id="activeFilePath" class="bg-brand-black px-2.5 py-1 rounded border border-brand-border font-mono text-[11px] text-brand-beige">concept-1-editorial.html</code>
+      </div>
+    </div>
+
+    <!-- The Iframe Viewport -->
+    <div id="frameWrapper" class="w-full max-w-7xl h-[850px] rounded-2xl overflow-hidden border border-brand-border bg-brand-black shadow-2xl relative transition-all duration-300">
+      <iframe 
+        id="previewIframe" 
+        src="./concept-1-editorial.html" 
+        class="w-full h-full border-0"
+        title="TablesBoostAI Concept Preview">
+      </iframe>
+    </div>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- STRATEGIC COMPARISON MATRIX (OmniPeak Digital Agency Guidance) -->
+  <!-- ========================================================================= -->
+  <section class="py-16 px-6 border-t border-brand-border bg-brand-dark/70">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="mb-10">
+        <span class="text-xs font-bold text-brand-orange uppercase tracking-widest">Agency Strategy Breakdown</span>
+        <h2 class="text-2xl sm:text-3xl font-display font-bold text-white mt-2">
+          Comparing Concept 01 vs. Concept 02
+        </h2>
+        <p class="text-xs sm:text-sm text-brand-muted mt-1">
+          How each creative direction addresses the client's brand goals and restaurant owner psychology.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Concept 1 Card -->
+        <div class="p-8 rounded-2xl bg-brand-card border border-brand-border space-y-6">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full bg-brand-orange/15 text-brand-orange font-bold text-xs uppercase tracking-wider border border-brand-orange/30">Concept 01</span>
+            <span class="text-xs font-mono text-brand-muted">Editorial Atelier</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif text-white font-semibold">The Culinary Atelier</h3>
+            <p class="text-xs text-brand-muted mt-2 leading-relaxed">
+              Designed for restaurant owners who pride themselves on cuisine, craft, and dining room atmosphere. It reads like a luxury culinary publication combined with a strategic restaurant growth advisory.
+            </p>
+          </div>
+          <div class="space-y-3 text-xs border-t border-brand-border pt-4">
+            <div>
+              <strong class="text-white">Typography:</strong>
+              <span class="text-brand-muted ml-2">Newsreader (Editorial Serif) + Plus Jakarta Sans</span>
+            </div>
+            <div>
+              <strong class="text-white">Color Mood:</strong>
+              <span class="text-brand-muted ml-2">Deep Charcoal Black (#0C0D0E), Stone Warm Beige (#EFE9E0), Pastel Apricot Orange (#F28C38)</span>
+            </div>
+            <div>
+              <strong class="text-white">Hero Approach:</strong>
+              <span class="text-brand-muted ml-2">Asymmetrical split layout with candlelit dining room photography and live "Friday Service 94% Seated" pill.</span>
+            </div>
+            <div>
+              <strong class="text-white">Best For:</strong>
+              <span class="text-brand-muted ml-2">Upscale bistros, independent chef-driven venues, fine dining groups, wine bars, boutique hospitality.</span>
+            </div>
+          </div>
+          <button onclick="switchConcept('concept1')" class="w-full py-2.5 rounded-xl bg-brand-black hover:bg-brand-border border border-brand-border text-xs font-semibold text-brand-orange transition-colors">
+            Preview Concept 01 Above ↑
+          </button>
+        </div>
+
+        <!-- Concept 2 Card -->
+        <div class="p-8 rounded-2xl bg-brand-card border border-brand-border space-y-6">
+          <div class="flex items-center justify-between">
+            <span class="px-3 py-1 rounded-full bg-brand-orange/15 text-brand-orange font-bold text-xs uppercase tracking-wider border border-brand-orange/30">Concept 02</span>
+            <span class="text-xs font-mono text-brand-muted">Modern Studio</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-display text-white font-bold">The Modern Culinary Engine</h3>
+            <p class="text-xs text-brand-muted mt-2 leading-relaxed">
+              Designed for decisive operators, multi-unit owners, and modern hospitality entrepreneurs who want clear commercial performance, speed, and mathematical proof of table yield.
+            </p>
+          </div>
+          <div class="space-y-3 text-xs border-t border-brand-border pt-4">
+            <div>
+              <strong class="text-white">Typography:</strong>
+              <span class="text-brand-muted ml-2">Outfit (Geometric Grotesque) + Plus Jakarta Sans</span>
+            </div>
+            <div>
+              <strong class="text-white">Color Mood:</strong>
+              <span class="text-brand-muted ml-2">Obsidian Carbon (#08090A), Sand Tan (#ECE4D8), High-Impact Pastel Orange (#FF8A3D)</span>
+            </div>
+            <div>
+              <strong class="text-white">Hero Approach:</strong>
+              <span class="text-brand-muted ml-2">Live 6-table floor dynamics matrix + Interactive Table Revenue &amp; Slow-Night Yield Calculator.</span>
+            </div>
+            <div>
+              <strong class="text-white">Best For:</strong>
+              <span class="text-brand-muted ml-2">High-volume restaurants, casual dining groups, modern brasseries, operators focused on mid-week numbers.</span>
+            </div>
+          </div>
+          <button onclick="switchConcept('concept2')" class="w-full py-2.5 rounded-xl bg-brand-black hover:bg-brand-border border border-brand-border text-xs font-semibold text-brand-orange transition-colors">
+            Preview Concept 02 Above ↑
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-brand-border bg-brand-black py-8 px-6 text-xs text-brand-muted text-center">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-white">OmniPeak Digital</span>
+        <span>&bull; Concept Presentation Suite</span>
+      </div>
+      <div>
+        <span>Prepared for <strong>TablesBoostAI</strong> &bull; All Assets &amp; Code Proprietary</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentConcept = 'concept1';
+
+    function switchConcept(concept) {
+      currentConcept = concept;
+      const iframe = document.getElementById('previewIframe');
+      const openFullLink = document.getElementById('openFullLink');
+      const btn1 = document.getElementById('btnConcept1');
+      const btn2 = document.getElementById('btnConcept2');
+      const badge = document.getElementById('activeBadge');
+      const desc = document.getElementById('activeDesc');
+      const filePath = document.getElementById('activeFilePath');
+
+      if (concept === 'concept1') {
+        iframe.src = './concept-1-editorial.html';
+        openFullLink.href = './concept-1-editorial.html';
+        btn1.className = "px-4 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 bg-brand-card text-brand-orange border border-brand-orange/40 shadow";
+        btn2.className = "px-4 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 text-brand-muted hover:text-white";
+        badge.textContent = "Concept 01 Active: The Culinary Atelier";
+        desc.textContent = "Warm editorial aesthetic • Newsreader serif + Plus Jakarta Sans typography • Michelin guide sophistication • Empathetic hospitality tone";
+        filePath.textContent = "concept-1-editorial.html";
+      } else {
+        iframe.src = './concept-2-modern.html';
+        openFullLink.href = './concept-2-modern.html';
+        btn2.className = "px-4 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 bg-brand-card text-brand-orange border border-brand-orange/40 shadow";
+        btn1.className = "px-4 py-2 rounded-lg text-xs font-semibold transition-all flex items-center gap-2 text-brand-muted hover:text-white";
+        badge.textContent = "Concept 02 Active: The Modern Culinary Engine";
+        desc.textContent = "Bold contemporary studio • Outfit + Plus Jakarta Sans typography • Interactive Table Yield Calculator • Dynamic table floor matrix";
+        filePath.textContent = "concept-2-modern.html";
+      }
+
+      // Smooth scroll back to preview container if scrolled down
+      document.getElementById('frameWrapper').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function setViewport(device) {
+      const wrapper = document.getElementById('frameWrapper');
+      const vpDesk = document.getElementById('vpDesk');
+      const vpTab = document.getElementById('vpTab');
+      const vpMob = document.getElementById('vpMob');
+
+      [vpDesk, vpTab, vpMob].forEach(btn => {
+        btn.className = "p-2 rounded text-brand-muted hover:text-white";
+      });
+
+      if (device === 'desktop') {
+        wrapper.style.maxWidth = '100%';
+        wrapper.style.height = '850px';
+        vpDesk.className = "p-2 rounded text-brand-orange bg-brand-card hover:text-white";
+      } else if (device === 'tablet') {
+        wrapper.style.maxWidth = '768px';
+        wrapper.style.height = '850px';
+        vpTab.className = "p-2 rounded text-brand-orange bg-brand-card hover:text-white";
+      } else if (device === 'mobile') {
+        wrapper.style.maxWidth = '390px';
+        wrapper.style.height = '800px';
+        vpMob.className = "p-2 rounded text-brand-orange bg-brand-card hover:text-white";
+      }
+    }
+  </script>
+
+</body>
+</html>
