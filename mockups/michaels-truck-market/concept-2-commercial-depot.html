@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael's Truck Market — Concept Preview | Commercial & Heavy-Duty Depot</title>
+  <meta name="description" content="Complimentary interactive website concept prepared for Michael by OmniPeak Digital. Concept 2: Commercial & Heavy-Duty Truck Depot with work-ready specs and direct inquiry.">
+  
+  <!-- Tailwind CSS & Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Manrope', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          },
+          colors: {
+            depot: {
+              bg: '#FFFFFF',
+              dark: '#111820',
+              darker: '#0B1015',
+              surface: '#F4F6F8',
+              card: '#FFFFFF',
+              accent: '#D94B32',
+              accentDark: '#B83822',
+              amber: '#E67E22',
+              border: '#E2E6EA',
+              borderDark: '#222C38',
+              text: '#17212B',
+              muted: '#627181'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #17212B;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Manrope', sans-serif;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #F4F6F8;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+    .modal-backdrop {
+      backdrop-filter: blur(4px);
+      background-color: rgba(17, 24, 32, 0.75);
+    }
+  </style>
+</head>
+<body class="selection:bg-depot-accent selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 17. MOCKUP DISCLOSURE BANNER (Subtle & Tasteful) -->
+  <!-- ========================================================================= -->
+  <div class="bg-depot-darker text-slate-300 text-xs py-2 px-4 border-b border-depot-borderDark">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 text-center sm:text-left">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-depot-accent text-white uppercase tracking-wider font-mono">
+          Direction 02: Commercial Depot
+        </span>
+        <span class="text-xs text-slate-200">
+          Complimentary Concept — Prepared for <strong>Michael</strong> by <strong class="text-white">OmniPeak Digital</strong>
+        </span>
+      </div>
+      <div class="text-[11px] text-slate-400">
+        Sample inventory, pricing, and branding are for design demonstration only.
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 4. HEADER AND STICKY NAVIGATION -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-depot-dark/95 backdrop-blur-md border-b border-depot-borderDark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Mark -->
+      <a href="#hero" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-xl bg-depot-accent flex items-center justify-center text-white font-extrabold text-lg shadow-md group-hover:scale-105 transition-transform">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-heading font-extrabold text-base sm:text-lg text-white leading-tight tracking-tight flex items-center gap-2">
+            <span>MICHAEL'S TRUCK MARKET</span>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-depot-borderDark text-amber-400 font-mono hidden sm:inline">DEPOT</span>
+          </div>
+          <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Commercial & Consumer Trucks &bull; CA</p>
+        </div>
+      </a>
+
+      <!-- Center Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#hero" class="hover:text-white transition-colors">Overview</a>
+        <a href="#inventory" class="text-white hover:text-depot-accent transition-colors flex items-center gap-1.5">
+          <span>Truck Inventory</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-depot-accent"></span>
+        </a>
+        <a href="#capability" class="hover:text-white transition-colors">Capability Specs</a>
+        <a href="#process" class="hover:text-white transition-colors">How It Works</a>
+        <a href="#contact" class="hover:text-white transition-colors">Inquire</a>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Search Quick Jump -->
+        <button onclick="scrollToInventoryAndFocus()" class="p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors" title="Search Inventory">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+
+        <!-- Saved Items Drawer -->
+        <button onclick="toggleSavedDrawer(true)" class="relative p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg transition-colors" title="Bookmarked Trucks">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          <span id="savedCountBadge" class="absolute -top-1 -right-1 bg-depot-accent text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center font-mono">0</span>
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="#inventory" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-depot-accent hover:bg-depot-accentDark text-white text-xs sm:text-sm font-bold tracking-wide transition-all shadow-sm">
+          Browse Trucks
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button onclick="toggleMobileNav(true)" class="md:hidden p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex-col justify-end">
+    <div class="bg-depot-dark text-white w-full rounded-t-2xl p-6 shadow-2xl space-y-4 border-t border-slate-700">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+        <span class="font-heading font-bold text-base">Navigation</span>
+        <button onclick="toggleMobileNav(false)" class="p-1 text-slate-400 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="space-y-3 font-medium text-slate-200 text-base">
+        <a href="#hero" onclick="toggleMobileNav(false)" class="block py-2 hover:text-depot-accent">Overview</a>
+        <a href="#inventory" onclick="toggleMobileNav(false)" class="block py-2 text-depot-accent font-semibold">Browse Inventory</a>
+        <a href="#capability" onclick="toggleMobileNav(false)" class="block py-2 hover:text-depot-accent">Capability Calculator</a>
+        <a href="#process" onclick="toggleMobileNav(false)" class="block py-2 hover:text-depot-accent">How It Works</a>
+        <a href="#contact" onclick="toggleMobileNav(false)" class="block py-2 hover:text-depot-accent">Contact & Inquire</a>
+      </nav>
+      <div class="pt-4 border-t border-slate-800">
+        <a href="#inventory" onclick="toggleMobileNav(false)" class="w-full inline-flex items-center justify-center py-3 bg-depot-accent text-white font-bold rounded-lg text-sm">
+          View Available Trucks
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 5. HERO SECTION: BOLD HIGH-UTILITY PRESENTATION -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="relative bg-depot-dark text-white pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-depot-borderDark overflow-hidden">
+    <!-- Subtle Background Grid Overlay -->
+    <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Column: Copy & Value Proposition -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-depot-borderDark border border-slate-700 text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-depot-accent"></span>
+            <span>SIMPLE TRUCK SHOPPING STARTS HERE</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight leading-[1.12]">
+            Find the Right Truck. <br>
+            <span class="text-depot-accent">Shop With Confidence.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl">
+            Explore available inventory, compare your options, and take the next step with a straightforward shopping experience.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+            <a href="#inventory" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-depot-accent hover:bg-depot-accentDark text-white font-bold text-sm tracking-wide transition-all shadow-md">
+              <span>Browse Inventory</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="#process" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition-all">
+              How It Works
+            </a>
+          </div>
+
+          <!-- Utility Badges -->
+          <div class="grid grid-cols-3 gap-3 pt-4 border-t border-slate-800 text-xs text-slate-300 font-mono">
+            <div class="bg-depot-darker/80 p-2.5 rounded-lg border border-slate-800">
+              <span class="text-amber-400 block font-bold text-sm">18,200 LBS</span>
+              <span class="text-[10px] text-slate-400">Max Towing Class</span>
+            </div>
+            <div class="bg-depot-darker/80 p-2.5 rounded-lg border border-slate-800">
+              <span class="text-emerald-400 block font-bold text-sm">NO GIMMICKS</span>
+              <span class="text-[10px] text-slate-400">Clear Buying Steps</span>
+            </div>
+            <div class="bg-depot-darker/80 p-2.5 rounded-lg border border-slate-800">
+              <span class="text-blue-400 block font-bold text-sm">VERIFIED</span>
+              <span class="text-[10px] text-slate-400">Accurate Specs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Truck Editorial Visual -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-900 group">
+            <img 
+              src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?auto=format&fit=crop&w=1200&q=85" 
+              alt="GMC Sierra Heavy-Duty Truck" 
+              class="w-full h-[320px] sm:h-[400px] object-cover object-center group-hover:scale-102 transition-transform duration-500"
+            >
+            <!-- Badge Overlay -->
+            <div class="absolute bottom-4 left-4 right-4 bg-depot-darker/90 backdrop-blur-md p-4 rounded-xl border border-slate-700 text-white flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-wider block">Depot Showcase</span>
+                <span class="font-heading font-extrabold text-sm sm:text-base">2023 GMC Sierra 1500 Elevation Duramax</span>
+              </div>
+              <a href="#inventory" class="text-xs font-bold text-depot-accent hover:underline flex items-center gap-1">
+                View &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Compact Search Bar Component -->
+      <div class="mt-12 lg:mt-16 bg-white text-depot-text p-4 sm:p-5 rounded-2xl border border-depot-border shadow-xl">
+        <form id="heroSearchForm" onsubmit="handleHeroSearch(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 items-center">
+          
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Keyword or Model</label>
+            <input 
+              type="text" 
+              id="heroKeyword" 
+              placeholder="e.g. Ford, Silverado, RAM..." 
+              class="w-full bg-depot-surface border border-depot-border rounded-lg px-3 py-2.5 text-xs sm:text-sm text-depot-text focus:outline-none focus:ring-2 focus:ring-depot-accent/40 focus:border-depot-accent"
+            >
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Category</label>
+            <select 
+              id="heroCategory" 
+              class="w-full bg-depot-surface border border-depot-border rounded-lg px-3 py-2.5 text-xs sm:text-sm text-depot-text focus:outline-none focus:ring-2 focus:ring-depot-accent/40 focus:border-depot-accent"
+            >
+              <option value="all">All Truck Classes</option>
+              <option value="Full-Size">Full-Size 1500</option>
+              <option value="Heavy-Duty">Heavy-Duty 2500/3500</option>
+              <option value="Mid-Size">Mid-Size Pickup</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Price Range</label>
+            <select 
+              id="heroPrice" 
+              class="w-full bg-depot-surface border border-depot-border rounded-lg px-3 py-2.5 text-xs sm:text-sm text-depot-text focus:outline-none focus:ring-2 focus:ring-depot-accent/40 focus:border-depot-accent"
+            >
+              <option value="all">All Ranges</option>
+              <option value="under-40k">Under $40,000</option>
+              <option value="40k-50k">$40,000 – $50,000</option>
+              <option value="50k-plus">$50,000 & Up</option>
+            </select>
+          </div>
+
+          <div class="pt-2 sm:pt-5 lg:pt-5">
+            <button 
+              type="submit" 
+              class="w-full bg-depot-dark hover:bg-slate-800 text-white font-bold py-2.5 sm:py-3 px-4 rounded-lg text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors shadow-sm"
+            >
+              <svg class="w-4 h-4 text-depot-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              <span>Search Inventory</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 11. TRUST AND CREDIBILITY SECTION -->
+  <!-- ========================================================================= -->
+  <section class="py-14 bg-depot-surface border-b border-depot-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-depot-text tracking-tight">
+          A More Straightforward Way to Shop
+        </h2>
+        <p class="text-sm text-depot-muted mt-2">
+          Every vehicle is displayed with complete transparency so buyers make confident, informed decisions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-white p-5 rounded-xl border border-depot-border shadow-xs">
+          <div class="w-10 h-10 rounded-lg bg-depot-dark text-depot-accent flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="font-heading font-bold text-base text-depot-text mb-1">Clear Product Information</h3>
+          <p class="text-xs sm:text-sm text-depot-muted leading-relaxed">See the important details in one place.</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-depot-border shadow-xs">
+          <div class="w-10 h-10 rounded-lg bg-depot-dark text-depot-accent flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/></svg>
+          </div>
+          <h3 class="font-heading font-bold text-base text-depot-text mb-1">Easy Inventory Browsing</h3>
+          <p class="text-xs sm:text-sm text-depot-muted leading-relaxed">Find and compare options without unnecessary steps.</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-depot-border shadow-xs">
+          <div class="w-10 h-10 rounded-lg bg-depot-dark text-depot-accent flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </div>
+          <h3 class="font-heading font-bold text-base text-depot-text mb-1">Simple Communication</h3>
+          <p class="text-xs sm:text-sm text-depot-muted leading-relaxed">Ask questions and get the information you need.</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-depot-border shadow-xs">
+          <div class="w-10 h-10 rounded-lg bg-depot-dark text-depot-accent flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-heading font-bold text-base text-depot-text mb-1">Mobile-Friendly Shopping</h3>
+          <p class="text-xs sm:text-sm text-depot-muted leading-relaxed">Browse comfortably from your phone, tablet, or desktop.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 6 & 7. INVENTORY FILTERING & PRODUCT CARDS GRID -->
+  <!-- ========================================================================= -->
+  <section id="inventory" class="py-16 bg-white border-b border-depot-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs font-mono font-bold text-depot-accent uppercase tracking-wider block mb-1">Verified Specifications</span>
+          <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-depot-text tracking-tight">
+            Explore Available Inventory
+          </h2>
+          <p class="text-sm text-depot-muted mt-1 max-w-2xl">
+            Browse the selection and find an option that fits your needs. Illustrative sample data curated for concept preview.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2 self-start md:self-auto font-mono text-xs">
+          <span class="text-slate-500 font-bold" id="resultsCount">6 Trucks Available</span>
+          <button onclick="resetAllFilters()" class="text-depot-accent hover:underline font-bold ml-2">
+            Reset Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Filters Strip -->
+      <div class="bg-depot-surface p-4 rounded-xl border border-depot-border mb-8 space-y-4">
+        
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">Make</label>
+            <select id="filterMake" onchange="applyFilters()" class="w-full bg-white border border-depot-border rounded-lg px-2.5 py-2 text-xs text-depot-text focus:outline-none focus:ring-1 focus:ring-depot-accent">
+              <option value="all">All Makes</option>
+              <option value="Ford">Ford</option>
+              <option value="Chevrolet">Chevrolet</option>
+              <option value="RAM">RAM</option>
+              <option value="Toyota">Toyota</option>
+              <option value="GMC">GMC</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">Class / Bed</label>
+            <select id="filterCategory" onchange="applyFilters()" class="w-full bg-white border border-depot-border rounded-lg px-2.5 py-2 text-xs text-depot-text focus:outline-none focus:ring-1 focus:ring-depot-accent">
+              <option value="all">All Classes</option>
+              <option value="Full-Size">Full-Size 1500</option>
+              <option value="Heavy-Duty">Heavy-Duty 2500</option>
+              <option value="Mid-Size">Mid-Size</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">Model Year</label>
+            <select id="filterYear" onchange="applyFilters()" class="w-full bg-white border border-depot-border rounded-lg px-2.5 py-2 text-xs text-depot-text focus:outline-none focus:ring-1 focus:ring-depot-accent">
+              <option value="all">All Years</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">Price Range</label>
+            <select id="filterPrice" onchange="applyFilters()" class="w-full bg-white border border-depot-border rounded-lg px-2.5 py-2 text-xs text-depot-text focus:outline-none focus:ring-1 focus:ring-depot-accent">
+              <option value="all">All Prices</option>
+              <option value="under-40k">Under $40k</option>
+              <option value="40k-50k">$40k – $50k</option>
+              <option value="50k-plus">$50k & Above</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">Condition</label>
+            <select id="filterCondition" onchange="applyFilters()" class="w-full bg-white border border-depot-border rounded-lg px-2.5 py-2 text-xs text-depot-text focus:outline-none focus:ring-1 focus:ring-depot-accent">
+              <option value="all">All Conditions</option>
+              <option value="Certified Pre-Owned">Certified Pre-Owned</option>
+              <option value="Like New">Like New</option>
+              <option value="Work-Ready">Work-Ready</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">Sort By</label>
+            <select id="filterSort" onchange="applyFilters()" class="w-full bg-white border border-depot-border rounded-lg px-2.5 py-2 text-xs text-depot-text focus:outline-none focus:ring-1 focus:ring-depot-accent">
+              <option value="featured">Featured First</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="year-desc">Year: Newest</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 border-t border-depot-border">
+          <div class="relative w-full sm:w-72">
+            <input 
+              type="text" 
+              id="filterSearch" 
+              oninput="applyFilters()" 
+              placeholder="Search make, model, or engine..." 
+              class="w-full pl-8 pr-3 py-1.5 bg-white border border-depot-border rounded-lg text-xs text-depot-text focus:outline-none focus:ring-1 focus:ring-depot-accent"
+            >
+            <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs font-mono">
+            <span class="text-slate-400 text-[11px]">Quick Picks:</span>
+            <button onclick="setQuickFilter('category', 'Heavy-Duty')" class="px-2 py-1 bg-depot-dark text-white rounded text-[11px] hover:bg-slate-800">Heavy-Duty</button>
+            <button onclick="setQuickFilter('make', 'Ford')" class="px-2 py-1 bg-white border border-depot-border rounded text-[11px] hover:bg-slate-50">Ford Power</button>
+            <button onclick="setQuickFilter('make', 'GMC')" class="px-2 py-1 bg-white border border-depot-border rounded text-[11px] hover:bg-slate-50">GMC Duramax</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Inventory Grid -->
+      <div id="truckGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="hidden text-center py-16 bg-depot-surface rounded-2xl border border-depot-border p-8">
+        <div class="w-16 h-16 rounded-full bg-slate-200 mx-auto flex items-center justify-center text-slate-500 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-heading font-bold text-lg text-depot-text mb-1">No Matching Trucks</h3>
+        <p class="text-xs sm:text-sm text-depot-muted max-w-md mx-auto mb-5">
+          Reset filters to view all available sample trucks in our inventory preview.
+        </p>
+        <button onclick="resetAllFilters()" class="px-5 py-2.5 bg-depot-accent hover:bg-depot-accentDark text-white font-bold text-xs rounded-lg transition-colors">
+          Reset All Filters
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SPECIAL SECTION: INTERACTIVE TOWING & CAPABILITY CALCULATOR -->
+  <!-- ========================================================================= -->
+  <section id="capability" class="py-16 bg-depot-dark text-white border-b border-depot-borderDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-depot-borderDark text-amber-400 font-mono text-xs font-bold">
+            Interactive Tool
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-heading font-extrabold tracking-tight">
+            Match Your Towing Requirement
+          </h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Truck shoppers frequently struggle to find the exact model suited for their trailer, boat, or jobsite equipment. Use this quick selector to filter our inventory by towing need.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7 bg-depot-darker p-6 rounded-2xl border border-slate-700 space-y-5">
+          <div>
+            <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">
+              Select What You Plan to Tow:
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <button onclick="filterByTowRange(7000)" class="p-3 rounded-lg border border-slate-700 bg-slate-900 hover:border-depot-accent text-left transition-colors">
+                <span class="block text-xs font-bold text-white">Light Towing</span>
+                <span class="text-[11px] text-slate-400 block mt-0.5">Up to 7,000 lbs (Boat/Campers)</span>
+              </button>
+              <button onclick="filterByTowRange(13000)" class="p-3 rounded-lg border border-slate-700 bg-slate-900 hover:border-depot-accent text-left transition-colors">
+                <span class="block text-xs font-bold text-white">Full-Size Towing</span>
+                <span class="text-[11px] text-slate-400 block mt-0.5">7,000 – 14,000 lbs (Horse/Flatbed)</span>
+              </button>
+              <button onclick="filterByTowRange(18000)" class="p-3 rounded-lg border border-slate-700 bg-slate-900 hover:border-depot-accent text-left transition-colors">
+                <span class="block text-xs font-bold text-white">Commercial Heavy</span>
+                <span class="text-[11px] text-slate-400 block mt-0.5">14,000+ lbs (Equipment/Gooseneck)</span>
+              </button>
+            </div>
+          </div>
+          <div class="text-[11px] text-slate-400 flex items-center justify-between pt-2 border-t border-slate-800">
+            <span>Click any class above to instantly filter the inventory grid.</span>
+            <a href="#inventory" class="text-depot-accent hover:underline font-bold">Go to Inventory &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 9. SIMPLE BUYING PROCESS -->
+  <!-- ========================================================================= -->
+  <section id="process" class="py-16 bg-depot-surface border-b border-depot-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-mono font-bold text-depot-accent uppercase tracking-wider block mb-1">Clear Step-by-Step Flow</span>
+        <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-depot-text tracking-tight">
+          Truck Shopping Made Simple
+        </h2>
+        <p class="text-sm text-depot-muted mt-2">
+          Designed specifically to remove pressure and make purchasing enjoyable, transparent, and direct.
+        </p>
+      </div>
+
+      <!-- 3 Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-white p-6 rounded-2xl border border-depot-border shadow-xs">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-mono font-extrabold text-2xl text-depot-accent">01</span>
+            <div class="w-9 h-9 rounded-lg bg-depot-surface flex items-center justify-center text-depot-text">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-depot-text mb-2">Browse Inventory</h3>
+          <p class="text-xs sm:text-sm text-depot-muted leading-relaxed">
+            Explore available options and compare the details that matter to you.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-depot-border shadow-xs">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-mono font-extrabold text-2xl text-depot-accent">02</span>
+            <div class="w-9 h-9 rounded-lg bg-depot-surface flex items-center justify-center text-depot-text">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </div>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-depot-text mb-2">Choose Your Truck</h3>
+          <p class="text-xs sm:text-sm text-depot-muted leading-relaxed">
+            Review specifications, photos, and pricing before making a decision.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-depot-border shadow-xs">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-mono font-extrabold text-2xl text-depot-accent">03</span>
+            <div class="w-9 h-9 rounded-lg bg-depot-surface flex items-center justify-center text-depot-text">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-depot-text mb-2">Take the Next Step</h3>
+          <p class="text-xs sm:text-sm text-depot-muted leading-relaxed">
+            Contact us about your selection or continue through the available purchase process.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 12. ABOUT SECTION -->
+  <!-- ========================================================================= -->
+  <section id="about" class="py-16 bg-white border-b border-depot-border">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-12 rounded-xl bg-depot-dark text-depot-accent mx-auto flex items-center justify-center mb-5 shadow-xs">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-depot-text tracking-tight mb-4">
+        Built Around a Better Shopping Experience
+      </h2>
+      <p class="text-sm sm:text-base text-depot-muted leading-relaxed max-w-2xl mx-auto">
+        We believe shopping for a truck should feel clear and manageable. This storefront is designed to make inventory easy to explore, product information simple to understand, and the next step easy to take.
+      </p>
+      <div class="mt-8 flex justify-center items-center gap-6 text-xs text-slate-500 font-mono">
+        <span>California-Based Focus</span>
+        <span>&bull;</span>
+        <span>Commercial & Consumer Stock</span>
+        <span>&bull;</span>
+        <span>Dedicated Customer Service</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 13. CONTACT SECTION -->
+  <!-- ========================================================================= -->
+  <section id="contact" class="py-16 bg-depot-surface border-b border-depot-border">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-10">
+        <span class="text-xs font-mono font-bold text-depot-accent uppercase tracking-wider block mb-1">Direct Inquiries</span>
+        <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-depot-text tracking-tight">
+          Have a Question About a Truck?
+        </h2>
+        <p class="text-sm text-depot-muted mt-2">
+          Connect directly with our truck specialists. We respond promptly with complete details and scheduling options.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 sm:p-8 rounded-2xl border border-depot-border shadow-xs">
+        
+        <!-- Demonstration Success State -->
+        <div id="contactSuccessState" class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div>
+              <p class="font-bold text-sm">Demonstration Inquiry Submitted!</p>
+              <p class="text-xs text-emerald-700 mt-0.5">
+                Thank you! In production, this notification dispatches directly to Michael with the vehicle information pre-attached.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Full Name <span class="text-depot-accent">*</span></label>
+              <input 
+                type="text" 
+                id="contactName" 
+                required 
+                placeholder="Michael Vance" 
+                class="w-full bg-depot-surface border border-depot-border rounded-lg px-3 py-2.5 text-xs sm:text-sm text-depot-text focus:outline-none focus:ring-2 focus:ring-depot-accent/40 focus:border-depot-accent"
+              >
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Email Address <span class="text-depot-accent">*</span></label>
+              <input 
+                type="email" 
+                id="contactEmail" 
+                required 
+                placeholder="michael@example.com" 
+                class="w-full bg-depot-surface border border-depot-border rounded-lg px-3 py-2.5 text-xs sm:text-sm text-depot-text focus:outline-none focus:ring-2 focus:ring-depot-accent/40 focus:border-depot-accent"
+              >
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Phone Number <span class="text-slate-400 font-normal font-mono">(optional)</span></label>
+              <input 
+                type="tel" 
+                id="contactPhone" 
+                placeholder="(555) 019-2834" 
+                class="w-full bg-depot-surface border border-depot-border rounded-lg px-3 py-2.5 text-xs sm:text-sm text-depot-text focus:outline-none focus:ring-2 focus:ring-depot-accent/40 focus:border-depot-accent"
+              >
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Truck of Interest</label>
+              <input 
+                type="text" 
+                id="contactTruck" 
+                placeholder="e.g. 2022 Ford F-250 Super Duty" 
+                class="w-full bg-depot-surface border border-depot-border rounded-lg px-3 py-2.5 text-xs sm:text-sm text-depot-text focus:outline-none focus:ring-2 focus:ring-depot-accent/40 focus:border-depot-accent"
+              >
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Message <span class="text-depot-accent">*</span></label>
+            <textarea 
+              id="contactMessage" 
+              rows="4" 
+              required 
+              placeholder="Ask about towing capabilities, scheduling a walkaround inspection, or vehicle details..." 
+              class="w-full bg-depot-surface border border-depot-border rounded-lg px-3 py-2.5 text-xs sm:text-sm text-depot-text focus:outline-none focus:ring-2 focus:ring-depot-accent/40 focus:border-depot-accent"
+            ></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button 
+              type="submit" 
+              id="contactSubmitBtn" 
+              class="w-full sm:w-auto px-8 py-3 bg-depot-accent hover:bg-depot-accentDark text-white font-bold text-xs sm:text-sm rounded-lg transition-colors shadow-sm"
+            >
+              Send Inquiry
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 14. FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="bg-depot-darker text-slate-300 py-12 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-800">
+        
+        <div class="space-y-3">
+          <div class="font-heading font-extrabold text-base text-white tracking-tight flex items-center gap-2">
+            <span>MICHAEL'S TRUCK MARKET</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Concept Preview &bull; Direction 02: Commercial & Heavy-Duty Depot. Simple, reliable truck shopping.
+          </p>
+          <div class="text-[11px] text-slate-500 font-mono">California, USA</div>
+        </div>
+
+        <div>
+          <span class="font-bold text-white text-xs uppercase tracking-wider block mb-3 font-mono">Depot Links</span>
+          <ul class="space-y-2">
+            <li><a href="#hero" class="hover:text-white transition-colors">Overview</a></li>
+            <li><a href="#inventory" class="hover:text-white transition-colors">Inventory</a></li>
+            <li><a href="#capability" class="hover:text-white transition-colors">Towing Specs</a></li>
+            <li><a href="#process" class="hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="font-bold text-white text-xs uppercase tracking-wider block mb-3 font-mono">Disclosures</span>
+          <ul class="space-y-2">
+            <li><a href="javascript:alert('Demo placeholder: Privacy policy terms.')" class="hover:text-white transition-colors">Privacy Policy (Demo)</a></li>
+            <li><a href="javascript:alert('Demo placeholder: Terms of service.')" class="hover:text-white transition-colors">Terms of Service (Demo)</a></li>
+            <li><span class="text-slate-400">Illustrative Sample Catalog</span></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <span class="font-bold text-white text-xs uppercase tracking-wider block mb-3 font-mono">Presented By</span>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Bespoke interactive mockup built by <strong>OmniPeak Digital</strong>.
+          </p>
+          <a href="https://omnipeakdigital.com" target="_blank" class="inline-block text-depot-accent hover:underline text-xs font-bold">
+            OmniPeak Digital Agency &rarr;
+          </a>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-400 text-[11px] font-mono">
+        <div>&copy; 2026 Michael's Truck Market — Concept Preview. All rights reserved.</div>
+        <div>OmniPeak Digital &bull; Client Evaluation Mockup</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 8. DETAIL MODAL -->
+  <!-- ========================================================================= -->
+  <div id="detailModal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-4xl w-full shadow-2xl border border-depot-border overflow-hidden my-auto max-h-[92vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 border-b border-depot-border flex items-center justify-between bg-white sticky top-0 z-10">
+        <div>
+          <span id="modalAvailabilityBadge" class="inline-block px-2 py-0.5 text-[10px] font-bold font-mono rounded uppercase tracking-wider bg-emerald-100 text-emerald-800 mb-1">
+            Ready for Delivery
+          </span>
+          <h3 id="modalTitle" class="font-heading font-extrabold text-lg sm:text-xl text-depot-text">
+            2022 Ford F-250 Super Duty
+          </h3>
+        </div>
+        <button onclick="closeDetailModal()" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-4 sm:p-6 overflow-y-auto custom-scroll space-y-6">
+        
+        <!-- Gallery -->
+        <div class="space-y-3">
+          <div class="rounded-xl overflow-hidden bg-slate-900 h-64 sm:h-80 border border-depot-border relative">
+            <img id="modalMainImage" src="" alt="Truck Image" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 right-3 bg-black/80 text-white text-[11px] font-mono px-2.5 py-1 rounded-md backdrop-blur-sm">
+              Authentic Automotive Photography
+            </div>
+          </div>
+          <div id="modalThumbnails" class="flex gap-2 overflow-x-auto pb-1"></div>
+        </div>
+
+        <!-- Pricing Strip -->
+        <div class="bg-depot-dark text-white p-4 rounded-xl border border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <span class="text-xs text-slate-400 font-mono">Illustrative Sample Price:</span>
+            <div id="modalPrice" class="font-heading font-extrabold text-2xl text-amber-400">
+              $58,700*
+            </div>
+            <span class="text-[10px] text-slate-400 font-mono">*Sample pricing for concept evaluation</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button id="modalSaveBtn" onclick="toggleSaveCurrentModalTruck()" class="px-3.5 py-2.5 border border-slate-600 bg-slate-800 hover:bg-slate-700 rounded-lg text-xs font-bold text-white flex items-center gap-1.5 transition-colors">
+              <svg id="modalSaveIcon" class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              <span id="modalSaveText">Bookmark</span>
+            </button>
+            <button onclick="inquireFromModal()" class="px-5 py-2.5 bg-depot-accent hover:bg-depot-accentDark text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1.5 shadow-sm">
+              <span>Inquire on This Truck</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Specs Grid -->
+        <div>
+          <h4 class="font-heading font-bold text-sm text-depot-text uppercase tracking-wider mb-3">Technical Specifications</h4>
+          <div id="modalSpecsGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-3"></div>
+        </div>
+
+        <!-- Description -->
+        <div>
+          <h4 class="font-heading font-bold text-sm text-depot-text uppercase tracking-wider mb-2">Capability Overview</h4>
+          <p id="modalDescription" class="text-xs sm:text-sm text-depot-muted leading-relaxed"></p>
+        </div>
+
+        <!-- Transparent Next Steps -->
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1">
+          <p class="font-bold text-slate-800">Clear Reservation & Inquiry Workflow:</p>
+          <p>
+            Submitting this request alerts our team to hold the vehicle for inspection or deliver complete mechanical history documentation directly to your inbox.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="p-4 border-t border-depot-border bg-slate-50 flex items-center justify-between">
+        <span class="text-xs text-slate-500 font-mono">California Truck Inventory Concept</span>
+        <button onclick="closeDetailModal()" class="px-4 py-2 bg-white border border-depot-border hover:bg-slate-100 text-slate-700 font-bold text-xs rounded-lg transition-colors">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SAVED TRUCKS DRAWER -->
+  <!-- ========================================================================= -->
+  <div id="savedDrawer" class="fixed inset-0 z-50 modal-backdrop hidden flex justify-end">
+    <div class="bg-white w-full max-w-md h-full shadow-2xl flex flex-col border-l border-depot-border">
+      
+      <div class="p-4 sm:p-5 border-b border-depot-border flex items-center justify-between bg-depot-dark text-white">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-depot-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          <h3 class="font-heading font-extrabold text-base">Bookmarked Trucks (<span id="savedDrawerCount" class="font-mono">0</span>)</h3>
+        </div>
+        <button onclick="toggleSavedDrawer(false)" class="p-1 text-slate-400 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div id="savedListContainer" class="p-4 flex-1 overflow-y-auto custom-scroll space-y-3"></div>
+
+      <div class="p-4 border-t border-depot-border bg-slate-50 space-y-2">
+        <button onclick="inquireAllSaved()" id="btnInquireAllSaved" class="w-full py-3 bg-depot-accent hover:bg-depot-accentDark text-white font-bold rounded-lg text-xs transition-colors shadow-sm disabled:opacity-50">
+          Inquire About Bookmarked Trucks
+        </button>
+        <button onclick="clearAllSaved()" class="w-full py-2 bg-transparent text-slate-500 hover:text-slate-800 text-xs font-medium">
+          Clear Bookmarks
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: DATA & INTERACTIVE LOGIC -->
+  <!-- ========================================================================= -->
+  <script>
+    const truckInventory = [
+      {
+        id: "ford-f150-2023",
+        name: "Ford F-150 Lariat 4x4 SuperCrew",
+        year: 2023,
+        make: "Ford",
+        category: "Full-Size",
+        price: 49850,
+        priceFormatted: "$49,850*",
+        condition: "Certified Pre-Owned",
+        availability: "Ready for Delivery",
+        availabilityClass: "bg-emerald-100 text-emerald-800 border-emerald-300",
+        image: "https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=800&q=80",
+        gallery: [
+          "https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=800&q=80"
+        ],
+        specs: {
+          engine: "3.5L EcoBoost Twin-Turbo V6",
+          transmission: "10-Speed SelectShift Auto",
+          drivetrain: "Electronic Shift-on-Fly 4x4",
+          towing: "14,000 lbs Towing",
+          payload: "2,120 lbs Payload",
+          bedLength: "5.5 ft Box",
+          fuelType: "Gasoline",
+          color: "Carbonized Gray Metallic"
+        },
+        towingValue: 14000,
+        description: "Equipped with the potent 3.5L twin-turbo EcoBoost V6, Max Trailer Tow Package, Pro Trailer Backup Assist, and full leather cab appointments. Built for both hard jobsite demands and long family trips."
+      },
+      {
+        id: "chevy-silverado-2022",
+        name: "Chevrolet Silverado 1500 RST Z71",
+        year: 2022,
+        make: "Chevrolet",
+        category: "Full-Size",
+        price: 44200,
+        priceFormatted: "$44,200*",
+        condition: "Like New",
+        availability: "Available for Inquiry",
+        availabilityClass: "bg-blue-100 text-blue-800 border-blue-300",
+        image: "https://images.unsplash.com/photo-1616422285623-13ff0162193c?auto=format&fit=crop&w=800&q=80",
+        gallery: [
+          "https://images.unsplash.com/photo-1616422285623-13ff0162193c?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80"
+        ],
+        specs: {
+          engine: "5.3L EcoTec3 V8 with DFM",
+          transmission: "10-Speed Automatic",
+          drivetrain: "Autotrac 2-Speed 4WD with Z71",
+          towing: "11,200 lbs Towing",
+          payload: "2,060 lbs Payload",
+          bedLength: "5.8 ft Short Bed",
+          fuelType: "Gasoline",
+          color: "Red Hot / Jet Black Interior"
+        },
+        towingValue: 11200,
+        description: "Features Chevrolet's 5.3L V8 with Dynamic Fuel Management, Z71 off-road suspension with skid plates, heavy-duty air filter, and rugged dual-outlet exhaust."
+      },
+      {
+        id: "ram-1500-2023",
+        name: "RAM 1500 Big Horn Quad Cab",
+        year: 2023,
+        make: "RAM",
+        category: "Full-Size",
+        price: 41900,
+        priceFormatted: "$41,900*",
+        condition: "Certified Pre-Owned",
+        availability: "Ready for Delivery",
+        availabilityClass: "bg-emerald-100 text-emerald-800 border-emerald-300",
+        image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
+        gallery: [
+          "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=800&q=80"
+        ],
+        specs: {
+          engine: "5.7L HEMI V8 eTorque Mild Hybrid",
+          transmission: "TorqueFlite 8-Speed Auto",
+          drivetrain: "Shift-on-Demand 4x4",
+          towing: "12,750 lbs Towing",
+          payload: "1,830 lbs Payload",
+          bedLength: "6.4 ft Standard Bed",
+          fuelType: "Gasoline / eTorque",
+          color: "Billet Silver Metallic"
+        },
+        towingValue: 12750,
+        description: "Iconic 395hp HEMI engine delivering strong pull and smooth launch assist. Multi-link rear suspension guarantees exceptional cargo poise."
+      },
+      {
+        id: "toyota-tacoma-2022",
+        name: "Toyota Tacoma TRD Off-Road Double Cab",
+        year: 2022,
+        make: "Toyota",
+        category: "Mid-Size",
+        price: 38450,
+        priceFormatted: "$38,450*",
+        condition: "Like New",
+        availability: "In Transit",
+        availabilityClass: "bg-amber-100 text-amber-800 border-amber-300",
+        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
+        gallery: [
+          "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80"
+        ],
+        specs: {
+          engine: "3.5L V6 DOHC Atkinson Cycle",
+          transmission: "6-Speed Electronically Controlled",
+          drivetrain: "4WDemand Part-Time 4x4 with Rear Locker",
+          towing: "6,400 lbs Towing",
+          payload: "1,155 lbs Payload",
+          bedLength: "5 ft Composite Bed",
+          fuelType: "Gasoline",
+          color: "Army Green / Black Interior"
+        },
+        towingValue: 6400,
+        description: "Proven indestructible platform featuring locking rear differential, Multi-Terrain Select dial, Crawl Control, and heavy-duty steel skid plating."
+      },
+      {
+        id: "gmc-sierra-2023",
+        name: "GMC Sierra 1500 Elevation Crew Cab",
+        year: 2023,
+        make: "GMC",
+        category: "Full-Size",
+        price: 52900,
+        priceFormatted: "$52,900*",
+        condition: "Certified Pre-Owned",
+        availability: "Ready for Delivery",
+        availabilityClass: "bg-emerald-100 text-emerald-800 border-emerald-300",
+        image: "https://images.unsplash.com/photo-1559416523-140ddc3d238c?auto=format&fit=crop&w=800&q=80",
+        gallery: [
+          "https://images.unsplash.com/photo-1559416523-140ddc3d238c?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80"
+        ],
+        specs: {
+          engine: "3.0L Duramax Turbo-Diesel Inline-6",
+          transmission: "10-Speed Automatic",
+          drivetrain: "Autotrac 2-Speed 4WD",
+          towing: "13,200 lbs Towing",
+          payload: "1,890 lbs Payload",
+          bedLength: "5.8 ft Bed with MultiPro Tailgate",
+          fuelType: "Diesel",
+          color: "Onyx Black / Jet Black"
+        },
+        towingValue: 13200,
+        description: "Outstanding torque and high-efficiency long-distance towing from the inline-6 Duramax diesel. Features GMC's innovative 6-position MultiPro tailgate system."
+      },
+      {
+        id: "ford-f250-2022",
+        name: "Ford F-250 Super Duty XLT Crew Cab",
+        year: 2022,
+        make: "Ford",
+        category: "Heavy-Duty",
+        price: 58700,
+        priceFormatted: "$58,700*",
+        condition: "Work-Ready",
+        availability: "Available for Inquiry",
+        availabilityClass: "bg-blue-100 text-blue-800 border-blue-300",
+        image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80",
+        gallery: [
+          "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80",
+          "https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=800&q=80"
+        ],
+        specs: {
+          engine: "6.7L Power Stroke V8 Turbo Diesel",
+          transmission: "TorqShift Heavy-Duty 10-Speed",
+          drivetrain: "4x4 with FX4 Off-Road Package",
+          towing: "18,200 lbs Towing",
+          payload: "3,320 lbs Payload",
+          bedLength: "6.75 ft Long Bed",
+          fuelType: "Diesel",
+          color: "Oxford White / Earth Gray"
+        },
+        towingValue: 18200,
+        description: "The commercial benchmark for serious hauling. Produces 1,050 lb-ft torque with an integrated fifth-wheel prep package, high-output alternator, and heavy payload rating."
+      }
+    ];
+
+    let savedTruckIds = [];
+    let currentModalTruck = null;
+
+    function loadSavedState() {
+      try {
+        const stored = localStorage.getItem("michaels_trucks_saved_concept2");
+        if (stored) savedTruckIds = JSON.parse(stored);
+      } catch (e) {
+        savedTruckIds = [];
+      }
+      updateSavedBadge();
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem("michaels_trucks_saved_concept2", JSON.stringify(savedTruckIds));
+      } catch (e) {}
+      updateSavedBadge();
+      renderSavedDrawer();
+    }
+
+    function updateSavedBadge() {
+      const b = document.getElementById("savedCountBadge");
+      const d = document.getElementById("savedDrawerCount");
+      if (b) b.innerText = savedTruckIds.length;
+      if (d) d.innerText = savedTruckIds.length;
+    }
+
+    function toggleSaveTruck(id, e) {
+      if (e) e.stopPropagation();
+      const i = savedTruckIds.indexOf(id);
+      if (i > -1) savedTruckIds.splice(i, 1);
+      else savedTruckIds.push(id);
+      saveState();
+      renderInventoryGrid();
+      if (currentModalTruck && currentModalTruck.id === id) updateModalSaveButton();
+    }
+
+    function renderInventoryGrid(filtered = null) {
+      const grid = document.getElementById("truckGrid");
+      const empty = document.getElementById("emptyState");
+      const count = document.getElementById("resultsCount");
+      const list = filtered !== null ? filtered : truckInventory;
+      if (!grid) return;
+
+      if (count) count.innerText = `${list.length} ${list.length === 1 ? 'Truck Available' : 'Trucks Available'}`;
+
+      if (list.length === 0) {
+        grid.innerHTML = "";
+        empty.classList.remove("hidden");
+        return;
+      }
+      empty.classList.add("hidden");
+
+      grid.innerHTML = list.map(t => {
+        const isSaved = savedTruckIds.includes(t.id);
+        return `
+          <div class="bg-white rounded-2xl border border-depot-border overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col group">
+            
+            <div class="relative h-52 bg-slate-900 overflow-hidden cursor-pointer" onclick="openDetailModal('${t.id}')">
+              <img src="${t.image}" alt="${t.name}" class="w-full h-full object-cover group-hover:scale-103 transition-transform duration-300">
+              
+              <span class="absolute top-3 left-3 text-[10px] font-bold font-mono px-2 py-0.5 rounded border uppercase tracking-wider ${t.availabilityClass}">
+                ${t.availability}
+              </span>
+
+              <button onclick="toggleSaveTruck('${t.id}', event)" class="absolute top-3 right-3 p-2 rounded-full bg-depot-dark/80 hover:bg-depot-dark text-white shadow-sm transition-transform active:scale-95">
+                <svg class="w-4 h-4 ${isSaved ? 'text-depot-accent fill-depot-accent' : 'text-slate-300'}" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </button>
+
+              <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-white bg-black/70 px-2.5 py-1 rounded-md backdrop-blur-xs">
+                <span>⚡ ${t.specs.towing}</span>
+                <span>📦 ${t.specs.payload}</span>
+              </div>
+            </div>
+
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between text-[11px] text-slate-500 font-mono mb-1">
+                  <span>${t.year} &bull; ${t.make}</span>
+                  <span class="px-1.5 py-0.5 bg-slate-100 rounded text-slate-700 font-semibold">${t.condition}</span>
+                </div>
+
+                <h3 class="font-heading font-extrabold text-base text-depot-text mb-3 leading-snug group-hover:text-depot-accent transition-colors cursor-pointer" onclick="openDetailModal('${t.id}')">
+                  ${t.name}
+                </h3>
+
+                <div class="space-y-1.5 text-xs text-slate-600 mb-4 bg-depot-surface p-2.5 rounded-lg border border-depot-border font-mono text-[11px]">
+                  <div class="truncate">⚙️ ${t.specs.engine}</div>
+                  <div class="truncate">🔒 ${t.specs.drivetrain}</div>
+                </div>
+              </div>
+
+              <div class="pt-3 border-t border-depot-border flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] text-slate-400 block uppercase font-mono">Sample Price</span>
+                  <span class="font-heading font-extrabold text-lg text-depot-text">${t.priceFormatted}</span>
+                </div>
+
+                <button onclick="openDetailModal('${t.id}')" class="px-3.5 py-2 rounded-lg bg-depot-dark hover:bg-slate-800 text-white text-xs font-bold transition-colors flex items-center gap-1 font-mono">
+                  <span>Inspect Spec</span>
+                  <svg class="w-3.5 h-3.5 text-depot-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        `;
+      }).join("");
+    }
+
+    function applyFilters() {
+      const make = document.getElementById("filterMake").value;
+      const category = document.getElementById("filterCategory").value;
+      const year = document.getElementById("filterYear").value;
+      const price = document.getElementById("filterPrice").value;
+      const condition = document.getElementById("filterCondition").value;
+      const sort = document.getElementById("filterSort").value;
+      const search = (document.getElementById("filterSearch").value || "").toLowerCase().trim();
+
+      let results = truckInventory.filter(truck => {
+        if (make !== "all" && truck.make !== make) return false;
+        if (category !== "all" && truck.category !== category) return false;
+        if (year !== "all" && truck.year.toString() !== year) return false;
+        if (condition !== "all" && truck.condition !== condition) return false;
+
+        if (price === "under-40k" && truck.price >= 40000) return false;
+        if (price === "40k-50k" && (truck.price < 40000 || truck.price > 50000)) return false;
+        if (price === "50k-plus" && truck.price <= 50000) return false;
+
+        if (search) {
+          const matchName = truck.name.toLowerCase().includes(search);
+          const matchEngine = truck.specs.engine.toLowerCase().includes(search);
+          const matchMake = truck.make.toLowerCase().includes(search);
+          if (!matchName && !matchEngine && !matchMake) return false;
+        }
+
+        return true;
+      });
+
+      if (sort === "price-asc") results.sort((a, b) => a.price - b.price);
+      else if (sort === "price-desc") results.sort((a, b) => b.price - a.price);
+      else if (sort === "year-desc") results.sort((a, b) => b.year - a.year);
+
+      renderInventoryGrid(results);
+    }
+
+    function filterByTowRange(minCapacity) {
+      resetAllFilters();
+      let results = truckInventory.filter(t => t.towingValue >= minCapacity);
+      renderInventoryGrid(results);
+      const invEl = document.getElementById("inventory");
+      if (invEl) invEl.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function setQuickFilter(type, value) {
+      if (type === "make") document.getElementById("filterMake").value = value;
+      else if (type === "category") document.getElementById("filterCategory").value = value;
+      applyFilters();
+    }
+
+    function resetAllFilters() {
+      document.getElementById("filterMake").value = "all";
+      document.getElementById("filterCategory").value = "all";
+      document.getElementById("filterYear").value = "all";
+      document.getElementById("filterPrice").value = "all";
+      document.getElementById("filterCondition").value = "all";
+      document.getElementById("filterSort").value = "featured";
+      document.getElementById("filterSearch").value = "";
+      renderInventoryGrid();
+    }
+
+    function handleHeroSearch(event) {
+      event.preventDefault();
+      const kw = document.getElementById("heroKeyword").value;
+      const cat = document.getElementById("heroCategory").value;
+      const pr = document.getElementById("heroPrice").value;
+
+      document.getElementById("filterSearch").value = kw;
+      document.getElementById("filterCategory").value = cat;
+      document.getElementById("filterPrice").value = pr;
+
+      applyFilters();
+      const invEl = document.getElementById("inventory");
+      if (invEl) invEl.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function scrollToInventoryAndFocus() {
+      const invEl = document.getElementById("inventory");
+      if (invEl) invEl.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        const searchInput = document.getElementById("filterSearch");
+        if (searchInput) searchInput.focus();
+      }, 500);
+    }
+
+    function openDetailModal(id) {
+      const truck = truckInventory.find(t => t.id === id);
+      if (!truck) return;
+      currentModalTruck = truck;
+
+      document.getElementById("modalTitle").innerText = `${truck.year} ${truck.name}`;
+      document.getElementById("modalPrice").innerText = truck.priceFormatted;
+      document.getElementById("modalDescription").innerText = truck.description;
+      
+      const avail = document.getElementById("modalAvailabilityBadge");
+      avail.innerText = truck.availability;
+      avail.className = `inline-block px-2 py-0.5 text-[10px] font-bold font-mono rounded uppercase tracking-wider border ${truck.availabilityClass}`;
+
+      const mainImg = document.getElementById("modalMainImage");
+      mainImg.src = truck.gallery[0];
+
+      const thumbs = document.getElementById("modalThumbnails");
+      thumbs.innerHTML = truck.gallery.map(imgUrl => `
+        <button onclick="document.getElementById('modalMainImage').src='${imgUrl}'" class="w-16 h-12 rounded-lg overflow-hidden border-2 border-slate-300 focus:border-depot-accent flex-shrink-0">
+          <img src="${imgUrl}" class="w-full h-full object-cover">
+        </button>
+      `).join("");
+
+      const specsGrid = document.getElementById("modalSpecsGrid");
+      const specItems = [
+        { label: "Engine", val: truck.specs.engine },
+        { label: "Transmission", val: truck.specs.transmission },
+        { label: "Drivetrain", val: truck.specs.drivetrain },
+        { label: "Max Towing", val: truck.specs.towing },
+        { label: "Max Payload", val: truck.specs.payload },
+        { label: "Bed Length", val: truck.specs.bedLength },
+        { label: "Fuel Type", val: truck.specs.fuelType },
+        { label: "Exterior Color", val: truck.specs.color }
+      ];
+
+      specsGrid.innerHTML = specItems.map(item => `
+        <div class="bg-depot-surface p-2.5 rounded-lg border border-depot-border font-mono">
+          <span class="text-[10px] font-bold uppercase text-slate-400 block">${item.label}</span>
+          <span class="text-xs font-bold text-depot-text truncate block mt-0.5">${item.val}</span>
+        </div>
+      `).join("");
+
+      updateModalSaveButton();
+      document.getElementById("detailModal").classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeDetailModal() {
+      document.getElementById("detailModal").classList.add("hidden");
+      document.body.style.overflow = "";
+      currentModalTruck = null;
+    }
+
+    function updateModalSaveButton() {
+      if (!currentModalTruck) return;
+      const isSaved = savedTruckIds.includes(currentModalTruck.id);
+      const icon = document.getElementById("modalSaveIcon");
+      const text = document.getElementById("modalSaveText");
+      if (isSaved) {
+        icon.classList.add("text-depot-accent", "fill-depot-accent");
+        text.innerText = "Bookmarked";
+      } else {
+        icon.classList.remove("text-depot-accent", "fill-depot-accent");
+        text.innerText = "Bookmark";
+      }
+    }
+
+    function toggleSaveCurrentModalTruck() {
+      if (!currentModalTruck) return;
+      toggleSaveTruck(currentModalTruck.id);
+      updateModalSaveButton();
+    }
+
+    function inquireFromModal() {
+      if (!currentModalTruck) return;
+      const name = `${currentModalTruck.year} ${currentModalTruck.name}`;
+      closeDetailModal();
+      fillContactWithTruck(name);
+    }
+
+    function toggleSavedDrawer(open) {
+      const drawer = document.getElementById("savedDrawer");
+      if (open) {
+        renderSavedDrawer();
+        drawer.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      } else {
+        drawer.classList.add("hidden");
+        document.body.style.overflow = "";
+      }
+    }
+
+    function renderSavedDrawer() {
+      const list = document.getElementById("savedListContainer");
+      const inqBtn = document.getElementById("btnInquireAllSaved");
+      const saved = truckInventory.filter(t => savedTruckIds.includes(t.id));
+
+      if (saved.length === 0) {
+        list.innerHTML = `
+          <div class="text-center py-12 text-slate-400">
+            <svg class="w-10 h-10 mx-auto text-slate-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            <p class="text-sm font-semibold text-slate-600">No trucks bookmarked yet</p>
+            <p class="text-xs text-slate-400 mt-1">Bookmark trucks to compare towing capacity and pricing side-by-side.</p>
+          </div>
+        `;
+        if (inqBtn) inqBtn.disabled = true;
+        return;
+      }
+
+      if (inqBtn) inqBtn.disabled = false;
+
+      list.innerHTML = saved.map(t => `
+        <div class="flex items-center gap-3 bg-depot-surface p-3 rounded-xl border border-depot-border">
+          <img src="${t.image}" class="w-16 h-14 object-cover rounded-lg border border-depot-border flex-shrink-0">
+          <div class="flex-1 min-w-0">
+            <h4 class="text-xs font-bold text-depot-text truncate">${t.name}</h4>
+            <span class="text-xs font-mono font-extrabold text-depot-accent">${t.priceFormatted}</span>
+            <div class="flex items-center gap-2 mt-1">
+              <button onclick="fillContactWithTruck('${t.name}'); toggleSavedDrawer(false);" class="text-[11px] font-bold text-depot-text hover:text-depot-accent underline">
+                Inquire
+              </button>
+              <span class="text-slate-300">&bull;</span>
+              <button onclick="openDetailModal('${t.id}'); toggleSavedDrawer(false);" class="text-[11px] font-medium text-slate-500 hover:text-depot-text">
+                Specs
+              </button>
+            </div>
+          </div>
+          <button onclick="toggleSaveTruck('${t.id}')" class="p-1.5 text-slate-400 hover:text-rose-600">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+          </button>
+        </div>
+      `).join("");
+    }
+
+    function clearAllSaved() {
+      savedTruckIds = [];
+      saveState();
+      renderInventoryGrid();
+    }
+
+    function inquireAllSaved() {
+      const saved = truckInventory.filter(t => savedTruckIds.includes(t.id));
+      if (saved.length === 0) return;
+      const names = saved.map(t => t.name).join(", ");
+      toggleSavedDrawer(false);
+      fillContactWithTruck(names);
+    }
+
+    function fillContactWithTruck(truckName) {
+      const input = document.getElementById("contactTruck");
+      const el = document.getElementById("contact");
+      if (input) input.value = truckName;
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById("contactSubmitBtn");
+      btn.disabled = true;
+      btn.innerText = "Dispatching Inquiry...";
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerText = "Send Inquiry";
+        document.getElementById("contactSuccessState").classList.remove("hidden");
+        document.getElementById("contactForm").reset();
+      }, 700);
+    }
+
+    function toggleMobileNav(show) {
+      const menu = document.getElementById("mobileMenu");
+      if (show) menu.classList.remove("hidden");
+      else menu.classList.add("hidden");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadSavedState();
+      renderInventoryGrid();
+    });
+  </script>
+</body>
+</html>
