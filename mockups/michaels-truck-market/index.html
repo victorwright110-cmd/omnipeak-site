@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael's Truck Market — 2 Website Concepts | Presented by OmniPeak Digital</title>
+  <meta name="description" content="Complimentary interactive website mockup presentation prepared for prospective client Michael by OmniPeak Digital. Two strategic design concepts for a California truck e-commerce website.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            agency: {
+              black: '#080C10',
+              dark: '#0E131A',
+              card: '#141B24',
+              border: '#1F2A38',
+              accent: '#D94B32',
+              cyan: '#00E5FF',
+              orange: '#FF7A45',
+              muted: '#7E8B9B',
+              light: '#F1F5F9'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #080C10;
+      color: #F1F5F9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .preview-frame {
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .pulse-subtle {
+      box-shadow: 0 0 15px rgba(217, 75, 50, 0.3);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#080C10] selection:bg-agency-accent selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- AGENCY TOP HEADER / BRAND BAR -->
+  <!-- ========================================================================= -->
+  <header class="border-b border-agency-border bg-agency-dark/95 backdrop-blur-md px-4 sm:px-6 py-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
+      
+      <!-- Agency & Client Brand Titles -->
+      <div class="flex items-center gap-4">
+        <!-- OmniPeak Badge -->
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-agency-accent to-agency-orange flex items-center justify-center font-extrabold text-white text-xs shadow-md">
+            OP
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] uppercase tracking-widest text-agency-accent font-bold">OmniPeak Digital</span>
+              <span class="text-[10px] px-1.5 py-0.2 rounded bg-agency-card text-agency-muted border border-agency-border font-mono">Bespoke Mockups</span>
+            </div>
+            <span class="text-sm font-bold text-white block">Client Delivery Presentation</span>
+          </div>
+        </div>
+
+        <span class="text-agency-border hidden md:inline">|</span>
+
+        <!-- Client Identity -->
+        <div class="hidden sm:flex items-center gap-2.5 bg-agency-card px-3 py-1.5 rounded-xl border border-agency-border">
+          <div class="w-6 h-6 rounded-md bg-agency-accent/20 border border-agency-accent/40 flex items-center justify-center text-[10px] font-bold text-agency-accent">
+            🚚
+          </div>
+          <div class="text-xs">
+            <span class="text-agency-muted text-[10px] block">Client Project:</span>
+            <span class="text-white font-semibold">Michael's Truck Market — Concept Preview</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Concept Switcher Tabs -->
+      <div class="flex items-center gap-2 bg-agency-black p-1.5 rounded-2xl border border-agency-border">
+        
+        <button id="btnConcept1" onclick="switchConcept('concept1')" class="px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-agency-card text-agency-accent border border-agency-accent/40 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-agency-accent"></span>
+          <span>Concept 01: Modern Digital Showroom</span>
+        </button>
+
+        <button id="btnConcept2" onclick="switchConcept('concept2')" class="px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white">
+          <span class="w-2 h-2 rounded-full bg-transparent border border-agency-muted"></span>
+          <span>Concept 02: Commercial & Heavy Depot</span>
+        </button>
+
+      </div>
+
+      <!-- Action: Open Directly & Viewport Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Viewport Controls -->
+        <div class="hidden md:flex items-center gap-1 bg-agency-card p-1 rounded-xl border border-agency-border text-xs">
+          <button onclick="setViewport('desktop')" id="vpDesk" class="p-1.5 rounded-lg text-agency-accent bg-agency-dark" title="Desktop 100%">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </button>
+          <button onclick="setViewport('tablet')" id="vpTab" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Tablet (768px)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </button>
+          <button onclick="setViewport('mobile')" id="vpMob" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Mobile (390px)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </button>
+        </div>
+
+        <!-- Fullscreen Link -->
+        <a id="openFullLink" href="./concept-1-modern-retail.html" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-agency-card hover:bg-agency-border border border-agency-border text-xs font-semibold text-agency-light transition-colors">
+          <span>Open Fullscreen</span>
+          <svg class="w-3.5 h-3.5 text-agency-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- CONCEPT BRIEFING HERO -->
+  <!-- ========================================================================= -->
+  <section class="border-b border-agency-border bg-agency-dark/60 py-6 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-agency-accent/15 border border-agency-accent/30 text-xs font-bold text-agency-accent uppercase tracking-wider mb-2">
+          Two Tailored Strategic Directions
+        </div>
+        <h1 class="text-xl sm:text-2xl font-heading font-extrabold text-white tracking-tight">
+          Website Mockups for Michael's Truck Inventory Business
+        </h1>
+        <p class="text-xs sm:text-sm text-agency-muted mt-1 max-w-3xl leading-relaxed">
+          Crafted by <strong class="text-white">OmniPeak Digital</strong>. Built directly from Michael's feedback: 
+          <em class="text-slate-300">"I want my site to be simple, but truck inventory and make it a very enjoyable process to purchase from my site."</em>
+          Both concepts feature working interactive search, multi-attribute filtering, bookmarked items, full vehicle modals, and inquiry forms.
+        </p>
+      </div>
+
+      <!-- Quick Concept Stats Pill -->
+      <div class="flex items-center gap-4 bg-agency-card p-3 rounded-2xl border border-agency-border text-xs">
+        <div>
+          <span class="text-agency-muted block text-[10px]">Development Model</span>
+          <span class="text-white font-semibold">Modular & Scalable</span>
+        </div>
+        <div class="w-px h-6 bg-agency-border"></div>
+        <div>
+          <span class="text-agency-muted block text-[10px]">Client Status</span>
+          <span class="text-emerald-400 font-semibold font-mono">Complimentary Demo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- LIVE INTERACTIVE IFRAME PREVIEW CONTAINER -->
+  <!-- ========================================================================= -->
+  <main class="flex-1 flex flex-col items-center bg-[#05080C] p-3 sm:p-6 overflow-hidden">
+    <div id="frameWrapper" class="preview-frame w-full max-w-full flex-1 flex flex-col bg-white rounded-2xl overflow-hidden shadow-2xl border border-agency-border" style="min-height: 82vh;">
+      <iframe 
+        id="previewIframe" 
+        src="./concept-1-modern-retail.html" 
+        class="w-full flex-1 border-0"
+        title="Live Interactive Website Mockup"
+      ></iframe>
+    </div>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- STRATEGIC COMPARISON MATRIX: CONCEPT 1 VS CONCEPT 2 -->
+  <!-- ========================================================================= -->
+  <section class="border-t border-agency-border bg-agency-dark py-12 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto space-y-8">
+      
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs font-mono font-bold text-agency-accent uppercase tracking-wider block mb-1">Strategic Comparison</span>
+        <h2 class="text-2xl font-heading font-extrabold text-white tracking-tight">
+          Understanding the Two Design Directions
+        </h2>
+        <p class="text-xs sm:text-sm text-agency-muted mt-2">
+          Each concept tests a specific customer psychology and buying path, helping Michael identify the exact feel for his brand before writing a single line of backend production code.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Concept 1 Card -->
+        <div class="bg-agency-card p-6 rounded-2xl border border-agency-border space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-agency-border">
+            <div>
+              <span class="text-[10px] font-mono uppercase text-agency-accent font-bold">Direction 01</span>
+              <h3 class="font-heading font-bold text-lg text-white">Modern Digital Showroom</h3>
+            </div>
+            <button onclick="switchConcept('concept1')" class="px-3 py-1.5 rounded-lg bg-agency-dark hover:bg-agency-black border border-agency-border text-xs font-semibold text-agency-accent">
+              Preview This &rarr;
+            </button>
+          </div>
+          <p class="text-xs text-agency-muted leading-relaxed">
+            A clean, editorial automotive retail aesthetic with crisp white backgrounds, subtle borders, scannable truck specification pills, and consumer-friendly browsing.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400">&check;</span>
+              <span><strong>Aesthetic:</strong> Crisp #FFFFFF canvas, #F4F6F8 panels, automotive red-orange (#D94B32) accents.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400">&check;</span>
+              <span><strong>Buyer Persona:</strong> General truck buyers, family adventurers, everyday drivers seeking transparency.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400">&check;</span>
+              <span><strong>Core Focus:</strong> Clear scannable pricing, easy model comparisons, zero friction navigation.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Concept 2 Card -->
+        <div class="bg-agency-card p-6 rounded-2xl border border-agency-border space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-agency-border">
+            <div>
+              <span class="text-[10px] font-mono uppercase text-agency-orange font-bold">Direction 02</span>
+              <h3 class="font-heading font-bold text-lg text-white">Commercial & Heavy-Duty Depot</h3>
+            </div>
+            <button onclick="switchConcept('concept2')" class="px-3 py-1.5 rounded-lg bg-agency-dark hover:bg-agency-black border border-agency-border text-xs font-semibold text-agency-orange">
+              Preview This &rarr;
+            </button>
+          </div>
+          <p class="text-xs text-agency-muted leading-relaxed">
+            A muscular, high-utility presentation emphasizing heavy-duty capabilities, towing classes, payload metrics, and work-ready fleet reliability.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400">&check;</span>
+              <span><strong>Aesthetic:</strong> Deep slate & charcoal dark headers, high-contrast capability badges, technical typography.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400">&check;</span>
+              <span><strong>Buyer Persona:</strong> Contractors, trade professionals, fleet managers, and heavy-towing enthusiasts.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400">&check;</span>
+              <span><strong>Unique Feature:</strong> Interactive Towing Requirement Matcher to immediately filter by payload/weight needs.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Development Cost & Growth Architecture Note -->
+      <div class="bg-agency-card p-6 rounded-2xl border border-agency-accent/30 space-y-3">
+        <div class="flex items-center gap-2 text-agency-accent text-xs font-bold uppercase tracking-wider font-mono">
+          <span>OmniPeak Digital Strategic Takeaway for Michael</span>
+        </div>
+        <h4 class="font-heading font-bold text-base text-white">
+          Predictable Development Costs & Phased Scalability
+        </h4>
+        <p class="text-xs text-agency-muted leading-relaxed">
+          Because Michael specifically noted needing to understand development costs before committing, both of these concepts are engineered to start lean:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300 pt-1">
+          <div class="bg-agency-dark p-3 rounded-xl border border-agency-border">
+            <span class="font-bold text-white block mb-0.5">Phase 1: Direct Inquiries</span>
+            <span class="text-agency-muted text-[11px]">Low setup cost. Vehicles capture warm lead inquiries with zero payment processor fees.</span>
+          </div>
+          <div class="bg-agency-dark p-3 rounded-xl border border-agency-border">
+            <span class="font-bold text-white block mb-0.5">Phase 2: Deposit Checkout</span>
+            <span class="text-agency-muted text-[11px]">Allow customers to place a refundable $500 vehicle reservation deposit securely online.</span>
+          </div>
+          <div class="bg-agency-dark p-3 rounded-xl border border-agency-border">
+            <span class="font-bold text-white block mb-0.5">Phase 3: Live Inventory Sync</span>
+            <span class="text-agency-muted text-[11px]">Integrate DMS or live inventory feeds as Michael's physical lot or supply relationships expand.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- PRESENTATION FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-agency-border bg-agency-black py-6 px-4 sm:px-6 text-xs text-agency-muted">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-agency-accent"></span>
+        <span class="text-slate-300 font-semibold">OmniPeak Digital</span>
+        <span>&bull;</span>
+        <span>Complimentary Website Mockup Delivery for Michael</span>
+      </div>
+      <div>
+        Live Mockup Deployment: <code class="text-agency-accent">mockups.omnipeakdigital.com</code>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE SWITCHER LOGIC -->
+  <!-- ========================================================================= -->
+  <script>
+    let currentConcept = "concept1";
+
+    function switchConcept(concept) {
+      currentConcept = concept;
+      const iframe = document.getElementById("previewIframe");
+      const openLink = document.getElementById("openFullLink");
+      const btn1 = document.getElementById("btnConcept1");
+      const btn2 = document.getElementById("btnConcept2");
+
+      if (concept === "concept1") {
+        iframe.src = "./concept-1-modern-retail.html";
+        openLink.href = "./concept-1-modern-retail.html";
+
+        btn1.className = "px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-agency-card text-agency-accent border border-agency-accent/40 shadow-sm";
+        btn1.querySelector("span:first-child").className = "w-2 h-2 rounded-full bg-agency-accent";
+
+        btn2.className = "px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white";
+        btn2.querySelector("span:first-child").className = "w-2 h-2 rounded-full bg-transparent border border-agency-muted";
+      } else {
+        iframe.src = "./concept-2-commercial-depot.html";
+        openLink.href = "./concept-2-commercial-depot.html";
+
+        btn2.className = "px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 bg-agency-card text-agency-orange border border-agency-orange/40 shadow-sm";
+        btn2.querySelector("span:first-child").className = "w-2 h-2 rounded-full bg-agency-orange";
+
+        btn1.className = "px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white";
+        btn1.querySelector("span:first-child").className = "w-2 h-2 rounded-full bg-transparent border border-agency-muted";
+      }
+    }
+
+    function setViewport(size) {
+      const wrapper = document.getElementById("frameWrapper");
+      const btnD = document.getElementById("vpDesk");
+      const btnT = document.getElementById("vpTab");
+      const btnM = document.getElementById("vpMob");
+
+      [btnD, btnT, btnM].forEach(b => {
+        b.className = "p-1.5 rounded-lg text-agency-muted hover:text-white";
+      });
+
+      if (size === "desktop") {
+        wrapper.style.width = "100%";
+        btnD.className = "p-1.5 rounded-lg text-agency-accent bg-agency-dark";
+      } else if (size === "tablet") {
+        wrapper.style.width = "768px";
+        btnT.className = "p-1.5 rounded-lg text-agency-accent bg-agency-dark";
+      } else if (size === "mobile") {
+        wrapper.style.width = "390px";
+        btnM.className = "p-1.5 rounded-lg text-agency-accent bg-agency-dark";
+      }
+    }
+  </script>
+</body>
+</html>
