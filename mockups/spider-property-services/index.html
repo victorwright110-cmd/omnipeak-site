@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider Property Services — 2 Homepage Concepts | Presented by OmniPeak Digital</title>
+  <meta name="description" content="Complimentary interactive website mockup presentation prepared for Spider Property Services by OmniPeak Digital. Two strategic design concepts: Cinematic Architectural Luxury & Industrial Precision.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            cinzel: ['Cinzel', 'serif'],
+            mono: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            agency: {
+              black: '#08090B',
+              dark: '#131518',
+              card: '#181C20',
+              border: '#25292D',
+              accent: '#B9BEC3',
+              silver: '#E9E9E7',
+              muted: '#777D83',
+              omniOrange: '#E05638',
+              omniDark: '#0D1117'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #08090B;
+      color: #E9E9E7;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .preview-frame {
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .active-concept-btn {
+      background-color: #25292D;
+      border-color: #E9E9E7;
+      color: #FFFFFF;
+      box-shadow: 0 0 20px rgba(185, 190, 195, 0.15);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#08090B] selection:bg-agency-accent selection:text-black">
+
+  <!-- ========================================================================= -->
+  <!-- AGENCY TOP HEADER / BRAND BAR -->
+  <!-- ========================================================================= -->
+  <header class="border-b border-agency-border bg-[#131518]/95 backdrop-blur-md px-4 sm:px-6 py-3.5 sticky top-0 z-50 shadow-xl">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
+      
+      <!-- Agency & Client Brand Titles -->
+      <div class="flex items-center gap-4">
+        <!-- OmniPeak Badge -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E05638] to-[#992211] flex items-center justify-center font-extrabold text-white text-xs shadow-md border border-white/20">
+            OP
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-[11px] uppercase tracking-widest text-[#E05638] font-bold">OmniPeak Digital</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-agency-card text-agency-muted border border-agency-border font-mono">Bespoke Mockups</span>
+            </div>
+            <span class="text-sm font-bold text-white block">Client Delivery Presentation</span>
+          </div>
+        </div>
+
+        <span class="text-agency-border hidden md:inline">|</span>
+
+        <!-- Client Identity -->
+        <div class="hidden sm:flex items-center gap-3 bg-agency-card px-3.5 py-1.5 rounded-xl border border-agency-border">
+          <div class="w-7 h-7 rounded-full overflow-hidden border border-agency-accent/50 flex-shrink-0 bg-black">
+            <img src="images/spider-logo.png" alt="Spider Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="text-xs">
+            <span class="text-agency-muted text-[10px] block font-mono">Client Organization:</span>
+            <span class="text-white font-semibold">Spider Property Services</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Concept Switcher Tabs -->
+      <div class="flex items-center gap-2 bg-[#08090B] p-1.5 rounded-2xl border border-agency-border">
+        
+        <button id="btnConcept1" onclick="switchConcept('concept1')" class="active-concept-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 border border-transparent">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>Concept 01: Cinematic Architectural Luxury</span>
+        </button>
+
+        <button id="btnConcept2" onclick="switchConcept('concept2')" class="px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white border border-transparent">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span>Concept 02: Industrial Precision & Vault</span>
+        </button>
+
+      </div>
+
+      <!-- Action: Open Directly & Viewport Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Viewport Controls -->
+        <div class="hidden md:flex items-center gap-1 bg-agency-card p-1 rounded-xl border border-agency-border text-xs">
+          <button onclick="setViewport('desktop')" id="vpDesk" class="p-1.5 rounded-lg text-white bg-[#25292D]" title="Desktop 100%">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </button>
+          <button onclick="setViewport('tablet')" id="vpTab" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Tablet (768px)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </button>
+          <button onclick="setViewport('mobile')" id="vpMob" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Mobile (390px)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </button>
+        </div>
+
+        <!-- Standalone Window Link -->
+        <a id="openDirectBtn" href="concept-1-cinematic-architectural.html" target="_blank" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-agency-card hover:bg-agency-border text-agency-silver border border-agency-border flex items-center gap-1.5 transition">
+          <span>Fullscreen</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN MOCKUP PREVIEW EMBED -->
+  <!-- ========================================================================= -->
+  <main class="flex-1 flex flex-col items-center justify-start p-2 sm:p-4 bg-[#08090B]">
+    
+    <!-- Viewport Container Frame -->
+    <div id="frameWrapper" class="preview-frame w-full max-w-[100%] rounded-2xl overflow-hidden border border-agency-border shadow-2xl bg-black" style="height: 84vh;">
+      <iframe id="mockupIframe" src="concept-1-cinematic-architectural.html" class="w-full h-full border-0 bg-[#08090B]" title="Spider Property Services Concept Mockup"></iframe>
+    </div>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- EXECUTIVE STRATEGIC BRIEFING & DESIGN SYSTEM OVERVIEW -->
+  <!-- ========================================================================= -->
+  <section class="border-t border-agency-border bg-[#131518] px-4 sm:px-6 lg:px-8 py-16">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <!-- Presentation Summary Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-agency-border">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-[0.25em] text-agency-accent block mb-2">OmniPeak Digital Strategic Design Brief</span>
+          <h2 class="font-cinzel text-2xl sm:text-4xl font-bold text-white">Art Direction & Architectural Framework</h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden border border-agency-accent/50 bg-black flex-shrink-0">
+            <img src="images/spider-logo.png" alt="Spider Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="text-xs font-mono">
+            <div class="text-white font-bold">Spider Property Services</div>
+            <div class="text-agency-muted">spiderpropertyservices.com &bull; +1 (720) 938-7304</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparative Concept Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Concept 01 Brief -->
+        <div class="p-8 rounded-2xl border border-agency-border bg-[#08090B] space-y-5 relative">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold font-mono bg-agency-card text-emerald-400 border border-emerald-400/30">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              Concept 01 : Cinematic Architectural Luxury
+            </span>
+            <button onclick="switchConcept('concept1'); window.scrollTo({top:0, behavior:'smooth'});" class="text-xs font-mono text-agency-accent hover:text-white underline">
+              View Concept &uarr;
+            </button>
+          </div>
+
+          <h3 class="font-cinzel text-xl font-bold text-white">
+            Editorial Prestige & High-End Real Estate Elevation
+          </h3>
+
+          <p class="text-sm text-agency-muted leading-relaxed">
+            Crafted for high-value residential homeowners and luxury property managers. Utilizes Obsidian Black (<code class="text-white">#08090B</code>), razor-thin brushed silver borders (<code class="text-white">#B9BEC3</code>), and the classical elegance of <strong>Cinzel</strong> typography.
+          </p>
+
+          <ul class="text-xs text-agency-silver space-y-2 font-mono">
+            <li>&bull; <strong>Interactive Comparison:</strong> Real draggable Before & After split transformation slider.</li>
+            <li>&bull; <strong>Service Grid:</strong> Asymmetric 6-card layout with deep-dive technical modal inspector.</li>
+            <li>&bull; <strong>Attic & Insulation:</strong> Dedicated high-priority feature cards for air sealing & thermal envelope.</li>
+            <li>&bull; <strong>Art Direction:</strong> Luxury twilight estate photography with subtle metallic corner webs.</li>
+          </ul>
+
+          <div class="pt-3">
+            <a href="concept-1-cinematic-architectural.html" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-white bg-agency-card px-4 py-2.5 rounded-xl border border-agency-border hover:border-agency-accent transition">
+              Open Concept 01 Standalone &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Concept 02 Brief -->
+        <div class="p-8 rounded-2xl border border-agency-border bg-[#08090B] space-y-5 relative">
+          <div class="flex items-center justify-between">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold font-mono bg-agency-card text-cyan-400 border border-cyan-400/30">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              Concept 02 : Industrial Precision & Vault
+            </span>
+            <button onclick="switchConcept('concept2'); window.scrollTo({top:0, behavior:'smooth'});" class="text-xs font-mono text-agency-accent hover:text-white underline">
+              View Concept &uarr;
+            </button>
+          </div>
+
+          <h3 class="font-cinzel text-xl font-bold text-white">
+            Industrial Fortress & Colorado Engineering Defense
+          </h3>
+
+          <p class="text-sm text-agency-muted leading-relaxed">
+            Drawn straight from the circular metallic emblem, stone textures, and crossed-hammer mountain heraldry. Features Gunmetal (<code class="text-white">#25292D</code>), Deep Charcoal (<code class="text-white">#131518</code>), and bold <strong>Cormorant Garamond</strong> display headings.
+          </p>
+
+          <ul class="text-xs text-agency-silver space-y-2 font-mono">
+            <li>&bull; <strong>Interactive Comparison:</strong> Tabbed multi-scenario before/after matrix with technical scope logs.</li>
+            <li>&bull; <strong>Pre-fill Estimator:</strong> Service discipline cards pre-fill the estimate calculator on click.</li>
+            <li>&bull; <strong>Brand Anchor:</strong> Full-width chiseled monolith featuring both official emblem and business card.</li>
+            <li>&bull; <strong>Telemetry:</strong> Denver Front Range coordinates, rapid-dispatch call bar, and blueprint badges.</li>
+          </ul>
+
+          <div class="pt-3">
+            <a href="concept-2-industrial-precision.html" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-white bg-agency-card px-4 py-2.5 rounded-xl border border-agency-border hover:border-agency-accent transition">
+              Open Concept 02 Standalone &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Verified Business Credentials & Brand Integrity Notice -->
+      <div class="p-6 rounded-2xl border border-agency-border bg-agency-card flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-agency-muted">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-black border border-agency-border flex items-center justify-center text-agency-accent font-mono text-lg font-bold">
+            &check;
+          </div>
+          <div>
+            <div class="text-white font-bold text-sm">Official Client Details Verified</div>
+            <p class="font-mono text-[11px] text-agency-muted">Phone: +1 (720) 938-7304 &bull; Email: spider@spiderpropertyservices.com &bull; Domain: spiderpropertyservices.com</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="text-agency-silver font-semibold">Strict Agency Rule Compliance:</span>
+          <p class="font-mono text-[11px]">Exact logo preserved &bull; No fake claims &bull; 100% bespoke frontend</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-agency-border bg-[#08090B] py-8 text-center text-xs text-agency-muted font-mono">
+    <p>
+      &copy; 2026 Spider Property Services &bull; Homepage Design Presentation Prepared by <strong class="text-white">OmniPeak Digital</strong>
+    </p>
+  </footer>
+
+  <!-- Concept & Viewport Switching Logic -->
+  <script>
+    let currentConcept = 'concept1';
+    const iframe = document.getElementById('mockupIframe');
+    const openDirectBtn = document.getElementById('openDirectBtn');
+    const btn1 = document.getElementById('btnConcept1');
+    const btn2 = document.getElementById('btnConcept2');
+    const frameWrapper = document.getElementById('frameWrapper');
+
+    function switchConcept(concept) {
+      currentConcept = concept;
+      if (concept === 'concept1') {
+        iframe.src = 'concept-1-cinematic-architectural.html';
+        openDirectBtn.href = 'concept-1-cinematic-architectural.html';
+        btn1.classList.add('active-concept-btn');
+        btn1.classList.remove('text-agency-muted');
+        btn2.classList.remove('active-concept-btn');
+        btn2.classList.add('text-agency-muted');
+      } else {
+        iframe.src = 'concept-2-industrial-precision.html';
+        openDirectBtn.href = 'concept-2-industrial-precision.html';
+        btn2.classList.add('active-concept-btn');
+        btn2.classList.remove('text-agency-muted');
+        btn1.classList.remove('active-concept-btn');
+        btn1.classList.add('text-agency-muted');
+      }
+    }
+
+    function setViewport(device) {
+      document.getElementById('vpDesk').classList.remove('bg-[#25292D]', 'text-white');
+      document.getElementById('vpTab').classList.remove('bg-[#25292D]', 'text-white');
+      document.getElementById('vpMob').classList.remove('bg-[#25292D]', 'text-white');
+      document.getElementById('vpDesk').classList.add('text-agency-muted');
+      document.getElementById('vpTab').classList.add('text-agency-muted');
+      document.getElementById('vpMob').classList.add('text-agency-muted');
+
+      if (device === 'desktop') {
+        frameWrapper.style.maxWidth = '100%';
+        document.getElementById('vpDesk').classList.add('bg-[#25292D]', 'text-white');
+        document.getElementById('vpDesk').classList.remove('text-agency-muted');
+      } else if (device === 'tablet') {
+        frameWrapper.style.maxWidth = '768px';
+        document.getElementById('vpTab').classList.add('bg-[#25292D]', 'text-white');
+        document.getElementById('vpTab').classList.remove('text-agency-muted');
+      } else if (device === 'mobile') {
+        frameWrapper.style.maxWidth = '390px';
+        document.getElementById('vpMob').classList.add('bg-[#25292D]', 'text-white');
+        document.getElementById('vpMob').classList.remove('text-agency-muted');
+      }
+    }
+  </script>
+</body>
+</html>
