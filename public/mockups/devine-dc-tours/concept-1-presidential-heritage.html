@@ -152,10 +152,10 @@
   <!-- ========================================================================= -->
   <!-- HERO SECTION: THE SHOWSTOPPER -->
   <!-- ========================================================================= -->
-  <section id="hero" class="relative min-h-[92vh] flex flex-col justify-between overflow-hidden bg-navy-midnight">
+  <section id="hero" class="relative min-h-[92vh] flex flex-col justify-between bg-navy-midnight z-20">
     
     <!-- Background Photograph with Dark Navy Overlay -->
-    <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 z-0 overflow-hidden">
       <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=2000&q=85" 
            alt="United States Capitol Washington DC at Dusk" 
            class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out">
@@ -209,8 +209,8 @@
     </div>
 
     <!-- Overlapping Booking Information Strip -->
-    <div class="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 w-full -mb-10 sm:-mb-12">
-      <div class="bg-navy-deep/95 backdrop-blur-xl border border-gold/40 rounded-2xl shadow-2xl p-4 sm:p-6 text-white grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
+    <div class="relative z-30 max-w-6xl mx-auto px-4 sm:px-6 w-full -mb-12 sm:-mb-14">
+      <div class="bg-navy-deep/95 backdrop-blur-xl border border-gold/40 rounded-2xl shadow-2xl p-5 sm:p-6 text-white grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
         
         <!-- Day Tours -->
         <div class="flex items-center gap-3 border-r border-white/10 pr-2">
@@ -219,7 +219,7 @@
           </div>
           <div>
             <span class="text-xs text-gold uppercase tracking-wider block font-semibold">Sightseeing</span>
-            <span class="text-sm font-bold text-white">Day Tours</span>
+            <span class="text-sm font-bold text-white whitespace-nowrap">Day Tours</span>
           </div>
         </div>
 
@@ -230,7 +230,7 @@
           </div>
           <div>
             <span class="text-xs text-gold uppercase tracking-wider block font-semibold">Evening</span>
-            <span class="text-sm font-bold text-white">Moonlight Tours</span>
+            <span class="text-sm font-bold text-white whitespace-nowrap">Moonlight Tours</span>
           </div>
         </div>
 
@@ -241,14 +241,14 @@
           </div>
           <div>
             <span class="text-xs text-gold uppercase tracking-wider block font-semibold">Departures</span>
-            <span class="text-sm font-bold text-white">Monday–Sunday</span>
+            <span class="text-sm font-bold text-white whitespace-nowrap">Monday–Sunday</span>
           </div>
         </div>
 
-        <!-- View Schedule CTA -->
+        <!-- View Schedule Button -->
         <div class="col-span-2 md:col-span-1 flex justify-center md:justify-end">
-          <a href="#schedule" class="w-full sm:w-auto text-center bg-gold hover:bg-gold-light text-navy-dark font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-xl transition shadow-md">
-            View Schedule CTA
+          <a href="#schedule" class="w-full sm:w-auto text-center bg-gold hover:bg-gold-light text-navy-dark font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-xl transition shadow-md whitespace-nowrap">
+            View Tour Schedule
           </a>
         </div>
 
@@ -260,7 +260,7 @@
   <!-- ========================================================================= -->
   <!-- INTRODUCTION SECTION: A MORE PERSONAL WAY TO EXPLORE DC -->
   <!-- ========================================================================= -->
-  <section class="pt-28 pb-20 bg-ivory relative overflow-hidden">
+  <section class="pt-28 pb-20 bg-ivory relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
