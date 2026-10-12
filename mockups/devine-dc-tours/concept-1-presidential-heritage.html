@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEVINE DC TOURS — Washington DC Guided Sightseeing Experiences | Concept 01</title>
+  <meta name="description" content="Discover Washington DC in a whole new light with DEVINE DC TOURS. Guided sightseeing daytime and moonlight tours with friendly local guides, heated and air-conditioned comfort, and personalized service.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind Configuration for Presidential Heritage Theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              DEFAULT: '#102F56',
+              deep: '#0B2342',
+              midnight: '#091B30',
+              dark: '#061322',
+              surface: '#153866',
+              border: '#1E467A'
+            },
+            gold: {
+              DEFAULT: '#C9A34E',
+              light: '#DFBF73',
+              dark: '#9F7C2B',
+              champagne: '#E8D8B3',
+              subtle: 'rgba(201, 163, 78, 0.15)'
+            },
+            ivory: {
+              DEFAULT: '#FAF8F3',
+              warm: '#F3EFE6',
+              card: '#FFFFFF',
+              border: '#E8E2D5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF8F3;
+      color: #102F56;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .heading-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .monument-line {
+      background: linear-gradient(180deg, rgba(201,163,78,0) 0%, rgba(201,163,78,1) 50%, rgba(201,163,78,0) 100%);
+    }
+    .gold-glow {
+      box-shadow: 0 0 35px -5px rgba(201, 163, 78, 0.35);
+    }
+    .hero-overlay {
+      background: linear-gradient(180deg, rgba(9, 27, 48, 0.72) 0%, rgba(16, 47, 86, 0.82) 65%, rgba(11, 35, 66, 0.94) 100%);
+    }
+    .nav-transition {
+      transition: background-color 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+  </style>
+</head>
+<body class="bg-ivory text-navy selection:bg-gold selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- TOP BANNER: DEVINE DC TOURS HERITAGE ADVISORY -->
+  <!-- ========================================================================= -->
+  <div class="bg-navy-midnight text-ivory text-[12px] font-medium tracking-wide py-2 px-4 border-b border-gold/20">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+        <span class="text-gold uppercase tracking-widest font-semibold text-[11px]">Official DC Sightseeing</span>
+        <span class="text-white/40 hidden sm:inline">•</span>
+        <span class="text-white/80">Climate-Controlled Touring Vehicles & Expert Local Guides</span>
+      </div>
+      <div class="flex items-center gap-4 text-white/80 text-[11px]">
+        <span class="flex items-center gap-1.5"><span class="text-gold">✦</span> Daily Daytime & Moonlight Departures</span>
+        <span class="hidden md:inline text-white/30">|</span>
+        <span class="hidden md:inline font-mono text-gold-champagne tracking-wider">divineddctours.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- HEADER & NAVIGATION -->
+  <!-- ========================================================================= -->
+  <header id="mainHeader" class="sticky top-0 z-50 nav-transition bg-navy-midnight/90 backdrop-blur-md border-b border-gold/25 py-3.5 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      
+      <!-- LEFT: Original Client Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="h-12 w-auto p-1 bg-ivory/95 rounded-lg border border-gold/40 shadow-md group-hover:border-gold transition flex items-center justify-center">
+          <img src="images/logo.png" alt="DEVINE DC TOURS Logo" class="h-10 w-auto object-contain">
+        </div>
+        <div class="flex flex-col">
+          <span class="heading-serif text-xl sm:text-2xl font-bold tracking-wider text-white uppercase group-hover:text-gold-champagne transition">DEVINE DC TOURS</span>
+          <span class="text-[10px] tracking-[0.22em] uppercase text-gold font-semibold">Washington, DC Sightseeing</span>
+        </div>
+      </a>
+
+      <!-- CENTER: Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide text-white/90">
+        <a href="#hero" class="hover:text-gold transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-gold after:transition-all">Home</a>
+        <a href="#tours" class="hover:text-gold transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-gold after:transition-all">Our Tours</a>
+        <a href="#why-us" class="hover:text-gold transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-gold after:transition-all">Why Choose Us</a>
+        <a href="#schedule" class="hover:text-gold transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-gold after:transition-all">Tour Schedule</a>
+        <a href="#contact" class="hover:text-gold transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-gold after:transition-all">Contact</a>
+      </nav>
+
+      <!-- RIGHT: Elegant Gold Action Button -->
+      <div class="flex items-center gap-3">
+        <button onclick="openInquiryModal()" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-gold to-[#B38C3B] hover:from-gold-light hover:to-gold text-navy-dark font-semibold text-xs tracking-wider uppercase px-5 py-2.5 rounded-full shadow-lg border border-gold-light/40 hover:shadow-gold/30 hover:scale-[1.02] active:scale-[0.98] transition-all">
+          <span>Explore Tours</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-white hover:text-gold border border-gold/30 bg-navy/60">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="hidden lg:hidden pt-4 pb-3 border-t border-gold/20 mt-3 flex-col gap-3">
+      <a href="#hero" onclick="toggleMobileMenu()" class="text-white hover:text-gold text-sm font-medium py-1.5 px-2 rounded hover:bg-white/5">Home</a>
+      <a href="#tours" onclick="toggleMobileMenu()" class="text-white hover:text-gold text-sm font-medium py-1.5 px-2 rounded hover:bg-white/5">Our Tours</a>
+      <a href="#why-us" onclick="toggleMobileMenu()" class="text-white hover:text-gold text-sm font-medium py-1.5 px-2 rounded hover:bg-white/5">Why Choose Us</a>
+      <a href="#schedule" onclick="toggleMobileMenu()" class="text-white hover:text-gold text-sm font-medium py-1.5 px-2 rounded hover:bg-white/5">Tour Schedule</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="text-white hover:text-gold text-sm font-medium py-1.5 px-2 rounded hover:bg-white/5">Contact</a>
+      <button onclick="openInquiryModal(); toggleMobileMenu();" class="mt-2 w-full text-center bg-gold text-navy-dark font-bold text-xs uppercase tracking-wider py-2.5 rounded-full">Explore Tours & Inquire</button>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION: THE SHOWSTOPPER -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="relative min-h-[92vh] flex flex-col justify-between overflow-hidden bg-navy-midnight">
+    
+    <!-- Background Photograph with Dark Navy Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=2000&q=85" 
+           alt="United States Capitol Washington DC at Dusk" 
+           class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out">
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+
+    <!-- Delicate Gold Washington Monument Architectural Needle Line -->
+    <div class="absolute right-12 lg:right-24 top-0 bottom-0 w-[1px] hidden sm:block pointer-events-none z-10 opacity-30">
+      <div class="h-full w-full monument-line"></div>
+      <!-- Monument Peak Indicator -->
+      <div class="absolute top-1/4 -left-1.5 w-3 h-3 border border-gold rotate-45"></div>
+      <div class="absolute top-3/4 -left-1.5 w-3 h-3 border border-gold rotate-45"></div>
+    </div>
+
+    <!-- Hero Content Container -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 pt-20 pb-16 flex-1 flex flex-col justify-center">
+      <div class="max-w-3xl">
+        
+        <!-- Editorial Label with Gold Star -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-navy/80 border border-gold/40 backdrop-blur-md mb-6">
+          <span class="text-gold text-xs">✦</span>
+          <span class="text-[11px] sm:text-xs font-semibold tracking-[0.25em] text-gold-champagne uppercase">
+            WASHINGTON DC • GUIDED SIGHTSEEING EXPERIENCES
+          </span>
+        </div>
+
+        <!-- Large Editorial Heading -->
+        <h1 class="heading-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08] mb-6">
+          Discover Washington DC in a <span class="italic font-normal text-gold-champagne underline decoration-gold/40 decoration-1 underline-offset-8">Whole New Light.</span>
+        </h1>
+
+        <!-- Supporting Copy -->
+        <p class="text-lg sm:text-xl text-white/85 font-light leading-relaxed mb-10 max-w-2xl">
+          Experience the nation's capital with friendly, knowledgeable local guides, exceptional service, and comfortable sightseeing tours designed around your day.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="#tours" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-gold to-[#B38C3B] hover:from-gold-light hover:to-gold text-navy-dark font-bold text-sm tracking-wider uppercase px-8 py-4 rounded-full shadow-2xl hover:shadow-gold/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+            <span>Explore Our Tours</span>
+            <span class="text-lg">→</span>
+          </a>
+
+          <a href="#schedule" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold text-sm tracking-wide px-8 py-4 rounded-full border border-white/20 backdrop-blur-md transition-all">
+            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>View Tour Schedule</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Overlapping Booking Information Strip -->
+    <div class="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 w-full -mb-10 sm:-mb-12">
+      <div class="bg-navy-deep/95 backdrop-blur-xl border border-gold/40 rounded-2xl shadow-2xl p-4 sm:p-6 text-white grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
+        
+        <!-- Day Tours -->
+        <div class="flex items-center gap-3 border-r border-white/10 pr-2">
+          <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" stroke-width="2"/><path stroke-width="2" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <div>
+            <span class="text-xs text-gold uppercase tracking-wider block font-semibold">Sightseeing</span>
+            <span class="text-sm font-bold text-white">Day Tours</span>
+          </div>
+        </div>
+
+        <!-- Moonlight Tours -->
+        <div class="flex items-center gap-3 border-r border-white/10 pr-2">
+          <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </div>
+          <div>
+            <span class="text-xs text-gold uppercase tracking-wider block font-semibold">Evening</span>
+            <span class="text-sm font-bold text-white">Moonlight Tours</span>
+          </div>
+        </div>
+
+        <!-- Mon-Sun Availability -->
+        <div class="flex items-center gap-3 md:border-r md:border-white/10 pr-2">
+          <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold flex-shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <span class="text-xs text-gold uppercase tracking-wider block font-semibold">Departures</span>
+            <span class="text-sm font-bold text-white">Monday–Sunday</span>
+          </div>
+        </div>
+
+        <!-- View Schedule CTA -->
+        <div class="col-span-2 md:col-span-1 flex justify-center md:justify-end">
+          <a href="#schedule" class="w-full sm:w-auto text-center bg-gold hover:bg-gold-light text-navy-dark font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-xl transition shadow-md">
+            View Schedule CTA
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- INTRODUCTION SECTION: A MORE PERSONAL WAY TO EXPLORE DC -->
+  <!-- ========================================================================= -->
+  <section class="pt-28 pb-20 bg-ivory relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Text Editorial -->
+        <div class="lg:col-span-7">
+          
+          <div class="inline-flex items-center gap-2 mb-4">
+            <span class="w-8 h-[1px] bg-gold"></span>
+            <span class="text-xs uppercase tracking-[0.25em] text-gold-dark font-bold">THE DEVINE DC TOURS EXPERIENCE</span>
+          </div>
+
+          <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-navy leading-tight mb-8">
+            The Capital Has Stories.<br>
+            <span class="italic font-normal text-gold-dark">Let Us Show You.</span>
+          </h2>
+
+          <div class="space-y-6 text-navy/80 text-base sm:text-lg leading-relaxed font-normal">
+            <p>
+              Washington DC is more than iconic monuments and historic landmarks. It's a city filled with remarkable stories, and there's no better way to experience it than with knowledgeable local guides who love sharing what makes the capital special.
+            </p>
+            <p>
+              At DEVINE DC TOURS, friendly service, local insight, and comfortable touring come together to make every sightseeing experience memorable.
+            </p>
+          </div>
+
+          <!-- Key Highlights Badges -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 pt-8 border-t border-ivory-border">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center text-gold-dark mt-1 flex-shrink-0">✓</div>
+              <div>
+                <h4 class="font-bold text-navy text-sm">Personal Attention</h4>
+                <p class="text-navy/70 text-xs">Welcoming for tourists, couples, families, and private groups.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center text-gold-dark mt-1 flex-shrink-0">✓</div>
+              <div>
+                <h4 class="font-bold text-navy text-sm">Year-Round Comfort</h4>
+                <p class="text-navy/70 text-xs">Modern touring vehicles with air conditioning & heating.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Asymmetric Photo Composition with Refined Gold Lines -->
+        <div class="lg:col-span-5 relative">
+          
+          <div class="relative mx-auto max-w-md">
+            
+            <!-- Main Photo -->
+            <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-gold/40 relative z-10 bg-navy">
+              <img src="https://images.unsplash.com/photo-1569098644584-210bcd375b59?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Washington DC Historic Monuments and Streets" 
+                   class="w-full h-80 sm:h-96 object-cover object-center hover:scale-105 transition duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white p-3 bg-navy/80 backdrop-blur-md rounded-xl border border-gold/30">
+                <span class="text-gold text-[10px] uppercase font-bold tracking-widest block">Washington DC Sightseeing</span>
+                <span class="text-xs font-semibold">Historic Monuments • Grand Boulevards • Story-Rich Discoveries</span>
+              </div>
+            </div>
+
+            <!-- Overlapping Accent Photo -->
+            <div class="absolute -bottom-8 -left-6 sm:-left-10 w-44 sm:w-52 rounded-xl overflow-hidden shadow-2xl border-2 border-white z-20">
+              <img src="https://images.unsplash.com/photo-1510253687831-0f982d7862fc?auto=format&fit=crop&w=600&q=80" 
+                   alt="Tidal Basin Monument Washington DC" 
+                   class="w-full h-32 sm:h-36 object-cover">
+            </div>
+
+            <!-- Gold Architectural Frame Accent -->
+            <div class="absolute -top-4 -right-4 w-32 h-32 border-2 border-gold/50 rounded-2xl -z-0 pointer-events-none"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TOUR EXPERIENCES SECTION: DAYTIME & MOONLIGHT -->
+  <!-- ========================================================================= -->
+  <section id="tours" class="py-24 bg-navy-deep text-white relative overflow-hidden">
+    
+    <!-- Background Monument Watermark -->
+    <div class="absolute -right-20 -bottom-20 w-96 h-96 opacity-5 pointer-events-none">
+      <svg viewBox="0 0 100 100" fill="currentColor"><polygon points="50,5 65,95 35,95"/></svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+      
+      <!-- Section Heading -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 mb-3">
+          <span class="w-6 h-[1px] bg-gold"></span>
+          <span class="text-xs uppercase tracking-[0.25em] text-gold font-bold">CURATED SIGHTSEEING</span>
+          <span class="w-6 h-[1px] bg-gold"></span>
+        </div>
+        <h2 class="heading-serif text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+          Explore the Capital, Your Way.
+        </h2>
+        <p class="text-white/75 text-base sm:text-lg">
+          From daytime discoveries to the beauty of Washington after dark.
+        </p>
+      </div>
+
+      <!-- Two Large Photographic Feature Panels -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        
+        <!-- PANEL 1: DAYTIME DC TOURS -->
+        <div class="group relative rounded-3xl overflow-hidden border border-white/15 bg-navy-midnight shadow-2xl flex flex-col justify-between hover:border-gold/60 transition-all duration-500">
+          
+          <!-- Image Box with Overlay -->
+          <div class="relative h-80 sm:h-96 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1501466044931-62695aada8e9?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Washington DC Capitol Reflecting Pool Daytime" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-midnight via-navy-midnight/40 to-transparent"></div>
+            
+            <!-- Daytime Tag -->
+            <div class="absolute top-6 left-6 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy/85 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wider uppercase text-white">
+              <span class="text-gold">☀</span> DAYTIME DC TOURS
+            </div>
+          </div>
+
+          <!-- Panel Details -->
+          <div class="p-8 sm:p-10 -mt-16 relative z-10 bg-navy-midnight flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="heading-serif text-3xl sm:text-4xl font-bold text-white mb-3 group-hover:text-gold-champagne transition">
+                Discover DC by Day
+              </h3>
+              <p class="text-white/80 text-base leading-relaxed mb-6 font-light">
+                Take in the beauty, history, and energy of the nation's capital with a friendly local guide.
+              </p>
+
+              <!-- Features checklist -->
+              <div class="space-y-2 mb-8 text-xs sm:text-sm text-white/70">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-gold">✦</span>
+                  <span>Panoramic views of iconic monuments and government landmarks</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="text-gold">✦</span>
+                  <span>Comfortable heated and air-conditioned passenger touring</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="text-gold">✦</span>
+                  <span>Friendly guides with rich historical and architectural insight</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div>
+              <a href="#schedule" class="inline-flex items-center justify-between w-full px-6 py-4 rounded-2xl bg-white/10 hover:bg-gold hover:text-navy-dark text-white font-bold text-xs uppercase tracking-wider border border-white/20 transition-all duration-300">
+                <span>View Daytime Schedule</span>
+                <span class="text-sm">→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PANEL 2: MOONLIGHT DC TOURS -->
+        <div class="group relative rounded-3xl overflow-hidden border border-gold/40 bg-navy-midnight shadow-2xl flex flex-col justify-between hover:border-gold transition-all duration-500 gold-glow">
+          
+          <!-- Image Box with Overlay -->
+          <div class="relative h-80 sm:h-96 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Lincoln Memorial Illuminated at Night Washington DC" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-midnight via-navy-midnight/40 to-transparent"></div>
+            
+            <!-- Gold Accent Label: EVENING EXPERIENCE -->
+            <div class="absolute top-6 left-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold text-navy-dark text-xs font-bold tracking-widest uppercase shadow-lg">
+              <span>✦</span> EVENING EXPERIENCE
+            </div>
+
+            <!-- Moonlight Badge -->
+            <div class="absolute top-6 right-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-navy/85 backdrop-blur-md border border-gold/30 text-xs font-semibold text-gold-champagne">
+              <span>☾ 8:00 PM – 10:00 PM</span>
+            </div>
+          </div>
+
+          <!-- Panel Details -->
+          <div class="p-8 sm:p-10 -mt-16 relative z-10 bg-navy-midnight flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="heading-serif text-3xl sm:text-4xl font-bold text-white mb-3 group-hover:text-gold transition">
+                DC After Dark
+              </h3>
+              <p class="text-white/80 text-base leading-relaxed mb-6 font-light">
+                See the capital in a different light with an evening sightseeing experience surrounded by Washington's illuminated landmarks.
+              </p>
+
+              <!-- Features checklist -->
+              <div class="space-y-2 mb-8 text-xs sm:text-sm text-white/70">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-gold">✦</span>
+                  <span>Magical illuminated views of the Lincoln Memorial & Washington Monument</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="text-gold">✦</span>
+                  <span>Atmospheric evening sightseeing with calm nighttime city traffic</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <span class="text-gold">✦</span>
+                  <span>Comfortable heated cabin perfect for crisp twilight & starry skies</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div>
+              <a href="#schedule" class="inline-flex items-center justify-between w-full px-6 py-4 rounded-2xl bg-gradient-to-r from-gold to-[#B38C3B] hover:from-gold-light hover:to-gold text-navy-dark font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-lg">
+                <span>Explore Moonlight Tours</span>
+                <span class="text-sm">→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TOUR SCHEDULE SECTION: EXACT CLIENT INFORMATION -->
+  <!-- ========================================================================= -->
+  <section id="schedule" class="py-24 bg-ivory relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 mb-3">
+          <span class="w-8 h-[1px] bg-gold"></span>
+          <span class="text-xs uppercase tracking-[0.25em] text-gold-dark font-bold">RESERVATION SCHEDULE</span>
+          <span class="w-8 h-[1px] bg-gold"></span>
+        </div>
+        <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-navy mb-4">
+          Find Your Perfect Time to Explore.
+        </h2>
+        <p class="text-navy/75 text-base sm:text-lg">
+          Choose a tour time that works with your Washington DC adventure.
+        </p>
+      </div>
+
+      <!-- Functional Tab Selector: Monday–Saturday / Sunday -->
+      <div class="flex justify-center mb-10">
+        <div class="inline-flex p-1.5 rounded-2xl bg-ivory-warm border border-ivory-border shadow-inner">
+          <button id="tabMonSatBtn" onclick="switchScheduleTab('monsat')" class="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold tracking-wide transition-all bg-navy text-white shadow-md">
+            Monday – Saturday
+          </button>
+          <button id="tabSunBtn" onclick="switchScheduleTab('sun')" class="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold tracking-wide transition-all text-navy/70 hover:text-navy">
+            Sunday Schedule
+          </button>
+        </div>
+      </div>
+
+      <!-- SCHEDULE CARD CONTAINER -->
+      <div class="bg-white rounded-3xl border border-ivory-border shadow-xl overflow-hidden p-6 sm:p-10">
+        
+        <!-- VIEW 1: MONDAY – SATURDAY SCHEDULE -->
+        <div id="scheduleMonSat" class="space-y-4">
+          
+          <div class="flex items-center justify-between pb-4 border-b border-ivory-border text-xs text-navy/60 font-semibold uppercase tracking-wider">
+            <span>Monday – Saturday Departures</span>
+            <span>Experience Type</span>
+          </div>
+
+          <!-- Slot 1 -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl border border-ivory-border hover:border-gold/50 hover:bg-ivory/50 transition gap-3">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-ivory-warm flex items-center justify-center font-bold text-navy text-sm font-mono border border-ivory-border">
+                10A
+              </div>
+              <div>
+                <div class="font-bold text-lg text-navy">10:00 AM – 12:00 PM</div>
+                <div class="text-xs text-navy/60">Morning Sightseeing Tour • Iconic Capital Landmarks</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between sm:justify-end gap-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ivory-warm text-navy text-xs font-semibold">
+                <span>☀</span> Daytime Tour
+              </span>
+              <button onclick="openInquiryModal('Monday–Saturday | 10:00 AM – 12:00 PM (Daytime)')" class="text-xs font-bold text-gold-dark hover:text-navy px-3 py-1.5 border border-gold/30 rounded-lg hover:bg-gold/10 transition">
+                Inquire
+              </button>
+            </div>
+          </div>
+
+          <!-- Slot 2 -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl border border-ivory-border hover:border-gold/50 hover:bg-ivory/50 transition gap-3">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-ivory-warm flex items-center justify-center font-bold text-navy text-sm font-mono border border-ivory-border">
+                01P
+              </div>
+              <div>
+                <div class="font-bold text-lg text-navy">1:00 PM – 3:00 PM</div>
+                <div class="text-xs text-navy/60">Early Afternoon Tour • Comprehensive Memorial Circuit</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between sm:justify-end gap-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ivory-warm text-navy text-xs font-semibold">
+                <span>☀</span> Daytime Tour
+              </span>
+              <button onclick="openInquiryModal('Monday–Saturday | 1:00 PM – 3:00 PM (Daytime)')" class="text-xs font-bold text-gold-dark hover:text-navy px-3 py-1.5 border border-gold/30 rounded-lg hover:bg-gold/10 transition">
+                Inquire
+              </button>
+            </div>
+          </div>
+
+          <!-- Slot 3 -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl border border-ivory-border hover:border-gold/50 hover:bg-ivory/50 transition gap-3">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-ivory-warm flex items-center justify-center font-bold text-navy text-sm font-mono border border-ivory-border">
+                04P
+              </div>
+              <div>
+                <div class="font-bold text-lg text-navy">4:00 PM – 6:00 PM</div>
+                <div class="text-xs text-navy/60">Late Afternoon Tour • Golden Hour Capital Views</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between sm:justify-end gap-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ivory-warm text-navy text-xs font-semibold">
+                <span>☀</span> Daytime Tour
+              </span>
+              <button onclick="openInquiryModal('Monday–Saturday | 4:00 PM – 6:00 PM (Daytime)')" class="text-xs font-bold text-gold-dark hover:text-navy px-3 py-1.5 border border-gold/30 rounded-lg hover:bg-gold/10 transition">
+                Inquire
+              </button>
+            </div>
+          </div>
+
+          <!-- Slot 4: MOONLIGHT TOUR (HIGHLIGHTED) -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-5 rounded-2xl border-2 border-gold bg-navy text-white shadow-lg relative overflow-hidden gap-3">
+            <div class="absolute -right-4 -bottom-4 w-20 h-20 bg-gold/15 rounded-full blur-xl pointer-events-none"></div>
+            <div class="flex items-center gap-4 relative z-10">
+              <div class="w-12 h-12 rounded-xl bg-gold/20 flex items-center justify-center font-bold text-gold text-sm font-mono border border-gold/40">
+                08P
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-lg text-white">8:00 PM – 10:00 PM</span>
+                  <span class="px-2 py-0.5 rounded bg-gold text-navy-dark text-[10px] font-extrabold uppercase tracking-widest">Moonlight Tour</span>
+                </div>
+                <div class="text-xs text-white/70">DC After Dark • Surrounded by Washington's Illuminated Monuments</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between sm:justify-end gap-3 relative z-10">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold/20 text-gold-champagne text-xs font-semibold border border-gold/40">
+                <span>☾</span> Evening Feature
+              </span>
+              <button onclick="openInquiryModal('Monday–Saturday | 8:00 PM – 10:00 PM (Moonlight Tour)')" class="text-xs font-bold bg-gold hover:bg-gold-light text-navy-dark px-4 py-2 rounded-xl transition shadow">
+                Inquire
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- VIEW 2: SUNDAY SCHEDULE -->
+        <div id="scheduleSun" class="hidden space-y-4">
+          
+          <div class="flex items-center justify-between pb-4 border-b border-ivory-border text-xs text-navy/60 font-semibold uppercase tracking-wider">
+            <span>Sunday Departures</span>
+            <span>Experience Type</span>
+          </div>
+
+          <!-- Sunday Slot 1 -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl border border-ivory-border hover:border-gold/50 hover:bg-ivory/50 transition gap-3">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-ivory-warm flex items-center justify-center font-bold text-navy text-sm font-mono border border-ivory-border">
+                01P
+              </div>
+              <div>
+                <div class="font-bold text-lg text-navy">1:00 PM – 3:00 PM</div>
+                <div class="text-xs text-navy/60">Sunday Afternoon Sightseeing Tour • Relaxed Pace</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between sm:justify-end gap-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ivory-warm text-navy text-xs font-semibold">
+                <span>☀</span> Daytime Tour
+              </span>
+              <button onclick="openInquiryModal('Sunday | 1:00 PM – 3:00 PM (Daytime)')" class="text-xs font-bold text-gold-dark hover:text-navy px-3 py-1.5 border border-gold/30 rounded-lg hover:bg-gold/10 transition">
+                Inquire
+              </button>
+            </div>
+          </div>
+
+          <!-- Sunday Slot 2 -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl border border-ivory-border hover:border-gold/50 hover:bg-ivory/50 transition gap-3">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-ivory-warm flex items-center justify-center font-bold text-navy text-sm font-mono border border-ivory-border">
+                04P
+              </div>
+              <div>
+                <div class="font-bold text-lg text-navy">4:00 PM – 6:00 PM</div>
+                <div class="text-xs text-navy/60">Sunday Late Afternoon Tour • Capital Sunset Views</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between sm:justify-end gap-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-ivory-warm text-navy text-xs font-semibold">
+                <span>☀</span> Daytime Tour
+              </span>
+              <button onclick="openInquiryModal('Sunday | 4:00 PM – 6:00 PM (Daytime)')" class="text-xs font-bold text-gold-dark hover:text-navy px-3 py-1.5 border border-gold/30 rounded-lg hover:bg-gold/10 transition">
+                Inquire
+              </button>
+            </div>
+          </div>
+
+          <!-- Sunday Slot 3: MOONLIGHT TOUR (HIGHLIGHTED) -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-5 rounded-2xl border-2 border-gold bg-navy text-white shadow-lg relative overflow-hidden gap-3">
+            <div class="absolute -right-4 -bottom-4 w-20 h-20 bg-gold/15 rounded-full blur-xl pointer-events-none"></div>
+            <div class="flex items-center gap-4 relative z-10">
+              <div class="w-12 h-12 rounded-xl bg-gold/20 flex items-center justify-center font-bold text-gold text-sm font-mono border border-gold/40">
+                08P
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-lg text-white">8:00 PM – 10:00 PM</span>
+                  <span class="px-2 py-0.5 rounded bg-gold text-navy-dark text-[10px] font-extrabold uppercase tracking-widest">Moonlight Tour</span>
+                </div>
+                <div class="text-xs text-white/70">DC After Dark • Illuminated Lincoln, Capitol & National Mall</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between sm:justify-end gap-3 relative z-10">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold/20 text-gold-champagne text-xs font-semibold border border-gold/40">
+                <span>☾</span> Evening Feature
+              </span>
+              <button onclick="openInquiryModal('Sunday | 8:00 PM – 10:00 PM (Moonlight Tour)')" class="text-xs font-bold bg-gold hover:bg-gold-light text-navy-dark px-4 py-2 rounded-xl transition shadow">
+                Inquire
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Schedule Bottom Bar with Primary CTA -->
+        <div class="mt-8 pt-6 border-t border-ivory-border flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-xs text-navy/70 text-center sm:text-left">
+            <span class="font-semibold text-navy">Need special timing or private group arrangements?</span><br>
+            Our friendly team will be glad to assist with tour details.
+          </div>
+          
+          <button onclick="openInquiryModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-navy hover:bg-navy-deep text-white font-bold text-xs uppercase tracking-wider px-7 py-3.5 rounded-full border border-gold/40 shadow-lg hover:border-gold transition">
+            <span>Inquire About a Tour</span>
+            <span class="text-gold">✦</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- WHY CHOOSE DEVINE DC TOURS -->
+  <!-- ========================================================================= -->
+  <section id="why-us" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16">
+        <div class="inline-flex items-center gap-2 mb-3">
+          <span class="w-8 h-[1px] bg-gold"></span>
+          <span class="text-xs uppercase tracking-[0.25em] text-gold-dark font-bold">OUR COMMITMENT</span>
+        </div>
+        <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-navy leading-tight mb-4">
+          The Difference Is in the Experience.
+        </h2>
+        <p class="text-navy/75 text-base sm:text-lg">
+          Thoughtfully crafted Washington DC tours designed around personal comfort and genuine hospitality.
+        </p>
+      </div>
+
+      <!-- Split Layout: Large Lifestyle Image & Numbered Benefits -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Washington DC Lifestyle Image -->
+        <div class="lg:col-span-5 relative">
+          <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-ivory-border relative">
+            <img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Washington Monument Golden Hour Sightseeing" 
+                 class="w-full h-[450px] object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-midnight/80 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-navy/90 backdrop-blur-md border border-gold/30 text-white">
+              <span class="text-gold font-bold text-xs tracking-wider uppercase block">DEVINE DC TOURS Standard</span>
+              <span class="heading-serif text-lg font-bold">"Every guest is welcomed like family, guided like an insider."</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 3 Numbered Advantages -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <!-- Advantage 01 -->
+          <div class="p-6 rounded-2xl bg-ivory border border-ivory-border hover:border-gold/50 transition">
+            <div class="flex items-start gap-5">
+              <span class="heading-serif text-3xl sm:text-4xl font-bold text-gold-dark">01</span>
+              <div>
+                <h3 class="text-xl font-bold text-navy mb-2">Exceptional Customer Service</h3>
+                <p class="text-navy/80 text-sm sm:text-base leading-relaxed">
+                  From your first inquiry to the end of your tour, enjoy a warm, welcoming experience built around attentive service.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advantage 02 -->
+          <div class="p-6 rounded-2xl bg-ivory border border-ivory-border hover:border-gold/50 transition">
+            <div class="flex items-start gap-5">
+              <span class="heading-serif text-3xl sm:text-4xl font-bold text-gold-dark">02</span>
+              <div>
+                <h3 class="text-xl font-bold text-navy mb-2">Knowledgeable, Friendly Local Guides</h3>
+                <p class="text-navy/80 text-sm sm:text-base leading-relaxed">
+                  Discover Washington DC through the perspective of friendly local guides who bring their knowledge and passion for the city to every experience.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advantage 03 -->
+          <div class="p-6 rounded-2xl bg-ivory border border-ivory-border hover:border-gold/50 transition">
+            <div class="flex items-start gap-5">
+              <span class="heading-serif text-3xl sm:text-4xl font-bold text-gold-dark">03</span>
+              <div>
+                <h3 class="text-xl font-bold text-navy mb-2">Comfort in Every Season</h3>
+                <p class="text-navy/80 text-sm sm:text-base leading-relaxed">
+                  Enjoy sightseeing in vehicles equipped with air conditioning and heating, helping you stay comfortable throughout the changing seasons.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CINEMATIC WASHINGTON DC VISUAL INTERLUDE -->
+  <!-- ========================================================================= -->
+  <section class="relative py-32 sm:py-40 bg-navy-midnight overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1617581629397-a72507c3de9e?auto=format&fit=crop&w=2000&q=85" 
+           alt="Washington Monument at Twilight" 
+           class="w-full h-full object-cover opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-midnight via-navy-midnight/80 to-navy-midnight"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 text-center">
+      <span class="text-gold text-2xl mb-4 inline-block">✦</span>
+      <h2 class="heading-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
+        Every Monument Has a Story.<br>
+        <span class="italic font-normal text-gold-champagne">Every Tour Creates a Memory.</span>
+      </h2>
+      <p class="text-lg sm:text-xl text-white/80 font-light max-w-xl mx-auto">
+        Discover the beauty of Washington DC with DEVINE DC TOURS.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FINAL CALL TO ACTION SECTION -->
+  <!-- ========================================================================= -->
+  <section id="contact" class="py-24 bg-navy-deep text-white relative border-t border-gold/30">
+    <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-2 mb-4">
+        <span class="w-8 h-[1px] bg-gold"></span>
+        <span class="text-xs uppercase tracking-[0.25em] text-gold font-bold">READY TO EXPLORE DC?</span>
+        <span class="w-8 h-[1px] bg-gold"></span>
+      </div>
+
+      <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-white mb-6">
+        Your Washington DC Experience Starts Here.
+      </h2>
+
+      <p class="text-white/80 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+        Whether you're exploring the capital during the day or discovering its beauty by moonlight, we'd love to help you plan your sightseeing experience.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <!-- Primary Button with Subtle Gold Border -->
+        <button onclick="openInquiryModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-gold to-[#B38C3B] hover:from-gold-light hover:to-gold text-navy-dark font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full border-2 border-gold-light shadow-xl hover:scale-105 transition-all">
+          <span>Plan Your Tour</span>
+          <span class="text-sm">✦</span>
+        </button>
+
+        <!-- Secondary Button -->
+        <a href="#schedule" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold text-xs uppercase tracking-wider px-8 py-4 rounded-full border border-white/20 backdrop-blur-md transition">
+          <span>View Tour Times</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="bg-navy-dark text-white/70 pt-16 pb-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Left: Logo & Company Description -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="h-12 w-auto p-1 bg-ivory rounded-lg border border-gold/40 flex items-center justify-center">
+              <img src="images/logo.png" alt="DEVINE DC TOURS Logo" class="h-10 w-auto object-contain">
+            </div>
+            <div>
+              <span class="heading-serif text-xl font-bold text-white tracking-wider block">DEVINE DC TOURS</span>
+              <span class="text-[10px] tracking-widest text-gold uppercase font-semibold">Sightseeing Tour Company</span>
+            </div>
+          </div>
+          <p class="text-sm text-white/70 leading-relaxed pr-6">
+            Discover Washington DC with knowledgeable local guides, exceptional customer service, and comfortable sightseeing experiences.
+          </p>
+          <div class="text-xs text-gold flex items-center gap-2">
+            <span>📍 Location:</span>
+            <span class="text-white font-medium">Washington, DC</span>
+          </div>
+        </div>
+
+        <!-- Center: Navigation Links -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-3">Quick Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#hero" class="hover:text-gold transition">Home</a></li>
+            <li><a href="#tours" class="hover:text-gold transition">Our Tours (Daytime & Moonlight)</a></li>
+            <li><a href="#why-us" class="hover:text-gold transition">Why Choose Us</a></li>
+            <li><a href="#schedule" class="hover:text-gold transition">Tour Schedule</a></li>
+            <li><a href="#contact" class="hover:text-gold transition">Contact & Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Right: Official Domain & Client Notice -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-3">Client Information</h4>
+          <div class="p-4 rounded-xl bg-navy-surface border border-navy-border text-xs space-y-2">
+            <div class="text-white/60">Official Client Domain:</div>
+            <div class="font-mono text-gold-champagne font-semibold text-sm">divineddctours.com</div>
+            <div class="text-[11px] text-white/60 pt-2 border-t border-white/10">
+              Sightseeing departures available Monday through Sunday.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Credits & Agency Attribution -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+        <div>
+          © 2026 DEVINE DC TOURS. All rights reserved. Washington, DC.
+        </div>
+        
+        <!-- Mandatory Agency Credit for OmniPeak Digital -->
+        <div class="flex items-center gap-1.5">
+          <span>Website Concept by</span>
+          <a href="https://omnipeakdigital.com/" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-gold-light font-semibold underline underline-offset-2 transition">
+            OmniPeak Digital
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE INQUIRY MODAL (CLIENT COMPLIANT — NO FAKE TRANSACTIONS) -->
+  <!-- ========================================================================= -->
+  <div id="inquiryModal" class="fixed inset-0 z-50 hidden bg-navy-dark/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-navy-deep text-white border border-gold/40 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+      
+      <!-- Close Button -->
+      <button onclick="closeInquiryModal()" class="absolute top-5 right-5 text-white/60 hover:text-white p-2 rounded-lg bg-white/5">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold">✦</div>
+        <div>
+          <h3 class="heading-serif text-2xl font-bold text-white">Inquire About a Tour</h3>
+          <p class="text-xs text-gold">DEVINE DC TOURS • Washington, DC</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-white/75 mb-6">
+        Let us help you plan your Washington DC sightseeing experience. Share your preferred date and time, and our friendly local team will get in touch.
+      </p>
+
+      <form id="inquiryForm" onsubmit="handleInquirySubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-white/80 mb-1">Your Name</label>
+          <input type="text" required placeholder="e.g. John Doe" class="w-full px-4 py-2.5 rounded-xl bg-navy-dark border border-white/20 text-white text-sm focus:border-gold focus:outline-none">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-white/80 mb-1">Email Address</label>
+            <input type="email" required placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-xl bg-navy-dark border border-white/20 text-white text-sm focus:border-gold focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-white/80 mb-1">Phone (Optional)</label>
+            <input type="tel" placeholder="(202) 555-0199" class="w-full px-4 py-2.5 rounded-xl bg-navy-dark border border-white/20 text-white text-sm focus:border-gold focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-white/80 mb-1">Preferred Tour Experience & Time</label>
+          <select id="tourTimeSelect" class="w-full px-4 py-2.5 rounded-xl bg-navy-dark border border-white/20 text-white text-sm focus:border-gold focus:outline-none">
+            <option value="Monday–Saturday | 10:00 AM – 12:00 PM (Daytime)">Monday–Saturday: 10:00 AM – 12:00 PM (Daytime)</option>
+            <option value="Monday–Saturday | 1:00 PM – 3:00 PM (Daytime)">Monday–Saturday: 1:00 PM – 3:00 PM (Daytime)</option>
+            <option value="Monday–Saturday | 4:00 PM – 6:00 PM (Daytime)">Monday–Saturday: 4:00 PM – 6:00 PM (Daytime)</option>
+            <option value="Monday–Saturday | 8:00 PM – 10:00 PM (Moonlight Tour)">Monday–Saturday: 8:00 PM – 10:00 PM (★ Moonlight Tour)</option>
+            <option value="Sunday | 1:00 PM – 3:00 PM (Daytime)">Sunday: 1:00 PM – 3:00 PM (Daytime)</option>
+            <option value="Sunday | 4:00 PM – 6:00 PM (Daytime)">Sunday: 4:00 PM – 6:00 PM (Daytime)</option>
+            <option value="Sunday | 8:00 PM – 10:00 PM (Moonlight Tour)">Sunday: 8:00 PM – 10:00 PM (★ Moonlight Tour)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-white/80 mb-1">Estimated Party Size</label>
+          <select class="w-full px-4 py-2.5 rounded-xl bg-navy-dark border border-white/20 text-white text-sm focus:border-gold focus:outline-none">
+            <option>1 – 2 Guests</option>
+            <option>3 – 5 Guests (Family / Small Group)</option>
+            <option>6+ Guests (Private Group)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full mt-2 bg-gradient-to-r from-gold to-[#B38C3B] text-navy-dark font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl hover:brightness-110 transition shadow-lg">
+          Submit Tour Inquiry
+        </button>
+      </form>
+
+      <div id="modalSuccess" class="hidden text-center py-8">
+        <div class="w-14 h-14 rounded-full bg-gold/20 border border-gold text-gold flex items-center justify-center mx-auto mb-4 text-2xl">✓</div>
+        <h4 class="heading-serif text-2xl font-bold text-white mb-2">Inquiry Received</h4>
+        <p class="text-sm text-white/80 leading-relaxed mb-6">
+          Thank you! We have received your Washington DC tour inquiry. Our team will review the requested schedule and reach out to you shortly.
+        </p>
+        <button onclick="closeInquiryModal()" class="px-6 py-2.5 rounded-xl bg-gold text-navy-dark font-bold text-xs uppercase tracking-wider">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Tab switching for exact client schedule
+    function switchScheduleTab(tab) {
+      const monSatTab = document.getElementById('scheduleMonSat');
+      const sunTab = document.getElementById('scheduleSun');
+      const btnMonSat = document.getElementById('tabMonSatBtn');
+      const btnSun = document.getElementById('tabSunBtn');
+
+      if (tab === 'monsat') {
+        monSatTab.classList.remove('hidden');
+        sunTab.classList.add('hidden');
+        btnMonSat.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold tracking-wide transition-all bg-navy text-white shadow-md";
+        btnSun.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold tracking-wide transition-all text-navy/70 hover:text-navy";
+      } else {
+        monSatTab.classList.add('hidden');
+        sunTab.classList.remove('hidden');
+        btnSun.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold tracking-wide transition-all bg-navy text-white shadow-md";
+        btnMonSat.className = "px-6 py-3 rounded-xl text-xs sm:text-sm font-bold tracking-wide transition-all text-navy/70 hover:text-navy";
+      }
+    }
+
+    // Modal controls
+    function openInquiryModal(presetTime) {
+      const modal = document.getElementById('inquiryModal');
+      const form = document.getElementById('inquiryForm');
+      const success = document.getElementById('modalSuccess');
+      const timeSelect = document.getElementById('tourTimeSelect');
+
+      form.classList.remove('hidden');
+      success.classList.add('hidden');
+
+      if (presetTime && timeSelect) {
+        timeSelect.value = presetTime;
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeInquiryModal() {
+      document.getElementById('inquiryModal').classList.add('hidden');
+    }
+
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      document.getElementById('inquiryForm').classList.add('hidden');
+      document.getElementById('modalSuccess').classList.remove('hidden');
+    }
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      drawer.classList.toggle('hidden');
+      drawer.classList.toggle('flex');
+    }
+
+    // Header transition on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-xl', 'bg-navy-midnight/95');
+      } else {
+        header.classList.remove('shadow-xl');
+      }
+    });
+  </script>
+
+</body>
+</html>
