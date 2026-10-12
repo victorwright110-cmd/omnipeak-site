@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEVINE DC TOURS — 2 Strategic Homepage Concepts | Presented by OmniPeak Digital</title>
+  <meta name="description" content="Complimentary interactive website mockup presentation prepared for DEVINE DC TOURS (divineddctours.com) by OmniPeak Digital. Two strategic bespoke concepts: Presidential Heritage & Cinematic Twilight.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            cinzel: ['Cinzel', 'serif'],
+            mono: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            agency: {
+              black: '#08090B',
+              dark: '#111418',
+              card: '#161A1F',
+              border: '#232830',
+              accent: '#C9A34E',
+              silver: '#E9E9E7',
+              muted: '#7A828C',
+              omniOrange: '#E05638',
+              navy: '#102F56'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #08090B;
+      color: #E9E9E7;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .preview-frame {
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .active-concept-btn {
+      background-color: #232830;
+      border-color: #C9A34E;
+      color: #FFFFFF;
+      box-shadow: 0 0 25px rgba(201, 163, 78, 0.2);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#08090B] selection:bg-agency-accent selection:text-black">
+
+  <!-- ========================================================================= -->
+  <!-- AGENCY TOP HEADER / BRAND BAR -->
+  <!-- ========================================================================= -->
+  <header class="border-b border-agency-border bg-[#111418]/95 backdrop-blur-md px-4 sm:px-6 py-3.5 sticky top-0 z-50 shadow-2xl">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
+      
+      <!-- Agency & Client Brand Titles -->
+      <div class="flex items-center gap-4 flex-wrap sm:flex-nowrap">
+        
+        <!-- OmniPeak Badge -->
+        <a href="https://omnipeakdigital.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E05638] to-[#992211] flex items-center justify-center font-extrabold text-white text-xs shadow-md border border-white/20 group-hover:scale-105 transition">
+            OP
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-[11px] uppercase tracking-widest text-[#E05638] font-bold">OmniPeak Digital</span>
+              <span class="text-[9px] px-2 py-0.5 rounded bg-agency-card text-agency-muted border border-agency-border font-mono">Bespoke Studio</span>
+            </div>
+            <span class="text-sm font-bold text-white block">Client Delivery Presentation</span>
+          </div>
+        </a>
+
+        <span class="text-agency-border hidden md:inline">|</span>
+
+        <!-- Client Identity -->
+        <div class="flex items-center gap-3 bg-agency-card px-3.5 py-1.5 rounded-xl border border-agency-border">
+          <div class="h-8 w-8 rounded-lg overflow-hidden border border-agency-accent/50 flex items-center justify-center bg-white p-0.5 flex-shrink-0">
+            <img src="images/logo.png" alt="DEVINE DC TOURS Logo" class="h-full w-full object-contain">
+          </div>
+          <div class="text-xs">
+            <div class="flex items-center gap-2">
+              <span class="text-white font-bold">DEVINE DC TOURS</span>
+              <span class="text-[10px] text-agency-accent font-mono">divineddctours.com</span>
+            </div>
+            <span class="text-agency-muted text-[10px] block">Washington, DC Guided Sightseeing</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Concept Switcher Tabs -->
+      <div class="flex items-center gap-2 bg-[#08090B] p-1.5 rounded-2xl border border-agency-border flex-wrap sm:flex-nowrap justify-center">
+        
+        <!-- Concept 1 -->
+        <button id="btnConcept1" onclick="switchConcept('concept1')" class="active-concept-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 border border-transparent">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+          <span>Concept 01: Presidential Heritage & Luxury</span>
+        </button>
+
+        <!-- Concept 2 -->
+        <button id="btnConcept2" onclick="switchConcept('concept2')" class="px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white border border-transparent">
+          <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+          <span>Concept 02: Cinematic Twilight & Luminary</span>
+        </button>
+
+      </div>
+
+      <!-- Action: Open Directly & Viewport Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Viewport Controls -->
+        <div class="hidden md:flex items-center gap-1 bg-agency-card p-1 rounded-xl border border-agency-border text-xs">
+          <button onclick="setViewport('desktop')" id="vpDesk" class="p-1.5 rounded-lg text-white bg-[#232830]" title="Desktop (Full Width)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </button>
+          <button onclick="setViewport('tablet')" id="vpTab" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Tablet (768px)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </button>
+          <button onclick="setViewport('mobile')" id="vpMob" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Mobile (390px)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </button>
+        </div>
+
+        <!-- Strategy Drawer Button -->
+        <button onclick="toggleRationaleModal()" class="px-3 py-2 rounded-xl text-xs font-semibold bg-agency-card hover:bg-agency-border text-agency-silver border border-agency-border flex items-center gap-1.5 transition">
+          <span class="text-agency-accent">💡</span>
+          <span class="hidden sm:inline">Design Brief</span>
+        </button>
+
+        <!-- Standalone Window Link -->
+        <a id="openDirectBtn" href="concept-1-presidential-heritage.html" target="_blank" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-agency-accent to-[#B38C3B] text-black border border-agency-accent flex items-center gap-1.5 transition shadow-md hover:brightness-110">
+          <span>Fullscreen</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN MOCKUP PREVIEW EMBED -->
+  <!-- ========================================================================= -->
+  <main class="flex-1 flex flex-col items-center justify-start p-2 sm:p-4 bg-[#08090B]">
+    
+    <!-- Viewport Container Frame -->
+    <div id="frameWrapper" class="preview-frame w-full max-w-[100%] rounded-2xl overflow-hidden border border-agency-border shadow-2xl bg-black" style="height: 85vh;">
+      <iframe id="mockupIframe" src="concept-1-presidential-heritage.html" class="w-full h-full border-0 bg-[#08090B]" title="DEVINE DC TOURS Concept Mockup"></iframe>
+    </div>
+
+    <!-- Quick Concept Summary Info Bar -->
+    <div class="w-full max-w-7xl mt-4 px-2 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-agency-muted">
+      <div id="conceptCaption" class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <span class="text-white font-semibold">Active Concept 01:</span>
+        <span>Presidential Heritage & Architectural Luxury — Deep Presidential Navy, Heritage Gold & Ivory.</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-[11px]">
+        <span>Exact Client Tour Schedules Displayed</span>
+        <span class="text-agency-border">•</span>
+        <span>Presented by <a href="https://omnipeakdigital.com/" target="_blank" class="text-agency-accent hover:underline">OmniPeak Digital</a></span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- DESIGN BRIEF / STRATEGY MODAL -->
+  <!-- ========================================================================= -->
+  <div id="rationaleModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-agency-card text-white border border-agency-border rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      
+      <button onclick="toggleRationaleModal()" class="absolute top-5 right-5 text-agency-muted hover:text-white p-2 rounded-xl bg-agency-dark">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-[#E05638]/20 border border-[#E05638]/40 flex items-center justify-center text-[#E05638] font-bold">OP</div>
+        <div>
+          <h3 class="text-xl font-bold text-white">OmniPeak Digital Creative Strategy</h3>
+          <p class="text-xs text-agency-accent">DEVINE DC TOURS (divineddctours.com) • Presentation Brief</p>
+        </div>
+      </div>
+
+      <div class="space-y-6 text-sm text-agency-silver">
+        
+        <div class="p-4 rounded-2xl bg-agency-dark border border-agency-border">
+          <h4 class="font-bold text-white text-sm mb-1 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+            Concept 01: Presidential Heritage & Architectural Luxury
+          </h4>
+          <p class="text-xs text-agency-muted mb-2">Typography: Cormorant Garamond + Plus Jakarta Sans | Palette: Presidential Navy (#102F56), Heritage Gold (#C9A34E), Elegant Ivory (#FAF8F3)</p>
+          <p class="text-xs leading-relaxed text-white/80">
+            Inspired by luxury boutique travel agencies and high-end Washington DC architectural journals. Features daytime monument grandeur, warm ivory schedule reservation cards, and classic gold monument needle motifs.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-agency-dark border border-agency-border">
+          <h4 class="font-bold text-white text-sm mb-1 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+            Concept 02: Cinematic Twilight & Luminary
+          </h4>
+          <p class="text-xs text-agency-muted mb-2">Typography: Playfair Display + Manrope | Palette: Rich Midnight Blue (#091B30), Obsidian Navy (#030A12), Glowing Gold</p>
+          <p class="text-xs leading-relaxed text-white/80">
+            Tailored to highlight the unique enchantment of Washington DC after dark. Brings high-contrast night monument photography to the forefront, giving prominent luminary treatment to the 8:00 PM – 10:00 PM Moonlight Tour.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-agency-dark/60 border border-agency-border text-xs space-y-2">
+          <div class="font-bold text-agency-accent uppercase tracking-wider text-[10px]">Client Data Accuracy Guarantee</div>
+          <div class="text-white/70">
+            Both concepts strictly display the client's exact provided schedule (Mon–Sat: 10AM–12PM, 1PM–3PM, 4PM–6PM, 8PM–10PM; Sun: 1PM–3PM, 4PM–6PM, 8PM–10PM), exact selling points (Exceptional Customer Service, Knowledgeable Friendly Local Guides, Comfort in Every Season with AC & heating), and original branding without alteration.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-agency-border flex justify-end">
+        <button onclick="toggleRationaleModal()" class="px-5 py-2 rounded-xl bg-agency-accent text-black font-bold text-xs uppercase tracking-wider">
+          Back to Live Mockups
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Switcher & Viewport Controller Scripts -->
+  <script>
+    let currentConcept = 'concept1';
+
+    function switchConcept(concept) {
+      currentConcept = concept;
+      const iframe = document.getElementById('mockupIframe');
+      const openBtn = document.getElementById('openDirectBtn');
+      const btn1 = document.getElementById('btnConcept1');
+      const btn2 = document.getElementById('btnConcept2');
+      const caption = document.getElementById('conceptCaption');
+
+      if (concept === 'concept1') {
+        iframe.src = 'concept-1-presidential-heritage.html';
+        openBtn.href = 'concept-1-presidential-heritage.html';
+        btn1.className = 'active-concept-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 border border-transparent';
+        btn2.className = 'px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white border border-transparent';
+        caption.innerHTML = `
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span class="text-white font-semibold">Active Concept 01:</span>
+          <span>Presidential Heritage & Architectural Luxury — Deep Presidential Navy, Heritage Gold & Ivory.</span>
+        `;
+      } else {
+        iframe.src = 'concept-2-twilight-editorial.html';
+        openBtn.href = 'concept-2-twilight-editorial.html';
+        btn2.className = 'active-concept-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 border border-transparent';
+        btn1.className = 'px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white border border-transparent';
+        caption.innerHTML = `
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span class="text-white font-semibold">Active Concept 02:</span>
+          <span>Cinematic Twilight & Luminary — Deep Midnight Blue, Glowing Gold & Evening Monuments.</span>
+        `;
+      }
+    }
+
+    function setViewport(size) {
+      const wrapper = document.getElementById('frameWrapper');
+      const vpDesk = document.getElementById('vpDesk');
+      const vpTab = document.getElementById('vpTab');
+      const vpMob = document.getElementById('vpMob');
+
+      [vpDesk, vpTab, vpMob].forEach(b => {
+        b.className = 'p-1.5 rounded-lg text-agency-muted hover:text-white';
+      });
+
+      if (size === 'desktop') {
+        wrapper.style.maxWidth = '100%';
+        vpDesk.className = 'p-1.5 rounded-lg text-white bg-[#232830]';
+      } else if (size === 'tablet') {
+        wrapper.style.maxWidth = '768px';
+        vpTab.className = 'p-1.5 rounded-lg text-white bg-[#232830]';
+      } else if (size === 'mobile') {
+        wrapper.style.maxWidth = '390px';
+        vpMob.className = 'p-1.5 rounded-lg text-white bg-[#232830]';
+      }
+    }
+
+    function toggleRationaleModal() {
+      const modal = document.getElementById('rationaleModal');
+      modal.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
