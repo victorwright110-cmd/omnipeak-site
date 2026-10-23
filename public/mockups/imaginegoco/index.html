@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniPeak Digital — SEO Audit & Organic E-Commerce Growth Roadmap: imaginegoco.com</title>
+  <meta name="description" content="In-depth technical architecture audit, Next.js crawl layer diagnostics, Schema.org entity blueprints, high-intent apparel keyword matrix, and commercial acquisition plan for imaginegoco.com. Prepared by OmniPeak Digital.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              space: '#060B14',
+              surface: '#0B1324',
+              card: '#0F1B33',
+              cardSub: '#132140',
+              border: '#1E2F52',
+              borderGlow: '#2A4374',
+              cyan: '#06B6D4',
+              cyanLight: '#38BDF8',
+              blue: '#3B82F6',
+              emerald: '#10B981',
+              amber: '#F59E0B',
+              rose: '#EF4444',
+              muted: '#8A9BB8',
+              light: '#E2E8F0',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #060B14;
+      color: #E2E8F0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* WEB SCREEN PRESENTATION */
+    @media screen {
+      .document-wrapper {
+        max-width: 1160px;
+        margin: 28px auto 80px auto;
+        box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.85), 0 0 0 1px #1E2F52;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .report-page {
+        min-height: 1450px;
+        background-color: #060B14;
+        position: relative;
+        padding: 48px 52px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 2px solid #1E2F52;
+      }
+      .screen-nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(16px);
+        background-color: rgba(6, 11, 20, 0.94);
+        border-bottom: 1px solid #1E2F52;
+      }
+    }
+
+    /* LUXURY PRINT & PDF ENGINE RULES */
+    @media print {
+      @page {
+        size: letter portrait;
+        margin: 0;
+      }
+      html, body {
+        background-color: #060B14 !important;
+        color: #E2E8F0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .no-print, .screen-nav {
+        display: none !important;
+      }
+      .document-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+      }
+      .report-page {
+        page-break-after: always !important;
+        break-after: page !important;
+        min-height: 100vh !important;
+        height: 100vh !important;
+        max-height: 100vh !important;
+        padding: 38px 46px 32px 46px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        border: none !important;
+        background-color: #060B14 !important;
+        overflow: hidden !important;
+      }
+    }
+
+    /* Custom Scrollbar for code */
+    pre::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    pre::-webkit-scrollbar-thumb {
+      background: #1E2F52;
+      border-radius: 4px;
+    }
+    pre::-webkit-scrollbar-thumb:hover {
+      background: #06B6D4;
+    }
+  </style>
+</head>
+<body class="selection:bg-cyan-500/20 selection:text-cyan-200">
+
+  <!-- ========================================================================= -->
+  <!-- STICKY AGENCY COMMAND BAR (WEB ONLY) -->
+  <!-- ========================================================================= -->
+  <header class="screen-nav px-4 lg:px-8 py-3.5 no-print shadow-2xl">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- OmniPeak Brand Identity -->
+      <div class="flex items-center gap-3">
+        <a href="https://omnipeakdigital.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-cyan-400 p-[1px] shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform flex items-center justify-center">
+            <div class="w-full h-full bg-[#060B14] rounded-[11px] flex items-center justify-center">
+              <span class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 text-xs font-mono">OP</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs uppercase tracking-widest text-cyan-400 font-extrabold">OmniPeak Digital</span>
+              <span class="text-[9px] px-2 py-0.5 rounded-full bg-cyan-950/80 text-cyan-300 border border-cyan-800 font-mono font-medium">Enterprise Audit</span>
+            </div>
+            <span class="text-xs text-slate-300 font-medium">ImagineGoCo (imaginegoco.com)</span>
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-2 ml-4 pl-4 border-l border-slate-800">
+          <span class="text-[11px] text-slate-400 font-mono">Quoted Retainer:</span>
+          <span class="text-xs font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-2.5 py-0.5 rounded-full font-mono">$499 / month</span>
+        </div>
+      </div>
+
+      <!-- Jump Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 text-xs text-slate-300 font-medium">
+        <a href="#page-1" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/80 transition-colors">Cover</a>
+        <a href="#page-2" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/80 transition-colors">01 Scorecard</a>
+        <a href="#page-3" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/80 transition-colors">02 Schema</a>
+        <a href="#page-4" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/80 transition-colors">03 Keywords</a>
+        <a href="#page-5" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/80 transition-colors">04 ROI Model ($499)</a>
+        <a href="#page-6" class="px-2.5 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/80 transition-colors">05 Retainer ($499)</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2.5">
+        <a href="./OmniPeak_SEO_Audit_imaginegoco.com.pdf" download="OmniPeak_SEO_Audit_imaginegoco.com.pdf" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-xs shadow-md shadow-cyan-500/20 transition-all">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <span>Download PDF ($499)</span>
+        </a>
+
+        <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 text-xs font-medium transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          <span>Print / Save</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 6-PAGE DOCUMENT WRAPPER -->
+  <!-- ========================================================================= -->
+  <main class="document-wrapper">
+
+    <!-- ======================================================================= -->
+    <!-- PAGE 01: COVER & EXECUTIVE THESIS -->
+    <!-- ======================================================================= -->
+    <section id="page-1" class="report-page">
+      
+      <!-- Page 1 Header -->
+      <div class="flex items-center justify-between border-b border-brand-border/60 pb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-cyan-400 p-[1.5px] shadow-lg shadow-cyan-500/20">
+            <div class="w-full h-full bg-[#060B14] rounded-[10px] flex items-center justify-center">
+              <span class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 text-sm font-mono">OP</span>
+            </div>
+          </div>
+          <div>
+            <span class="text-sm uppercase tracking-widest text-cyan-400 font-extrabold block">OmniPeak Digital</span>
+            <span class="text-[10px] text-slate-400 font-mono tracking-wider">ENTERPRISE TECHNICAL SEO &amp; ACQUISITION</span>
+          </div>
+        </div>
+
+        <div class="text-right space-y-1">
+          <span class="inline-block text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-1 rounded bg-cyan-950/80 border border-cyan-500/40 text-cyan-300">ENTERPRISE AUDIT</span>
+          <div class="text-[10px] font-mono text-slate-400">DOC: <span class="text-slate-200 font-bold">OP-SEO-IMG-2026-10</span></div>
+        </div>
+      </div>
+
+      <!-- Page 1 Hero Section -->
+      <div class="my-auto py-8 space-y-8">
+        
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span class="text-xs uppercase font-mono tracking-widest text-cyan-400 font-bold">COMMERCIAL SEO &amp; E-COMMERCE ACQUISITION REPORT</span>
+          </div>
+          
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            SEARCH ENGINE AUDIT &amp;<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-cyan-300">ORGANIC GROWTH ROADMAP</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
+            In-depth technical architecture audit, Next.js crawl layer diagnostics, Schema.org entity blueprints, high-intent apparel keyword matrix, and commercial acquisition plan for <span class="text-cyan-300 font-semibold font-mono">imaginegoco.com</span>.
+          </p>
+        </div>
+
+        <!-- Target Parameters 6-Box Grid -->
+        <div class="grid sm:grid-cols-2 gap-4 bg-brand-surface/90 border border-brand-border rounded-2xl p-6 shadow-2xl relative overflow-hidden">
+          <div class="absolute -right-16 -top-16 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- Col 1, Row 1 -->
+          <div class="space-y-1 border-b sm:border-b-0 sm:border-r border-brand-border/60 pb-3 sm:pb-0 sm:pr-4">
+            <span class="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-semibold block">CLIENT TARGET ENTITY</span>
+            <div class="text-sm font-bold text-white flex items-center gap-1.5">
+              <span>ImagineGoCo</span>
+              <a href="https://imaginegoco.com" target="_blank" class="text-cyan-400 text-xs font-mono hover:underline">(imaginegoco.com)</a>
+            </div>
+          </div>
+
+          <!-- Col 2, Row 1 -->
+          <div class="space-y-1 sm:pl-4">
+            <span class="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-semibold block">PRIMARY GEOGRAPHIC HUB</span>
+            <div class="text-sm font-bold text-white">Columbus, Ohio (614 Area Code) + National Shipping</div>
+          </div>
+
+          <!-- Col 1, Row 2 -->
+          <div class="space-y-1 border-b sm:border-b-0 sm:border-r border-brand-border/60 pb-3 sm:pb-0 sm:pr-4 pt-3 sm:pt-4 border-t border-brand-border/60">
+            <span class="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-semibold block">INDUSTRY &amp; COMMERCE NICHE</span>
+            <div class="text-sm font-bold text-slate-200">Custom Apparel, Screen Printing, DTG &amp; Design Studio</div>
+          </div>
+
+          <!-- Col 2, Row 2 -->
+          <div class="space-y-1 sm:pl-4 pt-3 sm:pt-4 border-t border-brand-border/60">
+            <span class="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-semibold block">TECHNICAL INFRASTRUCTURE</span>
+            <div class="text-sm font-bold text-slate-200">Next.js App Router &bull; Vercel Serverless Edge CDN</div>
+          </div>
+
+          <!-- Col 1, Row 3: QUOTED SERVICE RETAINER (UPDATED TO $499) -->
+          <div class="space-y-1 sm:border-r border-brand-border/60 sm:pr-4 pt-3 sm:pt-4 border-t border-brand-border/60 bg-emerald-950/20 -mx-6 px-6 sm:mx-0 sm:px-0 py-2 sm:py-0 rounded-lg sm:rounded-none">
+            <span class="text-[10px] uppercase font-mono tracking-wider text-emerald-400 font-bold flex items-center gap-1">
+              <span>QUOTED SERVICE RETAINER</span>
+              <span class="text-[9px] bg-emerald-900/80 text-emerald-300 px-1.5 py-0.2 rounded border border-emerald-700">UPDATED</span>
+            </span>
+            <div class="text-base sm:text-lg font-extrabold text-emerald-400 font-mono">
+              $499 / month <span class="text-xs font-normal text-slate-300 block sm:inline">(Dedicated Organic Growth Partnership)</span>
+            </div>
+          </div>
+
+          <!-- Col 2, Row 3 -->
+          <div class="space-y-1 sm:pl-4 pt-3 sm:pt-4 border-t border-brand-border/60">
+            <span class="text-[10px] uppercase font-mono tracking-wider text-slate-400 font-semibold block">PREPARED &amp; AUDITED BY</span>
+            <div class="text-sm font-bold text-white flex items-center gap-1.5">
+              <span>OmniPeak Digital &bull;</span>
+              <a href="https://omnipeakdigital.com" target="_blank" class="text-cyan-400 text-xs font-mono hover:underline">omnipeakdigital.com</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Executive Thesis Card -->
+        <div class="bg-brand-card/90 border border-brand-border rounded-2xl p-5 sm:p-6 space-y-2 shadow-xl">
+          <div class="flex items-center gap-2 text-cyan-400">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <strong class="text-xs font-mono uppercase tracking-widest text-cyan-300">EXECUTIVE THESIS:</strong>
+          </div>
+          <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed text-justify">
+            <span class="text-white font-semibold">ImagineGoCo</span> has engineered an intuitive, stylish custom merchandise platform powered by Next.js and Vercel. However, critical technical misconfigurations—chiefly a parent-canonical override that actively suppresses all individual product pages from Google indexation, 0 JSON-LD Schema implementations, an apex-to-www canonical split, broken 404 trust endpoints, and an uncompressed 1.09 MB PNG logo—block the domain from capturing high-intent organic apparel searches. With targeted technical remediation and an aggressive B2B bulk keyword strategy, ImagineGoCo can rapidly transform into Central Ohio's preeminent custom apparel studio.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Page 1 Footer -->
+      <div class="flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-brand-border/60 pt-4 gap-2 font-mono">
+        <div>&copy; 2026 OmniPeak Digital &bull; <a href="https://omnipeakdigital.com" class="text-cyan-400 hover:underline">omnipeakdigital.com</a></div>
+        <div>OCTOBER 2026 &bull; STRICTLY CONFIDENTIAL &bull; FOR IMAGINEGOCO LEADERSHIP</div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- PAGE 02: SECTION 01 • SCORECARD & EDGE DIAGNOSTICS -->
+    <!-- ======================================================================= -->
+    <section id="page-2" class="report-page">
+      
+      <!-- Page 2 Header -->
+      <div class="flex items-center justify-between border-b border-brand-border/60 pb-3 text-xs text-slate-400 font-mono">
+        <div class="flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-wider">
+          <span>TECHNICAL SEO &amp; REVENUE AUDIT</span>
+        </div>
+        <div>TARGET: <span class="text-slate-200 font-bold">IMAGINEGOCO.COM</span> &bull; OCTOBER 2026</div>
+      </div>
+
+      <!-- Section Title & Subtitle -->
+      <div class="space-y-1 pt-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">SECTION 01</span>
+          <h2 class="text-lg sm:text-xl font-bold text-white tracking-wide">EXECUTIVE SCORECARD &amp; LIVE INFRASTRUCTURE DIAGNOSTICS</h2>
+        </div>
+        <p class="text-xs text-slate-300 leading-normal">
+          OmniPeak Digital conducted automated and manual diagnostic sweeps of ImagineGoCo's public edge servers, HTTP response headers, Next.js routing patterns, and mobile Core Web Vitals to assess search engine indexing feasibility.
+        </p>
+      </div>
+
+      <!-- 4 Circular Score Badges Grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 my-3">
+        
+        <!-- Score 1 -->
+        <div class="bg-brand-surface border border-amber-500/30 rounded-xl p-3.5 text-center flex flex-col items-center justify-center space-y-1.5 shadow-lg">
+          <div class="w-14 h-14 rounded-full border-4 border-amber-500 flex items-center justify-center bg-amber-500/10 shadow-inner">
+            <span class="text-xl font-extrabold text-amber-400 font-mono">58</span>
+          </div>
+          <div>
+            <strong class="text-xs font-bold text-white block uppercase tracking-wider">TECHNICAL SEO</strong>
+            <span class="text-[10px] text-slate-400 block font-mono">Canonical Looping &amp; 404s</span>
+          </div>
+        </div>
+
+        <!-- Score 2 -->
+        <div class="bg-brand-surface border border-rose-500/30 rounded-xl p-3.5 text-center flex flex-col items-center justify-center space-y-1.5 shadow-lg">
+          <div class="w-14 h-14 rounded-full border-4 border-rose-500 flex items-center justify-center bg-rose-500/10 shadow-inner">
+            <span class="text-xl font-extrabold text-rose-400 font-mono">42</span>
+          </div>
+          <div>
+            <strong class="text-xs font-bold text-white block uppercase tracking-wider">CONTENT &amp; INDEX</strong>
+            <span class="text-[10px] text-slate-400 block font-mono">Only 4 Indexable URLs</span>
+          </div>
+        </div>
+
+        <!-- Score 3 -->
+        <div class="bg-brand-surface border border-rose-600/40 rounded-xl p-3.5 text-center flex flex-col items-center justify-center space-y-1.5 shadow-lg">
+          <div class="w-14 h-14 rounded-full border-4 border-rose-600 flex items-center justify-center bg-rose-600/10 shadow-inner">
+            <span class="text-xl font-extrabold text-rose-400 font-mono">12</span>
+          </div>
+          <div>
+            <strong class="text-xs font-bold text-white block uppercase tracking-wider">SCHEMA &amp; ENTITY</strong>
+            <span class="text-[10px] text-slate-400 block font-mono">0 JSON-LD Schemas</span>
+          </div>
+        </div>
+
+        <!-- Score 4 -->
+        <div class="bg-brand-surface border border-cyan-500/30 rounded-xl p-3.5 text-center flex flex-col items-center justify-center space-y-1.5 shadow-lg">
+          <div class="w-14 h-14 rounded-full border-4 border-cyan-400 flex items-center justify-center bg-cyan-500/10 shadow-inner">
+            <span class="text-xl font-extrabold text-cyan-300 font-mono">74</span>
+          </div>
+          <div>
+            <strong class="text-xs font-bold text-white block uppercase tracking-wider">SPEED &amp; CWV</strong>
+            <span class="text-[10px] text-slate-400 block font-mono">Edge Fast, 1.1MB Logo</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Strengths vs Vulnerabilities Two Columns -->
+      <div class="grid sm:grid-cols-2 gap-4 my-2">
+        
+        <!-- Strengths Card -->
+        <div class="bg-brand-surface border border-emerald-500/30 rounded-xl p-4 space-y-2">
+          <div class="flex items-center gap-2 border-b border-brand-border pb-2 text-emerald-400 font-bold text-xs uppercase tracking-wider font-mono">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>VERIFIED TECHNICAL STRENGTHS</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Next.js &amp; Vercel Edge Global CDN:</strong> Instant time-to-first-byte (TTFB ~180ms) and dynamic edge rendering infrastructure.</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Enterprise HTTPS &amp; HSTS:</strong> Preloaded TLS with Strict-Transport-Security: max-age=63072000 (2 full years).</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Interactive Canvas Studio:</strong> Functional web app allowing users to customize tees, hoodies, and crewnecks directly in-browser.</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Clean Responsive Layout:</strong> Seamless CSS grid and flexbox layout adapting to mobile and desktop screens.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Vulnerabilities Card -->
+        <div class="bg-brand-surface border border-rose-500/30 rounded-xl p-4 space-y-2">
+          <div class="flex items-center gap-2 border-b border-brand-border pb-2 text-rose-400 font-bold text-xs uppercase tracking-wider font-mono">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            <span>PRIMARY SEO VULNERABILITIES</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-rose-400 font-bold">&bull;</span>
+              <div><strong class="text-rose-300">Product Canonical Override:</strong> Every product detail page canonicals to /shop, de-indexing all 30+ items.</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Apex vs. WWW Split:</strong> Site redirects to www, but robots.txt and sitemap point to apex domain.</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Zero Schema Markup:</strong> 0 JSON-LD tags found. No Product, Offer, LocalBusiness, or Store schemas.</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-400 font-bold">&bull;</span>
+              <div><strong class="text-white">E-E-A-T Trust 404s:</strong> /about, /contact, /privacy, and /terms all return HTTP 404 Not Found.</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-rose-400 font-bold">&bull;</span>
+              <div><strong class="text-white">1.09 MB PNG Logo:</strong> Uncompressed logo preloaded in head bloats mobile data &amp; LCP.</div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Live Edge Server Inspection Table -->
+      <div class="bg-brand-surface border border-brand-border rounded-xl p-4 space-y-2.5 my-2">
+        <div class="flex items-center justify-between border-b border-brand-border pb-2">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider font-mono">LIVE EDGE SERVER INSPECTION &amp; CRAWLABILITY DIAGNOSTICS</h3>
+          <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">VERIFIED VIA EDGE SCAN</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-[11px] text-left border-collapse">
+            <thead>
+              <tr class="border-b border-brand-border/60 text-slate-400 font-mono text-[10px] uppercase">
+                <th class="py-1.5 px-2">PATH TESTED</th>
+                <th class="py-1.5 px-2">HTTP STATUS</th>
+                <th class="py-1.5 px-2">CANONICAL TARGET</th>
+                <th class="py-1.5 px-2">INDEXATION STATUS</th>
+                <th class="py-1.5 px-2">TECHNICAL FINDING / SEVERITY</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-border/40 font-mono text-slate-300">
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">https://imaginegoco.com</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-amber-950/80 text-amber-300 border border-amber-800 text-[9px] font-bold">308 REDIRECT</span></td>
+                <td class="py-1.5 px-2 text-cyan-300 text-[10px]">https://www.imaginegoco.com/</td>
+                <td class="py-1.5 px-2"><span class="text-cyan-400 font-bold">Redirecting</span></td>
+                <td class="py-1.5 px-2 font-sans text-slate-300 text-[11px]">Apex domain permanently 308 redirects to www host.</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">/ (Homepage)</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800 text-[9px] font-bold">200 OK</span></td>
+                <td class="py-1.5 px-2 text-rose-400 text-[10px]">None (Missing)</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-amber-950/80 text-amber-300 border border-amber-800 text-[9px] font-bold">AT RISK</span></td>
+                <td class="py-1.5 px-2 font-sans text-slate-300 text-[11px]">No self-referencing canonical tag; risks index dilution.</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">/shop</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800 text-[9px] font-bold">200 OK</span></td>
+                <td class="py-1.5 px-2 text-slate-300 text-[10px]">https://imaginegoco.com/shop</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-amber-950/80 text-amber-300 border border-amber-800 text-[9px] font-bold">MISMATCH</span></td>
+                <td class="py-1.5 px-2 font-sans text-slate-300 text-[11px]">Canonical points to apex domain while user is on www.</td>
+              </tr>
+              <tr class="bg-rose-950/10">
+                <td class="py-1.5 px-2 font-medium text-rose-300">/shop/[product-uuid]</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800 text-[9px] font-bold">200 OK</span></td>
+                <td class="py-1.5 px-2 text-rose-400 text-[10px]">https://imaginegoco.com/shop</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800 text-[9px] font-bold">SUPPRESSED</span></td>
+                <td class="py-1.5 px-2 font-sans text-rose-300 font-bold text-[11px]">CRITICAL: Product tells Google not to index itself!</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">/studio</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800 text-[9px] font-bold">200 OK</span></td>
+                <td class="py-1.5 px-2 text-slate-300 text-[10px]">https://imaginegoco.com/studio</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800 text-[9px] font-bold">INDEXED</span></td>
+                <td class="py-1.5 px-2 font-sans text-slate-300 text-[11px]">132 words only; thin content for high-value studio queries.</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">/about &amp; /contact</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800 text-[9px] font-bold">404 NOT FOUND</span></td>
+                <td class="py-1.5 px-2 text-slate-500 text-[10px]">None</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800 text-[9px] font-bold">BROKEN</span></td>
+                <td class="py-1.5 px-2 font-sans text-slate-300 text-[11px]">Missing core trust pages; penalizes e-commerce E-E-A-T score.</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">/privacy &amp; /terms</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800 text-[9px] font-bold">404 NOT FOUND</span></td>
+                <td class="py-1.5 px-2 text-slate-500 text-[10px]">None</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800 text-[9px] font-bold">BROKEN</span></td>
+                <td class="py-1.5 px-2 font-sans text-slate-300 text-[11px]">Standard legal routes 404 (content buried in /policies).</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">/sitemap.xml</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800 text-[9px] font-bold">200 OK</span></td>
+                <td class="py-1.5 px-2 text-slate-500 text-[10px]">N/A</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.5 rounded bg-amber-950/80 text-amber-300 border border-amber-800 text-[9px] font-bold">INCOMPLETE</span></td>
+                <td class="py-1.5 px-2 font-sans text-slate-300 text-[11px]">Contains only 4 URLs; 0 products included; uses apex domain.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Page 2 Footer -->
+      <div class="flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-brand-border/60 pt-3 gap-2 font-mono">
+        <div>&copy; 2026 OmniPeak Digital &bull; <a href="https://omnipeakdigital.com" class="text-cyan-400 hover:underline">omnipeakdigital.com</a></div>
+        <div>CONFIDENTIAL &bull; PREPARED FOR IMAGINEGOCO &bull; PAGE 02 OF 06</div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- PAGE 03: SECTION 02 • REMEDIATION & SCHEMA BLUEPRINTS -->
+    <!-- ======================================================================= -->
+    <section id="page-3" class="report-page">
+      
+      <!-- Page 3 Header -->
+      <div class="flex items-center justify-between border-b border-brand-border/60 pb-3 text-xs text-slate-400 font-mono">
+        <div class="flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-wider">
+          <span>TECHNICAL SEO &amp; REVENUE AUDIT</span>
+        </div>
+        <div>TARGET: <span class="text-slate-200 font-bold">IMAGINEGOCO.COM</span> &bull; OCTOBER 2026</div>
+      </div>
+
+      <!-- Section Title & Subtitle -->
+      <div class="space-y-1 pt-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">SECTION 02</span>
+          <h2 class="text-lg sm:text-xl font-bold text-white tracking-wide">TECHNICAL REMEDIATION, CANONICAL ARCHITECTURE &amp; SCHEMA</h2>
+        </div>
+        <p class="text-xs text-slate-300 leading-normal">
+          Resolving the crawl layer and canonical loop is prerequisite to all organic growth. Google must be given unambiguous indexing signals and rich product entity metadata.
+        </p>
+      </div>
+
+      <!-- Two Code Cards (Edge Redirect & Dynamic Product Metadata) -->
+      <div class="grid sm:grid-cols-2 gap-4 my-2">
+        
+        <!-- Code Card 1: Vercel Redirect -->
+        <div class="bg-brand-surface border border-brand-border rounded-xl p-4 space-y-2 flex flex-col justify-between">
+          <div class="space-y-1">
+            <h3 class="text-xs font-bold text-white uppercase tracking-wider font-mono text-cyan-300">1. EDGE REDIRECT &amp; ROUTE FIX (VERCEL.JSON)</h3>
+            <p class="text-[11px] text-slate-300 leading-normal">
+              Eliminates apex-to-www redirect chaining and maps legacy 404 paths to canonical policy anchors:
+            </p>
+          </div>
+
+          <div class="bg-[#050811] border border-brand-border/80 rounded-lg p-2.5 font-mono text-[10px] text-slate-300 overflow-x-auto">
+<pre class="leading-relaxed"><code>{
+  <span class="text-cyan-400">"redirects"</span>: [
+    { <span class="text-slate-400">"source"</span>: <span class="text-emerald-300">"/about"</span>, <span class="text-slate-400">"destination"</span>: <span class="text-emerald-300">"/policies#contact"</span>, <span class="text-slate-400">"permanent"</span>: <span class="text-amber-400">true</span> },
+    { <span class="text-slate-400">"source"</span>: <span class="text-emerald-300">"/contact"</span>, <span class="text-slate-400">"destination"</span>: <span class="text-emerald-300">"/policies#contact"</span>, <span class="text-slate-400">"permanent"</span>: <span class="text-amber-400">true</span> },
+    { <span class="text-slate-400">"source"</span>: <span class="text-emerald-300">"/privacy"</span>, <span class="text-slate-400">"destination"</span>: <span class="text-emerald-300">"/policies#privacy"</span>, <span class="text-slate-400">"permanent"</span>: <span class="text-amber-400">true</span> },
+    { <span class="text-slate-400">"source"</span>: <span class="text-emerald-300">"/terms"</span>, <span class="text-slate-400">"destination"</span>: <span class="text-emerald-300">"/policies#terms"</span>, <span class="text-slate-400">"permanent"</span>: <span class="text-amber-400">true</span> }
+  ],
+  <span class="text-cyan-400">"headers"</span>: [
+    { <span class="text-slate-400">"source"</span>: <span class="text-emerald-300">"/images/(.*)"</span>, <span class="text-slate-400">"headers"</span>: [{ <span class="text-slate-400">"key"</span>: <span class="text-emerald-300">"Cache-Control"</span>, <span class="text-slate-400">"value"</span>: <span class="text-emerald-300">"public, max-age=31536000, immutable"</span> }] }
+  ]
+}</code></pre>
+          </div>
+
+          <div class="text-[11px] text-emerald-400 font-medium flex items-center gap-1.5 pt-1">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            <span>Permanently resolves 404 crawl errors for search engines and ad networks.</span>
+          </div>
+        </div>
+
+        <!-- Code Card 2: Dynamic Product Metadata -->
+        <div class="bg-brand-surface border border-brand-border rounded-xl p-4 space-y-2 flex flex-col justify-between">
+          <div class="space-y-1">
+            <h3 class="text-xs font-bold text-white uppercase tracking-wider font-mono text-cyan-300">2. DYNAMIC PRODUCT METADATA (/SHOP/[SLUG])</h3>
+            <p class="text-[11px] text-slate-300 leading-normal">
+              Replaces the self-suppressing /shop canonical with dynamic, self-referencing product metadata:
+            </p>
+          </div>
+
+          <div class="bg-[#050811] border border-brand-border/80 rounded-lg p-2.5 font-mono text-[10px] text-slate-300 overflow-x-auto">
+<pre class="leading-relaxed"><code><span class="text-blue-400">export async function</span> <span class="text-amber-300">generateMetadata</span>({ params }): Promise&lt;Metadata&gt; {
+  <span class="text-blue-400">const</span> product = <span class="text-blue-400">await</span> getProduct(params.slug);
+  <span class="text-blue-400">return</span> {
+    title: <span class="text-emerald-300">`${product.title} | Custom Apparel | ImagineGoCo`</span>,
+    description: <span class="text-emerald-300">`Shop the ${product.title}. Premium quality, fully customizable in the Design Studio. Ships nationwide or local pickup in Columbus, OH.`</span>,
+    alternates: {
+      canonical: <span class="text-emerald-300">`https://www.imaginegoco.com/shop/${params.slug}`</span>
+    },
+    openGraph: {
+      title: product.title,
+      images: [{ url: product.imageUrl, width: <span class="text-amber-400">1200</span>, height: <span class="text-amber-400">630</span> }]
+    }
+  };
+}</code></pre>
+          </div>
+
+          <div class="text-[11px] text-emerald-400 font-medium flex items-center gap-1.5 pt-1">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            <span>Unlocks all 30+ products for Google Shopping, Images, and organic carousels.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Enterprise JSON-LD Structured Data Blueprints -->
+      <div class="bg-brand-surface border border-brand-border rounded-xl p-4 space-y-3 my-2">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-brand-border pb-2">
+          <div>
+            <h3 class="text-xs font-bold text-white uppercase tracking-wider font-mono">ENTERPRISE JSON-LD STRUCTURED DATA BLUEPRINTS (SCHEMA.ORG)</h3>
+            <p class="text-[11px] text-slate-300">
+              ImagineGoCo currently has 0 structured data schemas. Injecting these verified schemas establishes domain entity authority and unlocks rich search snippets (star ratings, prices, local inventory badges).
+            </p>
+          </div>
+          <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 font-bold self-start sm:self-center whitespace-nowrap">PRODUCTION READY CODE</span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          
+          <!-- Schema A -->
+          <div class="space-y-1.5">
+            <h4 class="text-[11px] font-bold text-cyan-300 font-mono">A. LOCALBUSINESS / CLOTHINGSTORE SCHEMA (GLOBAL LAYOUT)</h4>
+            <div class="bg-[#050811] border border-brand-border/80 rounded-lg p-2.5 font-mono text-[9.5px] text-slate-300 overflow-x-auto max-h-56">
+<pre class="leading-relaxed"><code>{
+  <span class="text-cyan-400">"@context"</span>: <span class="text-emerald-300">"https://schema.org"</span>,
+  <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"ClothingStore"</span>,
+  <span class="text-cyan-400">"name"</span>: <span class="text-emerald-300">"ImagineGoCo"</span>,
+  <span class="text-cyan-400">"alternateName"</span>: <span class="text-emerald-300">"Imagine GoCo Custom Apparel &amp; Design Studio"</span>,
+  <span class="text-cyan-400">"url"</span>: <span class="text-emerald-300">"https://www.imaginegoco.com"</span>,
+  <span class="text-cyan-400">"logo"</span>: <span class="text-emerald-300">"https://www.imaginegoco.com/images/imagine-goco-logo.PNG"</span>,
+  <span class="text-cyan-400">"telephone"</span>: <span class="text-emerald-300">"+1-614-726-2168"</span>,
+  <span class="text-cyan-400">"email"</span>: <span class="text-emerald-300">"imaginegoco@gmail.com"</span>,
+  <span class="text-cyan-400">"priceRange"</span>: <span class="text-emerald-300">"$$"</span>,
+  <span class="text-cyan-400">"address"</span>: {
+    <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"PostalAddress"</span>,
+    <span class="text-cyan-400">"addressLocality"</span>: <span class="text-emerald-300">"Columbus"</span>,
+    <span class="text-cyan-400">"addressRegion"</span>: <span class="text-emerald-300">"OH"</span>,
+    <span class="text-cyan-400">"addressCountry"</span>: <span class="text-emerald-300">"US"</span>
+  },
+  <span class="text-cyan-400">"geo"</span>: {
+    <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"GeoCoordinates"</span>,
+    <span class="text-cyan-400">"latitude"</span>: <span class="text-amber-400">"39.9612"</span>,
+    <span class="text-cyan-400">"longitude"</span>: <span class="text-amber-400">"-82.9988"</span>
+  },
+  <span class="text-cyan-400">"areaServed"</span>: [<span class="text-emerald-300">"Columbus, OH"</span>, <span class="text-emerald-300">"Franklin County"</span>, <span class="text-emerald-300">"United States"</span>],
+  <span class="text-cyan-400">"sameAs"</span>: [
+    <span class="text-emerald-300">"https://www.instagram.com/imaginegoco/"</span>,
+    <span class="text-emerald-300">"https://www.tiktok.com/@imaginegoco"</span>
+  ]
+}</code></pre>
+            </div>
+          </div>
+
+          <!-- Schema B -->
+          <div class="space-y-1.5">
+            <h4 class="text-[11px] font-bold text-cyan-300 font-mono">B. PRODUCT &amp; OFFER SCHEMA (DYNAMIC PRODUCT TEMPLATE)</h4>
+            <div class="bg-[#050811] border border-brand-border/80 rounded-lg p-2.5 font-mono text-[9.5px] text-slate-300 overflow-x-auto max-h-56">
+<pre class="leading-relaxed"><code>{
+  <span class="text-cyan-400">"@context"</span>: <span class="text-emerald-300">"https://schema.org"</span>,
+  <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"Product"</span>,
+  <span class="text-cyan-400">"name"</span>: <span class="text-emerald-300">"Centipede Red Graphic Hoodie"</span>,
+  <span class="text-cyan-400">"image"</span>: <span class="text-emerald-300">"https://www.imaginegoco.com/images/products/centipede-red-hoodie.png"</span>,
+  <span class="text-cyan-400">"description"</span>: <span class="text-emerald-300">"Customizable heavyweight cotton graphic hoodie. Built for comfort and daily wear."</span>,
+  <span class="text-cyan-400">"brand"</span>: { <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"Brand"</span>, <span class="text-cyan-400">"name"</span>: <span class="text-emerald-300">"ImagineGoCo"</span> },
+  <span class="text-cyan-400">"offers"</span>: {
+    <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"Offer"</span>,
+    <span class="text-cyan-400">"url"</span>: <span class="text-emerald-300">"https://www.imaginegoco.com/shop/centipede-red-graphic-hoodie"</span>,
+    <span class="text-cyan-400">"priceCurrency"</span>: <span class="text-emerald-300">"USD"</span>,
+    <span class="text-cyan-400">"price"</span>: <span class="text-amber-400">"65.00"</span>,
+    <span class="text-cyan-400">"priceValidUntil"</span>: <span class="text-emerald-300">"2027-12-31"</span>,
+    <span class="text-cyan-400">"itemCondition"</span>: <span class="text-emerald-300">"https://schema.org/NewCondition"</span>,
+    <span class="text-cyan-400">"availability"</span>: <span class="text-emerald-300">"https://schema.org/InStock"</span>,
+    <span class="text-cyan-400">"shippingDetails"</span>: {
+      <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"OfferShippingDetails"</span>,
+      <span class="text-cyan-400">"shippingRate"</span>: { <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"MonetaryAmount"</span>, <span class="text-cyan-400">"value"</span>: <span class="text-amber-400">"0.00"</span>, <span class="text-cyan-400">"currency"</span>: <span class="text-emerald-300">"USD"</span> },
+      <span class="text-cyan-400">"deliveryTime"</span>: {
+        <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"ShippingDeliveryTime"</span>,
+        <span class="text-cyan-400">"handlingTime"</span>: { <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"QuantitativeValue"</span>, <span class="text-cyan-400">"minValue"</span>: <span class="text-amber-400">3</span>, <span class="text-cyan-400">"maxValue"</span>: <span class="text-amber-400">5</span>, <span class="text-cyan-400">"unitCode"</span>: <span class="text-emerald-300">"DAY"</span> },
+        <span class="text-cyan-400">"transitTime"</span>: { <span class="text-cyan-400">"@type"</span>: <span class="text-emerald-300">"QuantitativeValue"</span>, <span class="text-cyan-400">"minValue"</span>: <span class="text-amber-400">2</span>, <span class="text-cyan-400">"maxValue"</span>: <span class="text-amber-400">3</span>, <span class="text-cyan-400">"unitCode"</span>: <span class="text-emerald-300">"DAY"</span> }
+      }
+    }
+  }
+}</code></pre>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Page 3 Footer -->
+      <div class="flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-brand-border/60 pt-3 gap-2 font-mono">
+        <div>&copy; 2026 OmniPeak Digital &bull; <a href="https://omnipeakdigital.com" class="text-cyan-400 hover:underline">omnipeakdigital.com</a></div>
+        <div>CONFIDENTIAL &bull; PREPARED FOR IMAGINEGOCO &bull; PAGE 03 OF 06</div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- PAGE 04: SECTION 03 • KEYWORD MATRIX & ON-PAGE ARCHITECTURE -->
+    <!-- ======================================================================= -->
+    <section id="page-4" class="report-page">
+      
+      <!-- Page 4 Header -->
+      <div class="flex items-center justify-between border-b border-brand-border/60 pb-3 text-xs text-slate-400 font-mono">
+        <div class="flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-wider">
+          <span>TECHNICAL SEO &amp; REVENUE AUDIT</span>
+        </div>
+        <div>TARGET: <span class="text-slate-200 font-bold">IMAGINEGOCO.COM</span> &bull; OCTOBER 2026</div>
+      </div>
+
+      <!-- Section Title & Subtitle -->
+      <div class="space-y-1 pt-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">SECTION 03</span>
+          <h2 class="text-lg sm:text-xl font-bold text-white tracking-wide">COMMERCIAL KEYWORD MATRIX &amp; ON-PAGE ARCHITECTURE</h2>
+        </div>
+        <p class="text-xs text-slate-300 leading-normal">
+          High-margin growth for custom apparel does not come from generic traffic; it stems from capturing commercial intent for screen printing, direct-to-garment (DTG), custom hoodies, and corporate bulk merch.
+        </p>
+      </div>
+
+      <!-- High-Intent Commercial Keyword Opportunity Matrix Table -->
+      <div class="bg-brand-surface border border-brand-border rounded-xl p-3.5 space-y-2 my-2">
+        <div class="flex items-center justify-between border-b border-brand-border pb-2">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider font-mono">HIGH-INTENT CUSTOM APPAREL COMMERCIAL KEYWORD OPPORTUNITY MATRIX</h3>
+          <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">CENTRAL OHIO &amp; NATIONAL TARGET</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-[11px] text-left border-collapse">
+            <thead>
+              <tr class="border-b border-brand-border/60 text-slate-400 font-mono text-[10px] uppercase">
+                <th class="py-1 px-2">PRIMARY SEARCH QUERY</th>
+                <th class="py-1 px-2">MONTHLY VOL</th>
+                <th class="py-1 px-2">SEARCH INTENT</th>
+                <th class="py-1 px-2">EST. CPC VALUE</th>
+                <th class="py-1 px-2">KEYWORD DIFFICULTY</th>
+                <th class="py-1 px-2">RECOMMENDED TARGET LANDING URL</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-border/40 font-mono text-slate-300 text-[10.5px]">
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">custom hoodies columbus ohio</td>
+                <td class="py-1.5 px-2 text-cyan-300 font-bold">720</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 text-[9px]">COMMERCIAL</span></td>
+                <td class="py-1.5 px-2 text-emerald-400 font-bold">$3.85</td>
+                <td class="py-1.5 px-2"><span class="text-emerald-400 font-semibold">Low (24)</span></td>
+                <td class="py-1.5 px-2 text-slate-400">/custom-hoodies-columbus-oh</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">custom screen printing columbus oh</td>
+                <td class="py-1.5 px-2 text-cyan-300 font-bold">1,400</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 text-[9px]">COMMERCIAL B2B</span></td>
+                <td class="py-1.5 px-2 text-emerald-400 font-bold">$5.40</td>
+                <td class="py-1.5 px-2"><span class="text-amber-400 font-semibold">Med (38)</span></td>
+                <td class="py-1.5 px-2 text-slate-400">/screen-printing-columbus-ohio</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">custom embroidery columbus ohio</td>
+                <td class="py-1.5 px-2 text-cyan-300 font-bold">1,100</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 text-[9px]">COMMERCIAL B2B</span></td>
+                <td class="py-1.5 px-2 text-emerald-400 font-bold">$4.90</td>
+                <td class="py-1.5 px-2"><span class="text-amber-400 font-semibold">Med (35)</span></td>
+                <td class="py-1.5 px-2 text-slate-400">/custom-embroidery-columbus</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">direct to garment printing columbus</td>
+                <td class="py-1.5 px-2 text-cyan-300 font-bold">480</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.2 rounded bg-blue-950 text-blue-300 border border-blue-800 text-[9px]">HIGH INTENT</span></td>
+                <td class="py-1.5 px-2 text-emerald-400 font-bold">$4.10</td>
+                <td class="py-1.5 px-2"><span class="text-emerald-400 font-semibold">Low (19)</span></td>
+                <td class="py-1.5 px-2 text-slate-400">/dtg-printing-columbus-ohio</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">custom graphic hoodies bulk</td>
+                <td class="py-1.5 px-2 text-cyan-300 font-bold">2,400</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 text-[9px]">COMMERCIAL B2B</span></td>
+                <td class="py-1.5 px-2 text-emerald-400 font-bold">$6.20</td>
+                <td class="py-1.5 px-2"><span class="text-amber-400 font-semibold">Med (42)</span></td>
+                <td class="py-1.5 px-2 text-slate-400">/shop/bulk-custom-hoodies</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">custom corporate apparel &amp; merch</td>
+                <td class="py-1.5 px-2 text-cyan-300 font-bold">3,200</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.2 rounded bg-purple-950 text-purple-300 border border-purple-800 text-[9px]">ENTERPRISE B2B</span></td>
+                <td class="py-1.5 px-2 text-emerald-400 font-bold">$7.80</td>
+                <td class="py-1.5 px-2"><span class="text-amber-400 font-semibold">Med (46)</span></td>
+                <td class="py-1.5 px-2 text-slate-400">/for-business</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">custom t shirt design studio online</td>
+                <td class="py-1.5 px-2 text-cyan-300 font-bold">4,800</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.2 rounded bg-indigo-950 text-indigo-300 border border-indigo-800 text-[9px]">TRANSACTIONAL</span></td>
+                <td class="py-1.5 px-2 text-emerald-400 font-bold">$4.50</td>
+                <td class="py-1.5 px-2"><span class="text-rose-400 font-semibold">High (54)</span></td>
+                <td class="py-1.5 px-2 text-slate-400">/studio</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">black owned custom apparel studio</td>
+                <td class="py-1.5 px-2 text-cyan-300 font-bold">880</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.2 rounded bg-purple-950 text-purple-300 border border-purple-800 text-[9px]">NICHE / BRAND</span></td>
+                <td class="py-1.5 px-2 text-emerald-400 font-bold">$3.10</td>
+                <td class="py-1.5 px-2"><span class="text-emerald-400 font-semibold">Low (16)</span></td>
+                <td class="py-1.5 px-2 text-slate-400">/about</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">event merchandise printing fast turnaround</td>
+                <td class="py-1.5 px-2 text-cyan-300 font-bold">950</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 text-[9px]">COMMERCIAL B2B</span></td>
+                <td class="py-1.5 px-2 text-emerald-400 font-bold">$5.90</td>
+                <td class="py-1.5 px-2"><span class="text-amber-400 font-semibold">Med (32)</span></td>
+                <td class="py-1.5 px-2 text-slate-400">/custom-event-merchandise</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 px-2 font-medium text-white">custom beanies and hats embroidery</td>
+                <td class="py-1.5 px-2 text-cyan-300 font-bold">1,600</td>
+                <td class="py-1.5 px-2"><span class="px-1.5 py-0.2 rounded bg-indigo-950 text-indigo-300 border border-indigo-800 text-[9px]">TRANSACTIONAL</span></td>
+                <td class="py-1.5 px-2 text-emerald-400 font-bold">$4.30</td>
+                <td class="py-1.5 px-2"><span class="text-amber-400 font-semibold">Med (37)</span></td>
+                <td class="py-1.5 px-2 text-slate-400">/shop?category=hats</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Current vs Optimized Metadata Cards -->
+      <div class="grid sm:grid-cols-2 gap-4 my-2">
+        
+        <!-- Current Metadata -->
+        <div class="bg-brand-surface border border-rose-500/30 rounded-xl p-3.5 space-y-2">
+          <div class="border-b border-brand-border pb-1.5 text-rose-400 font-bold text-xs uppercase tracking-wider font-mono">
+            CURRENT METADATA (UNDER-OPTIMIZED)
+          </div>
+          <div class="space-y-1 text-xs">
+            <div><strong class="text-slate-400">Homepage Title:</strong> <span class="text-white font-mono text-[11px]">ImagineGoCo | Custom Apparel &amp; Design Studio</span></div>
+            <div><strong class="text-slate-400">Homepage H1:</strong> <span class="text-rose-300 font-mono text-[11px]">"DON'T MAKE BASIC MERCH."</span></div>
+            <p class="text-[11px] text-slate-300 pt-1 leading-normal">
+              <strong class="text-white">Analysis:</strong> The H1 is a punchy branding tagline, but contains zero commercial search tokens. Search crawlers cannot infer geographic presence, production capabilities (screen printing, embroidery), or bulk B2B availability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Optimized Metadata -->
+        <div class="bg-brand-surface border border-cyan-500/30 rounded-xl p-3.5 space-y-2">
+          <div class="border-b border-brand-border pb-1.5 text-cyan-400 font-bold text-xs uppercase tracking-wider font-mono">
+            OPTIMIZED METADATA (OMNIPEAK STANDARD)
+          </div>
+          <div class="space-y-1 text-xs">
+            <div><strong class="text-slate-400">Recommended Title:</strong> <span class="text-cyan-300 font-mono text-[11px]">Custom Apparel, Screen Printing &amp; Hoodies | ImagineGoCo Columbus OH</span></div>
+            <div><strong class="text-slate-400">Recommended H1:</strong> <span class="text-emerald-300 font-mono text-[11px]">"Custom Apparel, Screen Printing &amp; Interactive Design Studio"</span></div>
+            <p class="text-[11px] text-slate-300 pt-1 leading-normal">
+              <strong class="text-white">Impact:</strong> Immediately targets high-intent queries for custom hoodies, screen printing, and Central Ohio geographic relevancy, while preserving the bold brand aesthetic in secondary H2 eyebrows.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- E-Commerce Content Siloing Blueprint -->
+      <div class="bg-brand-surface border border-brand-border rounded-xl p-3.5 space-y-2 my-2">
+        <div class="border-b border-brand-border pb-1.5">
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider font-mono">E-COMMERCE CONTENT SILOING BLUEPRINT</h3>
+          <p class="text-[11px] text-slate-300">
+            Instead of housing everything under dynamic client-side query parameters (/shop?category=apparel), ImagineGoCo must deploy dedicated, crawlable SEO category hubs to rank for distinct apparel sectors:
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-3 text-xs">
+          
+          <!-- Silo A -->
+          <div class="bg-[#050811] border border-brand-border/80 rounded-lg p-3 space-y-1.5">
+            <strong class="text-cyan-300 block font-mono text-[11px]">Silo A: Retail Apparel</strong>
+            <ul class="space-y-1 text-[11px] text-slate-300 font-mono">
+              <li>&bull; <span class="text-white">/shop/hoodies</span> <span class="text-slate-400 font-sans text-[10px]">(Graphic Hoodies)</span></li>
+              <li>&bull; <span class="text-white">/shop/tees</span> <span class="text-slate-400 font-sans text-[10px]">(Statement T-Shirts)</span></li>
+              <li>&bull; <span class="text-white">/shop/headwear</span> <span class="text-slate-400 font-sans text-[10px]">(Cuffed Beanies &amp; Hats)</span></li>
+              <li>&bull; <span class="text-white">/shop/accessories</span> <span class="text-slate-400 font-sans text-[10px]">(Keychains &amp; Swag)</span></li>
+            </ul>
+          </div>
+
+          <!-- Silo B -->
+          <div class="bg-[#050811] border border-brand-border/80 rounded-lg p-3 space-y-1.5">
+            <strong class="text-cyan-300 block font-mono text-[11px]">Silo B: Production Services</strong>
+            <ul class="space-y-1 text-[11px] text-slate-300 font-mono">
+              <li>&bull; <span class="text-white">/screen-printing</span> <span class="text-slate-400 font-sans text-[10px]">(Bulk Screen Printing)</span></li>
+              <li>&bull; <span class="text-white">/dtg-printing</span> <span class="text-slate-400 font-sans text-[10px]">(Direct to Garment)</span></li>
+              <li>&bull; <span class="text-white">/custom-embroidery</span> <span class="text-slate-400 font-sans text-[10px]">(Puff &amp; Flat Stitch)</span></li>
+              <li>&bull; <span class="text-white">/studio</span> <span class="text-slate-400 font-sans text-[10px]">(Interactive Live Designer)</span></li>
+            </ul>
+          </div>
+
+          <!-- Silo C -->
+          <div class="bg-[#050811] border border-brand-border/80 rounded-lg p-3 space-y-1.5">
+            <strong class="text-cyan-300 block font-mono text-[11px]">Silo C: B2B Commercial &amp; Local</strong>
+            <ul class="space-y-1 text-[11px] text-slate-300 font-mono">
+              <li>&bull; <span class="text-white">/for-business</span> <span class="text-slate-400 font-sans text-[10px]">(Corporate Swag &amp; Uniforms)</span></li>
+              <li>&bull; <span class="text-white">/columbus-ohio-apparel</span> <span class="text-slate-400 font-sans text-[10px]">(Local Pickup)</span></li>
+              <li>&bull; <span class="text-white">/bulk-order-quote</span> <span class="text-slate-400 font-sans text-[10px]">(B2B Volume Intake)</span></li>
+              <li>&bull; <span class="text-white">/about</span> <span class="text-slate-400 font-sans text-[10px]">(Founder Story &amp; Facility)</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Page 4 Footer -->
+      <div class="flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-brand-border/60 pt-3 gap-2 font-mono">
+        <div>&copy; 2026 OmniPeak Digital &bull; <a href="https://omnipeakdigital.com" class="text-cyan-400 hover:underline">omnipeakdigital.com</a></div>
+        <div>CONFIDENTIAL &bull; PREPARED FOR IMAGINEGOCO &bull; PAGE 04 OF 06</div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- PAGE 05: SECTION 04 • LOCAL SEO & $499 ROI MODEL -->
+    <!-- ======================================================================= -->
+    <section id="page-5" class="report-page">
+      
+      <!-- Page 5 Header -->
+      <div class="flex items-center justify-between border-b border-brand-border/60 pb-3 text-xs text-slate-400 font-mono">
+        <div class="flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-wider">
+          <span>TECHNICAL SEO &amp; REVENUE AUDIT</span>
+        </div>
+        <div>TARGET: <span class="text-slate-200 font-bold">IMAGINEGOCO.COM</span> &bull; OCTOBER 2026</div>
+      </div>
+
+      <!-- Section Title & Subtitle -->
+      <div class="space-y-1 pt-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">SECTION 04</span>
+          <h2 class="text-lg sm:text-xl font-bold text-white tracking-wide">COLUMBUS LOCAL SEO, CONVERSION ENGINEERING &amp; ROI MODEL</h2>
+        </div>
+        <p class="text-xs text-slate-300 leading-normal">
+          ImagineGoCo offers 5–7 day turnaround and local order pickup. Capitalizing on Columbus, Ohio's thriving business and creative ecosystem provides an immediate, high-margin revenue catalyst.
+        </p>
+      </div>
+
+      <!-- Columbus Local SEO & CRO Two Columns -->
+      <div class="grid sm:grid-cols-2 gap-4 my-2">
+        
+        <!-- Columbus Metro Local SEO Strategy -->
+        <div class="bg-brand-surface border border-cyan-500/30 rounded-xl p-3.5 space-y-2">
+          <div class="border-b border-brand-border pb-1.5 text-cyan-400 font-bold text-xs uppercase tracking-wider font-mono">
+            COLUMBUS METRO LOCAL SEO STRATEGY
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Google Business Profile (GBP) Launch:</strong> Establish and optimize a verified listing for ImagineGoCo under "Custom T-Shirt Store" and "Screen Printer".</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Central Ohio Local Citations:</strong> Consistent Name, Address, Phone (NAP with 614-726-2168) across Columbus Chamber of Commerce, Yelp, YellowPages, BBB, and Alignable.</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Capitalizing on "Local Pickup":</strong> Target high-intent queries like "custom t shirts columbus ohio same week" and "bulk hoodies pickup columbus".</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-cyan-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Local Customer Review Acquisition:</strong> Systematic post-fulfillment review capture to build 5-star prominence on Google Maps.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CRO & E-E-A-T Trust Engineering -->
+        <div class="bg-brand-surface border border-blue-500/30 rounded-xl p-3.5 space-y-2">
+          <div class="border-b border-brand-border pb-1.5 text-blue-400 font-bold text-xs uppercase tracking-wider font-mono">
+            CRO &amp; E-E-A-T TRUST ENGINEERING
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Professional Custom Email:</strong> Migrate from imaginegoco@gmail.com to orders@imaginegoco.com to boost B2B buyer trust and quote conversions.</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Dedicated /about Craftsmanship Page:</strong> Showcase production equipment, garment fabrics (heavyweight cotton, fleece), printing methods, and company mission.</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-400 font-bold">&bull;</span>
+              <div><strong class="text-white">Color Contrast &amp; Tap Target Fixes:</strong> Resolve Lighthouse accessibility flags (neon green text contrast of 1.62:1 raised to WCAG compliant 4.5:1).</div>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-400 font-bold">&bull;</span>
+              <div><strong class="text-white">E-Commerce Trust Badges:</strong> Display SSL security, turnaround guarantees, garment sizing charts, and transparent pickup instructions on product pages.</div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Financial Projection: The $499/Month Inbound Revenue Economics & ROI Model (UPDATED) -->
+      <div class="bg-gradient-to-br from-brand-surface via-brand-card to-[#09152C] border-2 border-emerald-500/40 rounded-2xl p-5 space-y-3.5 shadow-2xl relative overflow-hidden my-2">
+        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-brand-border/80 pb-2.5">
+          <div>
+            <span class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-bold block">FINANCIAL PROJECTION</span>
+            <h3 class="text-base sm:text-lg font-extrabold text-white">The $499/Month Inbound Revenue Economics &amp; ROI Model</h3>
+          </div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 font-mono font-bold text-xs self-start sm:self-center shadow-lg">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>11.8X PIPELINE MULTIPLIER</span>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-300 leading-normal">
+          Search engine optimization transforms recurring advertising costs into compounding digital enterprise equity. Here is the mathematical proof of how a <span class="text-emerald-300 font-bold font-mono">$499/month</span> OmniPeak retainer delivers immediate pipeline profitability:
+        </p>
+
+        <!-- 3 Metric Columns -->
+        <div class="grid sm:grid-cols-3 gap-3">
+          
+          <!-- Metric 1: Retail DTC -->
+          <div class="bg-[#050811]/90 border border-brand-border rounded-xl p-3.5 space-y-1">
+            <span class="text-[10px] uppercase font-mono tracking-wider text-slate-400 block font-semibold">RETAIL DTC E-COMMERCE</span>
+            <div class="text-xl sm:text-2xl font-extrabold text-cyan-300 font-mono">$2,145 <span class="text-xs font-normal text-slate-400 font-sans">/ mo</span></div>
+            <p class="text-[10px] text-slate-400 font-mono">1,500 visits &bull; 2.2% conv. &bull; 33 orders @ $65 AOV</p>
+          </div>
+
+          <!-- Metric 2: B2B Commercial -->
+          <div class="bg-[#050811]/90 border border-brand-border rounded-xl p-3.5 space-y-1">
+            <span class="text-[10px] uppercase font-mono tracking-wider text-slate-400 block font-semibold">B2B COMMERCIAL BULK MERCH</span>
+            <div class="text-xl sm:text-2xl font-extrabold text-emerald-400 font-mono">$3,750 <span class="text-xs font-normal text-slate-400 font-sans">/ mo</span></div>
+            <p class="text-[10px] text-slate-400 font-mono">Just 2 bulk client orders/mo @ $1,875 (75 garments)</p>
+          </div>
+
+          <!-- Metric 3: Combined Pipeline -->
+          <div class="bg-[#050811]/90 border border-emerald-500/40 rounded-xl p-3.5 space-y-1 bg-emerald-950/10">
+            <span class="text-[10px] uppercase font-mono tracking-wider text-emerald-400 block font-semibold">COMBINED INBOUND PIPELINE</span>
+            <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">$5,895 <span class="text-xs font-normal text-slate-400 font-sans">/ mo</span></div>
+            <p class="text-[10px] text-emerald-300 font-mono font-bold">11.8x Gross Inbound Return on $499 retainer</p>
+          </div>
+
+        </div>
+
+        <!-- Breakeven Analysis Box -->
+        <div class="bg-emerald-950/40 border border-emerald-500/30 rounded-xl p-3 text-xs text-emerald-200 leading-relaxed">
+          <strong class="text-white font-mono uppercase text-[11px] block sm:inline">Breakeven Analysis:</strong>
+          Due to strong gross margins in custom apparel printing, acquiring just <strong class="text-white">ONE</strong> additional corporate bulk order per month completely pays for the entire <strong class="text-emerald-300 font-mono">$499 OmniPeak retainer</strong>, making this growth investment self-funding from Month 2 onward.
+        </div>
+
+      </div>
+
+      <!-- Lighthouse Speed & Asset Optimization Roadmap -->
+      <div class="bg-brand-surface border border-brand-border rounded-xl p-3.5 space-y-2 my-2">
+        <h3 class="text-xs font-bold text-white uppercase tracking-wider font-mono border-b border-brand-border pb-1.5">
+          LIGHTHOUSE SPEED &amp; ASSET OPTIMIZATION ROADMAP
+        </h3>
+
+        <div class="grid sm:grid-cols-3 gap-3 text-xs">
+          
+          <div class="space-y-1 bg-[#050811] p-3 rounded-lg border border-brand-border/60">
+            <strong class="text-cyan-300 block font-mono text-[11px]">1. Logo Asset Compression</strong>
+            <p class="text-[11px] text-slate-300 leading-normal">
+              Convert imagine-goco-logo.PNG (1,087 KB) to scalable SVG or compressed WebP (&lt;25 KB) to save 1.06 MB of network payload on every page load.
+            </p>
+          </div>
+
+          <div class="space-y-1 bg-[#050811] p-3 rounded-lg border border-brand-border/60">
+            <strong class="text-cyan-300 block font-mono text-[11px]">2. Static Product Pre-Rendering</strong>
+            <p class="text-[11px] text-slate-300 leading-normal">
+              Utilize Next.js Incremental Static Regeneration (ISR) so search crawlers receive server-rendered product cards rather than "0 items Loading products...".
+            </p>
+          </div>
+
+          <div class="space-y-1 bg-[#050811] p-3 rounded-lg border border-brand-border/60">
+            <strong class="text-cyan-300 block font-mono text-[11px]">3. Mobile Touch Target Compliance</strong>
+            <p class="text-[11px] text-slate-300 leading-normal">
+              Expand footer link padding from 12.7px to 24px+ to pass Google Mobile Usability and Lighthouse Agentic Browsing standards.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Page 5 Footer -->
+      <div class="flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-brand-border/60 pt-3 gap-2 font-mono">
+        <div>&copy; 2026 OmniPeak Digital &bull; <a href="https://omnipeakdigital.com" class="text-cyan-400 hover:underline">omnipeakdigital.com</a></div>
+        <div>CONFIDENTIAL &bull; PREPARED FOR IMAGINEGOCO &bull; PAGE 05 OF 06</div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- PAGE 06: SECTION 05 • 6-MONTH ROADMAP & $499 RETAINER -->
+    <!-- ======================================================================= -->
+    <section id="page-6" class="report-page">
+      
+      <!-- Page 6 Header -->
+      <div class="flex items-center justify-between border-b border-brand-border/60 pb-3 text-xs text-slate-400 font-mono">
+        <div class="flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-wider">
+          <span>TECHNICAL SEO &amp; REVENUE AUDIT</span>
+        </div>
+        <div>TARGET: <span class="text-slate-200 font-bold">IMAGINEGOCO.COM</span> &bull; OCTOBER 2026</div>
+      </div>
+
+      <!-- Section Title & Subtitle -->
+      <div class="space-y-1 pt-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">SECTION 05</span>
+          <h2 class="text-lg sm:text-xl font-bold text-white tracking-wide">6-MONTH ROADMAP, DEDICATED RETAINER &amp; GOVERNANCE</h2>
+        </div>
+        <p class="text-xs text-slate-300 leading-normal">
+          E-commerce search engine optimization requires disciplined technical execution first, entity structure second, commercial keyword expansion third, and continuous domain authority building.
+        </p>
+      </div>
+
+      <!-- 6-Month Roadmap Phases Grid (2 rows x 3 cols) -->
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 my-2">
+        
+        <!-- Phase 1 -->
+        <div class="bg-brand-surface border border-brand-border rounded-xl p-3 space-y-1.5">
+          <div class="flex items-center justify-between border-b border-brand-border pb-1">
+            <strong class="text-xs font-bold text-white">Month 1: Technical Core</strong>
+            <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">PHASE 1</span>
+          </div>
+          <ul class="space-y-1 text-[10.5px] text-slate-300">
+            <li>&bull; Deploy Next.js dynamic product canonicals.</li>
+            <li>&bull; Fix apex-to-www 308 redirect in sitemap.</li>
+            <li>&bull; Resolve 404 trust endpoints (/about, /contact).</li>
+            <li>&bull; Compress 1.1MB logo into &lt;25KB WebP/SVG.</li>
+            <li>&bull; Google Search Console &amp; Merchant verification.</li>
+          </ul>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="bg-brand-surface border border-brand-border rounded-xl p-3 space-y-1.5">
+          <div class="flex items-center justify-between border-b border-brand-border pb-1">
+            <strong class="text-xs font-bold text-white">Month 2: Schema &amp; Local</strong>
+            <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">PHASE 2</span>
+          </div>
+          <ul class="space-y-1 text-[10.5px] text-slate-300">
+            <li>&bull; Deploy JSON-LD Store &amp; Product schemas.</li>
+            <li>&bull; Launch verified Google Business Profile (Columbus).</li>
+            <li>&bull; Rewrite homepage and shop title/H1 meta tags.</li>
+            <li>&bull; Implement static ISR product catalog rendering.</li>
+            <li>&bull; Submit NAP citations to top 20 local directories.</li>
+          </ul>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="bg-brand-surface border border-brand-border rounded-xl p-3 space-y-1.5">
+          <div class="flex items-center justify-between border-b border-brand-border pb-1">
+            <strong class="text-xs font-bold text-white">Month 3: Catalog Silos</strong>
+            <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 border border-cyan-800 font-bold">PHASE 3</span>
+          </div>
+          <ul class="space-y-1 text-[10.5px] text-slate-300">
+            <li>&bull; Build dedicated category hubs (/hoodies, /tees).</li>
+            <li>&bull; Migrate product URLs to semantic SEO slugs.</li>
+            <li>&bull; Launch dedicated Columbus Ohio pickup page.</li>
+            <li>&bull; Deploy structured FAQ schema for custom apparel.</li>
+            <li>&bull; Expand product descriptions to 150+ words each.</li>
+          </ul>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="bg-brand-surface border border-brand-border rounded-xl p-3 space-y-1.5">
+          <div class="flex items-center justify-between border-b border-brand-border pb-1">
+            <strong class="text-xs font-bold text-white">Month 4: B2B Service Hubs</strong>
+            <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-blue-950 text-blue-300 border border-blue-800 font-bold">PHASE 4</span>
+          </div>
+          <ul class="space-y-1 text-[10.5px] text-slate-300">
+            <li>&bull; Launch /screen-printing-columbus landing page.</li>
+            <li>&bull; Launch /dtg-printing-columbus high-intent hub.</li>
+            <li>&bull; Build dedicated Corporate Merch &amp; Swag intake.</li>
+            <li>&bull; Deploy interactive bulk order pricing calculator.</li>
+            <li>&bull; Initiate B2B lead capture and quote follow-up CRO.</li>
+          </ul>
+        </div>
+
+        <!-- Phase 5 -->
+        <div class="bg-brand-surface border border-brand-border rounded-xl p-3 space-y-1.5">
+          <div class="flex items-center justify-between border-b border-brand-border pb-1">
+            <strong class="text-xs font-bold text-white">Month 5: Authority &amp; Links</strong>
+            <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-blue-950 text-blue-300 border border-blue-800 font-bold">PHASE 5</span>
+          </div>
+          <ul class="space-y-1 text-[10.5px] text-slate-300">
+            <li>&bull; Digital PR outreach to Columbus business portals.</li>
+            <li>&bull; Publish "Custom Hoodies Fabric &amp; Print Guide".</li>
+            <li>&bull; Secure placements on apparel &amp; design directories.</li>
+            <li>&bull; High-authority link acquisition for B2B hubs.</li>
+            <li>&bull; Refine internal link anchor text distribution.</li>
+          </ul>
+        </div>
+
+        <!-- Phase 6 -->
+        <div class="bg-brand-surface border border-brand-border rounded-xl p-3 space-y-1.5">
+          <div class="flex items-center justify-between border-b border-brand-border pb-1">
+            <strong class="text-xs font-bold text-white">Month 6: Executive Scaling</strong>
+            <span class="text-[9px] font-mono px-1.5 py-0.2 rounded bg-blue-950 text-blue-300 border border-blue-800 font-bold">PHASE 6</span>
+          </div>
+          <ul class="space-y-1 text-[10.5px] text-slate-300">
+            <li>&bull; Deliver comprehensive 6-month growth audit.</li>
+            <li>&bull; Evaluate organic traffic, GSC queries, and sales.</li>
+            <li>&bull; Optimize checkout funnel &amp; Studio mobile UX.</li>
+            <li>&bull; Formulate Phase 2 regional expansion strategy.</li>
+            <li>&bull; Executive presentation on recurring corporate contracts.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Dedicated Growth Retainer Investment Card ($499/mo UPDATED) -->
+      <div class="bg-gradient-to-r from-brand-surface via-brand-card to-brand-surface border-2 border-emerald-500/50 rounded-2xl p-4 sm:p-5 space-y-3.5 shadow-2xl relative overflow-hidden my-2">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-brand-border/80 pb-3">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-emerald-400 font-bold">DEDICATED GROWTH RETAINER</span>
+              <span class="text-[9px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700 font-mono font-bold">UPDATED PRICING</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-extrabold text-white">OmniPeak Digital Managed E-Commerce SEO Retainer</h3>
+            <p class="text-xs text-slate-300">Full-spectrum Next.js technical maintenance, schema engineering, keyword siloing, and local Columbus dominance.</p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-[#050811] border border-emerald-500/40 text-left sm:text-right space-y-1 flex-shrink-0 min-w-[200px]">
+            <span class="text-[9px] uppercase font-mono text-slate-400 block font-semibold">MONTHLY INVESTMENT</span>
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">
+              $499 <span class="text-xs font-normal text-slate-300">/ month</span>
+            </div>
+            <span class="text-[10px] text-cyan-300 block font-mono">6-Month Minimum Recommended</span>
+          </div>
+        </div>
+
+        <!-- 3 Columns Scope Checklist -->
+        <div class="grid sm:grid-cols-3 gap-2.5 text-xs text-slate-300 font-medium">
+          <div class="space-y-1.5">
+            <div class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span>Next.js dynamic canonical &amp; sitemap governance</span></div>
+            <div class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span>Google Business Profile &amp; local Columbus ranking</span></div>
+            <div class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span>Core Web Vitals &amp; image compression monitoring</span></div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span>Product &amp; LocalBusiness JSON-LD schema suite</span></div>
+            <div class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span>Dedicated B2B landing pages (Screen Printing, DTG)</span></div>
+            <div class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span>Studio quote intake conversion rate optimization</span></div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span>Continuous keyword research &amp; metadata optimization</span></div>
+            <div class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span>Ongoing technical crawl error &amp; 404 remediation</span></div>
+            <div class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span>Monthly PDF executive traffic &amp; revenue reports</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Professional Disclosure & Governance -->
+      <div class="grid sm:grid-cols-3 gap-3 my-2">
+        
+        <div class="sm:col-span-2 bg-brand-surface border border-brand-border rounded-xl p-3 space-y-1">
+          <strong class="text-[10px] uppercase font-mono tracking-wider text-slate-400 block font-semibold">PROFESSIONAL SEO STANDARD &amp; ALGORITHMIC DISCLOSURE</strong>
+          <p class="text-[10.5px] text-slate-300 leading-normal text-justify">
+            Search engine optimization is an incremental operational process governed by algorithmic indexing, regional competition, and commercial search demand. While OmniPeak Digital applies industry-leading engineering methodologies, specific ranking positions and traffic numbers cannot be legally guaranteed. Our commitment is to deliver disciplined technical execution, transparent reporting, and continuous refinement to maximize commercial advantage.
+          </p>
+        </div>
+
+        <div class="bg-brand-surface border border-brand-border rounded-xl p-3 space-y-1 font-mono text-[10.5px]">
+          <strong class="text-[10px] uppercase tracking-wider text-cyan-400 block font-semibold">AUDIT GOVERNANCE</strong>
+          <div class="space-y-0.5 text-slate-300">
+            <div>Document: <span class="text-white font-bold">OP-SEO-IMG-2026-10</span></div>
+            <div>Audited Host: <span class="text-cyan-300 font-bold">www.imaginegoco.com</span></div>
+            <div>Status: <span class="text-emerald-400 font-bold">APPROVED FOR DELIVERY</span></div>
+            <div>Date: <span class="text-slate-400">October 2026</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Page 6 Footer -->
+      <div class="flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 border-t border-brand-border/60 pt-3 gap-2 font-mono">
+        <div>&copy; 2026 OmniPeak Digital &bull; <a href="https://omnipeakdigital.com" class="text-cyan-400 hover:underline">omnipeakdigital.com</a></div>
+        <div>CONFIDENTIAL &bull; PREPARED FOR IMAGINEGOCO &bull; PAGE 06 OF 06</div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
