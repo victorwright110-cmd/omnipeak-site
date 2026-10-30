@@ -155,10 +155,10 @@
   <!-- ========================================================================= -->
   <!-- HERO SECTION: NATIONAL MONUMENT BACKDROP + ACTUAL TOUR VEHICLE UPFRONT + HAPPY TOURISTS -->
   <!-- ========================================================================= -->
-  <section id="hero" class="relative min-h-[92vh] flex flex-col justify-between overflow-hidden bg-brand-navy">
+  <section id="hero" class="relative min-h-[90vh] flex flex-col justify-between bg-brand-navy">
 
     <!-- Washington Monument National Monument Scenic Backdrop (Bright & Crisp Daylight) -->
-    <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=2200&q=85"
            alt="Washington Monument and US Capitol National Mall Backdrop"
            class="w-full h-full object-cover object-center brightness-105 contrast-105">
@@ -281,59 +281,68 @@
       </div>
     </div>
 
-    <!-- Bottom Feature Strip: Key Sightseeing Metrics -->
-    <div class="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 w-full -mb-10 sm:-mb-12">
-      <div class="bg-white rounded-2xl shadow-xl border border-brand-border p-5 text-brand-charcoal grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
+      </section>
 
-        <!-- 14 Passenger Guarantee -->
-        <div class="flex items-center gap-3.5 border-r border-brand-border pr-2">
-          <div class="w-11 h-11 rounded-xl bg-brand-sky border border-brand-blue/20 flex items-center justify-center text-brand-blue font-extrabold text-lg flex-shrink-0">
-            14
-          </div>
-          <div>
-            <span class="text-[11px] text-brand-goldDark uppercase tracking-wider block font-bold">Strict Capacity</span>
-            <span class="text-sm font-extrabold text-brand-blue">Max 14 Guests</span>
-          </div>
+  <!-- ========================================================================= -->
+  <!-- FLOATING FEATURE STRIP: KEY SIGHTSEEING METRICS (UNCLIPPED OVERLAY) -->
+  <!-- ========================================================================= -->
+  <div class="relative z-30 max-w-6xl mx-auto px-4 sm:px-6 w-full -mt-10 sm:-mt-12 mb-6">
+    <div class="bg-white rounded-2xl shadow-2xl border border-brand-border/80 p-5 text-brand-charcoal grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
+
+      <!-- 14 Passenger Guarantee -->
+      <div class="flex items-center gap-3.5 border-r border-brand-border/80 pr-2">
+        <div class="w-11 h-11 rounded-xl bg-brand-sky border border-brand-blue/20 flex items-center justify-center text-brand-blue font-black text-lg flex-shrink-0 shadow-sm">
+          14
         </div>
-
-        <!-- All Season Comfort -->
-        <div class="flex items-center gap-3.5 border-r border-brand-border pr-2">
-          <div class="w-11 h-11 rounded-xl bg-brand-sky border border-brand-blue/20 flex items-center justify-center text-brand-blue text-xl flex-shrink-0">
-            ❄/☀
-          </div>
-          <div>
-            <span class="text-[11px] text-brand-goldDark uppercase tracking-wider block font-bold">All-Season Comfort</span>
-            <span class="text-sm font-extrabold text-brand-blue">Heated & AC Cabin</span>
-          </div>
+        <div>
+          <span class="text-[11px] text-brand-goldDark uppercase tracking-wider block font-bold">Strict Capacity</span>
+          <span class="text-sm font-extrabold text-brand-blue">Max 14 Guests</span>
         </div>
-
-        <!-- Daily Departures -->
-        <div class="flex items-center gap-3.5 md:border-r md:border-brand-border pr-2">
-          <div class="w-11 h-11 rounded-xl bg-brand-sky border border-brand-blue/20 flex items-center justify-center text-brand-blue text-lg flex-shrink-0">
-            🏛
-          </div>
-          <div>
-            <span class="text-[11px] text-brand-goldDark uppercase tracking-wider block font-bold">Iconic D.C. Sights</span>
-            <span class="text-sm font-extrabold text-brand-blue">Day & Moonlight</span>
-          </div>
-        </div>
-
-        <!-- Jump to Booking -->
-        <div class="col-span-2 md:col-span-1 flex justify-center md:justify-end">
-          <a href="#booking" class="w-full sm:w-auto text-center bg-brand-blue hover:bg-brand-navy text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition shadow-md">
-            Check Availability →
-          </a>
-        </div>
-
       </div>
-    </div>
 
-  </section>
+      <!-- All Season Comfort -->
+      <div class="flex items-center gap-3.5 border-r border-brand-border/80 pr-2">
+        <div class="w-11 h-11 rounded-xl bg-brand-sky border border-brand-blue/20 flex items-center justify-center text-brand-blue flex-shrink-0 shadow-sm">
+          <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </div>
+        <div>
+          <span class="text-[11px] text-brand-goldDark uppercase tracking-wider block font-bold">All-Season Comfort</span>
+          <span class="text-sm font-extrabold text-brand-blue">Heated & AC Cabin</span>
+        </div>
+      </div>
+
+      <!-- Iconic D.C. Sights -->
+      <div class="flex items-center gap-3.5 md:border-r md:border-brand-border/80 pr-2">
+        <div class="w-11 h-11 rounded-xl bg-brand-sky border border-brand-blue/20 flex items-center justify-center text-brand-blue flex-shrink-0 shadow-sm">
+          <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+        </div>
+        <div>
+          <span class="text-[11px] text-brand-goldDark uppercase tracking-wider block font-bold">Iconic D.C. Sights</span>
+          <span class="text-sm font-extrabold text-brand-blue">Day & Moonlight</span>
+        </div>
+      </div>
+
+      <!-- Jump to Booking -->
+      <div class="col-span-2 md:col-span-1 flex justify-center md:justify-end">
+        <a href="#booking" class="w-full sm:w-auto text-center bg-brand-blue hover:bg-brand-navy text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group">
+          <span>Check Availability</span>
+          <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ========================================================================= -->
   <!-- DEDICATED SECTION: OUR 14-PASSENGER VEHICLE SPOTLIGHT -->
   <!-- ========================================================================= -->
-  <section id="vehicle" class="pt-28 pb-20 bg-white">
+  <section id="vehicle" class="pt-14 sm:pt-16 pb-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
