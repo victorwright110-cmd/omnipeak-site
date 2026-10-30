@@ -9,7 +9,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <!-- Google Fonts: Manrope & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -40,7 +40,8 @@
           },
           boxShadow: {
             'concierge': '0 20px 40px -15px rgba(18, 60, 120, 0.12), 0 0 1px 1px rgba(18, 60, 120, 0.05)',
-            'concierge-hover': '0 30px 60px -15px rgba(18, 60, 120, 0.2), 0 0 1px 1px rgba(18, 60, 120, 0.08)'
+            'concierge-hover': '0 30px 60px -15px rgba(18, 60, 120, 0.2), 0 0 1px 1px rgba(18, 60, 120, 0.08)',
+            'vehicle': '0 25px 50px -12px rgba(14, 41, 82, 0.25), 0 0 0 1px rgba(201, 162, 74, 0.3)'
           }
         }
       }
@@ -56,10 +57,6 @@
     .heading-serif {
       font-family: 'Playfair Display', Georgia, serif;
     }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(12px);
-    }
   </style>
 </head>
 <body class="bg-white text-brand-charcoal antialiased selection:bg-brand-gold selection:text-white">
@@ -73,7 +70,7 @@
         <span class="inline-block w-2 h-2 rounded-full bg-brand-gold"></span>
         <span class="text-brand-gold font-bold uppercase tracking-wider text-[11px]">Boutique 14-Seat Sightseeing</span>
         <span class="text-white/40 hidden sm:inline">•</span>
-        <span class="text-white/90">Washington, D.C. Sightseeing Tours — Climate-Controlled Comfort</span>
+        <span class="text-white/95">Washington, D.C. Sightseeing Tours — Climate-Controlled Comfort</span>
       </div>
       <div class="flex items-center gap-4 text-white/80 text-[11px]">
         <span>Central DC Pickup Included</span>
@@ -92,10 +89,10 @@
       <!-- LEFT: Authentic Client Logo -->
       <a href="#hero" class="flex items-center gap-3.5 group">
         <div class="h-11 w-auto flex items-center justify-center transition-transform group-hover:scale-105">
-          <img src="images/shantal_logo_transparent.png" alt="Divine DC Tours Logo" class="h-11 w-auto object-contain">
+          <img src="images/client_logo_transparent.png" alt="Divine DC Tours Logo" class="h-11 w-auto object-contain">
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-lg text-brand-blue tracking-tight uppercase group-hover:text-brand-goldDark transition">DIVINE DC TOURS</span>
+          <span class="font-extrabold text-lg text-brand-blue tracking-tight uppercase group-hover:text-brand-goldDark transition">DIVINE DC TOURS</span>
           <span class="text-[9px] tracking-[0.24em] uppercase text-brand-gold font-bold">Guided Sightseeing Experiences</span>
         </div>
       </a>
@@ -103,6 +100,7 @@
       <!-- CENTER: Navigation -->
       <nav class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-brand-charcoal">
         <a href="#hero" class="hover:text-brand-blue transition py-1">Home</a>
+        <a href="#vehicle" class="hover:text-brand-blue transition py-1">Our Tour Vehicle</a>
         <a href="#tours" class="hover:text-brand-blue transition py-1">Tour Packages</a>
         <a href="#booking" class="hover:text-brand-blue transition py-1">Book Tour (14-Max)</a>
         <a href="#comparison" class="hover:text-brand-blue transition py-1">The 14-Seat Difference</a>
@@ -128,6 +126,7 @@
     <!-- Mobile Drawer -->
     <div id="mobileDrawer" class="hidden lg:hidden pt-4 pb-2 border-t border-brand-border mt-3 flex-col gap-2">
       <a href="#hero" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2">Home</a>
+      <a href="#vehicle" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2">Our Tour Vehicle</a>
       <a href="#tours" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2">Tour Packages</a>
       <a href="#booking" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2">Book Tour (14 Max)</a>
       <a href="#comparison" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2">The 14-Seat Difference</a>
@@ -154,13 +153,13 @@
             <span>Washington, D.C. Sightseeing Tour Operator</span>
           </div>
 
-          <!-- Suggested Client Headline -->
+          <!-- Headline: "Discover Washington, D.C. Like Never Before." -->
           <h1 class="heading-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-brand-blue leading-[1.08] tracking-tight">
             Discover Washington, D.C. <br>
             <span class="italic font-normal text-brand-goldDark">Like Never Before.</span>
           </h1>
 
-          <!-- Suggested Client Copy -->
+          <!-- Supporting Copy -->
           <p class="text-lg sm:text-xl text-gray-700 font-normal leading-relaxed max-w-xl">
             Experience the history, landmarks, and unforgettable sights of the nation's capital with Divine DC Tours. Enjoy intimate 14-passenger luxury touring with knowledgeable, friendly local guides.
           </p>
@@ -196,29 +195,36 @@
 
         </div>
 
-        <!-- Right: Modern Photo Grid -->
+        <!-- Right: CLIENT'S ACTUAL VEHICLE + NATIONAL MONUMENT BACKDROP + HAPPY TOURISTS -->
         <div class="lg:col-span-5 relative">
           <div class="grid grid-cols-2 gap-4">
 
-            <!-- Card 1: Washington Monument in Bright Sunlight -->
-            <div class="rounded-3xl overflow-hidden shadow-lg border-2 border-white group h-64">
+            <!-- Card 1: Washington Monument in Bright Sunlight (Backdrop) -->
+            <div class="rounded-3xl overflow-hidden shadow-lg border-2 border-white group h-64 relative">
               <img src="https://images.unsplash.com/photo-1501466044931-62695aada8e9?auto=format&fit=crop&w=800&q=85"
                    alt="Washington Monument in Bright Daylight"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-
-            <!-- Card 2: Touring Passenger Van Experience -->
-            <div class="rounded-3xl overflow-hidden shadow-lg border-2 border-white group h-64 bg-brand-blue relative">
-              <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=85"
-                   alt="Divine DC Tours Passenger Vehicle"
-                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 text-white text-[11px] font-bold">
-                14-Passenger Luxury Van
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 text-white text-[11px] font-bold">
+                Washington Monument
               </div>
             </div>
 
-            <!-- Card 3: Happy Sightseeing Tourists -->
+            <!-- Card 2: CLIENT'S ACTUAL TOUR VEHICLE (High Resolution) -->
+            <div class="rounded-3xl overflow-hidden shadow-lg border-2 border-white group h-64 bg-brand-skyLight relative">
+              <img src="images/client_tour_vehicle.png"
+                   alt="Divine DC Tours 14-Passenger Tour Vehicle"
+                   class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-white/95 px-2.5 py-1 rounded-lg text-[10px] font-extrabold text-brand-blue uppercase shadow">
+                Official Vehicle
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 text-white text-[11px] font-bold">
+                14-Passenger Open-Glass Van
+              </div>
+            </div>
+
+            <!-- Card 3: HAPPY SIGHTSEEING TOURISTS IN WASHINGTON D.C. -->
             <div class="col-span-2 rounded-3xl overflow-hidden shadow-xl border-2 border-white group h-52 relative">
               <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=85"
                    alt="Happy Tourists Sightseeing in Washington DC"
@@ -244,9 +250,52 @@
   </section>
 
   <!-- ========================================================================= -->
+  <!-- DEDICATED TOUR VEHICLE SPOTLIGHT -->
+  <!-- ========================================================================= -->
+  <section id="vehicle" class="py-20 bg-brand-skyLight border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+        <div class="md:col-span-6">
+          <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white">
+            <img src="images/client_tour_vehicle.png"
+                 alt="Divine DC Tours 14-Passenger Panoramic Vehicle"
+                 class="w-full h-80 object-cover object-center">
+            <div class="p-4 bg-white flex items-center justify-between border-t border-gray-100">
+              <div>
+                <span class="text-[10px] uppercase tracking-widest font-extrabold text-brand-goldDark block">CLIENT-VERIFIED FLEET</span>
+                <span class="text-sm font-extrabold text-brand-blue">14-Passenger Open-Glass Sightseeing Shuttle</span>
+              </div>
+              <span class="bg-brand-blue text-white text-xs font-bold px-3 py-1.5 rounded-xl">
+                Max 14 Guests
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-6 space-y-4">
+          <span class="text-xs uppercase tracking-widest text-brand-goldDark font-bold block">THE 14-SEAT EXPERIENCE</span>
+          <h2 class="heading-serif text-3xl sm:text-4xl font-bold text-brand-blue">
+            Unobstructed Views, Climate Comfort & Easy Access.
+          </h2>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            Every seat on our custom 14-passenger tour vehicle is positioned next to panoramic sightseeing glass, ensuring you enjoy breathtaking views of the Washington Monument, Lincoln Memorial, and Capitol without crowded bus obstructions.
+          </p>
+          <div class="space-y-2 text-xs text-brand-charcoal pt-2">
+            <div class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Climate-controlled heating & air conditioning</div>
+            <div class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Low-step easy boarding for all ages</div>
+            <div class="flex items-center gap-2"><span class="text-brand-gold font-bold">✓</span> Close curbside drops at national monuments</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
   <!-- TOURS LISTINGS -->
   <!-- ========================================================================= -->
-  <section id="tours" class="py-20 bg-brand-skyLight border-y border-brand-border">
+  <section id="tours" class="py-24 bg-white border-t border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
@@ -264,7 +313,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <!-- Tour 1 -->
-        <div class="bg-white rounded-3xl p-6 shadow-concierge hover:shadow-concierge-hover transition-all border border-brand-border flex flex-col justify-between">
+        <div class="bg-brand-skyLight rounded-3xl p-6 shadow-concierge hover:shadow-concierge-hover transition-all border border-brand-border flex flex-col justify-between">
           <div>
             <div class="relative h-56 rounded-2xl overflow-hidden mb-5">
               <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80" alt="Capitol" class="w-full h-full object-cover">
@@ -284,7 +333,7 @@
         </div>
 
         <!-- Tour 2 -->
-        <div class="bg-white rounded-3xl p-6 shadow-concierge hover:shadow-concierge-hover transition-all border-2 border-brand-gold flex flex-col justify-between relative">
+        <div class="bg-brand-skyLight rounded-3xl p-6 shadow-concierge hover:shadow-concierge-hover transition-all border-2 border-brand-gold flex flex-col justify-between relative">
           <div class="absolute -top-3 right-6 bg-brand-gold text-brand-navy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">
             ★ Evening Favorite
           </div>
@@ -295,7 +344,7 @@
               <span class="absolute bottom-3 right-3 bg-brand-navy text-white text-xs font-semibold px-2.5 py-1 rounded-lg">14 Seats Max</span>
             </div>
             <div class="text-xs text-brand-goldDark font-bold uppercase tracking-wider mb-1">Evening Splendor</div>
-            <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-2">Monuments by Moonlight</h3>
+            <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-2">Lincoln & Monuments by Moonlight</h3>
             <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
               Watch Washington's legendary monuments come alive under dramatic night illumination. Peaceful evening touring without midday traffic.
             </p>
@@ -307,7 +356,7 @@
         </div>
 
         <!-- Tour 3 -->
-        <div class="bg-white rounded-3xl p-6 shadow-concierge hover:shadow-concierge-hover transition-all border border-brand-border flex flex-col justify-between">
+        <div class="bg-brand-skyLight rounded-3xl p-6 shadow-concierge hover:shadow-concierge-hover transition-all border border-brand-border flex flex-col justify-between">
           <div>
             <div class="relative h-56 rounded-2xl overflow-hidden mb-5">
               <img src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?auto=format&fit=crop&w=800&q=80" alt="Tidal Basin" class="w-full h-full object-cover">
@@ -334,7 +383,7 @@
   <!-- ========================================================================= -->
   <!-- 14-PASSENGER RESERVATION CONSOLE -->
   <!-- ========================================================================= -->
-  <section id="booking" class="py-24 bg-white relative">
+  <section id="booking" class="py-24 bg-brand-skyLight relative">
     <div class="max-w-5xl mx-auto px-4 sm:px-8">
 
       <div class="text-center max-w-2xl mx-auto mb-12">
@@ -343,21 +392,21 @@
           Instant 14-Seat Booking Engine
         </h2>
         <p class="text-sm text-gray-600">
-          Select date and time below. Remaining seats update in real time with our strict 14-passenger policy.
+          Select date and departure time below. Remaining seats update in real time with our strict 14-passenger limit per departure.
         </p>
       </div>
 
       <!-- Booking Card Container -->
-      <div class="bg-brand-skyLight rounded-3xl border border-brand-border p-6 sm:p-10 shadow-lg">
+      <div class="bg-white rounded-3xl border border-brand-border p-6 sm:p-10 shadow-lg">
 
         <form id="bookingFormConcept2" onsubmit="handleBookingSubmissionConcept2(event)" class="space-y-6">
 
           <!-- Select Tour -->
           <div>
             <label class="block text-xs font-bold uppercase text-brand-blue mb-2">Select Tour Package</label>
-            <select id="tourSelectC2" onchange="recalculateTotalC2()" class="w-full px-4 py-3 rounded-xl border border-brand-border bg-white text-sm font-semibold text-brand-blue focus:outline-none focus:border-brand-blue">
+            <select id="tourSelectC2" onchange="recalculateTotalC2()" class="w-full px-4 py-3 rounded-xl border border-brand-border bg-brand-skyLight text-sm font-semibold text-brand-blue focus:outline-none focus:border-brand-blue">
               <option value="Grand Capital Day Tour" data-price="65">Grand Capital Day Tour ($65 / guest)</option>
-              <option value="Monuments by Moonlight" data-price="75">Monuments by Moonlight ($75 / guest)</option>
+              <option value="Lincoln & Monuments by Moonlight" data-price="75">Lincoln & Monuments by Moonlight ($75 / guest)</option>
               <option value="Tidal Basin & Memorials" data-price="65">Tidal Basin & Memorials ($65 / guest)</option>
             </select>
           </div>
@@ -366,20 +415,20 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-bold uppercase text-brand-blue mb-2">Tour Date</label>
-              <input type="date" id="dateSelectC2" required onchange="renderSlotsC2()" class="w-full px-4 py-3 rounded-xl border border-brand-border bg-white text-sm font-semibold text-brand-charcoal focus:outline-none focus:border-brand-blue">
+              <input type="date" id="dateSelectC2" required onchange="renderSlotsC2()" class="w-full px-4 py-3 rounded-xl border border-brand-border bg-brand-skyLight text-sm font-semibold text-brand-charcoal focus:outline-none focus:border-brand-blue">
             </div>
 
             <div>
               <label class="block text-xs font-bold uppercase text-brand-blue mb-2">Departure Slot (14-Cap)</label>
-              <select id="timeSelectC2" onchange="checkCapacityC2()" class="w-full px-4 py-3 rounded-xl border border-brand-border bg-white text-sm font-semibold text-brand-charcoal focus:outline-none focus:border-brand-blue">
+              <select id="timeSelectC2" onchange="checkCapacityC2()" class="w-full px-4 py-3 rounded-xl border border-brand-border bg-brand-skyLight text-sm font-semibold text-brand-charcoal focus:outline-none focus:border-brand-blue">
                 <!-- Dynamically populated -->
               </select>
             </div>
           </div>
 
           <!-- Capacity Banner for selected slot -->
-          <div id="slotCapacityBannerC2" class="p-3.5 rounded-xl bg-white border border-brand-border flex items-center justify-between text-xs">
-            <span class="text-gray-600">Seat Inventory Status:</span>
+          <div id="slotCapacityBannerC2" class="p-3.5 rounded-xl bg-brand-skyLight border border-brand-border flex items-center justify-between text-xs">
+            <span class="text-gray-600">Departure Seat Inventory:</span>
             <span id="capacityStatusBadgeC2" class="font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">
               Checking capacity...
             </span>
@@ -389,12 +438,12 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-bold uppercase text-brand-blue mb-1">Number of Adult Tickets</label>
-              <input type="number" id="adultCountC2" min="1" max="14" value="2" onchange="recalculateTotalC2()" class="w-full px-4 py-2.5 rounded-xl border border-brand-border bg-white text-sm font-bold text-brand-blue focus:outline-none focus:border-brand-blue">
+              <input type="number" id="adultCountC2" min="1" max="14" value="2" onchange="recalculateTotalC2()" class="w-full px-4 py-2.5 rounded-xl border border-brand-border bg-brand-skyLight text-sm font-bold text-brand-blue focus:outline-none focus:border-brand-blue">
             </div>
 
             <div>
               <label class="block text-xs font-bold uppercase text-brand-blue mb-1">Child Tickets (Under 13)</label>
-              <input type="number" id="childCountC2" min="0" max="13" value="0" onchange="recalculateTotalC2()" class="w-full px-4 py-2.5 rounded-xl border border-brand-border bg-white text-sm font-bold text-brand-blue focus:outline-none focus:border-brand-blue">
+              <input type="number" id="childCountC2" min="0" max="13" value="0" onchange="recalculateTotalC2()" class="w-full px-4 py-2.5 rounded-xl border border-brand-border bg-brand-skyLight text-sm font-bold text-brand-blue focus:outline-none focus:border-brand-blue">
             </div>
           </div>
 
@@ -402,16 +451,16 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
             <div>
               <label class="block text-xs font-semibold text-gray-600 mb-1">Lead Guest Name</label>
-              <input type="text" id="nameC2" required placeholder="Shantal Downer" class="w-full px-4 py-2.5 rounded-xl border border-brand-border bg-white text-sm focus:outline-none focus:border-brand-blue">
+              <input type="text" id="nameC2" required placeholder="Shantal Downer" class="w-full px-4 py-2.5 rounded-xl border border-brand-border bg-brand-skyLight text-sm focus:outline-none focus:border-brand-blue">
             </div>
             <div>
               <label class="block text-xs font-semibold text-gray-600 mb-1">Email (For Instant Ticket Voucher)</label>
-              <input type="email" id="emailC2" required placeholder="shantal@example.com" class="w-full px-4 py-2.5 rounded-xl border border-brand-border bg-white text-sm focus:outline-none focus:border-brand-blue">
+              <input type="email" id="emailC2" required placeholder="shantal@example.com" class="w-full px-4 py-2.5 rounded-xl border border-brand-border bg-brand-skyLight text-sm focus:outline-none focus:border-brand-blue">
             </div>
           </div>
 
           <!-- Total & Submit Bar -->
-          <div class="p-5 rounded-2xl bg-brand-blue text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="p-5 rounded-2xl bg-brand-blue text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
             <div>
               <div class="text-[11px] text-brand-gold uppercase tracking-wider font-bold">Total Reservation Cost</div>
               <div id="grandTotalC2" class="text-2xl font-extrabold">$130.00</div>
@@ -433,7 +482,7 @@
   <!-- ========================================================================= -->
   <!-- THE 14-PASSENGER DIFFERENCE (COMPARISON TABLE) -->
   <!-- ========================================================================= -->
-  <section id="comparison" class="py-20 bg-brand-skyLight border-t border-brand-border">
+  <section id="comparison" class="py-20 bg-white border-t border-brand-border">
     <div class="max-w-5xl mx-auto px-4 sm:px-8">
 
       <div class="text-center max-w-2xl mx-auto mb-12">
@@ -446,35 +495,35 @@
         </p>
       </div>
 
-      <div class="bg-white rounded-3xl border border-brand-border overflow-hidden shadow-sm">
+      <div class="bg-brand-skyLight rounded-3xl border border-brand-border overflow-hidden shadow-sm">
         <div class="grid grid-cols-12 bg-brand-blue text-white p-4 text-xs font-bold uppercase tracking-wider">
           <div class="col-span-6">Tour Feature</div>
           <div class="col-span-3 text-brand-gold text-center">Divine DC Tours (14-Max)</div>
           <div class="col-span-3 text-white/60 text-center">Big 55-Seat Coach</div>
         </div>
 
-        <div class="divide-y divide-gray-100 text-xs text-brand-charcoal">
-          <div class="grid grid-cols-12 p-4 items-center">
+        <div class="divide-y divide-gray-200 text-xs text-brand-charcoal">
+          <div class="grid grid-cols-12 p-4 items-center bg-white">
             <div class="col-span-6 font-semibold">Group Size & Intimacy</div>
             <div class="col-span-3 text-center font-bold text-brand-blue">Max 14 Guests</div>
             <div class="col-span-3 text-center text-gray-500">Up to 55 Passengers</div>
           </div>
-          <div class="grid grid-cols-12 p-4 items-center bg-gray-50/50">
+          <div class="grid grid-cols-12 p-4 items-center bg-brand-skyLight">
             <div class="col-span-6 font-semibold">Boarding & Deboarding Time</div>
             <div class="col-span-3 text-center font-bold text-brand-blue">Under 1 Minute</div>
             <div class="col-span-3 text-center text-gray-500">10-15 Minutes per stop</div>
           </div>
-          <div class="grid grid-cols-12 p-4 items-center">
+          <div class="grid grid-cols-12 p-4 items-center bg-white">
             <div class="col-span-6 font-semibold">Proximity to Monuments</div>
             <div class="col-span-3 text-center font-bold text-brand-blue">Close curb drop-offs</div>
             <div class="col-span-3 text-center text-gray-500">Distant commercial bus lots</div>
           </div>
-          <div class="grid grid-cols-12 p-4 items-center bg-gray-50/50">
+          <div class="grid grid-cols-12 p-4 items-center bg-brand-skyLight">
             <div class="col-span-6 font-semibold">Guide Interaction & Storytelling</div>
             <div class="col-span-3 text-center font-bold text-brand-blue">Direct conversation</div>
             <div class="col-span-3 text-center text-gray-500">Prerecorded audio headset</div>
           </div>
-          <div class="grid grid-cols-12 p-4 items-center">
+          <div class="grid grid-cols-12 p-4 items-center bg-white">
             <div class="col-span-6 font-semibold">Window View Guarantee</div>
             <div class="col-span-3 text-center font-bold text-brand-blue">100% Window Proximity</div>
             <div class="col-span-3 text-center text-gray-500">Middle seats obstructed</div>
@@ -488,11 +537,11 @@
   <!-- ========================================================================= -->
   <!-- ABOUT US -->
   <!-- ========================================================================= -->
-  <section id="about" class="py-20 bg-white">
+  <section id="about" class="py-20 bg-brand-skyLight border-t border-brand-border">
     <div class="max-w-5xl mx-auto px-4 sm:px-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
         <div class="md:col-span-5">
-          <div class="rounded-3xl overflow-hidden shadow-lg border border-brand-border">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-brand-border bg-white">
             <img src="https://images.unsplash.com/photo-1510253687831-0f982d7862fc?auto=format&fit=crop&w=800&q=80" alt="Jefferson Memorial" class="w-full h-80 object-cover">
           </div>
         </div>
@@ -501,7 +550,7 @@
           <h2 class="heading-serif text-3xl sm:text-4xl font-bold text-brand-blue">
             Dedicated to Memorable, Comfortable Sightseeing.
           </h2>
-          <p class="text-sm text-gray-600 leading-relaxed">
+          <p class="text-sm text-gray-700 leading-relaxed">
             At Divine DC Tours, we believe visiting Washington, D.C. should be inspiring and hassle-free. Our boutique 14-passenger format allows us to focus entirely on guest satisfaction, safety, and storytelling.
           </p>
           <div class="flex items-center gap-4 pt-2">
@@ -546,7 +595,7 @@
   <footer class="bg-brand-charcoal text-white/70 py-12 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
       <div class="flex items-center gap-3">
-        <img src="images/shantal_logo_transparent.png" alt="Logo" class="h-8 w-auto object-contain">
+        <img src="images/client_logo_transparent.png" alt="Logo" class="h-8 w-auto object-contain">
         <span>© 2026 Divine DC Tours. Washington, D.C.</span>
       </div>
       <div>
@@ -578,7 +627,6 @@
     const MAX_CAP = 14;
     const SLOTS = ['10:00 AM', '1:00 PM', '4:00 PM', '7:30 PM'];
 
-    // Default Date Tomorrow
     const tm = new Date();
     tm.setDate(tm.getDate() + 1);
     const tmStr = tm.toISOString().split('T')[0];
