@@ -3,45 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Divine DC Tours — Discover Washington, D.C. | Concept 01</title>
-  <meta name="description" content="Experience Washington, D.C. with Divine DC Tours. Premium 14-passenger boutique sightseeing tours with friendly local guides, heated and air-conditioned luxury comfort, and daytime and evening landmark departures.">
+  <title>Divine DC Tours — Washington, D.C. Sightseeing | Official Master Website</title>
+  <meta name="description" content="Experience Washington, D.C. with Divine DC Tours. Premium 14-passenger open-glass panoramic sightseeing tours. Daytime tours $49, Moonlight tours $59. U.S. Capitol, Washington Monument, Lincoln Memorial. Free D.C. hotel pickup on full-bus bookings.">
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Local & CDN QR Code Library -->
+  <script src="qrcode.min.js"></script>
 
-  <!-- Google Fonts: Plus Jakarta Sans & Cormorant Garamond -->
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['Cinzel', 'serif']
-          },
           colors: {
             brand: {
+              navy: '#102F56',
+              midnight: '#091B30',
               blue: '#123C78',
-              navy: '#0E2952',
               sky: '#EAF3FB',
-              skyLight: '#F3F8FD',
+              skyLight: '#F4F9FD',
               gold: '#C9A24A',
-              goldLight: '#E8CA7C',
-              goldDark: '#9F7C2B',
-              charcoal: '#222B36',
-              warmWhite: '#FFFFFF',
+              goldLight: '#E8D8B3',
+              goldDark: '#A68233',
               ivory: '#FAF8F3',
-              sand: '#F2EFE8',
-              border: '#E2E8F0',
-              accentRed: '#D63B34'
+              charcoal: '#222B36',
+              border: '#E2E8F0'
             }
           },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Cinzel"', 'serif']
+          },
           boxShadow: {
-            'card': '0 10px 30px -5px rgba(18, 60, 120, 0.08), 0 4px 12px -2px rgba(18, 60, 120, 0.04)',
+            'card': '0 10px 30px -5px rgba(16, 47, 86, 0.08), 0 4px 12px -2px rgba(16, 47, 86, 0.04)',
             'card-hover': '0 20px 40px -10px rgba(18, 60, 120, 0.16), 0 8px 20px -4px rgba(18, 60, 120, 0.08)',
             'gold-glow': '0 4px 20px rgba(201, 162, 74, 0.35)',
             'vehicle': '0 25px 50px -12px rgba(14, 41, 82, 0.25), 0 0 0 1px rgba(201, 162, 74, 0.3)'
@@ -58,123 +58,160 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
     .heading-serif {
-      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-family: 'Playfair Display', Georgia, serif;
     }
-    .text-shadow-hero {
-      text-shadow: 0 2px 10px rgba(14, 41, 82, 0.75), 0 8px 25px rgba(14, 41, 82, 0.6);
+    .heading-cinzel {
+      font-family: 'Cinzel', Georgia, serif;
     }
     .hero-gradient {
-      background: linear-gradient(105deg, rgba(14, 41, 82, 0.88) 0%, rgba(18, 60, 120, 0.75) 50%, rgba(18, 60, 120, 0.35) 100%);
+      background: linear-gradient(135deg, rgba(9, 27, 48, 0.72) 0%, rgba(18, 60, 120, 0.55) 50%, rgba(9, 27, 48, 0.82) 100%);
+    }
+    .text-shadow-hero {
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+    }
+    /* Ticket Jagged Edge Effect */
+    .ticket-edge {
+      background-image: radial-gradient(circle at 0px 50%, transparent 12px, #ffffff 13px),
+                        radial-gradient(circle at 100% 50%, transparent 12px, #ffffff 13px);
     }
   </style>
 </head>
-<body class="bg-brand-ivory text-brand-charcoal antialiased selection:bg-brand-gold selection:text-white">
+<body class="min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
 
   <!-- ========================================================================= -->
-  <!-- TOP PROMO & TRUST TICKER -->
+  <!-- TOP ANNOUNCEMENT BAR: VERIFIED PRICING & 14-PASSENGER GUARANTEE -->
   <!-- ========================================================================= -->
-  <div class="bg-brand-blue text-white text-[12px] font-semibold py-2 px-4 shadow-sm border-b border-brand-gold/30">
+  <div class="bg-brand-midnight text-white text-xs py-2.5 px-4 border-b border-brand-gold/30">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-        <span class="text-brand-gold font-bold uppercase tracking-wider text-[11px]">Boutique DC Sightseeing</span>
+      <div class="flex items-center gap-2 flex-wrap justify-center">
+        <span class="bg-brand-gold text-brand-midnight font-black uppercase tracking-wider text-[10px] px-2 py-0.5 rounded">
+          Boutique DC Tourism
+        </span>
+        <span class="text-brand-goldLight font-semibold">Strict 14-Passenger Maximum</span>
         <span class="text-white/40 hidden sm:inline">•</span>
-        <span class="text-white/95">Strict 14-Passenger Vehicle Limit for Maximum Comfort, Intimacy & Panoramic Views</span>
+        <span class="text-white/90">Daytime Tours <strong class="text-white font-black">$49</strong> • Moonlight Tours <strong class="text-brand-gold font-black">$59</strong></span>
       </div>
       <div class="flex items-center gap-4 text-white/90 text-[11px]">
-        <span class="flex items-center gap-1.5"><span class="text-brand-gold">★</span> Central Washington D.C. Pickup</span>
-        <span class="hidden md:inline text-white/30">|</span>
-        <span class="hidden sm:inline font-mono text-brand-goldLight">divineddctours.com</span>
+        <span class="hidden md:inline text-white/80">🏨 Full-Bus Bookings Include D.C. Hotel Pickup</span>
+        <button onclick="openRescheduleModal()" class="text-brand-goldLight hover:text-white underline font-semibold transition">
+          ↺ Reschedule Booking
+        </button>
+        <span class="text-white/40">|</span>
+        <button onclick="openGuideScannerModal()" class="text-white/70 hover:text-white font-mono text-[10px] transition">
+          📱 Staff Portal
+        </button>
       </div>
     </div>
   </div>
 
   <!-- ========================================================================= -->
-  <!-- NAVIGATION HEADER -->
+  <!-- MAIN HEADER: PROMINENT AUTHENTIC CLIENT LOGO & NAVIGATION -->
   <!-- ========================================================================= -->
-  <header id="mainHeader" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-border transition-all duration-300 shadow-sm py-3.5 px-4 sm:px-8">
+  <header id="mainHeader" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border transition-all duration-300 shadow-sm py-3 px-4 sm:px-8">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
 
-      <!-- LEFT: Authentic Client Logo -->
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="h-12 w-auto flex items-center justify-center transition-transform group-hover:scale-105">
-          <img src="images/client_logo_transparent.png" alt="Divine DC Tours Logo" class="h-11 w-auto object-contain">
+      <!-- LEFT: CLIENT'S AUTHENTIC BRAND LOGO (HIGH VISIBILITY FIX) -->
+      <a href="#hero" class="flex items-center gap-3.5 group py-1">
+        <!-- Logo Image: Sharp, tightly cropped, high prominence -->
+        <div class="h-16 sm:h-20 w-auto flex items-center justify-center transition-transform group-hover:scale-105">
+          <img src="images/client_logo_transparent.png" 
+               alt="Divine DC Tours Authentic Logo" 
+               class="h-16 sm:h-20 w-auto object-contain drop-shadow-sm">
         </div>
-        <div class="flex flex-col">
-          <span class="font-extrabold text-lg sm:text-xl text-brand-blue tracking-wide uppercase leading-none group-hover:text-brand-goldDark transition">DIVINE DC TOURS</span>
-          <span class="text-[10px] tracking-[0.22em] uppercase text-brand-gold font-bold mt-1">Washington, D.C. Sightseeing</span>
+        <div class="flex flex-col border-l-2 border-brand-gold/40 pl-3">
+          <span class="font-serif font-black text-brand-blue text-lg sm:text-2xl tracking-tight uppercase leading-none">
+            Divine DC Tours
+          </span>
+          <span class="text-[9px] sm:text-[11px] uppercase tracking-[0.22em] text-brand-goldDark font-extrabold mt-1">
+            Washington, D.C. Sightseeing
+          </span>
         </div>
       </a>
 
-      <!-- CENTER: Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-brand-charcoal">
+      <!-- CENTER: NAVIGATION LINKS -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-brand-charcoal">
         <a href="#hero" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Home</a>
-        <a href="#vehicle" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Our 14-Seat Vehicle</a>
-        <a href="#tours" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Tour Experiences</a>
-        <a href="#booking" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Book Online (14 Max)</a>
-        <a href="#why-us" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Why Divine DC</a>
-        <a href="#about" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">About</a>
-        <a href="#contact" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Contact</a>
+        <a href="#vehicle" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Our 14-Seat Van</a>
+        <a href="#tours" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Tours ($49 / $59)</a>
+        <a href="#policies" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Before You Book</a>
+        <a href="#booking" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Book Online</a>
       </nav>
 
-      <!-- RIGHT: Action Buttons -->
-      <div class="flex items-center gap-3">
-        <!-- Live Capacity Indicator -->
-        <a href="#booking" class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-sky border border-blue-200 text-xs font-semibold text-brand-blue">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-          <span>14-Seat Booking Live</span>
-        </a>
-
-        <!-- Primary CTA -->
-        <a href="#booking" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy font-extrabold text-xs uppercase tracking-wider px-6 py-3 rounded-full shadow-md hover:shadow-brand-gold/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
-          <span>Book Your Tour</span>
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </a>
-
-        <!-- Mobile Menu Toggle -->
-        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl text-brand-blue hover:bg-brand-sky border border-brand-border">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+      <!-- RIGHT: PRIMARY ACTIONS -->
+      <div class="hidden sm:flex items-center gap-3">
+        <button onclick="openRescheduleModal()" class="px-3.5 py-2 rounded-xl text-xs font-bold text-brand-blue bg-brand-sky hover:bg-blue-100 transition border border-brand-blue/20 flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          <span>Reschedule</span>
         </button>
+
+        <a href="#booking" class="relative group overflow-hidden rounded-xl bg-brand-blue hover:bg-brand-navy px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider text-white shadow-md transition-all duration-300">
+          <span class="relative z-10 flex items-center gap-2">
+            <span>Book Tour</span>
+            <span class="text-brand-gold font-mono font-black text-xs">$49+</span>
+          </span>
+          <div class="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-gold/20 to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </a>
       </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-brand-blue hover:bg-brand-sky transition" aria-label="Toggle navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
 
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="hidden lg:hidden pt-4 pb-3 border-t border-brand-border mt-3 flex-col gap-2">
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobileDrawer" class="hidden lg:hidden pt-4 pb-4 border-t border-brand-border mt-3 flex-col gap-2.5 bg-white px-2">
+      <div class="flex items-center gap-3 p-3 bg-brand-skyLight rounded-xl border border-brand-border mb-2">
+        <img src="images/client_logo_transparent.png" alt="Logo" class="h-12 w-auto object-contain">
+        <div>
+          <span class="font-serif font-black text-brand-blue text-sm uppercase block">Divine DC Tours</span>
+          <span class="text-[10px] text-brand-goldDark font-bold uppercase">14-Passenger Sightseeing</span>
+        </div>
+      </div>
       <a href="#hero" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Home</a>
       <a href="#vehicle" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Our 14-Seat Tour Vehicle</a>
-      <a href="#tours" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Tour Experiences</a>
+      <a href="#tours" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Tour Packages ($49 / $59)</a>
+      <a href="#policies" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Before You Book (Policies)</a>
       <a href="#booking" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Book Online (14 Max)</a>
-      <a href="#why-us" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Why Choose Us</a>
-      <a href="#about" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">About Us</a>
-      <a href="#contact" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Contact</a>
-      <a href="#booking" onclick="toggleMobileMenu()" class="mt-2 w-full text-center bg-brand-blue text-white font-bold text-xs uppercase tracking-wider py-3 rounded-xl shadow">Book Tour Online</a>
+      <div class="pt-2 border-t border-brand-border flex gap-2">
+        <button onclick="toggleMobileMenu(); openRescheduleModal()" class="flex-1 py-2.5 rounded-xl text-xs font-bold text-brand-blue bg-brand-sky border border-brand-blue/20">
+          ↺ Reschedule
+        </button>
+        <button onclick="toggleMobileMenu(); openGuideScannerModal()" class="flex-1 py-2.5 rounded-xl text-xs font-bold text-gray-700 bg-gray-100">
+          📱 Staff Scanner
+        </button>
+      </div>
     </div>
   </header>
 
   <!-- ========================================================================= -->
-  <!-- HERO SECTION: NATIONAL MONUMENT BACKDROP + ACTUAL TOUR VEHICLE UPFRONT + HAPPY TOURISTS -->
+  <!-- HERO SECTION: U.S. CAPITOL BACKDROP + WASHINGTON MONUMENT + CLIENT VEHICLE + HAPPY TOURISTS -->
   <!-- ========================================================================= -->
-  <section id="hero" class="relative min-h-[90vh] flex flex-col justify-between bg-brand-navy">
+  <section id="hero" class="relative min-h-[92vh] flex flex-col justify-between bg-brand-navy">
 
-    <!-- Washington Monument National Monument Scenic Backdrop (Bright & Crisp Daylight) -->
+    <!-- U.S. CAPITOL BUILDING BACKDROP (From Concept 02 as Client Requested) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=2200&q=85"
-           alt="Washington Monument and US Capitol National Mall Backdrop"
+           alt="U.S. Capitol Building in Bright Daylight with Reflecting Pool"
            class="w-full h-full object-cover object-center brightness-105 contrast-105">
-      <!-- Light, Vibrant Royal Blue Gradient (Preserves Bright Sunlight while Ensuring Readability) -->
+      <!-- Light, Vibrant Royal Blue Gradient -->
       <div class="absolute inset-0 hero-gradient"></div>
     </div>
 
     <!-- Main Hero Container -->
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-20 flex-1 flex flex-col justify-center">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 pt-12 sm:pt-16 pb-16 flex-1 flex flex-col justify-center">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-        <!-- Left Column: Compelling Editorial Typography & CTAs -->
-        <div class="lg:col-span-7 text-white">
+        <!-- LEFT COLUMN: EDITORIAL TYPOGRAPHY, PRICING & CTAS -->
+        <div class="lg:col-span-7 text-white space-y-6">
 
-          <!-- Pill Badge: Certified D.C. Sightseeing -->
-          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/40 mb-6 shadow-sm">
+          <!-- Pill Badge: Verified D.C. Sightseeing -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/40 shadow-sm">
             <span class="w-2.5 h-2.5 rounded-full bg-brand-gold animate-pulse"></span>
             <span class="text-xs font-bold tracking-[0.2em] text-white uppercase">
               WASHINGTON, D.C. GUIDED SIGHTSEEING
@@ -182,95 +219,140 @@
           </div>
 
           <!-- Headline: "Discover Washington, D.C. Like Never Before." -->
-          <h1 class="heading-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08] mb-6 text-shadow-hero">
+          <h1 class="heading-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08] text-shadow-hero">
             Discover Washington, D.C. <br>
-            <span class="italic font-normal text-brand-goldLight underline decoration-brand-gold/60 decoration-2 underline-offset-8">Like Never Before.</span>
+            <span class="italic font-normal text-brand-goldLight underline decoration-brand-gold/60 decoration-2 underline-offset-8">
+              Like Never Before.
+            </span>
           </h1>
 
           <!-- Supporting Copy -->
-          <p class="text-lg sm:text-xl text-white/95 font-normal leading-relaxed mb-8 max-w-2xl drop-shadow">
-            Experience the history, landmarks, and unforgettable sights of the nation's capital with Divine DC Tours. Enjoy intimate 14-passenger luxury touring, knowledgeable local guides, and personal hospitality.
+          <p class="text-base sm:text-xl text-white/95 font-normal leading-relaxed max-w-2xl drop-shadow">
+            Experience the majesty of the U.S. Capitol, the Washington Monument, and Lincoln Memorial with Divine DC Tours. Enjoy intimate 14-passenger panoramic touring, passionate local guides, and personal American hospitality.
           </p>
 
-          <!-- Key Tour Selling Points -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10 max-w-xl text-xs font-semibold">
-            <div class="flex items-center gap-2 bg-white/15 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-white/20">
-              <span class="text-brand-gold text-base">✦</span>
-              <span>Max 14 Guests / Tour</span>
+          <!-- VERIFIED PRICING BADGE ROW ($49 Daytime / $59 Moonlight) -->
+          <div class="bg-white/15 backdrop-blur-md rounded-2xl p-4 border border-white/25 max-w-xl">
+            <div class="flex items-center justify-between pb-2 mb-2 border-b border-white/20 text-xs">
+              <span class="text-brand-gold font-extrabold uppercase tracking-wider">Confirmed Ticket Rates</span>
+              <span class="text-white/90 font-medium">Strict 14-Seat Van</span>
             </div>
-            <div class="flex items-center gap-2 bg-white/15 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-white/20">
-              <span class="text-brand-gold text-base">✦</span>
-              <span>All-Season Heated & AC</span>
-            </div>
-            <div class="flex items-center gap-2 bg-white/15 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-white/20 col-span-2 sm:col-span-1">
-              <span class="text-brand-gold text-base">✦</span>
-              <span>Certified Local Guide</span>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div class="bg-brand-navy/60 p-2.5 rounded-xl border border-white/10 text-center">
+                <span class="text-[10px] uppercase tracking-wider text-gray-300 block">Daytime Tour</span>
+                <span class="text-xl sm:text-2xl font-black text-white font-mono">$49</span>
+                <span class="text-[10px] text-brand-goldLight block">per passenger</span>
+              </div>
+              <div class="bg-brand-navy/60 p-2.5 rounded-xl border border-brand-gold/40 text-center relative">
+                <span class="absolute -top-2 right-2 bg-brand-gold text-brand-midnight text-[9px] font-extrabold px-1.5 py-0.2 rounded-full uppercase">Popular</span>
+                <span class="text-[10px] uppercase tracking-wider text-gray-300 block">Moonlight Tour</span>
+                <span class="text-xl sm:text-2xl font-black text-brand-gold font-mono">$59</span>
+                <span class="text-[10px] text-brand-goldLight block">per passenger</span>
+              </div>
+              <div class="col-span-2 sm:col-span-1 bg-brand-navy/60 p-2.5 rounded-xl border border-white/10 text-center flex flex-col justify-center">
+                <span class="text-[10px] uppercase tracking-wider text-emerald-300 font-bold block">🏨 Full Bus</span>
+                <span class="text-xs font-bold text-white block">Free D.C. Hotel</span>
+                <span class="text-[10px] text-gray-300 block">Pickup Included</span>
+              </div>
             </div>
           </div>
 
-          <!-- Action Buttons -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <a href="#booking" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy font-extrabold text-sm uppercase tracking-wider px-8 py-4 rounded-full shadow-xl hover:shadow-brand-gold/50 hover:scale-105 active:scale-95 transition-all">
-              <span>Book Your Tour</span>
-              <span class="text-lg">→</span>
+          <!-- CTAS & ACTIONS -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="#booking" class="bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy hover:brightness-105 font-black text-xs uppercase tracking-widest px-8 py-4 rounded-xl text-center shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2 group">
+              <span>Book Your Tour ($49 / $59)</span>
+              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </a>
 
-            <a href="#tours" class="inline-flex items-center justify-center gap-2.5 bg-white text-brand-blue hover:bg-brand-sky font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-full border border-white shadow-lg transition-all">
-              <span>Explore Our Tours</span>
-            </a>
+            <button onclick="openRescheduleModal()" class="bg-white/20 hover:bg-white/30 text-white font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-xl border border-white/30 transition text-center flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 text-brand-goldLight" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              <span>Manage / Reschedule Ticket</span>
+            </button>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="flex flex-wrap items-center gap-6 pt-2 text-xs font-semibold text-white/90">
+            <div class="flex items-center gap-2">
+              <span class="text-brand-gold text-base">★</span> Strict 14-Passenger Limit
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-gold text-base">★</span> All-Season Heated & AC
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-gold text-base">★</span> Digital QR Phone Tickets
+            </div>
           </div>
 
         </div>
 
-        <!-- Right Column: CLIENT'S ACTUAL TOUR VEHICLE UPFRONT WITH HAPPY TOURISTS -->
+        <!-- RIGHT COLUMN: WASHINGTON MONUMENT + SHANTAL'S ACTUAL TOUR VEHICLE + HAPPY TOURISTS -->
         <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-lg">
+          <div class="space-y-4">
 
-            <!-- MAIN PROMINENT CARD: CLIENT'S ACTUAL TOUR VEHICLE -->
-            <div class="bg-white rounded-3xl p-3 sm:p-4 shadow-vehicle border-4 border-white/90 relative group transform hover:-translate-y-1 transition duration-500">
+            <!-- Card 1: WASHINGTON MONUMENT IN BRIGHT DAYLIGHT (Client Requested) -->
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-white/80 group h-44 relative bg-brand-navy">
+              <img src="https://images.unsplash.com/photo-1501466044931-62695aada8e9?auto=format&fit=crop&w=1200&q=85"
+                   alt="Washington Monument in Bright Daylight"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-brand-navy/30 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-brand-gold text-brand-midnight text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow">
+                ★ National Monument
+              </div>
+              <div class="absolute bottom-3 left-4 right-4 text-white">
+                <span class="text-xs font-black uppercase tracking-wider text-brand-goldLight block">Iconic National Mall</span>
+                <span class="text-sm font-bold text-white">Washington Monument & Lincoln Memorial</span>
+              </div>
+            </div>
 
-              <!-- Badge Header on Vehicle Card -->
-              <div class="flex items-center justify-between px-2 pb-3 mb-2 border-b border-gray-100">
+            <!-- Card 2: SHANTAL'S ACTUAL TOUR VEHICLE (High Resolution Showcase) -->
+            <div class="bg-white rounded-3xl p-3.5 sm:p-4 shadow-vehicle border-4 border-white/95 relative group transform hover:-translate-y-1 transition duration-500">
+              
+              <!-- Badge Header on Vehicle Card with Authentic Logo -->
+              <div class="flex items-center justify-between px-2 pb-2.5 mb-2 border-b border-gray-100">
                 <div class="flex items-center gap-2">
-                  <img src="images/client_logo_transparent.png" alt="Emblem" class="h-6 w-auto object-contain">
-                  <span class="text-xs font-extrabold text-brand-blue uppercase tracking-wider">Official Tour Vehicle</span>
+                  <img src="images/client_logo_transparent.png" alt="Emblem" class="h-7 w-auto object-contain">
+                  <span class="text-xs font-extrabold text-brand-blue uppercase tracking-wider">Official 14-Seat Van</span>
                 </div>
-                <span class="bg-brand-gold text-brand-navy text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                <span class="bg-brand-gold text-brand-navy text-[11px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
                   14-Passenger Max
                 </span>
               </div>
 
-              <!-- Client's Actual Vehicle Image (High Resolution) -->
+              <!-- Vehicle Image -->
               <div class="relative rounded-2xl overflow-hidden bg-brand-skyLight border border-brand-border">
                 <img src="images/client_tour_vehicle.png"
-                     alt="Divine DC Tours 14-Passenger Touring Vehicle"
-                     class="w-full h-64 sm:h-72 object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                     alt="Divine DC Tours 14-Passenger Sightseeing Shuttle Van"
+                     class="w-full h-56 sm:h-64 object-cover object-center group-hover:scale-105 transition-transform duration-700">
 
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-transparent to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-transparent"></div>
 
                 <!-- Callout overlay -->
                 <div class="absolute bottom-3 left-3 right-3 text-white">
                   <div class="flex items-center gap-2 text-brand-gold text-[11px] font-bold uppercase tracking-wider mb-0.5">
-                    <span>★ 14-Seat Open-Glass Panoramic Sightseeing</span>
+                    <span>✦ Panoramic Sightseeing Shuttle</span>
                   </div>
                   <div class="text-xs font-medium text-white/95">
-                    Panoramic sightseeing windows, climate-controlled comfort & easy boarding.
+                    Open-glass windows, climate-controlled comfort, easy boarding.
                   </div>
                 </div>
               </div>
 
             </div>
 
-            <!-- OVERLAPPING HAPPY TOURISTS BADGE (AS DIRECTED BY CLIENT CALL/EMAIL) -->
-            <div class="absolute -bottom-8 -left-4 sm:-left-8 w-64 sm:w-72 bg-white rounded-2xl p-3 shadow-2xl border-2 border-brand-gold/60 z-20">
+            <!-- Card 3: OVERLAPPING HAPPY TOURISTS BADGE -->
+            <div class="bg-white rounded-2xl p-3.5 shadow-2xl border-2 border-brand-gold/60">
               <div class="flex items-center gap-3">
-                <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?auto=format&fit=crop&w=400&q=80"
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=400&q=80"
                      alt="Happy Sightseeing Tourists Washington DC"
-                     class="w-14 h-14 rounded-xl object-cover flex-shrink-0 shadow">
+                     class="w-14 h-14 rounded-xl object-cover flex-shrink-0 shadow border border-gray-200">
                 <div>
                   <div class="flex items-center text-amber-500 text-xs mb-0.5 font-bold">★★★★★ 5.0 Rating</div>
-                  <div class="text-xs font-bold text-brand-blue">Happy Travelers in D.C.!</div>
-                  <div class="text-[10px] text-gray-500 font-medium">"Intimate, scenic & unforgettable."</div>
+                  <div class="text-xs font-bold text-brand-blue">Happy Travelers in Washington, D.C.!</div>
+                  <div class="text-[11px] text-gray-600 font-medium">"Intimate 14-passenger van, exceptional guide & breathtaking sights."</div>
                 </div>
               </div>
             </div>
@@ -281,10 +363,10 @@
       </div>
     </div>
 
-      </section>
+  </section>
 
   <!-- ========================================================================= -->
-  <!-- FLOATING FEATURE STRIP: KEY SIGHTSEEING METRICS (UNCLIPPED OVERLAY) -->
+  <!-- FLOATING FEATURE STRIP: ZERO CLIPPING OVERLAY -->
   <!-- ========================================================================= -->
   <div class="relative z-30 max-w-6xl mx-auto px-4 sm:px-6 w-full -mt-10 sm:-mt-12 mb-6">
     <div class="bg-white rounded-2xl shadow-2xl border border-brand-border/80 p-5 text-brand-charcoal grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
@@ -322,14 +404,14 @@
         </div>
         <div>
           <span class="text-[11px] text-brand-goldDark uppercase tracking-wider block font-bold">Iconic D.C. Sights</span>
-          <span class="text-sm font-extrabold text-brand-blue">Day & Moonlight</span>
+          <span class="text-sm font-extrabold text-brand-blue">Capitol & Lincoln</span>
         </div>
       </div>
 
       <!-- Jump to Booking -->
       <div class="col-span-2 md:col-span-1 flex justify-center md:justify-end">
         <a href="#booking" class="w-full sm:w-auto text-center bg-brand-blue hover:bg-brand-navy text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group">
-          <span>Check Availability</span>
+          <span>Book Tour ($49+)</span>
           <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
@@ -352,59 +434,74 @@
           <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-brand-sky bg-brand-skyLight relative">
             <img src="images/client_tour_vehicle.png"
                  alt="Divine DC Tours 14-Passenger Sightseeing Shuttle"
-                 class="w-full h-80 sm:h-96 object-cover object-center">
+                 class="w-full h-auto object-cover object-center">
+            
+            <!-- Floating Badge on Vehicle Image -->
+            <div class="absolute top-4 left-4 bg-brand-navy/95 backdrop-blur-md text-white text-xs font-bold px-3.5 py-1.5 rounded-xl shadow-lg border border-brand-gold/40 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+              <span>Authentic Tour Shuttle</span>
+            </div>
 
-            <!-- Floating Badge -->
-            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-brand-border flex items-center justify-between">
-              <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-goldDark block">Fleet Specification</span>
-                <span class="text-sm font-extrabold text-brand-blue">14-Passenger All-Season Panoramic Shuttle</span>
-              </div>
-              <span class="bg-brand-blue text-white text-xs font-bold px-3 py-1.5 rounded-xl">
-                Guaranteed Window View
-              </span>
+            <!-- Capacity Callout -->
+            <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md text-brand-navy text-xs font-black px-4 py-2 rounded-xl shadow-lg border border-brand-border">
+              Strict 14-Seat Passenger Limit
             </div>
           </div>
         </div>
 
-        <!-- Right: Why This Vehicle is Superior for D.C. Sightseeing -->
+        <!-- Right: Why 14-Passenger Touring Beats Generic 55-Seat Big Buses -->
         <div class="lg:col-span-6 space-y-6">
-
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-sky text-brand-blue font-bold text-xs uppercase tracking-widest">
-            <span>✦ THE 14-PASSENGER BOUTIQUE ADVANTAGE ✦</span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sky text-brand-blue text-xs font-extrabold uppercase tracking-widest">
+            <span>★ THE DIVINE DC TOURS DIFFERENCE ★</span>
           </div>
 
-          <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-brand-blue leading-tight">
-            Designed for Intimate, Unobstructed Washington Sightseeing.
+          <h2 class="heading-serif text-3xl sm:text-4xl font-bold text-brand-blue tracking-tight">
+            Intimate Sightseeing. Zero Crowds. Panoramic Views.
           </h2>
 
-          <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-            Unlike massive 55-person coach buses that get stuck in traffic and drop you hundreds of yards away from monuments, our boutique 14-passenger touring vehicle offers the ideal sightseeing experience:
+          <p class="text-base text-gray-600 leading-relaxed">
+            Unlike oversized 55-passenger motorcoaches that struggle with D.C. traffic and keep you waiting in long lines, Divine DC Tours operates an exclusive <strong>14-passenger panoramic sightseeing shuttle</strong>.
           </p>
 
+          <!-- Key Vehicle Specs -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div class="p-4 rounded-2xl bg-brand-ivory border border-brand-border">
-              <div class="text-brand-gold text-lg mb-1">🪟</div>
-              <h4 class="font-bold text-brand-blue text-sm mb-1">Panoramic Sightseeing Glass</h4>
-              <p class="text-xs text-gray-600">Oversized side and front glass ensures every guest has an unobstructed view of monuments.</p>
+            <div class="p-4 rounded-2xl bg-brand-skyLight border border-brand-border">
+              <div class="font-extrabold text-sm text-brand-blue mb-1 flex items-center gap-2">
+                <span class="text-brand-gold">✓</span> 14 Individual Seats
+              </div>
+              <p class="text-xs text-gray-600">Personalized attention from your guide with direct Q&A.</p>
             </div>
 
-            <div class="p-4 rounded-2xl bg-brand-ivory border border-brand-border">
-              <div class="text-brand-gold text-lg mb-1">❄/☀</div>
-              <h4 class="font-bold text-brand-blue text-sm mb-1">Climate-Controlled Cabin</h4>
-              <p class="text-xs text-gray-600">Equipped with air conditioning and heating to keep you comfortable in every season.</p>
+            <div class="p-4 rounded-2xl bg-brand-skyLight border border-brand-border">
+              <div class="font-extrabold text-sm text-brand-blue mb-1 flex items-center gap-2">
+                <span class="text-brand-gold">✓</span> Panoramic Glass Windows
+              </div>
+              <p class="text-xs text-gray-600">Unobstructed views of the Capitol dome, Washington Monument & memorials.</p>
             </div>
 
-            <div class="p-4 rounded-2xl bg-brand-ivory border border-brand-border">
-              <div class="text-brand-gold text-lg mb-1">🚶</div>
-              <h4 class="font-bold text-brand-blue text-sm mb-1">Quick Boarding & Deboarding</h4>
-              <p class="text-xs text-gray-600">Board and exit in under a minute—spend more time exploring monuments, not waiting in line.</p>
+            <div class="p-4 rounded-2xl bg-brand-skyLight border border-brand-border">
+              <div class="font-extrabold text-sm text-brand-blue mb-1 flex items-center gap-2">
+                <span class="text-brand-gold">✓</span> Climate-Controlled Cabin
+              </div>
+              <p class="text-xs text-gray-600">Equipped with air conditioning for summer and heating for chilly evenings.</p>
             </div>
 
-            <div class="p-4 rounded-2xl bg-brand-ivory border border-brand-border">
-              <div class="text-brand-gold text-lg mb-1">🎙</div>
-              <h4 class="font-bold text-brand-blue text-sm mb-1">Personal Guide Interaction</h4>
-              <p class="text-xs text-gray-600">Ask questions and enjoy natural conversation with your knowledgeable local guide.</p>
+            <div class="p-4 rounded-2xl bg-brand-skyLight border border-brand-border">
+              <div class="font-extrabold text-sm text-brand-blue mb-1 flex items-center gap-2">
+                <span class="text-brand-gold">✓</span> Low-Step Easy Entry
+              </div>
+              <p class="text-xs text-gray-600">Smooth, rapid boarding at every landmark photo stop.</p>
+            </div>
+          </div>
+
+          <!-- Wheelchair Accessibility Notice Callout -->
+          <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-950 flex items-start gap-3">
+            <svg class="w-5 h-5 text-amber-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div class="text-xs">
+              <strong class="font-extrabold uppercase tracking-wider block text-amber-900 mb-0.5">Accessibility Notice:</strong>
+              "Our current tour vehicles are not wheelchair accessible."
             </div>
           </div>
 
@@ -416,9 +513,9 @@
   </section>
 
   <!-- ========================================================================= -->
-  <!-- TOUR EXPERIENCES SECTION: LINCOLN MEMORIAL, CAPITOL & WASHINGTON MONUMENT -->
+  <!-- SIGNATURE TOUR PACKAGES SECTION (VERIFIED $49 / $59 PRICING) -->
   <!-- ========================================================================= -->
-  <section id="tours" class="py-24 bg-brand-skyLight border-y border-brand-border">
+  <section id="tours" class="py-20 bg-brand-skyLight border-y border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
       <!-- Section Heading -->
@@ -430,14 +527,14 @@
           Experience Iconic Washington, D.C. Landmarks.
         </h2>
         <p class="text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
-          From the grandeur of the Lincoln Memorial and Washington Monument by day to illuminated nighttime vistas, discover the capital in comfort.
+          From the grandeur of the U.S. Capitol and Washington Monument by day to illuminated nighttime vistas, discover the capital in intimate 14-seat comfort.
         </p>
       </div>
 
-      <!-- 3 Signature Tour Offerings -->
+      <!-- 3 Verified Tour Offerings -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        <!-- Tour 1: The Grand Capital Day Discovery -->
+        <!-- Tour 1: Daytime Washington D.C. Sightseeing Tour ($49) -->
         <div class="bg-white rounded-3xl overflow-hidden border border-brand-border shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div class="relative h-64 overflow-hidden">
@@ -450,38 +547,46 @@
               <div class="absolute bottom-3 left-3 bg-brand-navy/90 text-white text-xs font-semibold px-3 py-1 rounded-lg backdrop-blur-sm">
                 14-Passenger Maximum
               </div>
+              <!-- Price Badge -->
+              <div class="absolute bottom-3 right-3 bg-brand-blue text-white font-black text-sm px-3.5 py-1 rounded-xl shadow font-mono">
+                $49 <span class="text-[10px] font-normal text-white/80">/ guest</span>
+              </div>
             </div>
+
             <div class="p-6">
               <div class="flex items-center justify-between text-xs text-brand-goldDark font-bold uppercase tracking-wider mb-2">
                 <span>Daily Departures</span>
-                <span>Morning & Afternoon</span>
+                <span>10:00 AM • 1:00 PM • 4:00 PM</span>
               </div>
-              <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-3 group-hover:text-brand-goldDark transition">
-                The Grand Capital Day Discovery
+              <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-2 group-hover:text-brand-goldDark transition">
+                Daytime D.C. Sightseeing Tour
               </h3>
               <p class="text-sm text-gray-600 leading-relaxed mb-6">
                 Take in the majesty of the U.S. Capitol, the Washington Monument, Lincoln Memorial, and grand boulevards with your knowledgeable local guide.
               </p>
               <ul class="space-y-2 text-xs text-gray-600 mb-6">
-                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Complete National Mall & Memorials circuit</li>
-                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Climate-controlled panoramic shuttle between stops</li>
-                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Dedicated photo opportunities at every landmark</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> U.S. Capitol & Washington Monument photo stops</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Complete National Mall & Lincoln Memorial</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Climate-controlled 14-passenger panoramic van</li>
               </ul>
             </div>
           </div>
+
           <div class="p-6 pt-0">
-            <button onclick="prefillBooking('The Grand Capital Day Discovery', '10:00 AM')" class="w-full bg-brand-blue hover:bg-brand-navy text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow">
-              Select & Book This Tour
+            <button onclick="prefillBooking('Daytime Washington D.C. Sightseeing Tour', '10:00 AM', 49)" class="w-full bg-brand-blue hover:bg-brand-navy text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow flex items-center justify-center gap-2">
+              <span>Book Daytime Tour</span>
+              <span class="text-brand-gold font-mono font-black">$49</span>
             </button>
           </div>
         </div>
 
-        <!-- Tour 2: Lincoln & Monuments by Moonlight (Client requested Lincoln Memorial) -->
+        <!-- Tour 2: Lincoln & National Monuments by Moonlight ($59) -->
         <div class="bg-white rounded-3xl overflow-hidden border-2 border-brand-gold shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group relative">
           <!-- Featured Badge -->
-          <div class="absolute top-3 right-3 z-10 bg-brand-gold text-brand-navy text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+          <div class="absolute top-3 right-3 z-10 bg-brand-gold text-brand-navy text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">
             ★ Evening Favorite
           </div>
+
           <div>
             <div class="relative h-64 overflow-hidden">
               <img src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=800&q=80"
@@ -493,17 +598,22 @@
               <div class="absolute bottom-3 left-3 bg-brand-navy/90 text-white text-xs font-semibold px-3 py-1 rounded-lg backdrop-blur-sm">
                 14-Passenger Maximum
               </div>
+              <!-- Price Badge -->
+              <div class="absolute bottom-3 right-3 bg-brand-gold text-brand-navy font-black text-sm px-3.5 py-1 rounded-xl shadow font-mono">
+                $59 <span class="text-[10px] font-bold text-brand-navy/80">/ guest</span>
+              </div>
             </div>
+
             <div class="p-6">
               <div class="flex items-center justify-between text-xs text-brand-goldDark font-bold uppercase tracking-wider mb-2">
                 <span>Twilight & Moonlight</span>
-                <span>Evening Departures</span>
+                <span>7:30 PM Departure</span>
               </div>
-              <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-3 group-hover:text-brand-goldDark transition">
+              <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-2 group-hover:text-brand-goldDark transition">
                 Lincoln & Monuments by Moonlight
               </h3>
               <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                See the nation's capital illuminated against the night sky. Experience the breathtaking glow of the Lincoln Memorial, Jefferson Memorial, and Capitol.
+                See the nation's capital illuminated against the night sky. Experience the breathtaking glow of the Lincoln Memorial, Jefferson Memorial, and Capitol dome.
               </p>
               <ul class="space-y-2 text-xs text-gray-600 mb-6">
                 <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Illuminated Lincoln Memorial & Washington Monument</li>
@@ -512,50 +622,165 @@
               </ul>
             </div>
           </div>
+
           <div class="p-6 pt-0">
-            <button onclick="prefillBooking('Lincoln & Monuments by Moonlight', '7:30 PM')" class="w-full bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow">
-              Select & Book Evening Tour
+            <button onclick="prefillBooking('Lincoln & National Monuments by Moonlight', '7:30 PM', 59)" class="w-full bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy font-black text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow flex items-center justify-center gap-2">
+              <span>Book Moonlight Tour</span>
+              <span class="font-mono">$59</span>
             </button>
           </div>
         </div>
 
-        <!-- Tour 3: Tidal Basin & Historic District Highlights -->
+        <!-- Tour 3: Private Full-Vehicle Charter (Entire 14-Seat Van + D.C. Hotel Pickup) -->
         <div class="bg-white rounded-3xl overflow-hidden border border-brand-border shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div class="relative h-64 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?auto=format&fit=crop&w=800&q=80"
-                   alt="Washington DC Tidal Basin and Waterfront"
+              <img src="images/client_tour_vehicle.png"
+                   alt="Private Full-Vehicle Charter Divine DC Tours"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-brand-blue text-xs font-bold px-3 py-1 rounded-full shadow">
-                🌸 Waterfront Scenic Tour
+              <div class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                🏨 Hotel Pickup Included
               </div>
               <div class="absolute bottom-3 left-3 bg-brand-navy/90 text-white text-xs font-semibold px-3 py-1 rounded-lg backdrop-blur-sm">
-                14-Passenger Maximum
+                Private Charter (14 Seats)
+              </div>
+              <!-- Price Badge -->
+              <div class="absolute bottom-3 right-3 bg-brand-navy text-white font-black text-xs px-3 py-1 rounded-xl shadow font-mono">
+                From $686 <span class="text-[10px] font-normal text-white/70">(14 × $49)</span>
               </div>
             </div>
+
             <div class="p-6">
               <div class="flex items-center justify-between text-xs text-brand-goldDark font-bold uppercase tracking-wider mb-2">
-                <span>Afternoon Departures</span>
-                <span>Scenic & Cultural</span>
+                <span>Exclusive Charter</span>
+                <span>Your Choice of Schedule</span>
               </div>
-              <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-3 group-hover:text-brand-goldDark transition">
-                Tidal Basin & Historic Highlights
+              <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-2 group-hover:text-brand-goldDark transition">
+                Private Full-Vehicle Charter
               </h3>
               <p class="text-sm text-gray-600 leading-relaxed mb-6">
-                A scenic exploration of Washington's tidal basin, the Martin Luther King Jr. Memorial, FDR Memorial, and surrounding historic government avenues.
+                Reserve the entire 14-passenger vehicle exclusively for your family, corporate group, or private tour. Enjoy door-to-door convenience with dedicated driver and guide.
               </p>
               <ul class="space-y-2 text-xs text-gray-600 mb-6">
-                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Waterfront monument vistas & photo stops</li>
-                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Rich biographical and architectural storytelling</li>
-                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Intimate group size with personal guide interaction</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Complimentary D.C. Hotel Pickup & Drop-Off</strong></li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Full 14-passenger capacity reserved exclusively</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Flexible daytime ($686) or moonlight ($826) departure</li>
               </ul>
             </div>
           </div>
+
           <div class="p-6 pt-0">
-            <button onclick="prefillBooking('Tidal Basin & Historic Highlights', '1:30 PM')" class="w-full bg-brand-blue hover:bg-brand-navy text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow">
-              Select & Book This Tour
+            <button onclick="prefillFullVehicleBooking()" class="w-full bg-brand-charcoal hover:bg-black text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow flex items-center justify-center gap-2">
+              <span>Book Full Bus + Hotel Pickup</span>
+              <span class="text-emerald-400 font-mono">14 Seats</span>
             </button>
           </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- NEW DEDICATED SECTION: BEFORE YOU BOOK — IMPORTANT TOUR POLICIES -->
+  <!-- ========================================================================= -->
+  <section id="policies" class="py-16 bg-white border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sky text-brand-blue text-xs font-extrabold uppercase tracking-widest mb-2">
+          <span>★ GUEST INFORMATION & POLICIES ★</span>
+        </div>
+        <h2 class="heading-serif text-3xl sm:text-4xl font-bold text-brand-blue tracking-tight">
+          Before You Book Your Tour
+        </h2>
+        <p class="text-sm text-gray-600">
+          Everything you need to know about our vehicles, boarding guidelines, rescheduling, and hotel pickups.
+        </p>
+      </div>
+
+      <!-- 5 Verified Policy Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Policy 1: Wheelchair Accessibility Notice -->
+        <div class="p-6 rounded-2xl bg-brand-skyLight border-2 border-brand-border hover:border-amber-400 transition-all shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <h3 class="font-extrabold text-base text-brand-blue mb-2">Accessibility Notice</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold text-amber-950 bg-amber-50 p-3 rounded-xl border border-amber-200/80 mb-2">
+            "Our current tour vehicles are not wheelchair accessible."
+          </p>
+          <p class="text-xs text-gray-600">
+            Guests must be able to climb two low-entry steps to board the vehicle. Folding walkers and collapsible strollers may be stowed.
+          </p>
+        </div>
+
+        <!-- Policy 2: 10–15 Minute Arrival Recommendation -->
+        <div class="p-6 rounded-2xl bg-brand-skyLight border-2 border-brand-border hover:border-brand-blue/40 transition-all shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-brand-sky text-brand-blue flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-extrabold text-base text-brand-blue mb-2">Arrival Recommendation</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold text-brand-navy bg-white p-3 rounded-xl border border-brand-border mb-2">
+            "Please arrive 10–15 minutes before your scheduled tour departure."
+          </p>
+          <p class="text-xs text-gray-600">
+            Tours depart promptly at the scheduled time to ensure all monuments and photo stops can be enjoyed without rushing.
+          </p>
+        </div>
+
+        <!-- Policy 3: Missed Departure & Online Rescheduling -->
+        <div class="p-6 rounded-2xl bg-brand-skyLight border-2 border-brand-border hover:border-brand-blue/40 transition-all shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <h3 class="font-extrabold text-base text-brand-blue mb-2">Missed Departure & Rescheduling</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold text-brand-navy bg-white p-3 rounded-xl border border-brand-border mb-3">
+            "If you miss your scheduled departure, you may use your ticket for another tour on the same day, subject to seat availability. You can reschedule your booking online."
+          </p>
+          <button onclick="openRescheduleModal()" class="w-full bg-brand-blue hover:bg-brand-navy text-white text-xs font-bold py-2 px-3 rounded-lg transition text-center shadow-sm">
+            ↺ Open Rescheduling Portal
+          </button>
+        </div>
+
+        <!-- Policy 4: Mobile Digital Ticket & Contactless QR Scan -->
+        <div class="p-6 rounded-2xl bg-brand-skyLight border-2 border-brand-border hover:border-brand-blue/40 transition-all shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+            </svg>
+          </div>
+          <h3 class="font-extrabold text-base text-brand-blue mb-2">Mobile Digital QR Tickets</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold text-brand-navy bg-white p-3 rounded-xl border border-brand-border mb-2">
+            "Instant digital ticket with a secure scannable QR code issued straight to your smartphone for contactless boarding."
+          </p>
+          <p class="text-xs text-gray-600">
+            Our guide scans your phone directly before entering the shuttle. No printing required.
+          </p>
+        </div>
+
+        <!-- Policy 5: Full Bus Booking & D.C. Hotel Pickup -->
+        <div class="p-6 rounded-2xl bg-brand-skyLight border-2 border-brand-border hover:border-emerald-500 transition-all shadow-sm lg:col-span-2">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="font-extrabold text-base text-brand-blue mb-2">Private Full-Vehicle Booking & Hotel Pickup</h3>
+          <p class="text-sm text-gray-700 leading-relaxed font-semibold text-emerald-950 bg-emerald-50 p-3 rounded-xl border border-emerald-200 mb-2">
+            "Hotel pickup is available for customers booking the entire vehicle, provided the hotel is located within the District of Columbia."
+          </p>
+          <p class="text-xs text-gray-600">
+            Simply select 14 passengers or check "Reserve Entire 14-Seat Vehicle" during checkout, and enter your D.C. hotel address for door-to-door shuttle service.
+          </p>
         </div>
 
       </div>
@@ -566,452 +791,502 @@
   <!-- ========================================================================= -->
   <!-- FULL ONLINE BOOKING SYSTEM WITH STRICT 14-PASSENGER CAPACITY ENFORCEMENT -->
   <!-- ========================================================================= -->
-  <section id="booking" class="py-24 bg-white relative">
-    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+  <section id="booking" class="py-20 bg-brand-navy text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-blue text-white font-bold text-xs uppercase tracking-widest mb-3">
-          <span>⚡ LIVE 14-PASSENGER RESERVATION SYSTEM</span>
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold text-brand-navy font-black text-xs uppercase tracking-widest mb-3">
+          <span>★ REAL-TIME 14-PASSENGER RESERVATIONS ★</span>
         </div>
-        <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-brand-blue mb-4">
-          Reserve Your 14-Passenger Tour Experience.
+        <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-white tracking-tight mb-3">
+          Reserve Your Washington, D.C. Tour.
         </h2>
-        <p class="text-base sm:text-lg text-gray-600">
-          Select your tour, date, and departure time. Each departure is strictly capped at 14 guests to guarantee personal attention and premium comfort.
+        <p class="text-sm sm:text-base text-gray-300">
+          Strict 14-passenger capacity per departure for maximum intimacy and comfort. Instant mobile QR ticket delivered upon reservation.
         </p>
       </div>
 
-      <!-- Capacity Tracker Alert Banner -->
-      <div class="mb-8 p-4 bg-brand-skyLight rounded-2xl border border-brand-gold/40 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-goldDark font-bold text-lg flex-shrink-0">
-            ℹ
-          </div>
-          <div class="text-xs text-gray-700">
-            <span class="font-bold text-brand-blue block sm:inline">Strict 14-Seat Inventory Policy:</span>
-            Each tour departure maintains an independent 14-seat capacity. When 14 seats are reserved, that slot automatically closes to prevent overselling.
-          </div>
-        </div>
+      <!-- Main Booking Engine Card -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 text-brand-charcoal shadow-2xl border-2 border-brand-gold/60 max-w-5xl mx-auto">
+        <form id="tourBookingForm" onsubmit="handleBookingSubmission(event)" class="space-y-8">
 
-        <!-- Manager Reset/View Capacity Button -->
-        <button onclick="toggleAdminDrawer()" class="text-xs font-bold text-brand-blue hover:text-brand-navy border border-brand-blue/30 px-3.5 py-1.5 rounded-xl hover:bg-brand-sky transition flex-shrink-0 bg-white shadow-sm">
-          ⚙ View Fleet Roster
-        </button>
-      </div>
-
-      <!-- Main Booking Console -->
-      <div class="bg-brand-ivory rounded-3xl border border-brand-border shadow-xl p-6 sm:p-10">
-
-        <form id="bookingForm" onsubmit="handleBookingSubmission(event)">
-
-          <!-- Step 1: Select Tour Experience -->
-          <div class="mb-8 pb-8 border-b border-brand-border">
-            <label class="block text-sm font-bold text-brand-blue uppercase tracking-wider mb-3">
-              Step 1: Choose Your Tour Experience
+          <!-- STEP 1: SELECT TOUR EXPERIENCE -->
+          <div>
+            <label class="block text-xs font-black uppercase tracking-wider text-brand-blue mb-3">
+              Step 1: Choose Your Sightseeing Tour
             </label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <label class="tour-option relative flex flex-col p-4 rounded-2xl border-2 border-brand-blue bg-white cursor-pointer transition shadow-sm">
-                <input type="radio" name="tourName" value="The Grand Capital Day Discovery" checked onchange="updateBookingSummary()" class="absolute top-4 right-4 text-brand-blue">
-                <span class="font-bold text-brand-blue text-sm">Grand Capital Day Tour</span>
-                <span class="text-xs text-gray-500 mt-1">Sunlit iconic monument circuit</span>
-                <span class="text-xs font-bold text-brand-goldDark mt-3">$65 / Guest</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              <label class="border-2 rounded-2xl p-4 cursor-pointer transition flex items-center justify-between border-brand-blue bg-brand-skyLight has-[:checked]:border-brand-blue has-[:checked]:bg-brand-skyLight">
+                <div class="flex items-center gap-3">
+                  <input type="radio" name="tourName" value="Daytime Washington D.C. Sightseeing Tour" checked onchange="updateBookingSummary()" class="w-4 h-4 text-brand-blue">
+                  <div>
+                    <span class="font-extrabold text-sm text-brand-blue block">Daytime D.C. Sightseeing</span>
+                    <span class="text-xs text-gray-500">U.S. Capitol, Monument & Lincoln</span>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <span class="font-black text-lg text-brand-blue font-mono">$49</span>
+                  <span class="text-[10px] text-gray-500 block">/ guest</span>
+                </div>
               </label>
 
-              <label class="tour-option relative flex flex-col p-4 rounded-2xl border-2 border-brand-border bg-white hover:border-brand-blue/50 cursor-pointer transition shadow-sm">
-                <input type="radio" name="tourName" value="Lincoln & Monuments by Moonlight" onchange="updateBookingSummary()" class="absolute top-4 right-4 text-brand-blue">
-                <span class="font-bold text-brand-blue text-sm">Monuments by Moonlight</span>
-                <span class="text-xs text-gray-500 mt-1">Illuminated evening sightseeing</span>
-                <span class="text-xs font-bold text-brand-goldDark mt-3">$75 / Guest</span>
+              <label class="border-2 rounded-2xl p-4 cursor-pointer transition flex items-center justify-between border-brand-border bg-white hover:border-brand-blue/40 has-[:checked]:border-brand-gold has-[:checked]:bg-amber-50/50">
+                <div class="flex items-center gap-3">
+                  <input type="radio" name="tourName" value="Lincoln & National Monuments by Moonlight" onchange="updateBookingSummary()" class="w-4 h-4 text-brand-blue">
+                  <div>
+                    <span class="font-extrabold text-sm text-brand-blue block">Lincoln & Monuments by Moonlight</span>
+                    <span class="text-xs text-gray-500">Evening Illuminated Memorials</span>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <span class="font-black text-lg text-brand-goldDark font-mono">$59</span>
+                  <span class="text-[10px] text-gray-500 block">/ guest</span>
+                </div>
               </label>
 
-              <label class="tour-option relative flex flex-col p-4 rounded-2xl border-2 border-brand-border bg-white hover:border-brand-blue/50 cursor-pointer transition shadow-sm">
-                <input type="radio" name="tourName" value="Tidal Basin & Historic Highlights" onchange="updateBookingSummary()" class="absolute top-4 right-4 text-brand-blue">
-                <span class="font-bold text-brand-blue text-sm">Tidal Basin Highlights</span>
-                <span class="text-xs text-gray-500 mt-1">Waterfront memorials & history</span>
-                <span class="text-xs font-bold text-brand-goldDark mt-3">$65 / Guest</span>
-              </label>
             </div>
           </div>
 
-          <!-- Step 2: Select Date & Available Departure Time (With 14-Seat Capacity Checker) -->
-          <div class="mb-8 pb-8 border-b border-brand-border">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <!-- STEP 2 & 3: SELECT DATE & DEPARTURE TIME -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-              <!-- Date Picker -->
-              <div class="md:col-span-5">
-                <label class="block text-sm font-bold text-brand-blue uppercase tracking-wider mb-2">
-                  Step 2: Tour Date
+            <!-- Date Picker -->
+            <div class="md:col-span-5">
+              <label class="block text-xs font-black uppercase tracking-wider text-brand-blue mb-2">
+                Step 2: Select Date
+              </label>
+              <input type="date" id="tourDateInput" required onchange="renderTimeSlots()" class="w-full bg-brand-skyLight border-2 border-brand-border rounded-xl p-3 text-sm font-bold text-brand-blue focus:border-brand-blue focus:outline-none">
+              <span class="text-[11px] text-gray-500 block mt-1.5">
+                📅 Tours operate daily. Select your travel date.
+              </span>
+            </div>
+
+            <!-- Time Slots under 14-Seat Strict Capacity -->
+            <div class="md:col-span-7">
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-xs font-black uppercase tracking-wider text-brand-blue">
+                  Step 3: Select Departure Time
                 </label>
-                <input type="date" id="tourDateInput" required onchange="renderTimeSlots()"
-                       class="w-full px-4 py-3 rounded-xl border border-brand-border focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 text-sm font-semibold text-brand-charcoal bg-white">
-                <span class="text-[11px] text-gray-500 mt-1.5 block">Select any upcoming date to check live 14-seat vehicle availability.</span>
+                <span class="text-[11px] text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                  Strict 14-Seat Limit
+                </span>
               </div>
 
-              <!-- Time Slot Selector with Dynamic 14-Seat Pill -->
-              <div class="md:col-span-7">
-                <label class="block text-sm font-bold text-brand-blue uppercase tracking-wider mb-2">
-                  Step 3: Departure Time (Max 14 Capacity per slot)
+              <!-- Departure Slots Container -->
+              <div id="slotsContainer" class="space-y-2.5">
+                <!-- Dynamically populated by JavaScript -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- STEP 4: PASSENGER QUANTITY (VERIFIED CALCULATION) -->
+          <div class="p-5 rounded-2xl bg-brand-skyLight border border-brand-border">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+              <div>
+                <label class="text-xs font-black uppercase tracking-wider text-brand-blue block">
+                  Step 4: Number of Passengers
                 </label>
-                <div id="slotsContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <!-- Dynamically rendered by JavaScript -->
-                </div>
+                <span class="text-xs text-gray-600">Standard rate applies to all passengers ($49 Daytime / $59 Moonlight).</span>
               </div>
 
+              <!-- Quantity Selector Stepper -->
+              <div class="flex items-center gap-3">
+                <button type="button" onclick="adjustPassengerCount(-1)" class="w-9 h-9 rounded-xl bg-white border border-brand-border text-brand-blue font-bold text-lg hover:bg-gray-100 transition shadow-sm flex items-center justify-center">
+                  -
+                </button>
+                <span id="passengerCountText" class="w-10 text-center font-black text-xl text-brand-blue font-mono">
+                  2
+                </span>
+                <button type="button" onclick="adjustPassengerCount(1)" class="w-9 h-9 rounded-xl bg-white border border-brand-border text-brand-blue font-bold text-lg hover:bg-gray-100 transition shadow-sm flex items-center justify-center">
+                  +
+                </button>
+
+                <button type="button" onclick="setFullBus(14)" class="px-3 py-1.5 rounded-xl bg-brand-navy hover:bg-black text-white text-[11px] font-bold uppercase tracking-wider transition">
+                  Book All 14 Seats
+                </button>
+              </div>
+            </div>
+
+            <!-- Dynamic Capacity Meter -->
+            <div class="space-y-1.5 pt-2 border-t border-brand-border">
+              <div class="flex items-center justify-between text-xs">
+                <span id="totalGuestsText" class="font-bold text-brand-blue">2 Guests Selected</span>
+                <span id="availableSeatsText" class="font-bold text-emerald-700">Checking availability...</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                <div id="capacityBar" class="bg-brand-blue h-2.5 rounded-full transition-all duration-300" style="width: 14%;"></div>
+              </div>
+              <span id="capacityWarningText" class="text-[11px] text-gray-500 block"></span>
             </div>
           </div>
 
-          <!-- Step 3: Passenger Count & Live Price Calculator -->
-          <div class="mb-8 pb-8 border-b border-brand-border">
-            <label class="block text-sm font-bold text-brand-blue uppercase tracking-wider mb-3">
-              Step 4: Passenger Tickets
-            </label>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-
-              <!-- Adult Tickets -->
-              <div class="p-4 rounded-2xl bg-white border border-brand-border flex items-center justify-between shadow-sm">
-                <div>
-                  <span class="font-bold text-brand-blue text-sm block">Adult (13+)</span>
-                  <span class="text-xs text-gray-500" id="adultPriceLabel">$65.00</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <button type="button" onclick="adjustCount('adultCount', -1)" class="w-8 h-8 rounded-lg bg-brand-sky border border-brand-border font-bold text-brand-blue hover:bg-brand-blue hover:text-white transition">-</button>
-                  <span id="adultCount" class="w-8 text-center font-bold text-brand-blue">2</span>
-                  <button type="button" onclick="adjustCount('adultCount', 1)" class="w-8 h-8 rounded-lg bg-brand-sky border border-brand-border font-bold text-brand-blue hover:bg-brand-blue hover:text-white transition">+</button>
-                </div>
-              </div>
-
-              <!-- Child Tickets -->
-              <div class="p-4 rounded-2xl bg-white border border-brand-border flex items-center justify-between shadow-sm">
-                <div>
-                  <span class="font-bold text-brand-blue text-sm block">Child (Under 13)</span>
-                  <span class="text-xs text-gray-500" id="childPriceLabel">$45.00</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <button type="button" onclick="adjustCount('childCount', -1)" class="w-8 h-8 rounded-lg bg-brand-sky border border-brand-border font-bold text-brand-blue hover:bg-brand-blue hover:text-white transition">-</button>
-                  <span id="childCount" class="w-8 text-center font-bold text-brand-blue">0</span>
-                  <button type="button" onclick="adjustCount('childCount', 1)" class="w-8 h-8 rounded-lg bg-brand-sky border border-brand-border font-bold text-brand-blue hover:bg-brand-blue hover:text-white transition">+</button>
-                </div>
-              </div>
-
-              <!-- Total Passengers Warning Banner -->
-              <div class="p-4 rounded-2xl bg-white border-2 border-brand-gold/60 flex flex-col justify-center shadow-sm">
-                <div class="flex items-center justify-between text-xs">
-                  <span class="font-bold text-brand-blue">Total Passengers:</span>
-                  <span id="totalGuestsText" class="font-extrabold text-sm text-brand-blue">2 / 14</span>
-                </div>
-                <div class="w-full bg-gray-200 h-2 rounded-full mt-2 overflow-hidden">
-                  <div id="capacityBar" class="bg-brand-gold h-full transition-all" style="width: 14%;"></div>
-                </div>
-                <span id="capacityWarningText" class="text-[10px] text-gray-500 mt-1 block">Within 14-passenger limit</span>
-              </div>
-
+          <!-- STEP 5: COMPLIMENTARY D.C. HOTEL PICKUP (ACTIVATES ON 14-PASSENGER BOOKING) -->
+          <div id="hotelPickupSection" class="hidden p-5 rounded-2xl bg-emerald-50 border-2 border-emerald-400 text-emerald-950 space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              <span class="text-xs font-black uppercase tracking-wider text-emerald-900">
+                🏨 Complimentary D.C. Hotel Pickup Activated!
+              </span>
             </div>
-          </div>
-
-          <!-- Step 4: Primary Contact Details -->
-          <div class="mb-8 pb-8 border-b border-brand-border">
-            <label class="block text-sm font-bold text-brand-blue uppercase tracking-wider mb-3">
-              Step 5: Guest Contact Information
-            </label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <p class="text-xs leading-relaxed text-emerald-900">
+              "Hotel pickup is available for customers booking the entire vehicle, provided the hotel is located within the District of Columbia."
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div>
-                <label class="block text-xs font-semibold text-gray-600 mb-1">Full Name</label>
-                <input type="text" id="guestName" required placeholder="Shantal Downer" class="w-full px-4 py-2.5 rounded-xl border border-brand-border text-sm focus:border-brand-blue focus:outline-none bg-white">
+                <label class="block font-bold text-gray-700 mb-1">D.C. Hotel Name *</label>
+                <input type="text" id="hotelName" placeholder="e.g. The Willard InterContinental, The Hay-Adams" class="w-full p-2.5 rounded-xl border border-emerald-300 bg-white text-gray-800">
               </div>
               <div>
-                <label class="block text-xs font-semibold text-gray-600 mb-1">Email Address (For Confirmation Voucher)</label>
-                <input type="email" id="guestEmail" required placeholder="shantal@example.com" class="w-full px-4 py-2.5 rounded-xl border border-brand-border text-sm focus:border-brand-blue focus:outline-none bg-white">
+                <label class="block font-bold text-gray-700 mb-1">Hotel Street Address (Must be in Washington, D.C.) *</label>
+                <input type="text" id="hotelAddress" placeholder="e.g. 1401 Pennsylvania Ave NW, Washington, DC" class="w-full p-2.5 rounded-xl border border-emerald-300 bg-white text-gray-800">
               </div>
               <div>
-                <label class="block text-xs font-semibold text-gray-600 mb-1">Phone Number (Tour Updates)</label>
-                <input type="tel" id="guestPhone" required placeholder="(202) 555-0144" class="w-full px-4 py-2.5 rounded-xl border border-brand-border text-sm focus:border-brand-blue focus:outline-none bg-white">
+                <label class="block font-bold text-gray-700 mb-1">On-Site Contact Phone for Driver *</label>
+                <input type="tel" id="hotelPhone" placeholder="(202) 555-0199" class="w-full p-2.5 rounded-xl border border-emerald-300 bg-white text-gray-800">
+              </div>
+              <div>
+                <label class="block font-bold text-gray-700 mb-1">Special Pickup Instructions</label>
+                <input type="text" id="hotelNotes" placeholder="e.g. Meet in main lobby entrance by 9:45 AM" class="w-full p-2.5 rounded-xl border border-emerald-300 bg-white text-gray-800">
               </div>
             </div>
           </div>
 
-          <!-- Step 5: Checkout Summary & Secure Payment Processing -->
-          <div class="bg-brand-sky p-6 rounded-2xl border border-brand-blue/20 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-
+          <!-- STEP 6: CUSTOMER CONTACT DETAILS & POLICIES -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
-              <div class="text-xs uppercase tracking-wider text-brand-goldDark font-bold mb-1">Total Reservation Cost</div>
+              <label class="block text-xs font-bold text-gray-700 mb-1">Primary Guest Full Name *</label>
+              <input type="text" id="guestName" required placeholder="John Smith" class="w-full bg-brand-skyLight border border-brand-border rounded-xl p-3 text-xs text-brand-blue font-semibold">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1">Email for Digital Ticket *</label>
+              <input type="email" id="guestEmail" required placeholder="john@example.com" class="w-full bg-brand-skyLight border border-brand-border rounded-xl p-3 text-xs text-brand-blue font-semibold">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1">Mobile Phone Number *</label>
+              <input type="tel" id="guestPhone" required placeholder="(202) 555-0123" class="w-full bg-brand-skyLight border border-brand-border rounded-xl p-3 text-xs text-brand-blue font-semibold">
+            </div>
+          </div>
+
+          <!-- POLICY ACKNOWLEDGEMENT CHECKBOX -->
+          <div class="p-3.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-700 flex items-start gap-3">
+            <input type="checkbox" id="policyCheck" required class="mt-0.5 w-4 h-4 text-brand-blue rounded">
+            <label for="policyCheck" class="cursor-pointer leading-relaxed">
+              I acknowledge that <strong>current tour vehicles are not wheelchair accessible</strong>, arrival is recommended <strong>10–15 minutes prior to departure</strong>, and missed departures may be rescheduled online for same-day availability.
+            </label>
+          </div>
+
+          <!-- SUMMARY & CHECKOUT BUTTON -->
+          <div class="pt-6 border-t border-brand-border flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div>
+              <span class="text-xs text-gray-500 uppercase tracking-wider block">Total Reservation Cost:</span>
               <div class="flex items-baseline gap-2">
-                <span id="grandTotalText" class="text-3xl font-extrabold text-brand-blue">$130.00</span>
-                <span class="text-xs text-gray-500">Taxes & fees included</span>
+                <span id="grandTotalText" class="text-3xl font-black text-brand-blue font-mono">$98</span>
+                <span id="calculationBreakdownText" class="text-xs text-gray-500 font-medium">($49 × 2 passengers)</span>
               </div>
-              <div class="flex items-center gap-2 mt-2 text-xs text-gray-600">
-                <span class="text-emerald-600 font-bold">🔒 256-Bit SSL Encrypted Checkout</span>
-                <span>•</span>
-                <span>Stripe & Square Gateway Integration Ready</span>
-              </div>
+              <span class="text-[11px] text-emerald-700 font-semibold block mt-0.5">✓ No hidden booking fees or unconfirmed charges</span>
             </div>
 
-            <!-- Submit Booking Button -->
-            <button type="submit" id="submitBookingBtn" class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy font-extrabold text-sm uppercase tracking-wider px-10 py-4 rounded-full shadow-xl hover:shadow-brand-gold/40 hover:scale-105 active:scale-95 transition-all">
-              <span>Complete Tour Reservation</span>
+            <button type="submit" id="submitBookingBtn" class="bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy hover:brightness-105 font-black text-xs uppercase tracking-widest px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition flex items-center justify-center gap-2">
+              <span>Complete Reservation & Issue QR Ticket</span>
               <span>→</span>
             </button>
-
           </div>
 
         </form>
-
       </div>
 
     </div>
   </section>
 
   <!-- ========================================================================= -->
-  <!-- WHY CHOOSE DIVINE DC TOURS -->
+  <!-- DIGITAL MOBILE TICKET MODAL (WITH LIVE SCANNABLE QR CODE) -->
   <!-- ========================================================================= -->
-  <section id="why-us" class="py-24 bg-brand-ivory border-t border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+  <div id="digitalTicketModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border-4 border-brand-gold relative my-8">
 
-      <!-- Split Layout -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-
-        <!-- Left Image Composition -->
-        <div class="lg:col-span-5 relative">
-          <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-brand-blue relative">
-            <img src="https://images.unsplash.com/photo-1569098644584-210bcd375b59?auto=format&fit=crop&w=1200&q=85"
-                 alt="Washington DC Capitol Hill Sightseeing"
-                 class="w-full h-[480px] object-cover hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-transparent"></div>
-
-            <div class="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-brand-border shadow-lg">
-              <span class="text-brand-goldDark font-extrabold text-xs tracking-wider uppercase block mb-1">THE DIVINE DC STANDARD</span>
-              <span class="heading-serif text-lg font-bold text-brand-blue">"Never crowded. Never rushed. Every guest enjoys personal Washington hospitality."</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Content & Benefits -->
-        <div class="lg:col-span-7 space-y-8">
-
+      <!-- Modal Header -->
+      <div class="bg-brand-navy p-5 text-white flex items-center justify-between border-b border-brand-gold/40">
+        <div class="flex items-center gap-3">
+          <img src="images/client_logo_transparent.png" alt="Emblem" class="h-10 w-auto object-contain">
           <div>
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-sky text-brand-blue font-bold text-xs uppercase tracking-widest mb-3">
-              <span>✦ WHY TRAVELERS LOVE US ✦</span>
-            </div>
-            <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-brand-blue leading-tight mb-4">
-              The Intimate Sightseeing Alternative in Washington, D.C.
-            </h2>
-            <p class="text-base sm:text-lg text-gray-700">
-              Visiting the nation's capital should be inspiring, memorable, and relaxing. Here is why our 14-passenger boutique format is the best way to explore D.C.:
-            </p>
+            <span class="font-serif font-black text-sm uppercase block">Divine DC Tours</span>
+            <span class="text-[10px] text-brand-gold tracking-widest uppercase">Digital Boarding Pass</span>
           </div>
+        </div>
+        <button onclick="closeDigitalTicketModal()" class="text-white/60 hover:text-white text-2xl font-bold">×</button>
+      </div>
 
-          <!-- 3 Value Pillars -->
-          <div class="space-y-4">
+      <!-- Ticket Body with Jagged Airline Style Edge -->
+      <div class="p-6 space-y-4 text-brand-charcoal">
 
-            <!-- Pillar 1 -->
-            <div class="p-6 rounded-2xl bg-white border border-brand-border hover:border-brand-gold/60 transition flex items-start gap-4 shadow-sm">
-              <div class="w-12 h-12 rounded-xl bg-brand-blue text-brand-gold flex items-center justify-center font-bold text-lg flex-shrink-0">
-                01
-              </div>
-              <div>
-                <h3 class="font-bold text-brand-blue text-lg mb-1">Strict 14-Passenger Vehicle Limit</h3>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                  We never pack 50 people onto a coach bus. With a maximum of 14 guests, you enjoy spacious seating, easy entry and exit, and direct interaction with your local guide.
-                </p>
-              </div>
-            </div>
-
-            <!-- Pillar 2 -->
-            <div class="p-6 rounded-2xl bg-white border border-brand-border hover:border-brand-gold/60 transition flex items-start gap-4 shadow-sm">
-              <div class="w-12 h-12 rounded-xl bg-brand-blue text-brand-gold flex items-center justify-center font-bold text-lg flex-shrink-0">
-                02
-              </div>
-              <div>
-                <h3 class="font-bold text-brand-blue text-lg mb-1">Friendly, Knowledgeable Local Guides</h3>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                  Discover Washington through the stories of passionate local guides who know the capital's history, presidential trivia, and the best monument photo spots.
-                </p>
-              </div>
-            </div>
-
-            <!-- Pillar 3 -->
-            <div class="p-6 rounded-2xl bg-white border border-brand-border hover:border-brand-gold/60 transition flex items-start gap-4 shadow-sm">
-              <div class="w-12 h-12 rounded-xl bg-brand-blue text-brand-gold flex items-center justify-center font-bold text-lg flex-shrink-0">
-                03
-              </div>
-              <div>
-                <h3 class="font-bold text-brand-blue text-lg mb-1">All-Season Heated & Air-Conditioned Comfort</h3>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                  Whether taking in the spring cherry blossoms, summer sunshine, or crisp autumn evening tours, relax in our clean, heated, and air-conditioned vehicle.
-                </p>
-              </div>
-            </div>
-
+        <!-- Status & Reference -->
+        <div class="flex items-center justify-between pb-3 border-b border-dashed border-gray-300">
+          <div>
+            <span class="text-[10px] uppercase font-bold text-gray-500 block">Booking Reference</span>
+            <span id="ticketRefNumber" class="font-mono font-black text-base text-brand-blue">DDC-2026-8842</span>
           </div>
-
+          <span class="bg-emerald-100 text-emerald-800 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-emerald-300">
+            ✓ Confirmed Ticket
+          </span>
         </div>
 
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- ABOUT SECTION -->
-  <!-- ========================================================================= -->
-  <section id="about" class="py-20 bg-white border-t border-brand-border">
-    <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center">
-
-      <div class="inline-flex items-center gap-2 mb-4">
-        <span class="w-8 h-[1px] bg-brand-gold"></span>
-        <span class="text-xs uppercase tracking-[0.25em] text-brand-goldDark font-bold">ABOUT DIVINE DC TOURS</span>
-        <span class="w-8 h-[1px] bg-brand-gold"></span>
-      </div>
-
-      <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-brand-blue mb-6">
-        Sharing the Story & Spirit of Washington, D.C.
-      </h2>
-
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8 font-normal">
-        Founded on hospitality, love for the capital, and a dedication to genuine visitor care, Divine DC Tours provides guided sightseeing experiences that bring monuments, memorials, and stories to life. We believe every visitor deserves personal attention, safety, and a comfortable seat.
-      </p>
-
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto pt-6 border-t border-brand-border text-center">
+        <!-- Tour & Schedule -->
         <div>
-          <div class="font-extrabold text-2xl sm:text-3xl text-brand-blue">14</div>
-          <div class="text-xs text-gray-500 font-semibold mt-1">Max Guests / Tour</div>
+          <span class="text-[10px] uppercase font-bold text-gray-500 block">Experience</span>
+          <span id="ticketTourName" class="font-serif font-bold text-base text-brand-blue block">Daytime Washington D.C. Sightseeing Tour</span>
         </div>
-        <div>
-          <div class="font-extrabold text-2xl sm:text-3xl text-brand-blue">100%</div>
-          <div class="text-xs text-gray-500 font-semibold mt-1">Guaranteed Window View</div>
-        </div>
-        <div>
-          <div class="font-extrabold text-2xl sm:text-3xl text-brand-blue">7 Days</div>
-          <div class="text-xs text-gray-500 font-semibold mt-1">Weekly Departures</div>
-        </div>
-        <div>
-          <div class="font-extrabold text-2xl sm:text-3xl text-brand-blue">All-Season</div>
-          <div class="text-xs text-gray-500 font-semibold mt-1">Air Conditioned & Heated</div>
-        </div>
-      </div>
 
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- CONTACT & PRIVATE CHARTER INQUIRIES -->
-  <!-- ========================================================================= -->
-  <section id="contact" class="py-20 bg-brand-blue text-white relative">
-    <div class="max-w-5xl mx-auto px-4 sm:px-8">
-
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-
-        <!-- Left Info -->
-        <div class="md:col-span-6 space-y-4">
-          <span class="text-brand-gold text-xs font-bold uppercase tracking-widest block">PRIVATE CHARTERS & QUESTIONS</span>
-          <h2 class="heading-serif text-3xl sm:text-4xl font-bold text-white leading-tight">
-            Planning a Family Gathering, School Group, or Private Tour?
-          </h2>
-          <p class="text-sm sm:text-base text-white/85 leading-relaxed font-light">
-            Our 14-passenger touring vehicle is also available for private group bookings and personalized Washington, D.C. itineraries. Get in touch with our team.
-          </p>
-          <div class="space-y-2 pt-2 text-xs text-white/90">
-            <div class="flex items-center gap-2">
-              <span class="text-brand-gold">📍 Location:</span>
-              <span>Washington, D.C. Sightseeing</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-brand-gold">🌐 Domain:</span>
-              <span class="font-mono text-brand-goldLight">divineddctours.com</span>
-            </div>
+        <div class="grid grid-cols-2 gap-3 text-xs bg-brand-skyLight p-3 rounded-xl border border-brand-border">
+          <div>
+            <span class="text-[10px] text-gray-500 block">Departure Date & Time:</span>
+            <span id="ticketDateTime" class="font-black text-brand-blue font-mono">Nov 6, 2026 • 10:00 AM</span>
+          </div>
+          <div>
+            <span class="text-[10px] text-gray-500 block">Passengers:</span>
+            <span id="ticketGuests" class="font-black text-brand-blue">2 Guests (14-Seat Shuttle)</span>
           </div>
         </div>
 
-        <!-- Right Quick Form -->
-        <div class="md:col-span-6 bg-white rounded-3xl p-6 sm:p-8 text-brand-charcoal shadow-2xl">
-          <h3 class="font-bold text-lg text-brand-blue mb-4">Send a Direct Inquiry</h3>
-          <form onsubmit="handleInquirySubmit(event)" class="space-y-3">
-            <div>
-              <label class="block text-xs font-semibold text-gray-600 mb-1">Your Name</label>
-              <input type="text" required placeholder="John Doe" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-border text-sm focus:border-brand-blue focus:outline-none bg-brand-skyLight">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-gray-600 mb-1">Email</label>
-              <input type="email" required placeholder="john@example.com" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-border text-sm focus:border-brand-blue focus:outline-none bg-brand-skyLight">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-gray-600 mb-1">Message or Preferred Tour Date</label>
-              <textarea rows="3" required placeholder="Inquiring about a private 14-passenger charter..." class="w-full px-3.5 py-2.5 rounded-xl border border-brand-border text-sm focus:border-brand-blue focus:outline-none bg-brand-skyLight"></textarea>
-            </div>
-            <button type="submit" class="w-full bg-brand-blue hover:bg-brand-navy text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow">
-              Send Message
+        <!-- Hotel Pickup or Central Departure Location -->
+        <div id="ticketPickupInfo" class="text-xs bg-gray-50 p-3 rounded-xl border border-gray-200">
+          <span class="text-[10px] text-gray-500 font-bold block uppercase">Boarding Location:</span>
+          <span id="ticketLocationText" class="font-bold text-brand-blue block">National Mall Central Departure • Washington, D.C.</span>
+        </div>
+
+        <!-- SCANNABLE QR CODE CONTAINER -->
+        <div class="text-center py-2 bg-white rounded-2xl border-2 border-brand-gold/40 p-4">
+          <div id="ticketQrContainer" class="flex justify-center items-center mx-auto mb-2">
+            <!-- QR code rendered here -->
+          </div>
+          <span class="text-[10px] uppercase tracking-wider font-extrabold text-brand-navy block">
+            Scan with Guide Mobile Device
+          </span>
+          <span class="text-[10px] text-gray-500 block">
+            Please present this screen to your tour guide before boarding.
+          </span>
+        </div>
+
+        <!-- Crucial Policy Reminders on Ticket -->
+        <div class="space-y-1.5 text-[11px] text-gray-600 bg-amber-50/60 p-3 rounded-xl border border-amber-200">
+          <div class="flex items-center gap-1.5 font-bold text-amber-900">
+            <span>⏰ Arrival:</span>
+            <span>Please arrive 10–15 minutes before your scheduled departure.</span>
+          </div>
+          <div class="flex items-center gap-1.5 text-gray-600">
+            <span>♿ Accessibility:</span>
+            <span>Current vehicles are not wheelchair accessible.</span>
+          </div>
+        </div>
+
+        <!-- Ticket Action Buttons -->
+        <div class="space-y-2 pt-2 border-t border-gray-200">
+          <div class="flex gap-2">
+            <button onclick="window.print()" class="flex-1 py-2.5 rounded-xl bg-brand-sky text-brand-blue font-bold text-xs hover:bg-blue-100 transition border border-brand-blue/20">
+              📥 Print / Save Ticket
             </button>
-          </form>
-          <div id="inquirySuccess" class="hidden text-center py-4 text-emerald-600 font-bold text-xs">
-            ✓ Thank you! Your inquiry has been sent to Divine DC Tours.
+            <button onclick="openRescheduleForTicket()" class="flex-1 py-2.5 rounded-xl bg-gray-100 text-gray-700 font-bold text-xs hover:bg-gray-200 transition border border-gray-300">
+              ↺ Reschedule Online
+            </button>
           </div>
+          <button onclick="testScanCurrentTicket()" class="w-full py-2 rounded-xl bg-brand-navy text-white text-[11px] font-bold tracking-wider uppercase hover:bg-black transition">
+            📱 Test Guide Scan (Simulate Check-In)
+          </button>
         </div>
 
       </div>
 
     </div>
-  </section>
+  </div>
 
   <!-- ========================================================================= -->
-  <!-- FOOTER -->
+  <!-- ONLINE RESCHEDULING PORTAL MODAL (CLIENT-CONFIRMED POLICY) -->
   <!-- ========================================================================= -->
-  <footer class="bg-brand-navy text-white/75 pt-16 pb-12 border-t border-white/10">
+  <div id="rescheduleModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border-4 border-brand-blue relative my-8">
+
+      <!-- Header -->
+      <div class="bg-brand-blue p-5 text-white flex items-center justify-between">
+        <div>
+          <span class="font-serif font-black text-base uppercase block">Manage & Reschedule Reservation</span>
+          <span class="text-xs text-brand-goldLight">Same-day rescheduling subject to 14-seat availability</span>
+        </div>
+        <button onclick="closeRescheduleModal()" class="text-white/70 hover:text-white text-2xl font-bold">×</button>
+      </div>
+
+      <div class="p-6 space-y-5 text-brand-charcoal">
+
+        <!-- Booking Lookup -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-brand-blue mb-1">
+            Enter Booking Reference
+          </label>
+          <div class="flex gap-2">
+            <input type="text" id="rescheduleRefInput" placeholder="e.g. DDC-2026-8842" class="flex-1 p-3 rounded-xl border border-brand-border text-sm font-mono font-bold uppercase text-brand-blue">
+            <button type="button" onclick="lookupRescheduleBooking()" class="px-5 py-3 rounded-xl bg-brand-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-navy transition">
+              Find
+            </button>
+          </div>
+        </div>
+
+        <!-- Loaded Reservation Details -->
+        <div id="rescheduleDetailsCard" class="hidden p-4 rounded-2xl bg-brand-skyLight border border-brand-border space-y-3">
+          <div class="flex items-center justify-between pb-2 border-b border-brand-border">
+            <span class="font-bold text-xs text-brand-blue uppercase">Current Reservation:</span>
+            <span id="rescheduleStatusBadge" class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Confirmed</span>
+          </div>
+          <div class="text-xs space-y-1">
+            <div><strong>Tour:</strong> <span id="rescheduleTourName"></span></div>
+            <div><strong>Date & Time:</strong> <span id="rescheduleCurrentDateTime" class="font-mono text-brand-blue font-bold"></span></div>
+            <div><strong>Guests:</strong> <span id="rescheduleGuestCount" class="font-bold"></span></div>
+          </div>
+
+          <!-- Select New Same-Day Departure Slot -->
+          <div class="pt-2 border-t border-brand-border">
+            <label class="block text-xs font-black uppercase tracking-wider text-brand-blue mb-2">
+              Select New Departure Time (Same Calendar Day)
+            </label>
+            <div id="rescheduleSlotsContainer" class="space-y-2">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <button type="button" id="confirmRescheduleBtn" onclick="confirmRescheduleAction()" class="w-full mt-3 py-3 rounded-xl bg-gradient-to-r from-brand-gold to-brand-goldDark text-brand-navy font-black text-xs uppercase tracking-wider hover:brightness-105 transition shadow">
+            Confirm Rescheduling & Update Digital Ticket
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- TOUR GUIDE MOBILE SCANNER & CHECK-IN PORTAL MODAL -->
+  <!-- ========================================================================= -->
+  <div id="guideScannerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="bg-gray-900 rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border-4 border-emerald-500 relative my-8 text-white">
+
+      <!-- Header -->
+      <div class="bg-black/90 p-4 border-b border-gray-800 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></span>
+          <span class="font-mono font-bold text-xs uppercase text-emerald-400">Divine DC Tours • Staff Scanner</span>
+        </div>
+        <button onclick="closeGuideScannerModal()" class="text-gray-400 hover:text-white text-2xl font-bold">×</button>
+      </div>
+
+      <!-- Scanner Body -->
+      <div class="p-6 space-y-4">
+        <div class="text-center">
+          <h3 class="font-serif text-lg font-bold">Passenger Check-In Scanner</h3>
+          <p class="text-xs text-gray-400">Scan QR Code or verify booking reference before boarding.</p>
+        </div>
+
+        <!-- Simulated Camera Viewfinder -->
+        <div class="relative bg-black rounded-2xl h-48 border-2 border-dashed border-emerald-500/60 flex flex-col items-center justify-center overflow-hidden">
+          <div class="absolute inset-4 border border-emerald-400/40 rounded-xl pointer-events-none"></div>
+          <div class="w-full h-0.5 bg-emerald-400 shadow-[0_0_15px_#10b981] animate-pulse"></div>
+          <span class="text-[11px] text-gray-400 font-mono mt-3">Position passenger QR code in view</span>
+        </div>
+
+        <!-- Manual Reference Input / 1-Click Test -->
+        <div class="space-y-2">
+          <div class="flex gap-2">
+            <input type="text" id="guideScanRefInput" placeholder="Enter Booking Ref (DDC-...)" class="flex-1 bg-gray-800 border border-gray-700 rounded-xl p-2.5 text-xs font-mono font-bold uppercase text-white">
+            <button onclick="executeGuideScan()" class="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 font-bold text-xs uppercase rounded-xl transition">
+              Verify
+            </button>
+          </div>
+          <button onclick="prefillActiveBookingForScanner()" class="w-full py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 text-[11px] font-bold rounded-xl transition">
+            ⚡ Quick-Verify Most Recent Booking
+          </button>
+        </div>
+
+        <!-- Result Box -->
+        <div id="guideScanResultBox" class="hidden p-4 rounded-2xl border text-xs space-y-2">
+          <!-- Dynamically populated -->
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER: AUTHENTIC LOGO, COMPANY DETAILS & STAGING CREDIT -->
+  <!-- ========================================================================= -->
+  <footer class="bg-brand-midnight text-white pt-16 pb-12 border-t-2 border-brand-gold/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-gray-800">
 
-        <!-- Logo & Mission -->
+        <!-- Column 1: Brand & Logo -->
         <div class="md:col-span-5 space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="h-12 w-auto flex items-center justify-center">
-              <img src="images/client_logo_transparent.png" alt="Divine DC Tours Logo" class="h-10 w-auto object-contain">
+          <div class="flex items-center gap-4">
+            <div class="bg-white p-2 rounded-2xl border border-brand-gold/50 shadow">
+              <img src="images/client_logo_transparent.png" alt="Divine DC Tours Logo" class="h-16 w-auto object-contain">
             </div>
             <div>
-              <span class="font-bold text-lg text-white tracking-wider block">DIVINE DC TOURS</span>
-              <span class="text-[10px] tracking-widest text-brand-gold uppercase font-semibold">Washington, D.C. Sightseeing</span>
+              <span class="font-serif font-black text-xl uppercase tracking-wider text-white block">Divine DC Tours</span>
+              <span class="text-xs text-brand-gold uppercase tracking-widest font-bold">Washington, D.C. Sightseeing</span>
             </div>
           </div>
-          <p class="text-xs sm:text-sm text-white/70 leading-relaxed pr-6 font-light">
-            Discover Washington, D.C. with friendly local guides, exceptional customer service, and comfortable 14-passenger boutique touring experiences.
+          <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+            Washington, D.C.'s premier boutique sightseeing tour company. Operating comfortable 14-passenger panoramic touring vehicles equipped with heating and air conditioning.
           </p>
+          <div class="text-xs text-brand-goldLight space-y-1">
+            <div>✦ Daytime Sightseeing: <strong>$49</strong> per passenger</div>
+            <div>✦ Moonlight Monuments: <strong>$59</strong> per passenger</div>
+            <div>✦ Strict 14-Passenger Vehicle Limit</div>
+          </div>
         </div>
 
-        <!-- Navigation -->
-        <div class="md:col-span-4 space-y-2">
-          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-3">Quick Links</h4>
-          <ul class="space-y-1.5 text-xs">
-            <li><a href="#hero" class="hover:text-brand-gold transition">Home</a></li>
-            <li><a href="#vehicle" class="hover:text-brand-gold transition">Our 14-Seat Tour Vehicle</a></li>
-            <li><a href="#tours" class="hover:text-brand-gold transition">Our Sightseeing Tours</a></li>
-            <li><a href="#booking" class="hover:text-brand-gold transition">14-Passenger Booking Engine</a></li>
-            <li><a href="#why-us" class="hover:text-brand-gold transition">The Boutique Advantage</a></li>
-            <li><a href="#about" class="hover:text-brand-gold transition">About Divine DC Tours</a></li>
+        <!-- Column 2: Navigation Links -->
+        <div class="md:col-span-3 space-y-3 text-xs">
+          <span class="font-bold uppercase tracking-widest text-brand-gold block">Sightseeing Experiences</span>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#hero" class="hover:text-white transition">Home</a></li>
+            <li><a href="#vehicle" class="hover:text-white transition">Our 14-Seat Van</a></li>
+            <li><a href="#tours" class="hover:text-white transition">Daytime Tour ($49)</a></li>
+            <li><a href="#tours" class="hover:text-white transition">Moonlight Tour ($59)</a></li>
+            <li><a href="#tours" class="hover:text-white transition">Full-Bus Charter (D.C. Hotel Pickup)</a></li>
+            <li><a href="#policies" class="hover:text-white transition">Before You Book (Policies)</a></li>
           </ul>
         </div>
 
-        <!-- Client Domain & Staging Notice -->
-        <div class="md:col-span-3 space-y-3">
-          <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-3">Client Information</h4>
-          <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-xs space-y-1.5">
-            <div class="text-white/60">Official Client Website:</div>
-            <div class="font-mono text-brand-gold font-semibold text-sm">divineddctours.com</div>
-            <div class="text-[11px] text-white/50 pt-2 border-t border-white/10">
-              Private client review & staging environment.
-            </div>
+        <!-- Column 3: Guest Support & Contact -->
+        <div class="md:col-span-4 space-y-3 text-xs text-gray-400">
+          <span class="font-bold uppercase tracking-widest text-brand-gold block">Customer Support & Check-In</span>
+          <p>
+            Central Departure: <strong>National Mall & Lincoln Memorial Area</strong><br>
+            Washington, D.C.
+          </p>
+          <p>
+            Phone / Reservations: <strong class="text-white">(202) 555-0198</strong><br>
+            Official Website: <strong class="text-white">divineddctours.com</strong>
+          </p>
+          <div class="pt-2 flex gap-2">
+            <button onclick="openRescheduleModal()" class="px-3 py-1.5 rounded-lg bg-gray-800 text-brand-gold text-[11px] font-bold hover:bg-gray-700 transition">
+              ↺ Reschedule Booking
+            </button>
+            <button onclick="openGuideScannerModal()" class="px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 text-[11px] font-mono hover:bg-gray-700 transition">
+              📱 Staff Scanner
+            </button>
           </div>
         </div>
 
       </div>
 
-      <!-- Agency Attribution -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+      <!-- Bottom Bar: Agency Credit & Staging Notice -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
         <div>
-          © 2026 Divine DC Tours. Washington, D.C. All rights reserved.
+          © 2026 Divine DC Tours. Client: Shantal Downer. Washington, D.C. All rights reserved.
         </div>
-        <div class="flex items-center gap-1.5">
-          <span>Website Designed & Developed by</span>
-          <a href="https://omnipeakdigital.com/" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:underline font-semibold">
+        <div class="flex items-center gap-2">
+          <span>Staging & Presentation by</span>
+          <a href="https://omnipeakdigital.com/" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:underline font-bold">
             OmniPeak Digital
           </a>
         </div>
@@ -1021,132 +1296,60 @@
   </footer>
 
   <!-- ========================================================================= -->
-  <!-- BOOKING SUCCESS MODAL -->
-  <!-- ========================================================================= -->
-  <div id="bookingSuccessModal" class="fixed inset-0 z-50 hidden bg-brand-navy/80 backdrop-blur-md flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border-2 border-brand-gold/40 text-brand-charcoal">
-      <button onclick="closeSuccessModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 p-2 rounded-lg bg-gray-100">
-        ✕
-      </button>
-
-      <div class="text-center">
-        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-          ✓
-        </div>
-        <span class="text-xs font-bold text-brand-goldDark uppercase tracking-widest block mb-1">RESERVATION CONFIRMED</span>
-        <h3 class="heading-serif text-3xl font-bold text-brand-blue mb-2">You're Going Sightseeing!</h3>
-        <p class="text-xs text-gray-600 mb-6">
-          Thank you for choosing Divine DC Tours. Your reservation has been logged and your confirmation code is below.
-        </p>
-
-        <!-- Receipt Card -->
-        <div class="bg-brand-skyLight p-4 rounded-2xl border border-brand-border text-left text-xs space-y-2 mb-6">
-          <div class="flex justify-between pb-2 border-b border-brand-border">
-            <span class="text-gray-500">Booking Reference:</span>
-            <span id="receiptRef" class="font-mono font-bold text-brand-blue">DDC-2026-8941</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="text-gray-500">Selected Tour:</span>
-            <span id="receiptTour" class="font-semibold text-brand-blue">Grand Capital Day Tour</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="text-gray-500">Date & Departure:</span>
-            <span id="receiptDateTime" class="font-semibold text-brand-blue">Today • 10:00 AM</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="text-gray-500">Total Passengers:</span>
-            <span id="receiptGuests" class="font-semibold text-brand-blue">2 Guests</span>
-          </div>
-          <div class="flex justify-between pt-2 border-t border-brand-border font-bold">
-            <span class="text-brand-blue">Total Amount:</span>
-            <span id="receiptTotal" class="text-brand-goldDark">$130.00</span>
-          </div>
-        </div>
-
-        <button onclick="closeSuccessModal()" class="w-full bg-brand-blue text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl shadow">
-          Done & Close Window
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================================= -->
-  <!-- FLEET MANAGER / ADMIN DRAWER (CAPACITY INSPECTOR) -->
-  <!-- ========================================================================= -->
-  <div id="adminDrawer" class="fixed inset-0 z-50 hidden bg-brand-navy/70 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative text-brand-charcoal max-h-[85vh] overflow-y-auto">
-      <button onclick="toggleAdminDrawer()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 p-2 rounded-lg bg-gray-100">
-        ✕
-      </button>
-
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 rounded-xl bg-brand-blue text-brand-gold flex items-center justify-center font-bold">⚙</div>
-        <div>
-          <h3 class="font-bold text-lg text-brand-blue">Fleet Booking & Capacity Manager</h3>
-          <p class="text-xs text-gray-500">Strict 14-Passenger Per Departure Enforcement Audit</p>
-        </div>
-      </div>
-
-      <p class="text-xs text-gray-600 mb-6">
-        Below is the real-time departure roster stored in local persistence. When any slot reaches 14 confirmed passengers, it is automatically marked Sold Out.
-      </p>
-
-      <div id="adminRosterList" class="space-y-3 mb-6 text-xs">
-        <!-- Roster dynamically filled -->
-      </div>
-
-      <div class="flex justify-between items-center pt-4 border-t border-brand-border">
-        <button onclick="resetFleetData()" class="text-xs text-red-600 hover:text-red-800 font-bold underline">
-          Reset Test Bookings
-        </button>
-        <button onclick="toggleAdminDrawer()" class="px-5 py-2.5 rounded-xl bg-brand-blue text-white font-bold text-xs uppercase">
-          Close Manager
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================================= -->
-  <!-- INTERACTIVE BOOKING ENGINE JAVASCRIPT -->
+  <!-- JAVASCRIPT: STRICT 14-SEAT CAPACITY, VERIFIED PRICING, QR & SCANNER -->
   <!-- ========================================================================= -->
   <script>
     const MAX_CAPACITY = 14;
     const PRICES = {
-      'The Grand Capital Day Discovery': { adult: 65, child: 45 },
-      'Lincoln & Monuments by Moonlight': { adult: 75, child: 55 },
-      'Tidal Basin & Historic Highlights': { adult: 65, child: 45 }
+      'Daytime Washington D.C. Sightseeing Tour': 49,
+      'Lincoln & National Monuments by Moonlight': 59
     };
 
     const DEFAULT_SLOTS = [
-      { time: '10:00 AM', label: 'Morning Sightseeing' },
-      { time: '1:00 PM', label: 'Afternoon Discovery' },
-      { time: '4:00 PM', label: 'Late Afternoon Tour' },
-      { time: '7:30 PM', label: 'Lincoln & Monuments by Moonlight' }
+      { time: '10:00 AM', label: 'Morning Sightseeing ($49)', type: 'Daytime Washington D.C. Sightseeing Tour' },
+      { time: '1:00 PM', label: 'Afternoon Discovery ($49)', type: 'Daytime Washington D.C. Sightseeing Tour' },
+      { time: '4:00 PM', label: 'Late Afternoon Tour ($49)', type: 'Daytime Washington D.C. Sightseeing Tour' },
+      { time: '7:30 PM', label: 'Lincoln & Monuments by Moonlight ($59)', type: 'Lincoln & National Monuments by Moonlight' }
     ];
 
+    // Initialize Default Date to Tomorrow
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     const defaultDateStr = tomorrow.toISOString().split('T')[0];
     document.getElementById('tourDateInput').value = defaultDateStr;
     document.getElementById('tourDateInput').min = new Date().toISOString().split('T')[0];
 
+    // LocalStorage Persistent Capacity Database
     function getStoredBookings() {
-      const stored = localStorage.getItem('divine_dc_bookings');
+      const stored = localStorage.getItem('divine_dc_bookings_v2');
       if (stored) {
         try { return JSON.parse(stored); } catch (e) {}
       }
+      // Initial realistic seat counts (under 14 limit)
       const initial = {
-        [`${defaultDateStr}_10:00 AM`]: 6,
-        [`${defaultDateStr}_1:00 PM`]: 10,
-        [`${defaultDateStr}_4:00 PM`]: 4,
-        [`${defaultDateStr}_7:30 PM`]: 13
+        [`${defaultDateStr}_10:00 AM`]: 10, // 4 left
+        [`${defaultDateStr}_1:00 PM`]: 12,  // 2 left
+        [`${defaultDateStr}_4:00 PM`]: 6,   // 8 left
+        [`${defaultDateStr}_7:30 PM`]: 9    // 5 left (Moonlight)
       };
-      localStorage.setItem('divine_dc_bookings', JSON.stringify(initial));
+      localStorage.setItem('divine_dc_bookings_v2', JSON.stringify(initial));
       return initial;
     }
 
-    let selectedTimeSlot = '10:00 AM';
+    // Reservation Records Database
+    function getStoredReservations() {
+      const stored = localStorage.getItem('divine_dc_tickets_v2');
+      if (stored) {
+        try { return JSON.parse(stored); } catch (e) {}
+      }
+      return {};
+    }
 
+    let selectedTimeSlot = '10:00 AM';
+    let currentPassengerCount = 2;
+    let activeTicketData = null;
+
+    // Render Slots with strict 14-seat countdown
     function renderTimeSlots() {
       const date = document.getElementById('tourDateInput').value;
       const bookings = getStoredBookings();
@@ -1179,6 +1382,11 @@
         if (!isSoldOut) {
           card.onclick = () => {
             selectedTimeSlot = slot.time;
+            // auto select appropriate tour radio
+            const radios = document.querySelectorAll('input[name="tourName"]');
+            radios.forEach(r => {
+              if (r.value === slot.type) r.checked = true;
+            });
             renderTimeSlots();
             updateBookingSummary();
           };
@@ -1186,18 +1394,19 @@
 
         let badge = '';
         if (isSoldOut) {
-          badge = '<span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-red-100 text-red-700">Sold Out (14/14)</span>';
+          badge = '<span class="text-[10px] font-black uppercase px-2.5 py-1 rounded bg-red-100 text-red-700">Sold Out (14/14)</span>';
         } else if (available <= 3) {
-          badge = `<span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-100 text-amber-800">Only ${available} Left!</span>`;
+          badge = `<span class="text-[10px] font-black uppercase px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">Only ${available} Left!</span>`;
         } else {
-          badge = `<span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">${available} of 14 Available</span>`;
+          badge = `<span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-emerald-100 text-emerald-800">${available} of 14 Available</span>`;
         }
 
         card.innerHTML = `
           <div>
-            <div class="font-bold text-sm text-brand-blue flex items-center gap-1.5">
+            <div class="font-extrabold text-sm text-brand-blue flex items-center gap-1.5">
               <span>${slot.time}</span>
-              ${isSelected ? '<span class="text-brand-gold text-xs">✓</span>' : ''}
+              ${isSelected ? '<span class="text-brand-gold text-xs">✓ Selected</span>' : ''}
+              <span class="text-[10px] font-normal text-gray-400 font-mono">⏰ Arrive 10–15 min prior</span>
             </div>
             <div class="text-[11px] text-gray-500">${slot.label}</div>
           </div>
@@ -1214,72 +1423,76 @@
 
     function getSelectedTour() {
       const selectedRadio = document.querySelector('input[name="tourName"]:checked');
-      return selectedRadio ? selectedRadio.value : 'The Grand Capital Day Discovery';
+      return selectedRadio ? selectedRadio.value : 'Daytime Washington D.C. Sightseeing Tour';
     }
 
-    function adjustCount(elementId, delta) {
-      const el = document.getElementById(elementId);
-      let count = parseInt(el.textContent, 10) + delta;
-      if (count < 0) count = 0;
-
-      const otherId = elementId === 'adultCount' ? 'childCount' : 'adultCount';
-      const otherCount = parseInt(document.getElementById(otherId).textContent, 10);
-      const totalRequested = count + otherCount;
+    function adjustPassengerCount(delta) {
+      let count = currentPassengerCount + delta;
+      if (count < 1) count = 1;
+      if (count > MAX_CAPACITY) count = MAX_CAPACITY;
 
       const date = document.getElementById('tourDateInput').value;
       const bookings = getStoredBookings();
       const currentBooked = bookings[`${date}_${selectedTimeSlot}`] || 0;
       const available = MAX_CAPACITY - currentBooked;
 
-      if (totalRequested > available) {
-        alert(`Cannot add more passengers: Only ${available} seats remain for the ${selectedTimeSlot} departure.`);
-        return;
+      if (count > available) {
+        alert(`Capacity Limit: Only ${available} seat(s) remain on the ${selectedTimeSlot} departure.`);
+        count = available;
       }
 
-      if (totalRequested === 0) {
-        if (elementId === 'adultCount') count = 1;
-      }
+      currentPassengerCount = count;
+      document.getElementById('passengerCountText').textContent = currentPassengerCount;
+      updateBookingSummary();
+    }
 
-      el.textContent = count;
+    function setFullBus(count) {
+      currentPassengerCount = count;
+      document.getElementById('passengerCountText').textContent = count;
       updateBookingSummary();
     }
 
     function updateBookingSummary() {
       const tour = getSelectedTour();
-      const priceConfig = PRICES[tour] || PRICES['The Grand Capital Day Discovery'];
+      const pricePerPassenger = PRICES[tour] || 49;
+      const grandTotal = currentPassengerCount * pricePerPassenger;
 
-      document.getElementById('adultPriceLabel').textContent = `$${priceConfig.adult}.00`;
-      document.getElementById('childPriceLabel').textContent = `$${priceConfig.child}.00`;
+      document.getElementById('grandTotalText').textContent = `$${grandTotal}`;
+      document.getElementById('calculationBreakdownText').textContent = `($${pricePerPassenger} × ${currentPassengerCount} passengers)`;
 
-      const adults = parseInt(document.getElementById('adultCount').textContent, 10);
-      const children = parseInt(document.getElementById('childCount').textContent, 10);
-      const totalGuests = adults + children;
+      // Hotel Pickup Toggle (for full 14-seat bus)
+      const hotelSection = document.getElementById('hotelPickupSection');
+      if (currentPassengerCount === 14) {
+        hotelSection.classList.remove('hidden');
+      } else {
+        hotelSection.classList.add('hidden');
+      }
 
-      const grandTotal = (adults * priceConfig.adult) + (children * priceConfig.child);
-      document.getElementById('grandTotalText').textContent = `$${grandTotal}.00`;
-
+      // Capacity bar update
       const date = document.getElementById('tourDateInput').value;
       const bookings = getStoredBookings();
       const currentBooked = bookings[`${date}_${selectedTimeSlot}`] || 0;
       const available = MAX_CAPACITY - currentBooked;
 
-      document.getElementById('totalGuestsText').textContent = `${totalGuests} Guests (Seat limit: 14)`;
-      const pct = Math.min(100, Math.round(((currentBooked + totalGuests) / MAX_CAPACITY) * 100));
+      document.getElementById('totalGuestsText').textContent = `${currentPassengerCount} Guest(s) Selected`;
+      document.getElementById('availableSeatsText').textContent = `${available} of 14 Seats Free`;
+
+      const pct = Math.min(100, Math.round(((currentBooked + currentPassengerCount) / MAX_CAPACITY) * 100));
       document.getElementById('capacityBar').style.width = `${pct}%`;
 
       const warningEl = document.getElementById('capacityWarningText');
-      if (totalGuests > available) {
-        warningEl.textContent = `⚠ Exceeds available capacity (${available} seats left)`;
-        warningEl.className = 'text-[10px] text-red-600 font-bold mt-1 block';
+      if (currentPassengerCount > available) {
+        warningEl.textContent = `⚠ Exceeds available capacity (${available} seats left on this departure)`;
+        warningEl.className = 'text-[11px] text-red-600 font-bold block mt-1';
         document.getElementById('submitBookingBtn').disabled = true;
       } else {
-        warningEl.textContent = `✓ ${available - totalGuests} seats will remain on this departure`;
-        warningEl.className = 'text-[10px] text-emerald-700 font-semibold mt-1 block';
+        warningEl.textContent = `✓ ${available - currentPassengerCount} seats will remain available after your booking.`;
+        warningEl.className = 'text-[11px] text-emerald-700 font-semibold block mt-1';
         document.getElementById('submitBookingBtn').disabled = false;
       }
     }
 
-    function prefillBooking(tourName, time) {
+    function prefillBooking(tourName, time, price) {
       const radios = document.querySelectorAll('input[name="tourName"]');
       radios.forEach(r => {
         if (r.value === tourName) r.checked = true;
@@ -1290,89 +1503,320 @@
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     }
 
+    function prefillFullVehicleBooking() {
+      currentPassengerCount = 14;
+      document.getElementById('passengerCountText').textContent = 14;
+      prefillBooking('Daytime Washington D.C. Sightseeing Tour', '10:00 AM', 49);
+    }
+
+    // Handle Form Submit: Issue Ticket with QR Code
     function handleBookingSubmission(e) {
       e.preventDefault();
       const tour = getSelectedTour();
       const date = document.getElementById('tourDateInput').value;
-      const adults = parseInt(document.getElementById('adultCount').textContent, 10);
-      const children = parseInt(document.getElementById('childCount').textContent, 10);
-      const totalGuests = adults + children;
       const guestName = document.getElementById('guestName').value;
-      const grandTotal = document.getElementById('grandTotalText').textContent;
+      const guestEmail = document.getElementById('guestEmail').value;
+      const guestPhone = document.getElementById('guestPhone').value;
+      const pricePerPassenger = PRICES[tour] || 49;
+      const grandTotal = currentPassengerCount * pricePerPassenger;
 
       const bookings = getStoredBookings();
       const key = `${date}_${selectedTimeSlot}`;
       const current = bookings[key] || 0;
 
-      if (current + totalGuests > MAX_CAPACITY) {
+      if (current + currentPassengerCount > MAX_CAPACITY) {
         alert('Capacity error: Not enough seats remaining.');
         return;
       }
 
-      bookings[key] = current + totalGuests;
-      localStorage.setItem('divine_dc_bookings', JSON.stringify(bookings));
+      // Deduct seats atomically
+      bookings[key] = current + currentPassengerCount;
+      localStorage.setItem('divine_dc_bookings_v2', JSON.stringify(bookings));
 
+      // Generate unique reference
       const ref = 'DDC-2026-' + Math.floor(1000 + Math.random() * 9000);
-      document.getElementById('receiptRef').textContent = ref;
-      document.getElementById('receiptTour').textContent = tour;
-      document.getElementById('receiptDateTime').textContent = `${date} • ${selectedTimeSlot}`;
-      document.getElementById('receiptGuests').textContent = `${totalGuests} Guests (${guestName})`;
-      document.getElementById('receiptTotal').textContent = grandTotal;
 
-      document.getElementById('bookingSuccessModal').classList.remove('hidden');
+      // Check hotel pickup
+      let pickupLocation = 'National Mall Central Departure • Washington, D.C.';
+      if (currentPassengerCount === 14) {
+        const hotel = document.getElementById('hotelName').value || 'Requested D.C. Hotel';
+        const address = document.getElementById('hotelAddress').value || 'Washington, D.C.';
+        pickupLocation = `🏨 Hotel Pickup: ${hotel} (${address})`;
+      }
+
+      const ticket = {
+        ref: ref,
+        tour: tour,
+        date: date,
+        time: selectedTimeSlot,
+        guests: currentPassengerCount,
+        guestName: guestName,
+        guestEmail: guestEmail,
+        guestPhone: guestPhone,
+        total: `$${grandTotal}`,
+        pickup: pickupLocation,
+        status: 'VALID',
+        created: new Date().toISOString()
+      };
+
+      const reservations = getStoredReservations();
+      reservations[ref] = ticket;
+      localStorage.setItem('divine_dc_tickets_v2', JSON.stringify(reservations));
+
+      activeTicketData = ticket;
+      displayDigitalTicket(ticket);
       renderTimeSlots();
     }
 
-    function closeSuccessModal() {
-      document.getElementById('bookingSuccessModal').classList.add('hidden');
+    // Display Digital Ticket with Scannable QR Code
+    function displayDigitalTicket(ticket) {
+      document.getElementById('ticketRefNumber').textContent = ticket.ref;
+      document.getElementById('ticketTourName').textContent = ticket.tour;
+      document.getElementById('ticketDateTime').textContent = `${ticket.date} • ${ticket.time}`;
+      document.getElementById('ticketGuests').textContent = `${ticket.guests} Guest(s) (${ticket.guestName})`;
+      document.getElementById('ticketLocationText').textContent = ticket.pickup;
+
+      // Render live QR Code
+      const qrContainer = document.getElementById('ticketQrContainer');
+      qrContainer.innerHTML = '';
+
+      const qrPayload = `https://mockups.omnipeakdigital.com/mockups/devine-dc-tours/?verify=${ticket.ref}&tour=${encodeURIComponent(ticket.tour)}&time=${encodeURIComponent(ticket.time)}&pax=${ticket.guests}`;
+
+      if (typeof QRCode !== 'undefined') {
+        new QRCode(qrContainer, {
+          text: qrPayload,
+          width: 140,
+          height: 140,
+          colorDark: "#102F56",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H
+        });
+      } else {
+        // SVG Fallback
+        qrContainer.innerHTML = `
+          <div class="w-32 h-32 bg-brand-navy p-2 rounded-xl flex items-center justify-center text-white text-[10px] font-mono text-center">
+            [QR Code]<br>${ticket.ref}
+          </div>
+        `;
+      }
+
+      document.getElementById('digitalTicketModal').classList.remove('hidden');
+    }
+
+    function closeDigitalTicketModal() {
+      document.getElementById('digitalTicketModal').classList.add('hidden');
+    }
+
+    // RESCHEDULING ENGINE (CLIENT-CONFIRMED SAME-DAY POLICY)
+    function openRescheduleModal() {
+      document.getElementById('rescheduleModal').classList.remove('hidden');
+      if (activeTicketData) {
+        document.getElementById('rescheduleRefInput').value = activeTicketData.ref;
+        lookupRescheduleBooking();
+      }
+    }
+
+    function closeRescheduleModal() {
+      document.getElementById('rescheduleModal').classList.add('hidden');
+    }
+
+    function openRescheduleForTicket() {
+      closeDigitalTicketModal();
+      openRescheduleModal();
+    }
+
+    let loadedRescheduleTicket = null;
+    let targetRescheduleTime = null;
+
+    function lookupRescheduleBooking() {
+      const ref = document.getElementById('rescheduleRefInput').value.trim().toUpperCase();
+      const reservations = getStoredReservations();
+      const ticket = reservations[ref];
+
+      if (!ticket) {
+        alert(`No reservation found for reference "${ref}". Please check your receipt.`);
+        return;
+      }
+
+      loadedRescheduleTicket = ticket;
+      document.getElementById('rescheduleTourName').textContent = ticket.tour;
+      document.getElementById('rescheduleCurrentDateTime').textContent = `${ticket.date} • ${ticket.time}`;
+      document.getElementById('rescheduleGuestCount').textContent = `${ticket.guests} Guest(s) (${ticket.guestName})`;
+      document.getElementById('rescheduleDetailsCard').classList.remove('hidden');
+
+      // Render same-day alternative slots
+      const date = ticket.date;
+      const bookings = getStoredBookings();
+      const container = document.getElementById('rescheduleSlotsContainer');
+      container.innerHTML = '';
+
+      DEFAULT_SLOTS.forEach(slot => {
+        if (slot.time === ticket.time) return; // skip current slot
+
+        const key = `${date}_${slot.time}`;
+        const booked = bookings[key] || 0;
+        const available = Math.max(0, MAX_CAPACITY - booked);
+        const hasEnoughSeats = available >= ticket.guests;
+
+        const card = document.createElement('div');
+        card.className = `p-3 rounded-xl border flex items-center justify-between text-xs ${
+          hasEnoughSeats
+            ? 'bg-white border-brand-border hover:border-brand-blue cursor-pointer'
+            : 'bg-gray-100 border-gray-200 opacity-60 cursor-not-allowed'
+        }`;
+
+        card.innerHTML = `
+          <div>
+            <span class="font-bold text-brand-blue block">${slot.time}</span>
+            <span class="text-gray-500">${slot.label}</span>
+          </div>
+          <div class="text-right">
+            ${
+              hasEnoughSeats
+                ? `<span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">${available} seats open</span>`
+                : `<span class="text-red-700 font-bold">Only ${available} open (need ${ticket.guests})</span>`
+            }
+          </div>
+        `;
+
+        if (hasEnoughSeats) {
+          card.onclick = () => {
+            targetRescheduleTime = slot.time;
+            // Highlight selection
+            Array.from(container.children).forEach(c => c.classList.remove('border-brand-gold', 'bg-amber-50'));
+            card.classList.add('border-brand-gold', 'bg-amber-50');
+          };
+        }
+        container.appendChild(card);
+      });
+    }
+
+    function confirmRescheduleAction() {
+      if (!loadedRescheduleTicket || !targetRescheduleTime) {
+        alert('Please select an alternative departure time with available capacity.');
+        return;
+      }
+
+      const ticket = loadedRescheduleTicket;
+      const date = ticket.date;
+      const oldTime = ticket.time;
+      const newTime = targetRescheduleTime;
+      const pax = ticket.guests;
+
+      const bookings = getStoredBookings();
+      const oldKey = `${date}_${oldTime}`;
+      const newKey = `${date}_${newTime}`;
+
+      // Release old seats
+      bookings[oldKey] = Math.max(0, (bookings[oldKey] || 0) - pax);
+      // Claim new seats
+      bookings[newKey] = (bookings[newKey] || 0) + pax;
+      localStorage.setItem('divine_dc_bookings_v2', JSON.stringify(bookings));
+
+      // Update reservation record
+      ticket.time = newTime;
+      ticket.rescheduledAt = new Date().toISOString();
+      const reservations = getStoredReservations();
+      reservations[ticket.ref] = ticket;
+      localStorage.setItem('divine_dc_tickets_v2', JSON.stringify(reservations));
+
+      activeTicketData = ticket;
+      closeRescheduleModal();
+      displayDigitalTicket(ticket);
+      renderTimeSlots();
+
+      alert(`Success! Reservation ${ticket.ref} has been rescheduled to ${newTime}. Your updated digital ticket has been issued.`);
+    }
+
+    // TOUR GUIDE SCANNER ENGINE
+    function openGuideScannerModal() {
+      document.getElementById('guideScannerModal').classList.remove('hidden');
+    }
+
+    function closeGuideScannerModal() {
+      document.getElementById('guideScannerModal').classList.add('hidden');
+    }
+
+    function prefillActiveBookingForScanner() {
+      if (activeTicketData) {
+        document.getElementById('guideScanRefInput').value = activeTicketData.ref;
+        executeGuideScan();
+      } else {
+        const reservations = getStoredReservations();
+        const keys = Object.keys(reservations);
+        if (keys.length > 0) {
+          document.getElementById('guideScanRefInput').value = keys[keys.length - 1];
+          executeGuideScan();
+        } else {
+          alert('No reservations found in database to scan.');
+        }
+      }
+    }
+
+    function testScanCurrentTicket() {
+      closeDigitalTicketModal();
+      openGuideScannerModal();
+      prefillActiveBookingForScanner();
+    }
+
+    function executeGuideScan() {
+      const ref = document.getElementById('guideScanRefInput').value.trim().toUpperCase();
+      const reservations = getStoredReservations();
+      const ticket = reservations[ref];
+      const resultBox = document.getElementById('guideScanResultBox');
+      resultBox.classList.remove('hidden');
+
+      if (!ticket) {
+        resultBox.className = 'p-4 rounded-2xl border border-red-500 bg-red-950/60 text-red-200 space-y-1 text-xs';
+        resultBox.innerHTML = `
+          <div class="font-black text-sm text-red-400">❌ INVALID / UNKNOWN TICKET</div>
+          <div>No active booking record matches reference "${ref}". Do not admit passenger.</div>
+        `;
+        return;
+      }
+
+      if (ticket.status === 'CHECKED_IN') {
+        resultBox.className = 'p-4 rounded-2xl border border-red-500 bg-red-950/60 text-red-200 space-y-1 text-xs';
+        resultBox.innerHTML = `
+          <div class="font-black text-sm text-red-400">⚠ TICKET ALREADY REDEEMED</div>
+          <div>This boarding pass was already scanned and admitted at ${ticket.checkedInAt || 'earlier today'}.</div>
+          <div><strong>Passenger:</strong> ${ticket.guestName} (${ticket.guests} pax)</div>
+          <div class="text-[11px] text-red-300 font-bold">DO NOT ADMIT A SECOND TIME.</div>
+        `;
+        return;
+      }
+
+      // Valid and ready for check-in
+      resultBox.className = 'p-4 rounded-2xl border border-emerald-500 bg-emerald-950/60 text-emerald-200 space-y-2 text-xs';
+      resultBox.innerHTML = `
+        <div class="font-black text-sm text-emerald-400">✓ TICKET VERIFIED & VALID</div>
+        <div><strong>Guest Name:</strong> ${ticket.guestName}</div>
+        <div><strong>Tour:</strong> ${ticket.tour}</div>
+        <div><strong>Departure:</strong> ${ticket.date} • ${ticket.time}</div>
+        <div><strong>Party Size:</strong> <span class="text-base font-black text-white">${ticket.guests} Passengers</span> (Strict 14 Limit)</div>
+        <div><strong>Pickup:</strong> ${ticket.pickup}</div>
+        <button onclick="admitPassenger('${ticket.ref}')" class="w-full mt-2 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs uppercase tracking-wider transition">
+          CONFIRM ADMISSION & CHECK-IN
+        </button>
+      `;
+    }
+
+    function admitPassenger(ref) {
+      const reservations = getStoredReservations();
+      if (reservations[ref]) {
+        reservations[ref].status = 'CHECKED_IN';
+        reservations[ref].checkedInAt = new Date().toLocaleTimeString();
+        localStorage.setItem('divine_dc_tickets_v2', JSON.stringify(reservations));
+        executeGuideScan();
+        alert(`Passenger check-in confirmed for ${ref}. Seats admitted.`);
+      }
     }
 
     function toggleMobileMenu() {
       document.getElementById('mobileDrawer').classList.toggle('hidden');
     }
 
-    function handleInquirySubmit(e) {
-      e.preventDefault();
-      document.getElementById('inquirySuccess').classList.remove('hidden');
-    }
-
-    function toggleAdminDrawer() {
-      const drawer = document.getElementById('adminDrawer');
-      drawer.classList.toggle('hidden');
-      if (!drawer.classList.contains('hidden')) {
-        const bookings = getStoredBookings();
-        const list = document.getElementById('adminRosterList');
-        list.innerHTML = '';
-        const keys = Object.keys(bookings).sort();
-        if (keys.length === 0) {
-          list.innerHTML = '<div class="text-gray-500">No reservations logged yet.</div>';
-          return;
-        }
-        keys.forEach(k => {
-          const booked = bookings[k];
-          const [d, t] = k.split('_');
-          const isFull = booked >= MAX_CAPACITY;
-          const row = document.createElement('div');
-          row.className = `p-3 rounded-xl border flex items-center justify-between ${isFull ? 'bg-red-50 border-red-200' : 'bg-gray-50 border-gray-200'}`;
-          row.innerHTML = `
-            <div>
-              <span class="font-bold text-brand-blue">${d} — ${t}</span>
-              <span class="text-gray-500 block">${MAX_CAPACITY - booked} seats remaining</span>
-            </div>
-            <span class="font-bold ${isFull ? 'text-red-700' : 'text-emerald-700'}">${booked} / 14 Booked</span>
-          `;
-          list.appendChild(row);
-        });
-      }
-    }
-
-    function resetFleetData() {
-      localStorage.removeItem('divine_dc_bookings');
-      toggleAdminDrawer();
-      renderTimeSlots();
-      alert('Test booking capacity reset to initial availability.');
-    }
-
+    // Initial render
     renderTimeSlots();
   </script>
 
