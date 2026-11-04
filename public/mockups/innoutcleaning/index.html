@@ -125,7 +125,7 @@
 
       </div>
 
-      <!-- Right: Viewport Controls, Strategy Notes & Fullscreen -->
+      <!-- Right: Viewport Controls, Strategy Notes, Business Card & Fullscreen -->
       <div class="flex items-center gap-3 self-end xl:self-auto">
         
         <!-- Viewport Size Controls -->
@@ -140,6 +140,12 @@
             <i data-lucide="smartphone" class="w-4 h-4"></i>
           </button>
         </div>
+
+        <!-- Client Business Card Modal Button -->
+        <button onclick="toggleCardModal()" class="px-3 py-2 rounded-xl text-xs font-semibold bg-agency-card hover:bg-agency-border text-agency-text border border-agency-border flex items-center gap-1.5 transition">
+          <i data-lucide="credit-card" class="w-3.5 h-3.5 text-agency-gold"></i>
+          <span class="hidden sm:inline">Client Card</span>
+        </button>
 
         <!-- Strategy Notes Drawer Button -->
         <button onclick="toggleNotesDrawer()" class="px-3 py-2 rounded-xl text-xs font-semibold bg-agency-card hover:bg-agency-border text-agency-text border border-agency-border flex items-center gap-1.5 transition">
@@ -208,6 +214,40 @@
   </main>
 
   <!-- ======================================================== -->
+  <!-- BUSINESS CARD MODAL -->
+  <!-- ======================================================== -->
+  <div id="cardModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+    <div class="relative max-w-4xl w-full bg-agency-dark border border-agency-border rounded-2xl p-6 sm:p-8 shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-agency-border mb-4">
+        <div>
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <i data-lucide="credit-card" class="w-4 h-4 text-agency-gold"></i>
+            Client Supplied Business Card · Brand Direction
+          </h3>
+          <p class="text-xs text-agency-muted mt-0.5">IN-N-OUT CLEANING · Jamia Averytt · Cleaner &amp; Housekeeper (10 Years)</p>
+        </div>
+        <button onclick="toggleCardModal()" class="p-2 rounded-lg bg-agency-card text-agency-muted hover:text-white transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="rounded-xl overflow-hidden border border-agency-border/80 bg-black/70 p-3 flex items-center justify-center">
+        <img src="images/business-card.png" alt="IN-N-OUT CLEANING Business Card - Front and Back" class="max-h-[65vh] w-auto object-contain rounded-lg shadow-2xl">
+      </div>
+      <div class="mt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-agency-muted gap-3">
+        <div class="flex items-center gap-3 font-mono">
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-[#0D3F39] border border-white/30"></span> Deep Teal</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-[#5EEAD4]"></span> Soft Mint</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-[#FAF9F5] border border-white/30"></span> Warm White</span>
+          <span class="inline-flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-[#D4AF37]"></span> Warm Gold</span>
+        </div>
+        <button onclick="toggleCardModal()" class="px-4 py-2 bg-agency-card hover:bg-agency-border text-white rounded-xl text-xs font-semibold transition">
+          Close Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
   <!-- SLIDE-OVER STRATEGY & FEEDBACK DRAWER -->
   <!-- ======================================================== -->
   <div id="notesDrawer" class="fixed inset-0 z-50 hidden">
@@ -234,13 +274,21 @@
 
       <!-- Business Card Reference Info -->
       <div class="mt-6 p-4 rounded-xl bg-agency-card border border-agency-border">
-        <span class="text-[10px] font-mono uppercase tracking-wider text-agency-mint font-bold block mb-1">
-          Source Branding Reference
-        </span>
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-mono uppercase tracking-wider text-agency-mint font-bold block">
+            Client Supplied Business Card
+          </span>
+          <button onclick="toggleCardModal()" class="text-[10px] text-agency-gold hover:underline flex items-center gap-1 font-mono">
+            <i data-lucide="maximize-2" class="w-3 h-3"></i> Enlarge
+          </button>
+        </div>
+        <div class="rounded-lg overflow-hidden border border-agency-border/60 bg-black/40 mb-3 shadow-inner cursor-pointer" onclick="toggleCardModal()">
+          <img src="images/business-card.png" alt="IN-N-OUT CLEANING Business Card Concept" class="w-full object-contain hover:opacity-90 transition">
+        </div>
         <div class="text-xs text-agency-text leading-relaxed">
           <strong>IN-N-OUT CLEANING</strong> · Owner: Jamia Averytt (10 Years Experience). Phone: <strong>412-525-1998</strong>. Direct Email: <strong>innoutcleaning3@gmail.com</strong>.
           <br><br>
-          Both concepts preserve the exact business card color chemistry: <strong>Deep Teal (#0D3F39)</strong>, <strong>Soft Mint (#5EEAD4)</strong>, <strong>Warm White (#FAF9F5)</strong>, and <strong>Warm Gold Accents (#D4AF37)</strong> inspired by the front-and-back entering/exiting doorway motif.
+          Both concepts preserve the exact business card color chemistry: <strong>Deep Teal (#0D3F39 / #0A3B35)</strong>, <strong>Soft Mint (#5EEAD4 / #2DD4BF)</strong>, <strong>Warm White (#FAF9F5 / #FFFFFF)</strong>, and <strong>Warm Gold Accents (#D4AF37 / #F59E0B)</strong> inspired by the front-and-back entering/exiting doorway motif.
         </div>
       </div>
 
@@ -362,6 +410,11 @@
     function toggleNotesDrawer() {
       const drawer = document.getElementById('notesDrawer');
       drawer.classList.toggle('hidden');
+    }
+
+    function toggleCardModal() {
+      const modal = document.getElementById('cardModal');
+      modal.classList.toggle('hidden');
     }
 
     function handleFeedback(e) {
