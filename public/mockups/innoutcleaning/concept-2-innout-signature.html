@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IN-N-OUT CLEANING — Concept 02: Signature | Fast, Modern, Conversion-First Housekeeping</title>
+  <meta name="description" content="IN. CLEAN. OUT. DONE. Modern on-demand residential housekeeping designed around your schedule, space, and standards. 10 years experience. Direct call 412-525-1998.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Space Grotesk & Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#0A3B35',       /* Deep Teal Primary */
+              tealDark: '#05221E',   /* Ultra Deep Onyx-Teal */
+              tealCard: '#0E4942',
+              tealBorder: '#1A5951',
+              mint: '#2DD4BF',       /* Vibrant Mint Secondary */
+              mintGlow: '#5EEAD4',
+              mintPale: '#E6FCF5',
+              gold: '#F59E0B',       /* Energetic Gold Highlight */
+              goldLight: '#FDE68A',
+              pureWhite: '#FFFFFF',
+              surfaceLight: '#F8FAFC',
+              slateText: '#64748B'
+            }
+          },
+          fontFamily: {
+            display: ['"Outfit"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          boxShadow: {
+            'mint-sm': '0 0 15px rgba(45, 212, 191, 0.25)',
+            'mint-lg': '0 10px 30px -5px rgba(45, 212, 191, 0.35)',
+            'dark-lg': '0 25px 50px -12px rgba(5, 34, 30, 0.45)',
+            'card-sharp': '0 8px 30px rgba(0, 0, 0, 0.06)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Tech startup patterns & geometric aesthetics */
+    .grid-bg-dark {
+      background-color: #05221E;
+      background-image: radial-gradient(rgba(45, 212, 191, 0.12) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .grid-bg-light {
+      background-color: #FFFFFF;
+      background-image: radial-gradient(rgba(10, 59, 53, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .glass-dark {
+      background: rgba(14, 73, 66, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .clip-corner {
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+    }
+    .text-stroke {
+      -webkit-text-stroke: 1.5px #2DD4BF;
+      color: transparent;
+    }
+    /* Simple before/after toggle styles */
+    .ba-tab-active {
+      background-color: #2DD4BF;
+      color: #05221E;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900 font-sans antialiased selection:bg-brand-mint selection:text-brand-tealDark">
+
+  <!-- ======================================================== -->
+  <!-- TOP STATUS BAR: DIRECT CONVERSION VELOCITY -->
+  <!-- ======================================================== -->
+  <header class="bg-brand-tealDark text-white border-b border-brand-tealBorder text-xs py-2 px-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-3">
+        <span class="flex h-2 w-2 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-mint opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-mint"></span>
+        </span>
+        <span class="font-mono text-brand-mint font-semibold uppercase tracking-wider text-[11px]">
+          ACCEPTING NEW PITTSBURGH CLIENTS
+        </span>
+        <span class="text-white/40 hidden md:inline">|</span>
+        <span class="text-white/80 hidden md:inline text-[11px]">
+          10 Years of Owner-Operated Excellence · Jamia Averytt
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4 font-mono">
+        <a href="mailto:innoutcleaning3@gmail.com" class="hover:text-brand-mint transition-colors hidden sm:flex items-center gap-1.5 text-[11px]">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-mint"></i>
+          <span>innoutcleaning3@gmail.com</span>
+        </a>
+        <a href="tel:4125251998" class="text-brand-mint font-bold hover:underline flex items-center gap-1.5 bg-brand-teal/80 px-2.5 py-0.5 rounded border border-brand-mint/30">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+          <span>(412) 525-1998</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- MAIN NAVBAR -->
+  <!-- ======================================================== -->
+  <nav class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-9 z-40 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo Recreated from Business Card -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <!-- Geometric Doorway Emblem -->
+          <div class="w-12 h-12 rounded-xl bg-brand-teal flex items-center justify-center p-2.5 border-2 border-brand-mint shadow-mint-sm group-hover:scale-105 transition-transform">
+            <svg class="w-full h-full text-brand-mint" viewBox="0 0 32 32" fill="none">
+              <!-- Outer Door Frame -->
+              <rect x="6" y="3" width="20" height="26" rx="2" stroke="#2DD4BF" stroke-width="2.5"/>
+              <!-- Door Inner -->
+              <rect x="9" y="5.5" width="14" height="21" fill="#0E4942"/>
+              <!-- Gold Doorknob from Card -->
+              <circle cx="20" cy="16" r="2" fill="#F59E0B"/>
+              <!-- Speed Entry / Exit Arrows -->
+              <path d="M11 16H18M18 16L15 13M18 16L15 19" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-display font-black text-2xl tracking-tight text-brand-tealDark leading-none">
+              IN-N-OUT
+            </div>
+            <div class="font-mono text-[10px] uppercase tracking-[0.25em] text-brand-teal font-bold mt-1">
+              C L E A N I N G
+            </div>
+          </div>
+        </a>
+
+        <!-- Nav Items -->
+        <div class="hidden lg:flex items-center gap-8 font-display text-sm font-semibold text-slate-700">
+          <a href="#what-we-clean" class="hover:text-brand-teal transition-colors">What We Clean</a>
+          <a href="#timeline" class="hover:text-brand-teal transition-colors">You’re In. We Clean. You’re Out.</a>
+          <a href="#stats" class="hover:text-brand-teal transition-colors">10-Year Stats</a>
+          <a href="#comparison" class="hover:text-brand-teal transition-colors">Before &amp; After</a>
+          <a href="#estimator" class="hover:text-brand-teal transition-colors">Pricing Estimator</a>
+          <a href="#contact" class="hover:text-brand-teal transition-colors">Instant Booking</a>
+        </div>
+
+        <!-- Conversion Triggers -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="tel:4125251998" class="font-mono text-xs font-bold px-3.5 py-2.5 rounded-xl border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white transition-all flex items-center gap-1.5">
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+            <span>412-525-1998</span>
+          </a>
+          <button onclick="scrollToEstimator()" class="font-display text-xs font-bold uppercase tracking-wider bg-brand-teal hover:bg-brand-tealCard text-white px-5 py-2.5 rounded-xl shadow-card-sharp hover:shadow-mint-lg transition-all flex items-center gap-2">
+            <span>Request a Cleaning</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-mint"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="lg:hidden flex items-center gap-2">
+          <a href="tel:4125251998" class="p-2 rounded-lg bg-brand-teal text-white">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+          </a>
+          <button onclick="toggleMobileNav()" class="p-2 rounded-lg bg-slate-100 text-slate-800">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="c2-mobile-nav" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3 font-display font-semibold text-slate-800">
+      <a href="#what-we-clean" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-100">What We Clean</a>
+      <a href="#timeline" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-100">You’re In. We Clean. You’re Out.</a>
+      <a href="#stats" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-100">10-Year Stats</a>
+      <a href="#comparison" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-100">Before &amp; After</a>
+      <a href="#estimator" onclick="toggleMobileNav()" class="block py-2 border-b border-slate-100">Pricing Estimator</a>
+      <a href="#contact" onclick="toggleMobileNav()" class="block py-2 text-brand-teal">Instant Booking</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <button onclick="toggleMobileNav(); scrollToEstimator();" class="w-full py-3 bg-brand-teal text-white rounded-xl font-bold uppercase tracking-wider text-xs">
+          Request a Cleaning Now
+        </button>
+        <a href="tel:4125251998" class="w-full py-3 border-2 border-brand-teal text-brand-teal rounded-xl text-center font-mono font-bold text-xs flex items-center justify-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4"></i> Call 412-525-1998
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================== -->
+  <!-- HERO: ASYMMETRIC SPLIT SCREEN -->
+  <!-- Headline: “IN. CLEAN. OUT. DONE.” -->
+  <!-- ======================================================== -->
+  <section id="hero" class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden bg-brand-tealDark text-white grid-bg-dark">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Bold Typography & Conversion -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Category Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-brand-tealCard/80 border border-brand-mint/40 text-brand-mint font-mono text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-brand-mint animate-pulse"></span>
+            <span>HIGH-VELOCITY RESIDENTIAL CLEANING · PITTSBURGH</span>
+          </div>
+
+          <!-- Massive Headline -->
+          <h1 class="font-display font-black text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-white">
+            IN. CLEAN. <br>
+            <span class="text-brand-mint">OUT. DONE.</span>
+          </h1>
+
+          <!-- Supporting Text -->
+          <p class="text-slate-300 font-sans text-base sm:text-lg max-w-xl leading-relaxed">
+            Professional home cleaning designed around your schedule, your space, and your standards. Fast, reliable, and backed by a full decade of direct housekeeping care.
+          </p>
+
+          <!-- Conversion Triggers Block -->
+          <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <button onclick="scrollToEstimator()" class="px-8 py-4 bg-brand-mint hover:bg-brand-mintGlow text-brand-tealDark font-display font-extrabold text-sm uppercase tracking-wider rounded-xl shadow-mint-lg hover:scale-102 transition-all flex items-center justify-center gap-3">
+              <span>Request a Cleaning</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-brand-tealDark"></i>
+            </button>
+
+            <!-- Prominent Phone Number from requirements -->
+            <a href="tel:4125251998" class="px-6 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono font-bold text-sm rounded-xl transition-all flex items-center justify-center gap-3">
+              <i data-lucide="phone-call" class="w-4 h-4 text-brand-mint"></i>
+              <span>412-525-1998</span>
+            </a>
+          </div>
+
+          <!-- Mini Badges Row -->
+          <div class="pt-6 border-t border-white/10 flex flex-wrap items-center gap-6 font-mono text-xs text-slate-300">
+            <div class="flex items-center gap-2">
+              <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold"></i>
+              <span>5.0 Star Rated Cleaner</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-brand-mint"></i>
+              <span>100% Owner Operated</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-mint"></i>
+              <span>Zero Wasted Time</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Cinematic Photography with Floating Stats -->
+        <div class="lg:col-span-5 relative">
+          
+          <!-- Outer Geometric Frame -->
+          <div class="relative rounded-3xl overflow-hidden border-2 border-brand-tealBorder shadow-dark-lg">
+            
+            <div class="aspect-[4/5] sm:aspect-square w-full relative overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" 
+                alt="Spotless luxury modern home cleaned by IN-N-OUT" 
+                class="w-full h-full object-cover"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-tealDark/90 via-brand-tealDark/30 to-transparent"></div>
+            </div>
+
+            <!-- Floating Card: 10 YEARS OF CLEANING EXPERIENCE (Exact requirement) -->
+            <div class="absolute top-6 right-6 bg-brand-tealDark/90 backdrop-blur-md rounded-2xl p-4 border border-brand-mint/40 shadow-xl max-w-[200px]">
+              <div class="font-display font-black text-3xl text-brand-mint leading-none">10 YEARS</div>
+              <div class="font-mono text-[10px] uppercase tracking-wider text-white font-bold mt-1">
+                OF CLEANING EXPERIENCE
+              </div>
+              <div class="mt-2 text-[10px] text-slate-300">
+                Pittsburgh &amp; Allegheny County
+              </div>
+            </div>
+
+            <!-- Floating Bottom Pill: Owner Operator Contact -->
+            <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-4 text-slate-900 border border-white shadow-2xl flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-mono font-bold tracking-wider text-brand-teal block">Direct Housekeeper</span>
+                <span class="font-display font-bold text-base text-slate-900">Jamia Averytt</span>
+                <span class="text-xs text-slate-500 block">Cleaner &amp; Housekeeper</span>
+              </div>
+              <a href="tel:4125251998" class="px-3.5 py-2 bg-brand-teal text-white rounded-xl text-xs font-mono font-bold flex items-center gap-1.5 hover:bg-brand-tealCard transition-colors">
+                <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-mint"></i>
+                <span>Call</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Decorative background glow -->
+          <div class="absolute -bottom-8 -right-8 w-60 h-60 bg-brand-mint/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- “WHAT WE CLEAN” INTERACTIVE DYNAMIC MATRIX -->
+  <!-- Kitchens, Bathrooms, Floors, Dusting with modern oversized numbers -->
+  <!-- ======================================================== -->
+  <section id="what-we-clean" class="py-20 lg:py-28 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-teal bg-brand-mintPale px-3 py-1 rounded">
+            Precision Scope
+          </span>
+          <h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-brand-tealDark mt-4 tracking-tight">
+            WHAT WE CLEAN.
+          </h2>
+        </div>
+        <p class="font-sans text-slate-600 max-w-md text-sm sm:text-base leading-relaxed">
+          Four specialized zones handled with systematic checklists, hospital-grade microfiber, and surface-safe chemistry.
+        </p>
+      </div>
+
+      <!-- 4 High-Tech Service Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 01: Kitchens -->
+        <div class="rounded-3xl border-2 border-slate-200 hover:border-brand-teal bg-slate-50 p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-card-sharp group">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono font-black text-4xl text-slate-300 group-hover:text-brand-teal transition-colors">01</span>
+              <div class="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-brand-mint transition-all shadow-sm">
+                <i data-lucide="flame" class="w-6 h-6"></i>
+              </div>
+            </div>
+
+            <div class="aspect-video w-full rounded-2xl overflow-hidden mb-5">
+              <img 
+                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" 
+                alt="Kitchen cleaning" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              >
+            </div>
+
+            <h3 class="font-display font-bold text-2xl text-slate-900 mb-2">Kitchens</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Degreased cooktops, sanitized prep counters, appliance surfaces buffed to a showroom shine, and sink sanitization.
+            </p>
+
+            <div class="space-y-2 text-xs font-mono text-slate-700 pt-2 border-t border-slate-200">
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Stovetops &amp; Backsplashes</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Quartz &amp; Marble Sanitizing</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Microwave Inside/Out</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Chrome Faucet Polishing</div>
+            </div>
+          </div>
+
+          <button onclick="prefillEstimator('kitchen')" class="mt-6 w-full py-2.5 rounded-xl bg-white border border-slate-300 group-hover:bg-brand-teal group-hover:text-white group-hover:border-brand-teal font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5">
+            <span>Select Kitchen</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Card 02: Bathrooms -->
+        <div class="rounded-3xl border-2 border-slate-200 hover:border-brand-teal bg-slate-50 p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-card-sharp group">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono font-black text-4xl text-slate-300 group-hover:text-brand-teal transition-colors">02</span>
+              <div class="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-brand-mint transition-all shadow-sm">
+                <i data-lucide="droplets" class="w-6 h-6"></i>
+              </div>
+            </div>
+
+            <div class="aspect-video w-full rounded-2xl overflow-hidden mb-5">
+              <img 
+                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" 
+                alt="Bathroom cleaning" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              >
+            </div>
+
+            <h3 class="font-display font-bold text-2xl text-slate-900 mb-2">Bathrooms</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Hospital-grade disinfection. Glass showers descaled, tile grout renewed, mirrors streak-free, and toilets sanitized.
+            </p>
+
+            <div class="space-y-2 text-xs font-mono text-slate-700 pt-2 border-t border-slate-200">
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Glass Shower Descaling</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Tub &amp; Tile Scrubbing</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Germ-Free Vanity Disinfect</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Crystal Clear Mirrors</div>
+            </div>
+          </div>
+
+          <button onclick="prefillEstimator('bathroom')" class="mt-6 w-full py-2.5 rounded-xl bg-white border border-slate-300 group-hover:bg-brand-teal group-hover:text-white group-hover:border-brand-teal font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5">
+            <span>Select Bathrooms</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Card 03: Floors -->
+        <div class="rounded-3xl border-2 border-slate-200 hover:border-brand-teal bg-slate-50 p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-card-sharp group">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono font-black text-4xl text-slate-300 group-hover:text-brand-teal transition-colors">03</span>
+              <div class="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-brand-mint transition-all shadow-sm">
+                <i data-lucide="layers" class="w-6 h-6"></i>
+              </div>
+            </div>
+
+            <div class="aspect-video w-full rounded-2xl overflow-hidden mb-5">
+              <img 
+                src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=600&q=80" 
+                alt="Floor care" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              >
+            </div>
+
+            <h3 class="font-display font-bold text-2xl text-slate-900 mb-2">Floor Care</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Hardwood conditioning, edge vacuuming, tile grout mopping, and rug care without residue or slipping hazards.
+            </p>
+
+            <div class="space-y-2 text-xs font-mono text-slate-700 pt-2 border-t border-slate-200">
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> HEPA Deep Vacuuming</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Hardwood Conditioning Mop</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Tile &amp; Grout Buffing</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Baseboard Edge Detailing</div>
+            </div>
+          </div>
+
+          <button onclick="prefillEstimator('floors')" class="mt-6 w-full py-2.5 rounded-xl bg-white border border-slate-300 group-hover:bg-brand-teal group-hover:text-white group-hover:border-brand-teal font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5">
+            <span>Select Floors</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Card 04: Dusting -->
+        <div class="rounded-3xl border-2 border-slate-200 hover:border-brand-teal bg-slate-50 p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-card-sharp group">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-mono font-black text-4xl text-slate-300 group-hover:text-brand-teal transition-colors">04</span>
+              <div class="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center text-brand-teal group-hover:bg-brand-teal group-hover:text-brand-mint transition-all shadow-sm">
+                <i data-lucide="wind" class="w-6 h-6"></i>
+              </div>
+            </div>
+
+            <div class="aspect-video w-full rounded-2xl overflow-hidden mb-5">
+              <img 
+                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" 
+                alt="Dusting" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              >
+            </div>
+
+            <h3 class="font-display font-bold text-2xl text-slate-900 mb-2">Dusting</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Complete airborne particulate removal. Delicate care for art frames, ceiling fans, blinds, and high-tech electronics.
+            </p>
+
+            <div class="space-y-2 text-xs font-mono text-slate-700 pt-2 border-t border-slate-200">
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Ceiling Fans &amp; High Vents</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Window Sills &amp; Blinds</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Picture Frames &amp; Shelving</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-teal"></i> Tech &amp; TV Console Dusting</div>
+            </div>
+          </div>
+
+          <button onclick="prefillEstimator('dusting')" class="mt-6 w-full py-2.5 rounded-xl bg-white border border-slate-300 group-hover:bg-brand-teal group-hover:text-white group-hover:border-brand-teal font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5">
+            <span>Select Dusting</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- 10 YEARS OF EXPERIENCE / LARGE VISUAL STATISTIC SECTION -->
+  <!-- Bold oversized numbers & impact proof -->
+  <!-- ======================================================== -->
+  <section id="stats" class="py-20 bg-brand-teal text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+        
+        <!-- Stat 1 -->
+        <div class="text-center pt-6 lg:pt-0">
+          <div class="font-display font-black text-6xl sm:text-7xl lg:text-8xl text-brand-mint tracking-tight">
+            10+
+          </div>
+          <div class="font-mono text-xs uppercase tracking-widest text-slate-300 font-bold mt-2">
+            Years in Business
+          </div>
+          <p class="text-xs text-white/70 mt-1 max-w-[180px] mx-auto">
+            Continuous private residential housekeeping in Pittsburgh.
+          </p>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="text-center pt-6 lg:pt-0">
+          <div class="font-display font-black text-6xl sm:text-7xl lg:text-8xl text-white tracking-tight">
+            1,200+
+          </div>
+          <div class="font-mono text-xs uppercase tracking-widest text-slate-300 font-bold mt-2">
+            Spotless Cleans
+          </div>
+          <p class="text-xs text-white/70 mt-1 max-w-[180px] mx-auto">
+            From luxury apartments to expansive multi-story family homes.
+          </p>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="text-center pt-6 lg:pt-0">
+          <div class="font-display font-black text-6xl sm:text-7xl lg:text-8xl text-brand-gold tracking-tight">
+            100%
+          </div>
+          <div class="font-mono text-xs uppercase tracking-widest text-slate-300 font-bold mt-2">
+            Owner-Operated
+          </div>
+          <p class="text-xs text-white/70 mt-1 max-w-[180px] mx-auto">
+            Every clean performed directly by Jamia Averytt.
+          </p>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="text-center pt-6 lg:pt-0">
+          <div class="font-display font-black text-6xl sm:text-7xl lg:text-8xl text-brand-mint tracking-tight">
+            412
+          </div>
+          <div class="font-mono text-xs uppercase tracking-widest text-slate-300 font-bold mt-2">
+            Area Code Dedicated
+          </div>
+          <p class="text-xs text-white/70 mt-1 max-w-[180px] mx-auto">
+            Deep roots in Allegheny County &amp; surrounding neighborhoods.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- BRAND PHRASE CREATIVE SECTION -->
+  <!-- “You’re In. We Clean. You’re Out.” -->
+  <!-- Interactive operational rhythm & lifestyle harmony -->
+  <!-- ======================================================== -->
+  <section id="timeline" class="py-20 lg:py-28 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-teal bg-white px-3.5 py-1 rounded-full border border-slate-200 shadow-sm">
+          Friction-Free Living
+        </span>
+        <h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-brand-tealDark mt-4 tracking-tight">
+          YOU’RE IN. WE CLEAN. YOU’RE OUT.
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-4 max-w-xl mx-auto">
+          Housekeeping engineered for zero friction. How your typical service day looks from the moment you leave until you return to an immaculate home.
+        </p>
+      </div>
+
+      <!-- Interactive 4-Stage Operational Rhythm Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+        
+        <!-- Stage 01 -->
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-200 shadow-sm relative group hover:border-brand-teal transition-all">
+          <div class="font-mono text-xs font-bold text-slate-400 mb-2">08:00 AM · MORNING DEPARTURE</div>
+          <div class="w-10 h-10 rounded-xl bg-brand-mintPale text-brand-teal flex items-center justify-center mb-4">
+            <i data-lucide="log-out" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-display font-bold text-xl text-slate-900 mb-2">You Head Out</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Head to work, school run, or weekend errands. Leave lockbox or entry instructions. No need to stay trapped at home supervising.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono font-semibold text-brand-teal">
+            Phase 1: Zero Disruption
+          </div>
+        </div>
+
+        <!-- Stage 02 -->
+        <div class="bg-white rounded-3xl p-6 border-2 border-brand-teal shadow-md relative group">
+          <div class="font-mono text-xs font-bold text-brand-teal mb-2">09:15 AM · PROMPT ARRIVAL</div>
+          <div class="w-10 h-10 rounded-xl bg-brand-teal text-brand-mint flex items-center justify-center mb-4">
+            <i data-lucide="log-in" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-display font-bold text-xl text-slate-900 mb-2">IN-N-OUT Steps In</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Jamia arrives on time with commercial-grade HEPA vacuum, sanitized microfiber, and eco-friendly supplies. Doors secured behind.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono font-semibold text-brand-teal">
+            Phase 2: Meticulous Care
+          </div>
+        </div>
+
+        <!-- Stage 03 -->
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-200 shadow-sm relative group hover:border-brand-teal transition-all">
+          <div class="font-mono text-xs font-bold text-slate-400 mb-2">10:00 AM – 01:30 PM</div>
+          <div class="w-10 h-10 rounded-xl bg-brand-mintPale text-brand-teal flex items-center justify-center mb-4">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-display font-bold text-xl text-slate-900 mb-2">Systematic Clean</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Kitchen grease removed, shower tile and mirrors polished, high and low dusting cleared, and all floors vacuumed and conditioned.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono font-semibold text-brand-teal">
+            Phase 3: Checklist Completed
+          </div>
+        </div>
+
+        <!-- Stage 04 -->
+        <div class="bg-white rounded-3xl p-6 border-2 border-brand-mint shadow-mint-sm relative group hover:border-brand-teal transition-all">
+          <div class="font-mono text-xs font-bold text-brand-teal mb-2">05:30 PM · RECLAIMED EVENING</div>
+          <div class="w-10 h-10 rounded-xl bg-brand-mint text-brand-tealDark flex items-center justify-center mb-4">
+            <i data-lucide="home" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-display font-bold text-xl text-slate-900 mb-2">You Return to Calm</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Walk into fresh air, gleaming surfaces, and crisp bed linens. Your evening is 100% yours to relax with family, not spend scrubbing.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono font-semibold text-brand-teal">
+            Phase 4: Total Peace of Mind
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- BEFORE / AFTER INTERACTIVE SHOWCASE -->
+  <!-- ======================================================== -->
+  <section id="comparison" class="py-20 lg:py-24 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col lg:flex-row items-center justify-between mb-12 gap-6">
+        <div>
+          <span class="font-mono text-xs font-bold uppercase tracking-widest text-brand-teal bg-brand-mintPale px-3 py-1 rounded">
+            Proof of Work
+          </span>
+          <h2 class="font-display font-black text-4xl sm:text-5xl text-brand-tealDark mt-3 tracking-tight">
+            SEE THE DIFFERENCE.
+          </h2>
+        </div>
+        
+        <!-- Toggle Tabs for Demo -->
+        <div class="flex items-center gap-2 bg-slate-100 p-1.5 rounded-2xl border border-slate-300">
+          <button id="btnTabKitchen" onclick="switchVisualTab('kitchen')" class="ba-tab-active px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all">
+            Kitchen Cooktop
+          </button>
+          <button id="btnTabBath" onclick="switchVisualTab('bathroom')" class="px-4 py-2 rounded-xl text-xs font-mono font-bold text-slate-600 hover:text-slate-900 transition-all">
+            Master Bath
+          </button>
+          <button id="btnTabFloors" onclick="switchVisualTab('floors')" class="px-4 py-2 rounded-xl text-xs font-mono font-bold text-slate-600 hover:text-slate-900 transition-all">
+            Hardwood Living
+          </button>
+        </div>
+      </div>
+
+      <!-- Before / After Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-slate-50 p-6 sm:p-10 rounded-3xl border-2 border-slate-200">
+        
+        <!-- Interactive Visual Display -->
+        <div class="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 aspect-video sm:aspect-[4/3]">
+          <!-- Before State -->
+          <img id="demoBeforeImg" src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=80" alt="Pre-clean state" class="w-full h-full object-cover">
+          
+          <!-- After State Overlay -->
+          <div id="demoAfterOverlay" class="absolute inset-0 w-full h-full transition-opacity duration-300" style="opacity: 0;">
+            <img id="demoAfterImg" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80" alt="Post-clean spotless state" class="w-full h-full object-cover">
+          </div>
+
+          <!-- Live Floating Toggle Pill -->
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-black/75 backdrop-blur-md px-4 py-2.5 rounded-xl text-white text-xs font-mono">
+            <span id="currentStatusText">Currently Viewing: Pre-Clean State</span>
+            <button onclick="toggleCleanState()" class="px-3 py-1 bg-brand-mint text-brand-tealDark font-bold rounded-lg hover:bg-white transition-all text-[11px] uppercase tracking-wider">
+              Flip to Post-Clean
+            </button>
+          </div>
+        </div>
+
+        <!-- Explanatory Details -->
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-teal text-brand-mint font-mono text-xs font-bold">
+            <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+            <span id="roomFocusTag">ZONE: KITCHEN PREP &amp; STOVE</span>
+          </div>
+
+          <h3 id="roomFocusTitle" class="font-display font-black text-3xl text-slate-900">
+            Showroom Finish on Cooktops &amp; Counters
+          </h3>
+
+          <p id="roomFocusDesc" class="text-sm text-slate-600 leading-relaxed font-sans">
+            Grease residue, burnt splatters, and water stains are completely emulsified and hand-polished. We leave quartz, marble, and stainless steel sealed and pristine.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 font-mono text-xs">
+            <div class="p-4 rounded-xl bg-white border border-slate-200">
+              <span class="text-slate-400 block mb-1">Standard Clean Time:</span>
+              <span class="font-bold text-slate-900 text-sm">45 – 70 Mins</span>
+            </div>
+            <div class="p-4 rounded-xl bg-white border border-slate-200">
+              <span class="text-slate-400 block mb-1">Chemical Standard:</span>
+              <span class="font-bold text-brand-teal text-sm">Non-Toxic &amp; Safe</span>
+            </div>
+          </div>
+
+          <button onclick="scrollToEstimator()" class="px-6 py-3.5 bg-brand-teal hover:bg-brand-tealCard text-white font-display font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center gap-2">
+            <span>Get Quote for This Room</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-mint"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- INSTANT CLEANING ESTIMATOR CALCULATOR -->
+  <!-- Real-time quote transparency & 1-click booking -->
+  <!-- ======================================================== -->
+  <section id="estimator" class="py-20 lg:py-28 bg-brand-tealDark text-white relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-mint bg-brand-tealCard px-3.5 py-1 rounded border border-brand-tealBorder">
+          Transparent Estimator
+        </span>
+        <h2 class="font-display font-black text-4xl sm:text-5xl text-white mt-4 tracking-tight">
+          CALCULATE YOUR CLEANING.
+        </h2>
+        <p class="text-slate-300 text-sm mt-3 font-sans">
+          Pick your home layout and service level to receive an instant service estimate and schedule directly with Jamia.
+        </p>
+      </div>
+
+      <!-- Estimator Component Box -->
+      <div class="bg-brand-tealCard/90 rounded-3xl p-6 sm:p-10 border-2 border-brand-tealBorder shadow-2xl">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          
+          <!-- Bedrooms -->
+          <div>
+            <label class="block font-mono text-xs uppercase text-slate-300 font-bold mb-2">Bedrooms</label>
+            <select id="calcBeds" onchange="calculateEstimate()" class="w-full bg-brand-tealDark text-white px-4 py-3 rounded-xl border border-brand-tealBorder focus:border-brand-mint font-mono text-sm">
+              <option value="1">1 Bedroom Apartment</option>
+              <option value="2">2 Bedrooms</option>
+              <option value="3" selected>3 Bedrooms</option>
+              <option value="4">4 Bedrooms</option>
+              <option value="5">5+ Bedrooms Estate</option>
+            </select>
+          </div>
+
+          <!-- Bathrooms -->
+          <div>
+            <label class="block font-mono text-xs uppercase text-slate-300 font-bold mb-2">Bathrooms</label>
+            <select id="calcBaths" onchange="calculateEstimate()" class="w-full bg-brand-tealDark text-white px-4 py-3 rounded-xl border border-brand-tealBorder focus:border-brand-mint font-mono text-sm">
+              <option value="1">1 Bathroom</option>
+              <option value="2" selected>2 Bathrooms</option>
+              <option value="2.5">2.5 Bathrooms</option>
+              <option value="3">3 Bathrooms</option>
+              <option value="4">4+ Bathrooms</option>
+            </select>
+          </div>
+
+          <!-- Service Frequency -->
+          <div>
+            <label class="block font-mono text-xs uppercase text-slate-300 font-bold mb-2">Cleaning Frequency</label>
+            <select id="calcType" onchange="calculateEstimate()" class="w-full bg-brand-tealDark text-white px-4 py-3 rounded-xl border border-brand-tealBorder focus:border-brand-mint font-mono text-sm">
+              <option value="biweekly" selected>Bi-Weekly Maintenance (Most Popular)</option>
+              <option value="weekly">Weekly Concierge Housekeeping</option>
+              <option value="monthly">Monthly Refresh</option>
+              <option value="deep">One-Time Deep Clean</option>
+              <option value="move">Move-In / Move-Out Clean</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Estimated Calculation Output Bar -->
+        <div class="p-6 rounded-2xl bg-brand-tealDark border border-brand-mint/30 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <div class="font-mono text-xs text-brand-mint uppercase font-semibold">Estimated Service Time</div>
+            <div class="font-display font-black text-3xl sm:text-4xl text-white mt-0.5">
+              <span id="estimatedHours">3.0 – 3.5</span> Hours
+            </div>
+            <p class="text-xs text-slate-400 mt-1">
+              Includes kitchen, baths, dusting &amp; floor care by Jamia Averytt.
+            </p>
+          </div>
+
+          <div class="text-right">
+            <div class="font-mono text-xs text-slate-300 uppercase font-semibold">Estimated Price Range</div>
+            <div class="font-display font-black text-3xl sm:text-4xl text-brand-mint mt-0.5">
+              $<span id="estimatedPrice">150 – $185</span>
+            </div>
+            <div class="text-[11px] text-slate-400">Customized upon in-home walk-through</div>
+          </div>
+        </div>
+
+        <!-- Quick 20-second form to send calculation -->
+        <div class="mt-8 pt-8 border-t border-brand-tealBorder">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+            <input type="text" id="calcName" placeholder="Your Full Name" class="bg-brand-tealDark text-white px-4 py-3 rounded-xl border border-brand-tealBorder focus:border-brand-mint text-sm">
+            <input type="tel" id="calcPhone" placeholder="Your Phone (412-xxx-xxxx)" class="bg-brand-tealDark text-white px-4 py-3 rounded-xl border border-brand-tealBorder focus:border-brand-mint text-sm">
+            <input type="text" id="calcLoc" placeholder="Neighborhood (e.g. Shadyside)" class="bg-brand-tealDark text-white px-4 py-3 rounded-xl border border-brand-tealBorder focus:border-brand-mint text-sm">
+          </div>
+
+          <button onclick="submitEstimator(event)" class="w-full py-4 bg-brand-mint hover:bg-brand-mintGlow text-brand-tealDark font-display font-black text-sm uppercase tracking-wider rounded-xl shadow-mint-lg transition-all flex items-center justify-center gap-2">
+            <span>Lock In This Cleaning Estimate with Jamia</span>
+            <i data-lucide="send" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- CUSTOMER REVIEWS & LOCAL TRUST -->
+  <!-- ======================================================== -->
+  <section class="py-20 lg:py-28 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-brand-teal bg-brand-mintPale px-3 py-1 rounded">
+          Pittsburgh Verified
+        </span>
+        <h2 class="font-display font-black text-4xl sm:text-5xl text-brand-tealDark mt-4 tracking-tight">
+          TESTED. TRUSTED. RECOMMENDED.
+        </h2>
+        <div class="flex items-center justify-center gap-1.5 mt-3 text-brand-gold">
+          <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+          <span class="font-mono text-xs font-bold text-slate-800 ml-2">10 Years of 5-Star Reviews</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="p-8 rounded-3xl bg-slate-50 border-2 border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-brand-gold mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+            </div>
+            <p class="text-sm text-slate-800 leading-relaxed font-sans mb-6">
+              “Jamia is the definition of punctual. She enters on the minute, works without a single wasted movement, and when she exits, my kitchen and hardwood floors look completely renewed.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 flex items-center justify-between font-mono text-xs">
+            <div>
+              <div class="font-bold text-slate-900">Brian V.</div>
+              <div class="text-slate-500">Squirrel Hill · Bi-Weekly</div>
+            </div>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[10px]">VERIFIED CLIENT</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-8 rounded-3xl bg-slate-50 border-2 border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-brand-gold mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+            </div>
+            <p class="text-sm text-slate-800 leading-relaxed font-sans mb-6">
+              “No contracting middlemen or random strangers in your house. Jamia handles every clean personally. She knows exactly how to handle our delicate bathroom marble without harsh acid chemicals.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 flex items-center justify-between font-mono text-xs">
+            <div>
+              <div class="font-bold text-slate-900">Christina &amp; Mark P.</div>
+              <div class="text-slate-500">Shadyside · Recurring</div>
+            </div>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[10px]">VERIFIED CLIENT</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-8 rounded-3xl bg-slate-50 border-2 border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-brand-gold mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-brand-gold"></i>
+            </div>
+            <p class="text-sm text-slate-800 leading-relaxed font-sans mb-6">
+              “The 'IN. CLEAN. OUT. DONE.' slogan is 100% real. My husband and I both work in tech; we leave at 8 AM, come back at 6 PM, and the home feels like a calm retreat. Best investment we make all month.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 flex items-center justify-between font-mono text-xs">
+            <div>
+              <div class="font-bold text-slate-900">Jessica R.</div>
+              <div class="text-slate-500">Lawrenceville · Weekly</div>
+            </div>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[10px]">VERIFIED CLIENT</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- FINAL LOCAL SERVICE CTA BANNER -->
+  <!-- ======================================================== -->
+  <section id="contact" class="py-20 bg-brand-teal text-white relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <span class="font-mono text-xs uppercase font-bold tracking-widest text-brand-mint bg-brand-tealDark/80 px-4 py-1.5 rounded-full border border-brand-mint/30 inline-block mb-6">
+        Direct Access · Jamia Averytt
+      </span>
+
+      <h2 class="font-display font-black text-4xl sm:text-6xl text-white tracking-tight mb-6">
+        BOOK YOUR CLEANING IN 60 SECONDS.
+      </h2>
+
+      <p class="text-slate-200 font-sans text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        Speak directly with Jamia. No automated switchboards, no subcontractor markups. Fast, dependable residential housekeeping across Greater Pittsburgh.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="tel:4125251998" class="w-full sm:w-auto px-8 py-4 bg-brand-mint hover:bg-brand-mintGlow text-brand-tealDark font-display font-extrabold text-sm uppercase tracking-wider rounded-xl shadow-mint-lg transition-all flex items-center justify-center gap-3">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+          <span>Call 412-525-1998</span>
+        </a>
+
+        <a href="mailto:innoutcleaning3@gmail.com" class="w-full sm:w-auto px-8 py-4 bg-brand-tealDark hover:bg-brand-tealCard text-white font-mono font-bold text-sm uppercase tracking-wider rounded-xl border border-brand-mint/40 transition-all flex items-center justify-center gap-3">
+          <i data-lucide="mail" class="w-5 h-5 text-brand-mint"></i>
+          <span>innoutcleaning3@gmail.com</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER -->
+  <!-- ======================================================== -->
+  <footer class="bg-brand-tealDark text-white py-14 border-t border-brand-tealBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between pb-10 border-b border-white/10 gap-6">
+        
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-brand-teal flex items-center justify-center p-2 border border-brand-mint/40">
+            <svg class="w-full h-full text-brand-mint" viewBox="0 0 32 32" fill="none">
+              <rect x="6" y="3" width="20" height="26" rx="2" stroke="#2DD4BF" stroke-width="2.5"/>
+              <circle cx="20" cy="16" r="2" fill="#F59E0B"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-display font-black text-xl tracking-tight text-white leading-none">IN-N-OUT CLEANING</div>
+            <div class="font-mono text-[10px] text-brand-mint font-semibold mt-1">Cleaner &amp; Housekeeper · Jamia Averytt</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6 font-mono text-xs text-slate-300">
+          <a href="#what-we-clean" class="hover:text-white transition-colors">Kitchens</a>
+          <a href="#what-we-clean" class="hover:text-white transition-colors">Bathrooms</a>
+          <a href="#what-we-clean" class="hover:text-white transition-colors">Floors</a>
+          <a href="#what-we-clean" class="hover:text-white transition-colors">Dusting</a>
+          <a href="tel:4125251998" class="text-brand-mint font-bold hover:underline">412-525-1998</a>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between font-mono text-xs text-slate-400 gap-4">
+        <div>
+          &copy; <span id="c2-year">2026</span> IN-N-OUT CLEANING. Pittsburgh, PA. All rights reserved.
+        </div>
+        <div class="text-[11px] text-slate-500">
+          Concept 02 — “IN-N-OUT Signature” · Prepared by OmniPeak Digital.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    lucide.createIcons();
+    document.getElementById('c2-year').textContent = new Date().getFullYear();
+
+    function toggleMobileNav() {
+      const el = document.getElementById('c2-mobile-nav');
+      el.classList.toggle('hidden');
+    }
+
+    function scrollToEstimator() {
+      const el = document.getElementById('estimator');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function prefillEstimator(service) {
+      scrollToEstimator();
+      const calcType = document.getElementById('calcType');
+      if (service === 'kitchen' || service === 'bathroom') {
+        calcType.value = 'deep';
+      }
+      calculateEstimate();
+    }
+
+    function calculateEstimate() {
+      const beds = parseFloat(document.getElementById('calcBeds').value);
+      const baths = parseFloat(document.getElementById('calcBaths').value);
+      const type = document.getElementById('calcType').value;
+
+      let baseHours = 2.0 + (beds * 0.4) + (baths * 0.5);
+      let multiplier = 1.0;
+
+      if (type === 'deep') multiplier = 1.35;
+      if (type === 'move') multiplier = 1.6;
+      if (type === 'weekly') multiplier = 0.85;
+      if (type === 'biweekly') multiplier = 0.95;
+
+      const finalHours = (baseHours * multiplier).toFixed(1);
+      const lowPrice = Math.round(finalHours * 45);
+      const highPrice = Math.round(finalHours * 55);
+
+      document.getElementById('estimatedHours').textContent = `${(finalHours * 0.9).toFixed(1)} – ${finalHours}`;
+      document.getElementById('estimatedPrice').textContent = `${lowPrice} – $${highPrice}`;
+    }
+
+    function submitEstimator(e) {
+      e.preventDefault();
+      const name = document.getElementById('calcName').value || 'Pittsburgh Resident';
+      const phone = document.getElementById('calcPhone').value || 'Not provided';
+      const loc = document.getElementById('calcLoc').value || 'Pittsburgh Area';
+      const beds = document.getElementById('calcBeds').value;
+      const baths = document.getElementById('calcBaths').value;
+      const type = document.getElementById('calcType').value;
+      const price = document.getElementById('estimatedPrice').textContent;
+
+      const subject = encodeURIComponent(`Estimate Inquiry: ${beds} Bed / ${baths} Bath for ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Phone: ${phone}\n` +
+        `Neighborhood: ${loc}\n` +
+        `Configuration: ${beds} Bed, ${baths} Bath\n` +
+        `Service Plan: ${type}\n` +
+        `Estimated Range: $${price}\n\n` +
+        `Requesting Jamia Averytt to confirm scheduling.`
+      );
+
+      window.location.href = `mailto:innoutcleaning3@gmail.com?subject=${subject}&body=${body}`;
+      alert(`Estimate calculation generated! Opening email to Jamia Averytt.`);
+    }
+
+    // Before / After visual switcher
+    let isAfter = false;
+    const tabData = {
+      kitchen: {
+        before: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=80",
+        after: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80",
+        tag: "ZONE: KITCHEN PREP & STOVE",
+        title: "Showroom Finish on Cooktops & Counters",
+        desc: "Grease residue, burnt splatters, and water stains are completely emulsified and hand-polished. We leave quartz, marble, and stainless steel sealed and pristine."
+      },
+      bathroom: {
+        before: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1000&q=80",
+        after: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80",
+        tag: "ZONE: MASTER BATH & SHOWER",
+        title: "Soap Scum Eradicated & Grout Descaled",
+        desc: "Tile walls scrubbed, chrome faucets descaled and buffed, frameless shower glass wiped crystal clear without toxic fumes."
+      },
+      floors: {
+        before: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80",
+        after: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1000&q=80",
+        tag: "ZONE: HARDWOOD & LIVING FLOORS",
+        title: "Gleaming Natural Wood with Zero Slip Film",
+        desc: "High-filtration HEPA vacuuming followed by micro-damp mopping with pH-neutral conditioning for rich wood grain luster."
+      }
+    };
+
+    let activeTabKey = 'kitchen';
+
+    function switchVisualTab(key) {
+      activeTabKey = key;
+      isAfter = false;
+      document.getElementById('demoBeforeImg').src = tabData[key].before;
+      document.getElementById('demoAfterImg').src = tabData[key].after;
+      document.getElementById('demoAfterOverlay').style.opacity = '0';
+      document.getElementById('currentStatusText').textContent = 'Currently Viewing: Pre-Clean State';
+      document.getElementById('roomFocusTag').textContent = tabData[key].tag;
+      document.getElementById('roomFocusTitle').textContent = tabData[key].title;
+      document.getElementById('roomFocusDesc').textContent = tabData[key].desc;
+
+      // Update button classes
+      ['btnTabKitchen', 'btnTabBath', 'btnTabFloors'].forEach(b => {
+        document.getElementById(b).className = 'px-4 py-2 rounded-xl text-xs font-mono font-bold text-slate-600 hover:text-slate-900 transition-all';
+      });
+      if (key === 'kitchen') document.getElementById('btnTabKitchen').className = 'ba-tab-active px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all';
+      if (key === 'bathroom') document.getElementById('btnTabBath').className = 'ba-tab-active px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all';
+      if (key === 'floors') document.getElementById('btnTabFloors').className = 'ba-tab-active px-4 py-2 rounded-xl text-xs font-mono font-bold transition-all';
+    }
+
+    function toggleCleanState() {
+      isAfter = !isAfter;
+      const overlay = document.getElementById('demoAfterOverlay');
+      const text = document.getElementById('currentStatusText');
+      if (isAfter) {
+        overlay.style.opacity = '1';
+        text.textContent = 'Currently Viewing: IN-N-OUT Spotless Finish';
+      } else {
+        overlay.style.opacity = '0';
+        text.textContent = 'Currently Viewing: Pre-Clean State';
+      }
+    }
+  </script>
+
+</body>
+</html>
