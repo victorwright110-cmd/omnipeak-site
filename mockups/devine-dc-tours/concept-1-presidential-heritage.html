@@ -64,7 +64,12 @@
       font-family: 'Cinzel', Georgia, serif;
     }
     .hero-gradient {
-      background: linear-gradient(135deg, rgba(9, 27, 48, 0.72) 0%, rgba(18, 60, 120, 0.55) 50%, rgba(9, 27, 48, 0.82) 100%);
+      background: linear-gradient(90deg, rgba(9, 27, 48, 0.88) 0%, rgba(9, 27, 48, 0.62) 48%, rgba(9, 27, 48, 0.22) 78%, rgba(9, 27, 48, 0.38) 100%);
+    }
+    @media (max-width: 1023px) {
+      .hero-gradient {
+        background: linear-gradient(180deg, rgba(9, 27, 48, 0.88) 0%, rgba(9, 27, 48, 0.72) 45%, rgba(9, 27, 48, 0.82) 100%);
+      }
     }
     .text-shadow-hero {
       text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
@@ -194,12 +199,12 @@
   <!-- ========================================================================= -->
   <section id="hero" class="relative min-h-[92vh] flex flex-col justify-between bg-brand-navy">
 
-    <!-- U.S. CAPITOL BUILDING BACKDROP (Bright Daylight) -->
+    <!-- U.S. CAPITOL BUILDING BACKDROP (Bright Daylight with Pennsylvania Avenue) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-      <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=2200&q=85"
-           alt="U.S. Capitol Building in Bright Daylight with Reflecting Pool"
-           class="w-full h-full object-cover object-center brightness-105 contrast-105">
-      <!-- Light, Vibrant Royal Blue Gradient -->
+      <img src="images/us_capitol_daylight.jpg"
+           alt="U.S. Capitol Building in Bright Daylight with Pennsylvania Avenue"
+           class="w-full h-full object-cover object-[center_35%] brightness-105 contrast-105">
+      <!-- Balanced Translucent Gradient: Deep royal navy on the left for text contrast, open bright daylight on the right for Capitol dome visibility -->
       <div class="absolute inset-0 hero-gradient"></div>
     </div>
 
@@ -289,72 +294,78 @@
 
         </div>
 
-        <!-- RIGHT COLUMN: WASHINGTON MONUMENT + SHANTAL'S ACTUAL TOUR VEHICLE + HAPPY TOURISTS -->
+        <!-- RIGHT COLUMN: BALANCED SHOWCASE (WASHINGTON MONUMENT + HAPPY TOURISTS + 14-SEAT TOUR VEHICLE) -->
         <div class="lg:col-span-5 relative">
-          <div class="space-y-4">
+          <div class="space-y-3 sm:space-y-3.5">
 
-            <!-- Card 1: WASHINGTON MONUMENT IN BRIGHT DAYLIGHT (Client Requested) -->
-            <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-white/80 group h-44 relative bg-brand-navy">
-              <img src="https://images.unsplash.com/photo-1501466044931-62695aada8e9?auto=format&fit=crop&w=1200&q=85"
-                   alt="Washington Monument in Bright Daylight"
-                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-brand-navy/30 to-transparent"></div>
-              <div class="absolute top-3 left-3 bg-brand-gold text-brand-midnight text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow">
-                ★ National Monument
+            <!-- TOP 2-CARD GRID: AUTHENTIC WASHINGTON MONUMENT & HAPPY TOURISTS (NO BULK / NO OVERLAP) -->
+            <div class="grid grid-cols-2 gap-3 sm:gap-3.5">
+
+              <!-- Card 1: AUTHENTIC WASHINGTON MONUMENT (Correct Image & Labeling) -->
+              <div class="rounded-2xl overflow-hidden shadow-xl border border-white/70 group h-36 sm:h-40 relative bg-brand-navy">
+                <img src="images/washington_monument.jpg"
+                     alt="Washington Monument Obelisk rising above Tidal Basin cherry blossoms in Washington, D.C."
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/35 to-transparent"></div>
+                <div class="absolute top-2.5 left-2.5 bg-brand-gold text-brand-midnight text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider shadow">
+                  ★ National Monument
+                </div>
+                <div class="absolute bottom-2.5 left-3 right-3 text-white">
+                  <span class="text-[9px] font-extrabold uppercase tracking-wider text-brand-goldLight block leading-tight">National Mall</span>
+                  <span class="text-xs font-bold text-white block leading-tight">Washington Monument</span>
+                </div>
               </div>
-              <div class="absolute bottom-3 left-4 right-4 text-white">
-                <span class="text-xs font-black uppercase tracking-wider text-brand-goldLight block">Iconic National Mall</span>
-                <span class="text-sm font-bold text-white">Washington Monument & Lincoln Memorial</span>
+
+              <!-- Card 2: HAPPY TOURISTS IN D.C. (Naturally Balanced Alongside Monument) -->
+              <div class="rounded-2xl overflow-hidden shadow-xl border border-white/70 group h-36 sm:h-40 relative bg-brand-navy">
+                <img src="images/happy_tourists.jpg"
+                     alt="Happy Sightseeing Tourists enjoying Washington, D.C."
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/35 to-transparent"></div>
+                <div class="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-md text-brand-blue text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider shadow">
+                  ★ 5.0 Star Rated
+                </div>
+                <div class="absolute bottom-2.5 left-3 right-3 text-white">
+                  <span class="text-[9px] font-extrabold uppercase tracking-wider text-brand-goldLight block leading-tight">Tour Memories</span>
+                  <span class="text-xs font-bold text-white block leading-tight">Happy D.C. Travelers</span>
+                </div>
               </div>
+
             </div>
 
-            <!-- Card 2: SHANTAL'S ACTUAL TOUR VEHICLE (High Resolution Showcase) -->
-            <div class="bg-white rounded-3xl p-3.5 sm:p-4 shadow-vehicle border-4 border-white/95 relative group transform hover:-translate-y-1 transition duration-500">
+            <!-- Card 3: OFFICIAL 14-SEAT TOUR VEHICLE (Uncrowded, High-Res Showcase) -->
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-3.5 shadow-2xl border border-white/90 relative group transform hover:-translate-y-0.5 transition duration-300">
               
               <!-- Badge Header on Vehicle Card with Authentic Logo -->
-              <div class="flex items-center justify-between px-2 pb-2.5 mb-2 border-b border-gray-100">
+              <div class="flex items-center justify-between px-1.5 pb-2 mb-2 border-b border-gray-100">
                 <div class="flex items-center gap-2">
-                  <img src="images/client_logo_transparent.png" alt="Emblem" class="h-7 w-auto object-contain">
-                  <span class="text-xs font-extrabold text-brand-blue uppercase tracking-wider">Official 14-Seat Van</span>
+                  <img src="images/client_logo_transparent.png" alt="Divine DC Tours Logo" class="h-6 w-auto object-contain">
+                  <span class="text-xs font-black text-brand-blue uppercase tracking-wider">Official Tour Vehicle</span>
                 </div>
-                <span class="bg-brand-gold text-brand-navy text-[11px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
+                <span class="bg-brand-gold text-brand-navy text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
                   14-Passenger Max
                 </span>
               </div>
 
               <!-- Vehicle Image -->
-              <div class="relative rounded-2xl overflow-hidden bg-brand-skyLight border border-brand-border">
+              <div class="relative rounded-xl overflow-hidden bg-brand-skyLight border border-brand-border">
                 <img src="images/client_tour_vehicle.png"
                      alt="Divine DC Tours 14-Passenger Sightseeing Shuttle Van"
-                     class="w-full h-56 sm:h-64 object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                     class="w-full h-48 sm:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-700">
 
                 <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-transparent"></div>
 
                 <!-- Callout overlay -->
-                <div class="absolute bottom-3 left-3 right-3 text-white">
-                  <div class="flex items-center gap-2 text-brand-gold text-[11px] font-bold uppercase tracking-wider mb-0.5">
+                <div class="absolute bottom-2.5 left-3 right-3 text-white">
+                  <div class="flex items-center gap-1.5 text-brand-gold text-[10px] font-bold uppercase tracking-wider mb-0.5">
                     <span>✦ Panoramic Sightseeing Shuttle</span>
                   </div>
-                  <div class="text-xs font-medium text-white/95">
-                    Open-glass windows, climate-controlled comfort, easy boarding.
+                  <div class="text-[11px] font-medium text-white/95 leading-snug">
+                    Open-glass windows, climate-controlled comfort, intimate small-group touring.
                   </div>
                 </div>
               </div>
 
-            </div>
-
-            <!-- Card 3: OVERLAPPING HAPPY TOURISTS BADGE -->
-            <div class="bg-white rounded-2xl p-3.5 shadow-2xl border-2 border-brand-gold/60">
-              <div class="flex items-center gap-3">
-                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=400&q=80"
-                     alt="Happy Sightseeing Tourists Washington DC"
-                     class="w-14 h-14 rounded-xl object-cover flex-shrink-0 shadow border border-gray-200">
-                <div>
-                  <div class="flex items-center text-amber-500 text-xs mb-0.5 font-bold">★★★★★ 5.0 Rating</div>
-                  <div class="text-xs font-bold text-brand-blue">Happy Travelers in Washington, D.C.!</div>
-                  <div class="text-[11px] text-gray-600 font-medium">"Intimate 14-passenger van, exceptional guide & breathtaking sights."</div>
-                </div>
-              </div>
             </div>
 
           </div>
@@ -538,7 +549,7 @@
         <div class="bg-white rounded-3xl overflow-hidden border border-brand-border shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div class="relative h-64 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80"
+              <img src="images/us_capitol_daylight.jpg"
                    alt="Washington Monument and Capitol Day Tour"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
               <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-brand-blue text-xs font-bold px-3 py-1 rounded-full shadow">
