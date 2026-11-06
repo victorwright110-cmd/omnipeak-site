@@ -3,7 +3,28 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
+    {
+      "source": "/mockups/divine-dc-tours",
+      "destination": "/public/mockups/devine-dc-tours/index.html"
+    },
+    {
+      "source": "/mockups/divine-dc-tours/",
+      "destination": "/public/mockups/devine-dc-tours/index.html"
+    },
+    {
+      "source": "/mockups/divine-dc-tours/:path*",
+      "destination": "/public/mockups/devine-dc-tours/:path*"
+    },
+    {
+      "source": "/mockups/devine-dc-tours",
+      "destination": "/public/mockups/devine-dc-tours/index.html"
+    },
+    {
+      "source": "/mockups/devine-dc-tours/",
+      "destination": "/public/mockups/devine-dc-tours/index.html"
+    },
     {
       "source": "/mockups/:path*",
       "destination": "/public/mockups/:path*"

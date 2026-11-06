@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Check-In Portal & QR Scanner | Divine DC Tours</title>
+  <meta name="description" content="Secure staff-only check-in portal for Divine DC Tours guides and operators. Real-time QR ticket validation, duplicate check-in prevention, and daily departure manifest.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/client_logo_transparent.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#102F56',
+              blue: '#1A477E',
+              gold: '#D4AF37',
+              goldLight: '#F4E091',
+              goldDark: '#AA8419',
+              midnight: '#0B1B2D',
+              sky: '#EBF3FA',
+              skyLight: '#F5F9FD',
+              charcoal: '#222B36',
+              border: '#E2E8F0',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cinzel: ['"Cinzel"', 'Georgia', 'serif'],
+          },
+          boxShadow: {
+            'card': '0 10px 30px -5px rgba(16, 47, 86, 0.08), 0 4px 12px -2px rgba(16, 47, 86, 0.04)',
+            'card-hover': '0 20px 40px -10px rgba(16, 47, 86, 0.16), 0 8px 16px -4px rgba(16, 47, 86, 0.08)',
+            'concierge': '0 25px 50px -12px rgba(16, 47, 86, 0.25)',
+            'vehicle': '0 20px 45px -10px rgba(16, 47, 86, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF8F3;
+      color: #222B36;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .heading-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .heading-cinzel {
+      font-family: 'Cinzel', Georgia, serif;
+    }
+    .hero-gradient {
+      background: linear-gradient(90deg, rgba(9, 27, 48, 0.88) 0%, rgba(9, 27, 48, 0.62) 48%, rgba(9, 27, 48, 0.22) 78%, rgba(9, 27, 48, 0.38) 100%);
+    }
+    @media (max-width: 1023px) {
+      .hero-gradient {
+        background: linear-gradient(180deg, rgba(9, 27, 48, 0.88) 0%, rgba(9, 27, 48, 0.72) 45%, rgba(9, 27, 48, 0.82) 100%);
+      }
+    }
+    .text-shadow-hero {
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+    }
+    .ticket-edge {
+      background-image: radial-gradient(circle at 0px 50%, transparent 12px, #ffffff 13px),
+                        radial-gradient(circle at 100% 50%, transparent 12px, #ffffff 13px);
+    }
+  </style>
+
+  <!-- QRCode Library for dynamic scannable tickets -->
+  <script src="qrcode.min.js"></script>
+  <!-- Shared Booking System & Database Engine -->
+  <script src="booking-system.js"></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
+  <!-- ========================================================================= -->
+  <!-- TOP ANNOUNCEMENT BAR: VERIFIED PRICING & 14-PASSENGER GUARANTEE -->
+  <!-- ========================================================================= -->
+  <div class="bg-brand-midnight text-white text-xs py-2.5 px-4 border-b border-brand-gold/30">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2 flex-wrap justify-center">
+        <span class="bg-brand-gold text-brand-midnight font-black uppercase tracking-wider text-[10px] px-2 py-0.5 rounded">
+          Boutique DC Tourism
+        </span>
+        <span class="text-brand-goldLight font-semibold">Strict 14-Passenger Maximum</span>
+        <span class="text-white/40 hidden sm:inline">•</span>
+        <span class="text-white/90">Daytime Tours <strong class="text-white font-black">$49</strong> • Moonlight Tours <strong class="text-brand-gold font-black">$59</strong></span>
+      </div>
+      <div class="flex items-center gap-4 text-white/90 text-[11px]">
+        <span class="hidden md:inline text-white/80">🏨 Full-Bus Bookings Include Free D.C. Hotel Pickup</span>
+        <a href="reschedule.html" class="text-brand-goldLight hover:text-white underline font-semibold transition">
+          ↺ Reschedule Booking
+        </a>
+        <span class="text-white/40">|</span>
+        <a href="staff.html" class="text-white/70 hover:text-white font-mono text-[10px] transition flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span>Staff Portal</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN HEADER: PROMINENT AUTHENTIC CLIENT LOGO & NAVIGATION -->
+  <!-- ========================================================================= -->
+  <header id="mainHeader" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border transition-all duration-300 shadow-sm py-3 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+
+      <!-- LEFT: CLIENT'S AUTHENTIC BRAND LOGO -->
+      <a href="index.html" class="flex items-center gap-3.5 group py-1">
+        <div class="bg-white p-1 rounded-xl border border-brand-border/60 shadow-sm group-hover:border-brand-gold transition duration-300 flex-shrink-0">
+          <img src="images/client_logo_transparent.png" 
+               alt="Divine DC Tours Authentic Compass Logo" 
+               class="h-10 sm:h-12 w-auto object-contain">
+        </div>
+        <div class="flex flex-col border-l-2 border-brand-gold/40 pl-3">
+          <span class="font-serif font-black text-brand-blue text-lg sm:text-2xl tracking-tight uppercase leading-none">
+            Divine DC Tours
+          </span>
+          <span class="text-[9px] sm:text-[11px] uppercase tracking-[0.22em] text-brand-goldDark font-extrabold mt-1">
+            Washington, D.C. Sightseeing
+          </span>
+        </div>
+      </a>
+
+      <!-- CENTER: MULTI-PAGE NAVIGATION LINKS -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-brand-charcoal">
+        <a href="index.html" class="text-brand-blue border-b-2 border-brand-gold py-1 font-extrabold">Home</a>
+        <a href="van.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Our 14-Seat Van</a>
+        <a href="tours.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Our Tours ($49 / $59)</a>
+        <a href="before-you-book.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Before You Book</a>
+        <a href="book-online.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Book Online</a>
+        <a href="contact.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Contact</a>
+      </nav>
+
+      <!-- RIGHT: PRIMARY ACTIONS -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="reschedule.html" class="px-3.5 py-2 rounded-xl text-xs font-bold text-brand-blue bg-brand-sky hover:bg-blue-100 transition border border-brand-blue/20 flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          <span>Reschedule</span>
+        </a>
+
+        <a href="book-online.html" class="relative group overflow-hidden rounded-xl bg-brand-blue hover:bg-brand-navy px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider text-white shadow-md transition-all duration-300">
+          <span class="relative z-10 flex items-center gap-2">
+            <span>Book Tour</span>
+            <span class="text-brand-gold font-mono font-black text-xs">$49+</span>
+          </span>
+          <div class="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-gold/20 to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-brand-blue hover:bg-brand-sky transition" aria-label="Toggle navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobileDrawer" class="hidden lg:hidden pt-4 pb-4 border-t border-brand-border mt-3 flex-col gap-2.5 bg-white px-2">
+      <div class="flex items-center gap-3 p-3 bg-brand-skyLight rounded-xl border border-brand-border mb-2">
+        <img src="images/client_logo_transparent.png" alt="Logo" class="h-12 w-auto object-contain">
+        <div>
+          <span class="font-serif font-black text-brand-blue text-sm uppercase block">Divine DC Tours</span>
+          <span class="text-[10px] text-brand-goldDark font-bold uppercase">14-Passenger Sightseeing</span>
+        </div>
+      </div>
+      <a href="index.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Home</a>
+      <a href="van.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Our 14-Seat Van</a>
+      <a href="tours.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Our Tours ($49 / $59)</a>
+      <a href="before-you-book.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Before You Book (Policies)</a>
+      <a href="book-online.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Book Online (14 Max)</a>
+      <a href="contact.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Contact</a>
+      <div class="pt-2 border-t border-brand-border flex gap-2">
+        <a href="reschedule.html" class="flex-1 text-center py-2.5 rounded-xl text-xs font-bold text-brand-blue bg-brand-sky border border-brand-blue/20">
+          ↺ Reschedule
+        </a>
+        <a href="staff.html" class="flex-1 text-center py-2.5 rounded-xl text-xs font-bold text-gray-700 bg-gray-100 hover:bg-gray-200">
+          📱 Staff Portal
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative bg-brand-midnight text-white pt-12 pb-14 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/50 text-emerald-400 text-xs font-mono font-bold uppercase tracking-wider mb-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Authorized Guide & Dispatch Portal</span>
+        </div>
+        <h1 class="heading-serif text-2xl sm:text-4xl font-bold text-white">
+          Staff QR Ticket Scanner & Manifest
+        </h1>
+      </div>
+      <div id="authStatusBadgeContainer">
+        <!-- populated based on auth -->
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN STAFF SECTION -->
+  <section class="py-12 bg-gray-950 text-white min-h-[70vh]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-8">
+
+      <!-- ============================================== -->
+      <!-- 1. AUTHENTICATION LOCK SCREEN (IF NOT LOGGED IN) -->
+      <!-- ============================================== -->
+      <div id="staffLoginGate" class="max-w-md mx-auto bg-gray-900 rounded-3xl p-8 border border-gray-800 shadow-2xl space-y-6">
+        <div class="text-center space-y-2">
+          <div class="w-14 h-14 rounded-2xl bg-brand-navy border border-brand-gold/40 flex items-center justify-center text-brand-gold text-2xl mx-auto">
+            🔒
+          </div>
+          <h2 class="font-serif text-xl font-bold text-white">Staff Authentication Required</h2>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Please enter your Divine DC Tours staff PIN or security key to access passenger records and check-in tools.
+          </p>
+        </div>
+
+        <form onsubmit="handleStaffLogin(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-1">Enter Staff PIN / Password</label>
+            <input type="password" id="staffPinInput" required placeholder="Enter PIN" class="w-full p-3.5 rounded-xl bg-gray-800 border border-gray-700 text-white font-mono text-center tracking-widest text-lg focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs uppercase tracking-wider transition shadow-lg">
+            Authenticate Staff Session
+          </button>
+        </form>
+
+        <div class="p-3 rounded-xl bg-gray-800/80 border border-gray-700 text-[11px] text-gray-400 text-center">
+          <strong class="text-brand-goldLight block">Private Client & Staff Demo Access:</strong>
+          Staff PIN: <code class="text-emerald-400 font-mono font-bold">1776</code> or Password: <code class="text-emerald-400 font-mono font-bold">divine2026</code>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- 2. AUTHENTICATED STAFF SCANNER WORKSPACE -->
+      <!-- ============================================== -->
+      <div id="staffWorkspace" class="hidden space-y-10">
+
+        <!-- Controls Header -->
+        <div class="flex items-center justify-between pb-4 border-b border-gray-800">
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+            <span class="text-xs font-mono font-bold text-emerald-400 uppercase">Session Active: Tour Guide Terminal #1</span>
+          </div>
+          <button onclick="handleStaffLogout()" class="px-3.5 py-1.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs font-bold transition border border-gray-700">
+            Sign Out / Lock Portal
+          </button>
+        </div>
+
+        <!-- SCANNER & VALIDATION TOOL -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- Left: Live QR Viewfinder & Input -->
+          <div class="lg:col-span-6 bg-gray-900 p-6 rounded-3xl border border-gray-800 space-y-5">
+            <h3 class="font-bold text-sm uppercase tracking-wider text-emerald-400 flex items-center gap-2">
+              <span>📷 Ticket Scanner & Lookup</span>
+            </h3>
+
+            <!-- Simulated Camera Viewfinder -->
+            <div class="relative bg-black rounded-2xl h-52 border-2 border-dashed border-emerald-500/50 flex flex-col items-center justify-center overflow-hidden">
+              <div class="absolute inset-4 border border-emerald-400/30 rounded-xl pointer-events-none"></div>
+              <div class="w-full h-0.5 bg-emerald-400 shadow-[0_0_20px_#10b981] animate-pulse"></div>
+              <span class="text-xs text-gray-400 font-mono mt-4">Aim camera at passenger's digital QR ticket</span>
+              <span class="text-[10px] text-gray-600 font-mono mt-1">Live camera optical decoder active</span>
+            </div>
+
+            <!-- Manual Ticket Code Input -->
+            <div class="space-y-2">
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-400">Scan or Enter Ticket Reference Code</label>
+              <div class="flex gap-2">
+                <input type="text" id="staffTicketInput" placeholder="e.g. DDC-2026-7841" class="flex-1 bg-gray-800 border border-gray-700 rounded-xl p-3 text-xs font-mono font-bold uppercase text-white focus:border-emerald-500">
+                <button type="button" onclick="verifyTicketAction()" class="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 font-black text-xs uppercase tracking-wider rounded-xl transition text-white">
+                  Validate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Validation Result & Admission Status -->
+          <div class="lg:col-span-6 bg-gray-900 p-6 rounded-3xl border border-gray-800 space-y-4">
+            <h3 class="font-bold text-sm uppercase tracking-wider text-brand-gold flex items-center gap-2">
+              <span>📋 Admission Decision & Verification</span>
+            </h3>
+
+            <!-- Placeholder state -->
+            <div id="validationEmptyState" class="p-8 text-center text-gray-500 text-xs border border-gray-800 rounded-2xl bg-black/40">
+              Awaiting ticket scan or code entry. Validation will check against verified booking database records.
+            </div>
+
+            <!-- Result Box -->
+            <div id="staffValidationResult" class="hidden p-5 rounded-2xl border text-xs space-y-3">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 3. TODAY'S PASSENGER MANIFEST & CAPACITY MONITOR -->
+        <div class="bg-gray-900 p-6 sm:p-8 rounded-3xl border border-gray-800 space-y-6">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-gray-800">
+            <div>
+              <h3 class="font-serif text-xl font-bold text-white">Today's Departure Manifest</h3>
+              <p class="text-xs text-gray-400">Real-time check-in status across scheduled small-group tours.</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-gray-400">Filter Departure:</span>
+              <select id="manifestFilter" onchange="renderManifest()" class="bg-gray-800 border border-gray-700 text-xs text-white rounded-xl p-2 font-semibold">
+                <option value="ALL">All Departures</option>
+                <option value="10:00 AM">10:00 AM Daytime</option>
+                <option value="1:00 PM">1:00 PM Daytime</option>
+                <option value="4:00 PM">4:00 PM Daytime</option>
+                <option value="7:30 PM">7:30 PM Moonlight</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Manifest Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-left">
+              <thead class="bg-black/60 text-gray-400 uppercase tracking-wider font-mono text-[10px] border-b border-gray-800">
+                <tr>
+                  <th class="py-3 px-3">Ticket Ref</th>
+                  <th class="py-3 px-3">Passenger / Group</th>
+                  <th class="py-3 px-3">Tour Itinerary</th>
+                  <th class="py-3 px-3">Time</th>
+                  <th class="py-3 px-3 text-center">Party Size</th>
+                  <th class="py-3 px-3">Pickup Location</th>
+                  <th class="py-3 px-3 text-center">Status</th>
+                  <th class="py-3 px-3 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="manifestTableBody" class="divide-y divide-gray-800">
+                <!-- Dynamically rendered -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    // Staff authentication state in sessionStorage
+    function checkStaffAuth() {
+      const isAuth = sessionStorage.getItem('divine_staff_auth') === 'true';
+      const loginGate = document.getElementById('staffLoginGate');
+      const workspace = document.getElementById('staffWorkspace');
+      const badgeContainer = document.getElementById('authStatusBadgeContainer');
+
+      if (isAuth) {
+        loginGate.classList.add('hidden');
+        workspace.classList.remove('hidden');
+        badgeContainer.innerHTML = `
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-900/60 border border-emerald-500 text-emerald-400 text-xs font-bold font-mono">
+            <span>● Authenticated Staff Session</span>
+          </span>
+        `;
+        renderManifest();
+      } else {
+        loginGate.classList.remove('hidden');
+        workspace.classList.add('hidden');
+        badgeContainer.innerHTML = `
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-800 text-gray-400 text-xs font-mono">
+            <span>🔒 Locked / Authentication Required</span>
+          </span>
+        `;
+      }
+    }
+
+    function handleStaffLogin(e) {
+      e.preventDefault();
+      const pin = document.getElementById('staffPinInput').value.trim();
+      if (pin === '1776' || pin.toLowerCase() === 'divine2026') {
+        sessionStorage.setItem('divine_staff_auth', 'true');
+        checkStaffAuth();
+      } else {
+        alert('Invalid staff authentication PIN. Please enter PIN 1776 or password divine2026.');
+      }
+    }
+
+    function handleStaffLogout() {
+      sessionStorage.removeItem('divine_staff_auth');
+      checkStaffAuth();
+    }
+
+    // Check URL query ?scan=DDC-...
+    const scanParam = new URLSearchParams(window.location.search).get('scan');
+    if (scanParam) {
+      document.getElementById('staffTicketInput').value = scanParam;
+      // If already logged in, verify immediately
+      if (sessionStorage.getItem('divine_staff_auth') === 'true') {
+        verifyTicketAction();
+      }
+    }
+
+    // Ticket Verification with STRICT Duplicate Check-In Prevention
+    function verifyTicketAction() {
+      const ref = document.getElementById('staffTicketInput').value.trim().toUpperCase();
+      const reservations = getStoredReservations();
+      const ticket = reservations[ref];
+
+      document.getElementById('validationEmptyState').classList.add('hidden');
+      const resultBox = document.getElementById('staffValidationResult');
+      resultBox.classList.remove('hidden');
+
+      if (!ticket) {
+        resultBox.className = 'p-5 rounded-2xl border border-red-500/80 bg-red-950/70 text-red-200 space-y-2';
+        resultBox.innerHTML = `
+          <div class="font-black text-sm text-red-400 flex items-center gap-2">
+            <span>❌ INVALID / UNKNOWN TICKET CODE</span>
+          </div>
+          <p class="text-xs">No active reservation record matches reference "<strong>${ref}</strong>". Do not board this passenger.</p>
+        `;
+        return;
+      }
+
+      // DUPLICATE CHECK-IN DETECTION
+      if (ticket.status === 'CHECKED_IN') {
+        resultBox.className = 'p-5 rounded-2xl border border-amber-500 bg-amber-950/70 text-amber-200 space-y-2';
+        resultBox.innerHTML = `
+          <div class="font-black text-sm text-amber-400 flex items-center gap-2">
+            <span>⚠️ DUPLICATE CHECK-IN BLOCKED</span>
+          </div>
+          <div class="p-3 rounded-xl bg-black/40 border border-amber-500/30 text-xs space-y-1">
+            <div><strong>Ticket:</strong> <span class="font-mono">${ticket.ref}</span></div>
+            <div><strong>Passenger:</strong> ${ticket.guestName} (${ticket.guests} Seats)</div>
+            <div><strong>Original Check-In:</strong> <span class="text-amber-300 font-bold">${ticket.checkedInAt || 'Earlier today'}</span></div>
+          </div>
+          <p class="text-xs text-amber-300 font-bold">
+            DO NOT ADMIT A SECOND TIME. This digital boarding pass has already been scanned and boarded.
+          </p>
+        `;
+        return;
+      }
+
+      // VALID & READY FOR BOARDING
+      resultBox.className = 'p-5 rounded-2xl border border-emerald-500 bg-emerald-950/70 text-emerald-100 space-y-3';
+      resultBox.innerHTML = `
+        <div class="font-black text-sm text-emerald-400 flex items-center justify-between">
+          <span>✓ TICKET CONFIRMED & READY FOR BOARDING</span>
+          <span class="font-mono text-xs bg-emerald-900 px-2.5 py-0.5 rounded text-emerald-200">${ticket.ref}</span>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-xs text-gray-200 bg-black/40 p-3 rounded-xl">
+          <div><strong>Guest:</strong> ${ticket.guestName}</div>
+          <div><strong>Tour:</strong> ${ticket.tour}</div>
+          <div><strong>Departure:</strong> ${ticket.date} • ${ticket.time}</div>
+          <div><strong>Party Size:</strong> <span class="text-emerald-400 font-bold text-sm">${ticket.guests} Passengers</span></div>
+          <div class="col-span-2"><strong>Location:</strong> ${ticket.pickup}</div>
+        </div>
+        <button onclick="confirmAdmission('${ticket.ref}')" class="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs uppercase tracking-wider transition shadow-lg">
+          CONFIRM BOARDING (${ticket.guests} SEATS ADMITTED)
+        </button>
+      `;
+    }
+
+    function confirmAdmission(ref) {
+      const reservations = getStoredReservations();
+      if (reservations[ref]) {
+        reservations[ref].status = 'CHECKED_IN';
+        reservations[ref].checkedInAt = new Date().toLocaleTimeString() + ' by Staff Guide';
+        localStorage.setItem('divine_dc_tickets_v2', JSON.stringify(reservations));
+        verifyTicketAction();
+        renderManifest();
+        alert(`Passenger ${reservations[ref].guestName} (${reservations[ref].guests} pax) has been boarded successfully!`);
+      }
+    }
+
+    function renderManifest() {
+      const filter = document.getElementById('manifestFilter') ? document.getElementById('manifestFilter').value : 'ALL';
+      const reservations = getStoredReservations();
+      const tbody = document.getElementById('manifestTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      const keys = Object.keys(reservations);
+      if (keys.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" class="text-center py-6 text-gray-500">No active bookings found in system.</td></tr>';
+        return;
+      }
+
+      keys.forEach(k => {
+        const t = reservations[k];
+        if (filter !== 'ALL' && !t.time.includes(filter)) return;
+
+        const isCheckedIn = (t.status === 'CHECKED_IN');
+        const tr = document.createElement('tr');
+        tr.className = isCheckedIn ? 'bg-emerald-950/20' : 'hover:bg-gray-800/40';
+
+        tr.innerHTML = `
+          <td class="py-3 px-3 font-mono font-bold text-emerald-400">${t.ref}</td>
+          <td class="py-3 px-3 font-semibold text-white">${t.guestName}</td>
+          <td class="py-3 px-3 text-gray-300">${t.tour}</td>
+          <td class="py-3 px-3 font-mono text-gray-300">${t.time}</td>
+          <td class="py-3 px-3 text-center font-bold text-white">${t.guests}</td>
+          <td class="py-3 px-3 text-gray-400 text-[11px] max-w-xs truncate">${t.pickup}</td>
+          <td class="py-3 px-3 text-center">
+            ${isCheckedIn ? '<span class="px-2 py-0.5 rounded-full bg-emerald-900/60 border border-emerald-500 text-emerald-300 text-[10px] font-bold">Checked In</span>' :
+              '<span class="px-2 py-0.5 rounded-full bg-blue-950 border border-blue-500 text-blue-300 text-[10px] font-bold">Confirmed</span>'
+            }
+          </td>
+          <td class="py-3 px-3 text-right">
+            ${isCheckedIn ? '<span class="text-[10px] text-gray-500 font-mono">Admitted</span>' :
+              `<button onclick="document.getElementById('staffTicketInput').value='${t.ref}'; verifyTicketAction();" class="px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-[10px] font-bold">Check In</button>`
+            }
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Run auth check on load
+    checkStaffAuth();
+  </script>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER: AUTHENTIC LOGO, COMPANY DETAILS & STAGING CREDIT -->
+  <!-- ========================================================================= -->
+  <footer class="bg-brand-midnight text-white pt-16 pb-12 border-t-2 border-brand-gold/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-gray-800">
+
+        <!-- Column 1: Brand & Logo -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="bg-white p-2 rounded-2xl border border-brand-gold/50 shadow">
+              <img src="images/client_logo_transparent.png" alt="Divine DC Tours Logo" class="h-16 w-auto object-contain">
+            </div>
+            <div>
+              <span class="font-serif font-black text-xl uppercase tracking-wider text-white block">Divine DC Tours</span>
+              <span class="text-xs text-brand-gold uppercase tracking-widest font-bold">Washington, D.C. Sightseeing</span>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+            Washington, D.C.'s premier boutique sightseeing tour company. Operating comfortable 14-passenger panoramic touring vehicles equipped with heating and air conditioning.
+          </p>
+          <div class="text-xs text-brand-goldLight space-y-1">
+            <div>✦ Daytime Sightseeing: <strong>$49</strong> per passenger</div>
+            <div>✦ Moonlight Monuments: <strong>$59</strong> per passenger</div>
+            <div>✦ Strict 14-Passenger Vehicle Limit</div>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div class="md:col-span-3 space-y-3 text-xs">
+          <span class="font-bold uppercase tracking-widest text-brand-gold block">Sightseeing Experiences</span>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="van.html" class="hover:text-white transition">Our 14-Seat Van</a></li>
+            <li><a href="tours.html" class="hover:text-white transition">Daytime Tour ($49)</a></li>
+            <li><a href="tours.html" class="hover:text-white transition">Moonlight Tour ($59)</a></li>
+            <li><a href="tours.html" class="hover:text-white transition">Full-Bus Charter (Free D.C. Hotel Pickup)</a></li>
+            <li><a href="before-you-book.html" class="hover:text-white transition">Before You Book (Policies)</a></li>
+            <li><a href="book-online.html" class="hover:text-white transition">Book Online</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Guest Support & Contact -->
+        <div class="md:col-span-4 space-y-3 text-xs text-gray-400">
+          <span class="font-bold uppercase tracking-widest text-brand-gold block">Customer Support & Check-In</span>
+          <p>
+            Central Departure: <strong>National Mall & Lincoln Memorial Area</strong><br>
+            Washington, D.C.
+          </p>
+          <p>
+            Phone / Reservations: <strong class="text-white">(202) 555-0198</strong><br>
+            Official Website: <strong class="text-white">divineddctours.com</strong>
+          </p>
+          <div class="pt-2 flex gap-2">
+            <a href="reschedule.html" class="px-3 py-1.5 rounded-lg bg-gray-800 text-brand-gold text-[11px] font-bold hover:bg-gray-700 transition">
+              ↺ Reschedule Booking
+            </a>
+            <a href="staff.html" class="px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 text-[11px] font-mono hover:bg-gray-700 transition flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Staff Scanner</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Agency Credit & Staging Notice -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <div>
+          © 2026 Divine DC Tours. Client: Shantal Downer. Washington, D.C. All rights reserved.
+        </div>
+        <div class="flex items-center gap-2">
+          <span>Staging & Presentation by</span>
+          <a href="https://omnipeakdigital.com/" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:underline font-bold">
+            OmniPeak Digital
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
