@@ -4,19 +4,24 @@
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
+  "redirects": [
     {
       "source": "/mockups/divine-dc-tours",
-      "destination": "/public/mockups/devine-dc-tours/index.html"
+      "destination": "/mockups/devine-dc-tours",
+      "permanent": false
     },
     {
       "source": "/mockups/divine-dc-tours/",
-      "destination": "/public/mockups/devine-dc-tours/index.html"
+      "destination": "/mockups/devine-dc-tours",
+      "permanent": false
     },
     {
       "source": "/mockups/divine-dc-tours/:path*",
-      "destination": "/public/mockups/devine-dc-tours/:path*"
-    },
+      "destination": "/mockups/devine-dc-tours/:path*",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
     {
       "source": "/mockups/devine-dc-tours",
       "destination": "/public/mockups/devine-dc-tours/index.html"
@@ -24,6 +29,82 @@
     {
       "source": "/mockups/devine-dc-tours/",
       "destination": "/public/mockups/devine-dc-tours/index.html"
+    },
+    {
+      "source": "/mockups/devine-dc-tours/van",
+      "destination": "/public/mockups/devine-dc-tours/van.html"
+    },
+    {
+      "source": "/mockups/devine-dc-tours/our-14-seat-van",
+      "destination": "/public/mockups/devine-dc-tours/van.html"
+    },
+    {
+      "source": "/mockups/devine-dc-tours/tours",
+      "destination": "/public/mockups/devine-dc-tours/tours.html"
+    },
+    {
+      "source": "/mockups/devine-dc-tours/before-you-book",
+      "destination": "/public/mockups/devine-dc-tours/before-you-book.html"
+    },
+    {
+      "source": "/mockups/devine-dc-tours/book-online",
+      "destination": "/public/mockups/devine-dc-tours/book-online.html"
+    },
+    {
+      "source": "/mockups/devine-dc-tours/reschedule",
+      "destination": "/public/mockups/devine-dc-tours/reschedule.html"
+    },
+    {
+      "source": "/mockups/devine-dc-tours/contact",
+      "destination": "/public/mockups/devine-dc-tours/contact.html"
+    },
+    {
+      "source": "/mockups/devine-dc-tours/staff",
+      "destination": "/public/mockups/devine-dc-tours/staff.html"
+    },
+    {
+      "source": "/mockups/devine-dc-tours/:path*",
+      "destination": "/public/mockups/devine-dc-tours/:path*"
+    },
+    {
+      "source": "/mockups/images/:path*",
+      "destination": "/public/mockups/devine-dc-tours/images/:path*"
+    },
+    {
+      "source": "/mockups/qrcode.min.js",
+      "destination": "/public/mockups/devine-dc-tours/qrcode.min.js"
+    },
+    {
+      "source": "/mockups/booking-system.js",
+      "destination": "/public/mockups/devine-dc-tours/booking-system.js"
+    },
+    {
+      "source": "/mockups/van",
+      "destination": "/public/mockups/devine-dc-tours/van.html"
+    },
+    {
+      "source": "/mockups/tours",
+      "destination": "/public/mockups/devine-dc-tours/tours.html"
+    },
+    {
+      "source": "/mockups/before-you-book",
+      "destination": "/public/mockups/devine-dc-tours/before-you-book.html"
+    },
+    {
+      "source": "/mockups/book-online",
+      "destination": "/public/mockups/devine-dc-tours/book-online.html"
+    },
+    {
+      "source": "/mockups/reschedule",
+      "destination": "/public/mockups/devine-dc-tours/reschedule.html"
+    },
+    {
+      "source": "/mockups/contact",
+      "destination": "/public/mockups/devine-dc-tours/contact.html"
+    },
+    {
+      "source": "/mockups/staff",
+      "destination": "/public/mockups/devine-dc-tours/staff.html"
     },
     {
       "source": "/mockups/:path*",
