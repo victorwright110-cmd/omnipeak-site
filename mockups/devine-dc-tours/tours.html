@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signature Sightseeing Tours ($49 / $59) | Divine DC Tours Washington D.C.</title>
+  <meta name="description" content="Explore Washington, D.C.'s premier guided tours: Daytime Sightseeing ($49) and Lincoln & Monuments by Moonlight ($59). Small-group 14-seat panoramic shuttle.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/client_logo_transparent.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#102F56',
+              blue: '#1A477E',
+              gold: '#D4AF37',
+              goldLight: '#F4E091',
+              goldDark: '#AA8419',
+              midnight: '#0B1B2D',
+              sky: '#EBF3FA',
+              skyLight: '#F5F9FD',
+              charcoal: '#222B36',
+              border: '#E2E8F0',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cinzel: ['"Cinzel"', 'Georgia', 'serif'],
+          },
+          boxShadow: {
+            'card': '0 10px 30px -5px rgba(16, 47, 86, 0.08), 0 4px 12px -2px rgba(16, 47, 86, 0.04)',
+            'card-hover': '0 20px 40px -10px rgba(16, 47, 86, 0.16), 0 8px 16px -4px rgba(16, 47, 86, 0.08)',
+            'concierge': '0 25px 50px -12px rgba(16, 47, 86, 0.25)',
+            'vehicle': '0 20px 45px -10px rgba(16, 47, 86, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF8F3;
+      color: #222B36;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .heading-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .heading-cinzel {
+      font-family: 'Cinzel', Georgia, serif;
+    }
+    .hero-gradient {
+      background: linear-gradient(90deg, rgba(9, 27, 48, 0.88) 0%, rgba(9, 27, 48, 0.62) 48%, rgba(9, 27, 48, 0.22) 78%, rgba(9, 27, 48, 0.38) 100%);
+    }
+    @media (max-width: 1023px) {
+      .hero-gradient {
+        background: linear-gradient(180deg, rgba(9, 27, 48, 0.88) 0%, rgba(9, 27, 48, 0.72) 45%, rgba(9, 27, 48, 0.82) 100%);
+      }
+    }
+    .text-shadow-hero {
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+    }
+    .ticket-edge {
+      background-image: radial-gradient(circle at 0px 50%, transparent 12px, #ffffff 13px),
+                        radial-gradient(circle at 100% 50%, transparent 12px, #ffffff 13px);
+    }
+  </style>
+
+  <!-- QRCode Library for dynamic scannable tickets -->
+  <script src="qrcode.min.js"></script>
+  <!-- Shared Booking System & Database Engine -->
+  <script src="booking-system.js"></script>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
+  <!-- ========================================================================= -->
+  <!-- TOP ANNOUNCEMENT BAR: VERIFIED PRICING & 14-PASSENGER GUARANTEE -->
+  <!-- ========================================================================= -->
+  <div class="bg-brand-midnight text-white text-xs py-2.5 px-4 border-b border-brand-gold/30">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2 flex-wrap justify-center">
+        <span class="bg-brand-gold text-brand-midnight font-black uppercase tracking-wider text-[10px] px-2 py-0.5 rounded">
+          Boutique DC Tourism
+        </span>
+        <span class="text-brand-goldLight font-semibold">Strict 14-Passenger Maximum</span>
+        <span class="text-white/40 hidden sm:inline">•</span>
+        <span class="text-white/90">Daytime Tours <strong class="text-white font-black">$49</strong> • Moonlight Tours <strong class="text-brand-gold font-black">$59</strong></span>
+      </div>
+      <div class="flex items-center gap-4 text-white/90 text-[11px]">
+        <span class="hidden md:inline text-white/80">🏨 Full-Bus Bookings Include Free D.C. Hotel Pickup</span>
+        <a href="reschedule.html" class="text-brand-goldLight hover:text-white underline font-semibold transition">
+          ↺ Reschedule Booking
+        </a>
+        <span class="text-white/40">|</span>
+        <a href="staff.html" class="text-white/70 hover:text-white font-mono text-[10px] transition flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span>Staff Portal</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN HEADER: PROMINENT AUTHENTIC CLIENT LOGO & NAVIGATION -->
+  <!-- ========================================================================= -->
+  <header id="mainHeader" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border transition-all duration-300 shadow-sm py-3 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+
+      <!-- LEFT: CLIENT'S AUTHENTIC BRAND LOGO -->
+      <a href="index.html" class="flex items-center gap-3.5 group py-1">
+        <div class="bg-white p-1 rounded-xl border border-brand-border/60 shadow-sm group-hover:border-brand-gold transition duration-300 flex-shrink-0">
+          <img src="images/client_logo_transparent.png" 
+               alt="Divine DC Tours Authentic Compass Logo" 
+               class="h-10 sm:h-12 w-auto object-contain">
+        </div>
+        <div class="flex flex-col border-l-2 border-brand-gold/40 pl-3">
+          <span class="font-serif font-black text-brand-blue text-lg sm:text-2xl tracking-tight uppercase leading-none">
+            Divine DC Tours
+          </span>
+          <span class="text-[9px] sm:text-[11px] uppercase tracking-[0.22em] text-brand-goldDark font-extrabold mt-1">
+            Washington, D.C. Sightseeing
+          </span>
+        </div>
+      </a>
+
+      <!-- CENTER: MULTI-PAGE NAVIGATION LINKS -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-brand-charcoal">
+        <a href="index.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Home</a>
+        <a href="van.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Our 14-Seat Van</a>
+        <a href="tours.html" class="text-brand-blue border-b-2 border-brand-gold py-1 font-extrabold">Our Tours ($49 / $59)</a>
+        <a href="before-you-book.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Before You Book</a>
+        <a href="book-online.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Book Online</a>
+        <a href="contact.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Contact</a>
+      </nav>
+
+      <!-- RIGHT: PRIMARY ACTIONS -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="reschedule.html" class="px-3.5 py-2 rounded-xl text-xs font-bold text-brand-blue bg-brand-sky hover:bg-blue-100 transition border border-brand-blue/20 flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          <span>Reschedule</span>
+        </a>
+
+        <a href="book-online.html" class="relative group overflow-hidden rounded-xl bg-brand-blue hover:bg-brand-navy px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider text-white shadow-md transition-all duration-300">
+          <span class="relative z-10 flex items-center gap-2">
+            <span>Book Tour</span>
+            <span class="text-brand-gold font-mono font-black text-xs">$49+</span>
+          </span>
+          <div class="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-gold/20 to-brand-blue opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-brand-blue hover:bg-brand-sky transition" aria-label="Toggle navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobileDrawer" class="hidden lg:hidden pt-4 pb-4 border-t border-brand-border mt-3 flex-col gap-2.5 bg-white px-2">
+      <div class="flex items-center gap-3 p-3 bg-brand-skyLight rounded-xl border border-brand-border mb-2">
+        <img src="images/client_logo_transparent.png" alt="Logo" class="h-12 w-auto object-contain">
+        <div>
+          <span class="font-serif font-black text-brand-blue text-sm uppercase block">Divine DC Tours</span>
+          <span class="text-[10px] text-brand-goldDark font-bold uppercase">14-Passenger Sightseeing</span>
+        </div>
+      </div>
+      <a href="index.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Home</a>
+      <a href="van.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Our 14-Seat Van</a>
+      <a href="tours.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Our Tours ($49 / $59)</a>
+      <a href="before-you-book.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Before You Book (Policies)</a>
+      <a href="book-online.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Book Online (14 Max)</a>
+      <a href="contact.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Contact</a>
+      <div class="pt-2 border-t border-brand-border flex gap-2">
+        <a href="reschedule.html" class="flex-1 text-center py-2.5 rounded-xl text-xs font-bold text-brand-blue bg-brand-sky border border-brand-blue/20">
+          ↺ Reschedule
+        </a>
+        <a href="staff.html" class="flex-1 text-center py-2.5 rounded-xl text-xs font-bold text-gray-700 bg-gray-100 hover:bg-gray-200">
+          📱 Staff Portal
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO: SIGNATURE TOURS -->
+  <section class="relative bg-brand-navy text-white pt-16 pb-20 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-25">
+      <img src="images/us_capitol_daylight.jpg" alt="Capitol Daylight" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-goldLight text-xs font-bold uppercase tracking-wider mb-4">
+          ★ Verified D.C. Itineraries
+        </div>
+        <h1 class="heading-serif text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
+          Signature Washington, D.C. <br>
+          <span class="italic font-normal text-brand-goldLight">Sightseeing Experiences</span>
+        </h1>
+        <p class="text-base sm:text-xl text-white/90 leading-relaxed font-normal">
+          From the sunlit splendor of Capitol Hill and the Washington Monument to illuminated evening vistas at the Lincoln Memorial, discover the nation's capital in boutique 14-seat comfort.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOURS SHOWCASE SECTION -->
+  <section class="py-16 bg-[#FAF8F3]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-widest text-brand-goldDark font-bold block mb-1">BOUTIQUE EXPERIENCES</span>
+        <h2 class="heading-serif text-3xl sm:text-5xl font-bold text-brand-blue mb-4">
+          Choose Your Sightseeing Tour
+        </h2>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          All tours are conducted aboard our custom climate-controlled 14-passenger sightseeing shuttle with personal guide narration and curated monument photo stops.
+        </p>
+      </div>
+
+      <!-- 3 TOUR CARDS -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+
+        <!-- Tour 1: Daytime Tour ($49) -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-brand-border shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-64 overflow-hidden bg-brand-navy">
+              <img src="images/us_capitol_daylight.jpg" 
+                   alt="Daytime Washington D.C. Sightseeing Tour" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-brand-blue text-xs font-bold px-3 py-1 rounded-full shadow">
+                ☀ Daytime Tour
+              </div>
+              <div class="absolute bottom-3 left-3 bg-brand-navy/90 text-white text-xs font-semibold px-3 py-1 rounded-lg backdrop-blur-sm">
+                14-Passenger Maximum
+              </div>
+              <div class="absolute bottom-3 right-3 bg-brand-blue text-white font-black text-sm px-3.5 py-1 rounded-xl shadow font-mono">
+                $49 <span class="text-[10px] font-normal text-white/80">/ guest</span>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-brand-goldDark font-bold uppercase tracking-wider mb-2">
+                <span>Daily Departures</span>
+                <span>10:00 AM • 1:00 PM • 4:00 PM</span>
+              </div>
+              <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-2 group-hover:text-brand-goldDark transition">
+                Daytime D.C. Sightseeing Tour
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-6">
+                Take in the majesty of the U.S. Capitol, the Washington Monument, Lincoln Memorial, WWII Memorial, and grand presidential avenues with your friendly local guide.
+              </p>
+              <ul class="space-y-2.5 text-xs text-gray-600 mb-6">
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Duration:</strong> 2.5–3 hours guided journey</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Photo Stops:</strong> Capitol, Washington Monument, Lincoln</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Comfort:</strong> Dual A/C & heating, panoramic glass</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Departure:</strong> Central National Mall meeting point</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="book-online.html?tour=daytime" class="w-full bg-brand-blue hover:bg-brand-navy text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow flex items-center justify-center gap-2">
+              <span>Book Daytime Tour</span>
+              <span class="text-brand-gold font-mono font-black">$49</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tour 2: Lincoln & Monuments by Moonlight ($59) - FIXED IMAGE -->
+        <div class="bg-white rounded-3xl overflow-hidden border-2 border-brand-gold shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group relative">
+          <div class="absolute top-3 right-3 z-10 bg-brand-gold text-brand-navy text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">
+            ★ Evening Favorite
+          </div>
+
+          <div>
+            <div class="relative h-64 overflow-hidden bg-brand-navy">
+              <img src="images/lincoln_memorial_night.jpg" 
+                   alt="Lincoln Memorial Illuminated at Night Washington DC" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute top-4 left-4 bg-brand-navy text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow border border-brand-gold/40">
+                ☾ Evening Experience
+              </div>
+              <div class="absolute bottom-3 left-3 bg-brand-navy/90 text-white text-xs font-semibold px-3 py-1 rounded-lg backdrop-blur-sm">
+                14-Passenger Maximum
+              </div>
+              <div class="absolute bottom-3 right-3 bg-brand-gold text-brand-navy font-black text-sm px-3.5 py-1 rounded-xl shadow font-mono">
+                $59 <span class="text-[10px] font-bold text-brand-navy/80">/ guest</span>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-brand-goldDark font-bold uppercase tracking-wider mb-2">
+                <span>Twilight & Night Skies</span>
+                <span>7:30 PM Departure</span>
+              </div>
+              <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-2 group-hover:text-brand-goldDark transition">
+                Lincoln & Monuments by Moonlight
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-6">
+                See the nation's capital illuminated against the night sky. Experience the breathtaking glow of the Lincoln Memorial statue, Jefferson Memorial, and Capitol dome.
+              </p>
+              <ul class="space-y-2.5 text-xs text-gray-600 mb-6">
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Duration:</strong> 2.5–3 hours illuminated tour</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Evening Glow:</strong> Lincoln statue, Washington Monument obelisk</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Zero Traffic:</strong> Peaceful evening touring without daytime crowds</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Warmth:</strong> Heated cabin for cool evening breezes</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="book-online.html?tour=moonlight" class="w-full bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy font-black text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow flex items-center justify-center gap-2">
+              <span>Book Moonlight Tour</span>
+              <span class="font-mono">$59</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tour 3: Full-Bus Private Charter ($686) -->
+        <div class="bg-white rounded-3xl overflow-hidden border border-brand-border shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-64 overflow-hidden bg-brand-navy">
+              <img src="images/client_tour_vehicle.png" 
+                   alt="Private Full-Vehicle Charter Divine DC Tours" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                🏨 Hotel Pickup Included
+              </div>
+              <div class="absolute bottom-3 left-3 bg-brand-navy/90 text-white text-xs font-semibold px-3 py-1 rounded-lg backdrop-blur-sm">
+                Up to 14 Passengers
+              </div>
+              <div class="absolute bottom-3 right-3 bg-brand-navy text-brand-goldLight font-black text-sm px-3.5 py-1 rounded-xl shadow font-mono">
+                $686 <span class="text-[10px] font-normal text-white/80">flat rate</span>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-brand-goldDark font-bold uppercase tracking-wider mb-2">
+                <span>Private Family / Group</span>
+                <span>Custom Departure</span>
+              </div>
+              <h3 class="heading-serif text-2xl font-bold text-brand-blue mb-2 group-hover:text-brand-goldDark transition">
+                Private Full-Vehicle Charter
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-6">
+                Reserve the entire 14-passenger touring shuttle exclusively for your group. Includes free door-to-door hotel pickup anywhere in Washington D.C.
+              </p>
+              <ul class="space-y-2.5 text-xs text-gray-600 mb-6">
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Capacity:</strong> Entire 14-seat van reserved for you</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Door-to-Door:</strong> Free D.C. hotel pickup & return included</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Flexibility:</strong> Choose daytime or moonlight schedule</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Customization:</strong> Tailored photo stops and pacing</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <a href="book-online.html?tour=private" class="w-full bg-brand-navy hover:bg-brand-blue text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow flex items-center justify-center gap-2">
+              <span>Reserve Entire Shuttle</span>
+              <span class="text-brand-gold font-mono font-black">$686</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MONUMENT STOPS TIMELINE -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-brand-border shadow-card mb-16">
+        <div class="max-w-2xl mx-auto text-center mb-10">
+          <span class="text-xs uppercase tracking-widest text-brand-goldDark font-bold block mb-1">CURATED ITINERARY</span>
+          <h2 class="heading-serif text-2xl sm:text-4xl font-bold text-brand-blue mb-2">
+            What You Will See on Tour
+          </h2>
+          <p class="text-xs text-gray-500">
+            Carefully paced monument stops designed for walking, photography, and storytelling without exhausting long treks.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
+          <div class="p-4 rounded-2xl bg-brand-skyLight border border-brand-border">
+            <span class="w-7 h-7 rounded-full bg-brand-blue text-white font-mono font-bold flex items-center justify-center mb-3">1</span>
+            <strong class="text-brand-blue block text-sm mb-1">U.S. Capitol East Front</strong>
+            <p class="text-gray-600 leading-relaxed">View the iconic dome, Supreme Court, and Library of Congress with guide historical narration.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-brand-skyLight border border-brand-border">
+            <span class="w-7 h-7 rounded-full bg-brand-blue text-white font-mono font-bold flex items-center justify-center mb-3">2</span>
+            <strong class="text-brand-blue block text-sm mb-1">Washington Monument</strong>
+            <p class="text-gray-600 leading-relaxed">Marvel at the 555-foot marble obelisk from prime photo grounds adjacent to the National Mall.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-brand-skyLight border border-brand-border">
+            <span class="w-7 h-7 rounded-full bg-brand-blue text-white font-mono font-bold flex items-center justify-center mb-3">3</span>
+            <strong class="text-brand-blue block text-sm mb-1">Lincoln Memorial</strong>
+            <p class="text-gray-600 leading-relaxed">Ascend the steps to stand before the colossal statue of Abraham Lincoln and the Reflecting Pool.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-brand-skyLight border border-brand-border">
+            <span class="w-7 h-7 rounded-full bg-brand-blue text-white font-mono font-bold flex items-center justify-center mb-3">4</span>
+            <strong class="text-brand-blue block text-sm mb-1">Tidal Basin & WWII</strong>
+            <p class="text-gray-600 leading-relaxed">Explore the World War II Memorial, Martin Luther King Jr. Memorial, and scenic Tidal Basin shores.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER: AUTHENTIC LOGO, COMPANY DETAILS & STAGING CREDIT -->
+  <!-- ========================================================================= -->
+  <footer class="bg-brand-midnight text-white pt-16 pb-12 border-t-2 border-brand-gold/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-gray-800">
+
+        <!-- Column 1: Brand & Logo -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="bg-white p-2 rounded-2xl border border-brand-gold/50 shadow">
+              <img src="images/client_logo_transparent.png" alt="Divine DC Tours Logo" class="h-16 w-auto object-contain">
+            </div>
+            <div>
+              <span class="font-serif font-black text-xl uppercase tracking-wider text-white block">Divine DC Tours</span>
+              <span class="text-xs text-brand-gold uppercase tracking-widest font-bold">Washington, D.C. Sightseeing</span>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+            Washington, D.C.'s premier boutique sightseeing tour company. Operating comfortable 14-passenger panoramic touring vehicles equipped with heating and air conditioning.
+          </p>
+          <div class="text-xs text-brand-goldLight space-y-1">
+            <div>✦ Daytime Sightseeing: <strong>$49</strong> per passenger</div>
+            <div>✦ Moonlight Monuments: <strong>$59</strong> per passenger</div>
+            <div>✦ Strict 14-Passenger Vehicle Limit</div>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div class="md:col-span-3 space-y-3 text-xs">
+          <span class="font-bold uppercase tracking-widest text-brand-gold block">Sightseeing Experiences</span>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="van.html" class="hover:text-white transition">Our 14-Seat Van</a></li>
+            <li><a href="tours.html" class="hover:text-white transition">Daytime Tour ($49)</a></li>
+            <li><a href="tours.html" class="hover:text-white transition">Moonlight Tour ($59)</a></li>
+            <li><a href="tours.html" class="hover:text-white transition">Full-Bus Charter (Free D.C. Hotel Pickup)</a></li>
+            <li><a href="before-you-book.html" class="hover:text-white transition">Before You Book (Policies)</a></li>
+            <li><a href="book-online.html" class="hover:text-white transition">Book Online</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Guest Support & Contact -->
+        <div class="md:col-span-4 space-y-3 text-xs text-gray-400">
+          <span class="font-bold uppercase tracking-widest text-brand-gold block">Customer Support & Check-In</span>
+          <p>
+            Central Departure: <strong>National Mall & Lincoln Memorial Area</strong><br>
+            Washington, D.C.
+          </p>
+          <p>
+            Phone / Reservations: <strong class="text-white">(202) 555-0198</strong><br>
+            Official Website: <strong class="text-white">divineddctours.com</strong>
+          </p>
+          <div class="pt-2 flex gap-2">
+            <a href="reschedule.html" class="px-3 py-1.5 rounded-lg bg-gray-800 text-brand-gold text-[11px] font-bold hover:bg-gray-700 transition">
+              ↺ Reschedule Booking
+            </a>
+            <a href="staff.html" class="px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 text-[11px] font-mono hover:bg-gray-700 transition flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Staff Scanner</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Agency Credit & Staging Notice -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <div>
+          © 2026 Divine DC Tours. Client: Shantal Downer. Washington, D.C. All rights reserved.
+        </div>
+        <div class="flex items-center gap-2">
+          <span>Staging & Presentation by</span>
+          <a href="https://omnipeakdigital.com/" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:underline font-bold">
+            OmniPeak Digital
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>

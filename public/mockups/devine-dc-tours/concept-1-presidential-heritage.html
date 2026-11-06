@@ -98,13 +98,13 @@
       </div>
       <div class="flex items-center gap-4 text-white/90 text-[11px]">
         <span class="hidden md:inline text-white/80">🏨 Full-Bus Bookings Include D.C. Hotel Pickup</span>
-        <button onclick="openRescheduleModal()" class="text-brand-goldLight hover:text-white underline font-semibold transition">
+        <a href="reschedule.html" class="text-brand-goldLight hover:text-white underline font-semibold transition">
           ↺ Reschedule Booking
-        </button>
+        </a>
         <span class="text-white/40">|</span>
-        <button onclick="openGuideScannerModal()" class="text-white/70 hover:text-white font-mono text-[10px] transition">
+        <a href="staff.html" class="text-white/70 hover:text-white font-mono text-[10px] transition">
           📱 Staff Portal
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -133,25 +133,26 @@
         </div>
       </a>
 
-      <!-- CENTER: NAVIGATION LINKS -->
+      <!-- CENTER: MULTI-PAGE NAVIGATION LINKS -->
       <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-brand-charcoal">
-        <a href="#hero" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Home</a>
-        <a href="#vehicle" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Our 14-Seat Van</a>
-        <a href="#tours" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Tours ($49 / $59)</a>
-        <a href="#policies" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Before You Book</a>
-        <a href="#booking" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Book Online</a>
+        <a href="index.html" class="text-brand-blue border-b-2 border-brand-gold py-1 font-extrabold">Home</a>
+        <a href="van.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Our 14-Seat Van</a>
+        <a href="tours.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Tours ($49 / $59)</a>
+        <a href="before-you-book.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Before You Book</a>
+        <a href="book-online.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Book Online</a>
+        <a href="contact.html" class="hover:text-brand-blue transition py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Contact</a>
       </nav>
 
       <!-- RIGHT: PRIMARY ACTIONS -->
       <div class="hidden sm:flex items-center gap-3">
-        <button onclick="openRescheduleModal()" class="px-3.5 py-2 rounded-xl text-xs font-bold text-brand-blue bg-brand-sky hover:bg-blue-100 transition border border-brand-blue/20 flex items-center gap-1.5">
+        <a href="reschedule.html" class="px-3.5 py-2 rounded-xl text-xs font-bold text-brand-blue bg-brand-sky hover:bg-blue-100 transition border border-brand-blue/20 flex items-center gap-1.5">
           <svg class="w-3.5 h-3.5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
           </svg>
           <span>Reschedule</span>
-        </button>
+        </a>
 
-        <a href="#booking" class="relative group overflow-hidden rounded-xl bg-brand-blue hover:bg-brand-navy px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider text-white shadow-md transition-all duration-300">
+        <a href="book-online.html" class="relative group overflow-hidden rounded-xl bg-brand-blue hover:bg-brand-navy px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider text-white shadow-md transition-all duration-300">
           <span class="relative z-10 flex items-center gap-2">
             <span>Book Tour</span>
             <span class="text-brand-gold font-mono font-black text-xs">$49+</span>
@@ -178,18 +179,19 @@
           <span class="text-[10px] text-brand-goldDark font-bold uppercase">14-Passenger Sightseeing</span>
         </div>
       </div>
-      <a href="#hero" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Home</a>
-      <a href="#vehicle" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Our 14-Seat Tour Vehicle</a>
-      <a href="#tours" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Tour Packages ($49 / $59)</a>
-      <a href="#policies" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Before You Book (Policies)</a>
-      <a href="#booking" onclick="toggleMobileMenu()" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Book Online (14 Max)</a>
+      <a href="index.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Home</a>
+      <a href="van.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Our 14-Seat Tour Vehicle</a>
+      <a href="tours.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Tour Packages ($49 / $59)</a>
+      <a href="before-you-book.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Before You Book (Policies)</a>
+      <a href="book-online.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Book Online (14 Max)</a>
+      <a href="contact.html" class="text-brand-charcoal hover:text-brand-blue text-sm font-semibold py-2 px-3 rounded-lg hover:bg-brand-sky">Contact</a>
       <div class="pt-2 border-t border-brand-border flex gap-2">
-        <button onclick="toggleMobileMenu(); openRescheduleModal()" class="flex-1 py-2.5 rounded-xl text-xs font-bold text-brand-blue bg-brand-sky border border-brand-blue/20">
+        <a href="reschedule.html" class="flex-1 text-center py-2.5 rounded-xl text-xs font-bold text-brand-blue bg-brand-sky border border-brand-blue/20">
           ↺ Reschedule
-        </button>
-        <button onclick="toggleMobileMenu(); openGuideScannerModal()" class="flex-1 py-2.5 rounded-xl text-xs font-bold text-gray-700 bg-gray-100">
-          📱 Staff Scanner
-        </button>
+        </a>
+        <a href="staff.html" class="flex-1 text-center py-2.5 rounded-xl text-xs font-bold text-gray-700 bg-gray-100 hover:bg-gray-200">
+          📱 Staff Portal
+        </a>
       </div>
     </div>
   </header>
@@ -600,7 +602,7 @@
 
           <div>
             <div class="relative h-64 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?auto=format&fit=crop&w=800&q=80"
+              <img src="images/lincoln_memorial_night.jpg"
                    alt="Lincoln Memorial Illuminated at Night Washington DC"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
               <div class="absolute top-4 left-4 bg-brand-navy text-brand-gold text-xs font-bold px-3 py-1 rounded-full shadow">
@@ -1210,9 +1212,9 @@
               Verify
             </button>
           </div>
-          <button onclick="prefillActiveBookingForScanner()" class="w-full py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 text-[11px] font-bold rounded-xl transition">
-            ⚡ Quick-Verify Most Recent Booking
-          </button>
+          <a href="staff.html" class="w-full py-2.5 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-500/50 text-emerald-300 text-[11px] font-bold rounded-xl transition flex items-center justify-center gap-1.5">
+            🔒 Open Authorized Staff Check-In Terminal →
+          </a>
         </div>
 
         <!-- Result Box -->
@@ -1258,12 +1260,14 @@
         <div class="md:col-span-3 space-y-3 text-xs">
           <span class="font-bold uppercase tracking-widest text-brand-gold block">Sightseeing Experiences</span>
           <ul class="space-y-2 text-gray-400">
-            <li><a href="#hero" class="hover:text-white transition">Home</a></li>
-            <li><a href="#vehicle" class="hover:text-white transition">Our 14-Seat Van</a></li>
-            <li><a href="#tours" class="hover:text-white transition">Daytime Tour ($49)</a></li>
-            <li><a href="#tours" class="hover:text-white transition">Moonlight Tour ($59)</a></li>
-            <li><a href="#tours" class="hover:text-white transition">Full-Bus Charter (D.C. Hotel Pickup)</a></li>
-            <li><a href="#policies" class="hover:text-white transition">Before You Book (Policies)</a></li>
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="van.html" class="hover:text-white transition">Our 14-Seat Van</a></li>
+            <li><a href="tours.html" class="hover:text-white transition">Daytime Tour ($49)</a></li>
+            <li><a href="tours.html" class="hover:text-white transition">Moonlight Tour ($59)</a></li>
+            <li><a href="tours.html" class="hover:text-white transition">Full-Bus Charter (D.C. Hotel Pickup)</a></li>
+            <li><a href="before-you-book.html" class="hover:text-white transition">Before You Book (Policies)</a></li>
+            <li><a href="book-online.html" class="hover:text-white transition">Book Online</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
           </ul>
         </div>
 
@@ -1279,12 +1283,13 @@
             Official Website: <strong class="text-white">divineddctours.com</strong>
           </p>
           <div class="pt-2 flex gap-2">
-            <button onclick="openRescheduleModal()" class="px-3 py-1.5 rounded-lg bg-gray-800 text-brand-gold text-[11px] font-bold hover:bg-gray-700 transition">
+            <a href="reschedule.html" class="px-3 py-1.5 rounded-lg bg-gray-800 text-brand-gold text-[11px] font-bold hover:bg-gray-700 transition">
               ↺ Reschedule Booking
-            </button>
-            <button onclick="openGuideScannerModal()" class="px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 text-[11px] font-mono hover:bg-gray-700 transition">
-              📱 Staff Scanner
-            </button>
+            </a>
+            <a href="staff.html" class="px-3 py-1.5 rounded-lg bg-gray-800 text-gray-300 text-[11px] font-mono hover:bg-gray-700 transition flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Staff Scanner</span>
+            </a>
           </div>
         </div>
 
