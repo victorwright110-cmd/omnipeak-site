@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact & Central Location | Divine DC Tours Washington D.C.</title>
-  <meta name="description" content="Contact Divine DC Tours. Operating daily sightseeing tours in Washington, D.C. Phone: (202) 555-0198. Central meeting point near National Mall.">
+  <meta name="description" content="Contact Divine DC Tours. Operating daily sightseeing tours in Washington, D.C. Phone: (240) 606-9008. Central meeting point near National Mall.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/mockups/devine-dc-tours/images/client_logo_transparent.png">
@@ -238,6 +238,9 @@
             </p>
 
             <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-5 text-xs">
+              <!-- Honeypot Anti-Spam Field -->
+              <input type="text" name="hp_field" id="hp_field" class="hidden" tabindex="-1" autocomplete="off">
+              <div id="contactErrorBox" class="hidden p-3.5 rounded-xl bg-red-50 border border-red-300 text-red-800 text-xs font-semibold leading-relaxed"></div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block font-bold text-brand-blue mb-1 uppercase tracking-wider text-[11px]">Your Full Name *</label>
@@ -252,14 +255,14 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block font-bold text-brand-blue mb-1 uppercase tracking-wider text-[11px]">Phone Number</label>
-                  <input type="tel" id="contactPhone" placeholder="(202) 555-0198" class="w-full p-3 rounded-xl border border-brand-border focus:border-brand-blue focus:ring-1 focus:ring-brand-blue text-sm">
+                  <input type="tel" id="contactPhone" placeholder="(240) 606-9008" class="w-full p-3 rounded-xl border border-brand-border focus:border-brand-blue focus:ring-1 focus:ring-brand-blue text-sm">
                 </div>
                 <div>
                   <label class="block font-bold text-brand-blue mb-1 uppercase tracking-wider text-[11px]">Tour Interest</label>
                   <select id="contactTour" class="w-full p-3 rounded-xl border border-brand-border focus:border-brand-blue focus:ring-1 focus:ring-brand-blue text-sm bg-white">
                     <option value="Daytime Sightseeing ($49)">Daytime D.C. Sightseeing Tour ($49)</option>
                     <option value="Moonlight Tour ($59)">Lincoln & Monuments by Moonlight ($59)</option>
-                    <option value="Private Charter ($686)">Private Full-Vehicle Charter ($686)</option>
+                    <option value="Private Charter (Rate Pending Approval)">Private Full-Vehicle Charter (Rate Pending Final Approval)</option>
                     <option value="General Question">General Sightseeing Question</option>
                   </select>
                 </div>
@@ -302,9 +305,9 @@
                 📞
               </div>
               <div>
-                <span class="text-gray-400 block font-semibold text-[10px] uppercase tracking-wider">Phone / WhatsApp</span>
-                <strong class="text-brand-blue text-sm">(202) 555-0198</strong>
-                <span class="text-gray-500 block text-[11px]">Lines open daily 8:30 AM – 9:00 PM EST</span>
+                <span class="text-gray-400 block font-semibold text-[10px] uppercase tracking-wider">Official Telephone</span>
+                <a href="tel:+12406069008" class="text-brand-blue font-bold text-sm hover:underline">+1 (240) 606-9008</a>
+                <span class="text-gray-500 block text-[11px]">Direct inquiries & tour concierge</span>
               </div>
             </div>
 
@@ -314,7 +317,7 @@
               </div>
               <div>
                 <span class="text-gray-400 block font-semibold text-[10px] uppercase tracking-wider">Official Email</span>
-                <strong class="text-brand-blue text-sm">info@divinedctours.com</strong>
+                <strong class="text-brand-blue text-sm">divinedctours@gmail.com</strong>
                 <span class="text-gray-500 block text-[11px]">Direct client support & booking assistance</span>
               </div>
             </div>
@@ -325,8 +328,8 @@
               </div>
               <div>
                 <span class="text-gray-400 block font-semibold text-[10px] uppercase tracking-wider">Central Departure Area</span>
-                <strong class="text-brand-blue text-sm">National Mall & Lincoln Memorial Area</strong>
-                <span class="text-gray-500 block text-[11px]">Washington, D.C. 20037</span>
+                <strong class="text-brand-blue text-sm">National Mall Sightseeing Hub</strong>
+                <span class="text-gray-500 block text-[11px]">Washington, D.C. (Exact street coordinates confirmed in booking confirmation)</span>
               </div>
             </div>
 
@@ -364,9 +367,74 @@
   <script>
     function handleContactSubmit(e) {
       e.preventDefault();
+      const errBox = document.getElementById('contactErrorBox');
+      const succBox = document.getElementById('contactSuccessBox');
+      errBox.classList.add('hidden');
+      succBox.classList.add('hidden');
+
+      // Honeypot check
+      const hp = document.getElementById('hp_field').value;
+      if (hp) {
+        // Silently ignore bots
+        return;
+      }
+
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const phone = document.getElementById('contactPhone').value.trim();
+      const tour = document.getElementById('contactTour').value;
+      const date = document.getElementById('contactDate').value;
+      const message = document.getElementById('contactMessage').value.trim();
+
+      // Validation
+      if (name.length < 2) {
+        errBox.textContent = 'Please enter your full name (minimum 2 characters).';
+        errBox.classList.remove('hidden');
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        errBox.textContent = 'Please provide a valid email address (e.g. name@example.com).';
+        errBox.classList.remove('hidden');
+        return;
+      }
+
+      if (date) {
+        const todayStr = getFormattedDate(0);
+        if (date < todayStr) {
+          errBox.textContent = 'Please select today or a future date for your planned visit.';
+          errBox.classList.remove('hidden');
+          return;
+        }
+      }
+
+      if (message.length < 10) {
+        errBox.textContent = 'Please enter a message with at least 10 characters so we can assist you.';
+        errBox.classList.remove('hidden');
+        return;
+      }
+
+      // Record inquiry
       const ref = 'INQ-' + Math.floor(10000 + Math.random() * 90000);
+      const inquiryRecord = {
+        ref: ref,
+        name: name,
+        email: email,
+        phone: phone || 'Not provided',
+        tour: tour,
+        date: date || 'Not specified',
+        message: message,
+        routedTo: 'divinedctours@gmail.com',
+        timestamp: new Date().toISOString()
+      };
+
+      if (typeof saveInquiry === 'function') {
+        saveInquiry(inquiryRecord);
+      }
+
       document.getElementById('contactRefId').textContent = ref;
-      document.getElementById('contactSuccessBox').classList.remove('hidden');
+      succBox.classList.remove('hidden');
       document.getElementById('contactForm').reset();
     }
   </script>
@@ -423,7 +491,7 @@
             Washington, D.C.
           </p>
           <p>
-            Phone / Reservations: <strong class="text-white">(202) 555-0198</strong><br>
+            Phone / Reservations: <strong class="text-white">(240) 606-9008</strong><br>
             Official Website: <strong class="text-white">divineddctours.com</strong>
           </p>
           <div class="pt-2 flex gap-2">

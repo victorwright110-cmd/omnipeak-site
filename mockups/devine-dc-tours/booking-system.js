@@ -1,14 +1,23 @@
 /**
- * DIVINE DC TOURS - SHARED BOOKING, CAPACITY & QR VALIDATION SYSTEM
- * Shared across all website pages (localStorage synchronized)
+ * DIVINE DC TOURS - MASTER BOOKING, CAPACITY & QR VALIDATION ENGINE
+ * Client: Shantal Downer | OmniPeak Digital Staging
+ * Synchronized across all website pages via localStorage
  */
 
 const MAX_CAPACITY = 14;
 
+// Confirmed Client Pricing & Operational Parameters
 const PRICES = {
   'Daytime Washington D.C. Sightseeing Tour': 49,
   'Lincoln & National Monuments by Moonlight': 59,
-  'Private Full-Vehicle Charter': 686
+  'Private Full-Vehicle Charter': 686 // Flagged for client confirmation
+};
+
+const CLIENT_CONTACT = {
+  phone: '+1 (240) 606-9008',
+  phoneDisplay: '(240) 606-9008',
+  email: 'divinedctours@gmail.com',
+  departureArea: 'National Mall Sightseeing Hub, Washington, D.C. (Exact curbside coordinates provided upon booking confirmation)'
 };
 
 const DEFAULT_SLOTS = [
@@ -51,10 +60,11 @@ function initializeSystemData() {
         guests: 2,
         guestName: 'Eleanor Roosevelt',
         guestEmail: 'eleanor@example.com',
-        guestPhone: '(202) 555-0144',
+        guestPhone: '(240) 606-9008',
         total: '$98',
         pickup: 'National Mall Central Departure • Washington, D.C.',
         status: 'CONFIRMED',
+        paymentStatus: 'TEST_MODE_PENDING_GATEWAY',
         created: new Date().toISOString()
       },
       'DDC-2026-5519': {
@@ -65,10 +75,11 @@ function initializeSystemData() {
         guests: 4,
         guestName: 'Marcus Vance',
         guestEmail: 'marcus.v@example.com',
-        guestPhone: '(202) 555-0182',
+        guestPhone: '(240) 606-9008',
         total: '$236',
         pickup: 'National Mall Central Departure • Washington, D.C.',
         status: 'CONFIRMED',
+        paymentStatus: 'TEST_MODE_PENDING_GATEWAY',
         created: new Date().toISOString()
       },
       'DDC-2026-9204': {
@@ -79,15 +90,21 @@ function initializeSystemData() {
         guests: 14,
         guestName: 'Sarah Jenkins Group',
         guestEmail: 'sarah.j@example.com',
-        guestPhone: '(202) 555-0199',
-        total: '$686',
+        guestPhone: '(240) 606-9008',
+        total: '$686 (Pending Approval)',
         pickup: '🏨 Hotel Pickup: The Hay-Adams (800 16th St NW, Washington, DC)',
         status: 'CHECKED_IN',
         checkedInAt: '09:42 AM by Guide Michael',
+        paymentStatus: 'PENDING_CLIENT_RATE_CONFIRMATION',
         created: new Date().toISOString()
       }
     };
     localStorage.setItem('divine_dc_tickets_v2', JSON.stringify(initialTickets));
+  }
+
+  // 3. Inquiries storage
+  if (!localStorage.getItem('divine_dc_inquiries_v2')) {
+    localStorage.setItem('divine_dc_inquiries_v2', JSON.stringify([]));
   }
 }
 
@@ -109,6 +126,22 @@ function getStoredReservations() {
   } catch (e) {
     return {};
   }
+}
+
+// Inquiries Getter & Saver
+function getStoredInquiries() {
+  initializeSystemData();
+  try {
+    return JSON.parse(localStorage.getItem('divine_dc_inquiries_v2')) || [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveInquiry(inquiry) {
+  const inqs = getStoredInquiries();
+  inqs.unshift(inquiry);
+  localStorage.setItem('divine_dc_inquiries_v2', JSON.stringify(inqs));
 }
 
 // Mobile Menu Toggle

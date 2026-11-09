@@ -261,10 +261,10 @@
                 <input type="radio" name="tourSelect" value="Private Full-Vehicle Charter" onchange="onTourChanged()" class="peer sr-only">
                 <div class="flex items-center justify-between mb-2">
                   <span class="text-xs font-black uppercase text-emerald-800">Private Charter</span>
-                  <span class="font-mono font-black text-emerald-800 text-sm">$686</span>
+                  <span class="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded uppercase">Rate Pending Approval</span>
                 </div>
                 <div class="text-[11px] text-gray-600 mb-2">Entire 14-seat shuttle + Free D.C. Hotel Pickup</div>
-                <div class="text-[10px] font-bold text-emerald-700">Up to 14 Passengers Included</div>
+                <div class="text-[10px] font-bold text-emerald-700">Custom Quote / Subject to Client Confirmation</div>
               </label>
             </div>
           </div>
@@ -349,7 +349,7 @@
               </div>
               <div>
                 <label class="block font-bold text-brand-blue mb-1 uppercase tracking-wider text-[11px]">Mobile Phone (SMS Updates) *</label>
-                <input type="tel" id="leadGuestPhone" required placeholder="(202) 555-0144" class="w-full p-3 rounded-xl border border-brand-border text-sm">
+                <input type="tel" id="leadGuestPhone" required placeholder="(240) 606-9008" class="w-full p-3 rounded-xl border border-brand-border text-sm">
               </div>
             </div>
 
@@ -364,6 +364,33 @@
                 <span id="grandTotalDisplay" class="font-mono text-3xl font-black text-brand-gold">$98</span>
               </div>
             </div>
+          </div>
+
+          <!-- MANDATORY ACCESSIBILITY & ARRIVAL NOTICE (Req 10) -->
+          <div class="p-5 rounded-2xl bg-amber-50/80 border border-amber-300 text-xs text-amber-950 space-y-3">
+            <div class="font-extrabold text-sm text-amber-900 flex items-center gap-2">
+              <span>⚠️ Important Guest Policies & Accessibility Notice</span>
+            </div>
+            <ul class="space-y-1.5 text-xs text-amber-900 list-disc list-inside">
+              <li><strong>Accessibility Notice:</strong> Our current tour vehicles are <em>not wheelchair accessible</em>. Low step-in access is provided for ambulatory guests.</li>
+              <li><strong>Arrival Recommendation:</strong> Please arrive 10–15 minutes prior to your scheduled departure time.</li>
+              <li><strong>Missed Tour Policy:</strong> If a guest misses the scheduled departure, their ticket may be used on another tour on the same day, subject to available seats (strict 14-passenger limit).</li>
+            </ul>
+            <label class="flex items-start gap-2.5 pt-2 cursor-pointer font-semibold text-[11px] text-amber-950">
+              <input type="checkbox" id="policyAcknowledgment" required class="mt-0.5 rounded text-brand-blue focus:ring-brand-blue">
+              <span>I acknowledge that the vehicle is not wheelchair accessible, arrival is recommended 10–15 minutes prior to departure, and missed departures may be used on available same-day tours. *</span>
+            </label>
+          </div>
+
+          <!-- PAYMENT GATEWAY INTEGRATION CALLOUT (Req 7) -->
+          <div class="p-4 rounded-2xl bg-brand-skyLight border border-brand-border text-xs text-brand-navy space-y-1.5">
+            <div class="flex items-center justify-between font-bold text-[11px] uppercase tracking-wider text-brand-blue">
+              <span>💳 Payment Gateway Integration (Stripe / Square)</span>
+              <span class="px-2 py-0.5 rounded bg-blue-100 text-brand-blue font-mono text-[10px]">Pending Client Selection</span>
+            </div>
+            <p class="text-[11px] text-gray-600 leading-relaxed">
+              Integration ready for Stripe or Square upon client provider confirmation. This checkout operates in prototype reservation request mode (no live credit card charged). A verified digital QR ticket will be issued for check-in demonstration.
+            </p>
           </div>
 
           <!-- SUBMIT BUTTON -->
@@ -551,15 +578,14 @@
 
       let total = 0;
       if (activeTour === 'Private Full-Vehicle Charter') {
-        total = 686;
-        document.getElementById('summaryTextDisplay').textContent = `Private Charter (Entire 14-Seat Van + D.C. Hotel Pickup)`;
+        document.getElementById('summaryTextDisplay').textContent = `Private Charter (Entire 14-Seat Van + D.C. Hotel Pickup) - Rate Pending Client Confirmation`;
+        document.getElementById('grandTotalDisplay').textContent = 'Custom Quote';
       } else {
         const pricePerPax = PRICES[activeTour] || 49;
         total = passengerCount * pricePerPax;
         document.getElementById('summaryTextDisplay').textContent = `${passengerCount} Guests × ${activeTour} ($${pricePerPax})`;
+        document.getElementById('grandTotalDisplay').textContent = `$${total}`;
       }
-
-      document.getElementById('grandTotalDisplay').textContent = `$${total}`;
 
       // Hotel Pickup Toggle
       const hotelBlock = document.getElementById('hotelPickupBlock');
@@ -719,7 +745,7 @@
             Washington, D.C.
           </p>
           <p>
-            Phone / Reservations: <strong class="text-white">(202) 555-0198</strong><br>
+            Phone / Reservations: <strong class="text-white">(240) 606-9008</strong><br>
             Official Website: <strong class="text-white">divineddctours.com</strong>
           </p>
           <div class="pt-2 flex gap-2">

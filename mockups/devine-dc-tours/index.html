@@ -267,20 +267,24 @@
           </div>
 
           <!-- CTAS & ACTIONS -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-            <a href="#booking" class="bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy hover:brightness-105 font-black text-xs uppercase tracking-widest px-8 py-4 rounded-xl text-center shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2 group">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+            <a href="#booking" class="bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy hover:brightness-105 font-black text-xs uppercase tracking-widest px-6 py-4 rounded-xl text-center shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2 group">
               <span>Book Your Tour ($49 / $59)</span>
               <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </a>
 
-            <button onclick="openRescheduleModal()" class="bg-white/20 hover:bg-white/30 text-white font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-xl border border-white/30 transition text-center flex items-center justify-center gap-2">
+            <a href="/mockups/devine-dc-tours/tours.html" class="bg-white/20 hover:bg-white/30 text-white font-bold text-xs uppercase tracking-wider px-5 py-4 rounded-xl border border-white/30 transition text-center flex items-center justify-center gap-1.5">
+              <span>Explore Tours</span>
+            </a>
+
+            <a href="/mockups/devine-dc-tours/reschedule.html" class="bg-brand-midnight/70 hover:bg-brand-midnight text-brand-goldLight font-bold text-xs uppercase tracking-wider px-5 py-4 rounded-xl border border-brand-gold/30 transition text-center flex items-center justify-center gap-1.5">
               <svg class="w-4 h-4 text-brand-goldLight" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
               </svg>
-              <span>Manage / Reschedule Ticket</span>
-            </button>
+              <span>Manage / Reschedule</span>
+            </a>
           </div>
 
           <!-- Trust Badges -->
@@ -660,8 +664,9 @@
                 Private Charter (14 Seats)
               </div>
               <!-- Price Badge -->
-              <div class="absolute bottom-3 right-3 bg-brand-navy text-white font-black text-xs px-3 py-1 rounded-xl shadow font-mono">
-                From $686 <span class="text-[10px] font-normal text-white/70">(14 × $49)</span>
+              <div class="absolute bottom-3 right-3 bg-brand-navy/95 border border-brand-gold/50 text-brand-goldLight font-bold text-[11px] px-3 py-1.5 rounded-xl shadow text-center">
+                <span class="block text-[9px] uppercase tracking-wider text-amber-300">Rate Pending Approval</span>
+                <span>Inquire for Quote</span>
               </div>
             </div>
 
@@ -679,7 +684,7 @@
               <ul class="space-y-2 text-xs text-gray-600 mb-6">
                 <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> <strong>Complimentary D.C. Hotel Pickup & Drop-Off</strong></li>
                 <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Full 14-passenger capacity reserved exclusively</li>
-                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Flexible daytime ($686) or moonlight ($826) departure</li>
+                <li class="flex items-center gap-2"><span class="text-brand-gold">✓</span> Flexible daytime or moonlight departure (custom quote upon inquiry)</li>
               </ul>
             </div>
           </div>
@@ -959,7 +964,7 @@
               </div>
               <div>
                 <label class="block font-bold text-gray-700 mb-1">On-Site Contact Phone for Driver *</label>
-                <input type="tel" id="hotelPhone" placeholder="(202) 555-0199" class="w-full p-2.5 rounded-xl border border-emerald-300 bg-white text-gray-800">
+                <input type="tel" id="hotelPhone" placeholder="(240) 606-9008" class="w-full p-2.5 rounded-xl border border-emerald-300 bg-white text-gray-800">
               </div>
               <div>
                 <label class="block font-bold text-gray-700 mb-1">Special Pickup Instructions</label>
@@ -980,7 +985,7 @@
             </div>
             <div>
               <label class="block text-xs font-bold text-gray-700 mb-1">Mobile Phone Number *</label>
-              <input type="tel" id="guestPhone" required placeholder="(202) 555-0123" class="w-full bg-brand-skyLight border border-brand-border rounded-xl p-3 text-xs text-brand-blue font-semibold">
+              <input type="tel" id="guestPhone" required placeholder="(240) 606-9008" class="w-full bg-brand-skyLight border border-brand-border rounded-xl p-3 text-xs text-brand-blue font-semibold">
             </div>
           </div>
 
@@ -1281,7 +1286,7 @@
             Washington, D.C.
           </p>
           <p>
-            Phone / Reservations: <strong class="text-white">(202) 555-0198</strong><br>
+            Phone / Reservations: <strong class="text-white">(240) 606-9008</strong><br>
             Official Website: <strong class="text-white">divineddctours.com</strong>
           </p>
           <div class="pt-2 flex gap-2">

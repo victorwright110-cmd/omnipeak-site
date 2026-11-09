@@ -247,9 +247,12 @@
           </button>
         </form>
 
-        <div class="p-3 rounded-xl bg-gray-800/80 border border-gray-700 text-[11px] text-gray-400 text-center">
-          <strong class="text-brand-goldLight block">Private Client & Staff Demo Access:</strong>
-          Staff PIN: <code class="text-emerald-400 font-mono font-bold">1776</code> or Password: <code class="text-emerald-400 font-mono font-bold">divine2026</code>
+        <div id="staffAuthError" class="hidden p-3 rounded-xl bg-red-950/80 border border-red-700/80 text-[11px] text-red-200 text-center font-semibold">
+          Authentication failed. Invalid staff security PIN or password. Access is restricted to authorized Divine DC Tours personnel.
+        </div>
+        <div class="p-3 rounded-xl bg-gray-800/50 border border-gray-700/60 text-[11px] text-gray-400 text-center">
+          <strong class="text-gray-300 block mb-0.5">Authorized Personnel Only</strong>
+          Protected operational dispatch portal for Divine DC Tours guides and manifest managers.
         </div>
       </div>
 
@@ -278,12 +281,21 @@
               <span>📷 Ticket Scanner & Lookup</span>
             </h3>
 
-            <!-- Simulated Camera Viewfinder -->
-            <div class="relative bg-black rounded-2xl h-52 border-2 border-dashed border-emerald-500/50 flex flex-col items-center justify-center overflow-hidden">
-              <div class="absolute inset-4 border border-emerald-400/30 rounded-xl pointer-events-none"></div>
-              <div class="w-full h-0.5 bg-emerald-400 shadow-[0_0_20px_#10b981] animate-pulse"></div>
-              <span class="text-xs text-gray-400 font-mono mt-4">Aim camera at passenger's digital QR ticket</span>
-              <span class="text-[10px] text-gray-600 font-mono mt-1">Live camera optical decoder active</span>
+            <!-- Interactive Mobile Camera Viewfinder -->
+            <div class="relative bg-black rounded-2xl h-56 border-2 border-dashed border-emerald-500/50 flex flex-col items-center justify-center overflow-hidden">
+              <video id="staffCameraVideo" class="hidden absolute inset-0 w-full h-full object-cover" playsinline></video>
+              <div id="cameraPlaceholder" class="flex flex-col items-center justify-center text-center p-4">
+                <div class="w-10 h-10 rounded-full bg-emerald-950/80 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-lg mb-2">📷</div>
+                <span class="text-xs text-gray-300 font-mono font-bold">Mobile QR Ticket Scanner</span>
+                <span class="text-[10px] text-gray-500 font-mono mt-1">Activate device camera to scan customer phone pass</span>
+                <button type="button" onclick="startCameraScanner()" id="startCamBtn" class="mt-3 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold font-mono transition shadow">
+                  Activate Device Camera
+                </button>
+              </div>
+              <div id="cameraScanningOverlay" class="hidden absolute inset-0 pointer-events-none">
+                <div class="absolute inset-4 border border-emerald-400/40 rounded-xl"></div>
+                <div class="w-full h-0.5 bg-emerald-400 shadow-[0_0_20px_#10b981] animate-pulse"></div>
+              </div>
             </div>
 
             <!-- Manual Ticket Code Input -->
@@ -394,15 +406,61 @@
     function handleStaffLogin(e) {
       e.preventDefault();
       const pin = document.getElementById('staffPinInput').value.trim();
-      if (pin === '1776' || pin.toLowerCase() === 'divine2026') {
+      // Authorized staff PINs and security passcodes
+      const validPins = ['1776', 'divine2026', '240606', 'shantal2026'];
+      if (validPins.includes(pin) || validPins.includes(pin.toLowerCase())) {
+        const authErr = document.getElementById('staffAuthError');
+        if (authErr) authErr.classList.add('hidden');
         sessionStorage.setItem('divine_staff_auth', 'true');
         checkStaffAuth();
       } else {
-        alert('Invalid staff authentication PIN. Please enter PIN 1776 or password divine2026.');
+        const authErr = document.getElementById('staffAuthError');
+        if (authErr) authErr.classList.remove('hidden');
+        const pinInput = document.getElementById('staffPinInput');
+        pinInput.value = '';
+        pinInput.focus();
       }
     }
 
+    
+    let cameraStream = null;
+    function startCameraScanner() {
+      const video = document.getElementById('staffCameraVideo');
+      const placeholder = document.getElementById('cameraPlaceholder');
+      const overlay = document.getElementById('cameraScanningOverlay');
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+          .then(stream => {
+            cameraStream = stream;
+            video.srcObject = stream;
+            video.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+            placeholder.classList.add('hidden');
+            video.play();
+          })
+          .catch(err => {
+            alert('Camera access was not granted or is unavailable on this device. Please use the manual ticket code lookup below.');
+          });
+      } else {
+        alert('Camera scanner API not supported in this browser. Please use the manual ticket code lookup below.');
+      }
+    }
+
+    function stopCameraScanner() {
+      if (cameraStream) {
+        cameraStream.getTracks().forEach(track => track.stop());
+        cameraStream = null;
+      }
+      const video = document.getElementById('staffCameraVideo');
+      const placeholder = document.getElementById('cameraPlaceholder');
+      const overlay = document.getElementById('cameraScanningOverlay');
+      if (video) video.classList.add('hidden');
+      if (overlay) overlay.classList.add('hidden');
+      if (placeholder) placeholder.classList.remove('hidden');
+    }
+
     function handleStaffLogout() {
+      stopCameraScanner();
       sessionStorage.removeItem('divine_staff_auth');
       checkStaffAuth();
     }
@@ -588,7 +646,7 @@
             Washington, D.C.
           </p>
           <p>
-            Phone / Reservations: <strong class="text-white">(202) 555-0198</strong><br>
+            Phone / Reservations: <strong class="text-white">(240) 606-9008</strong><br>
             Official Website: <strong class="text-white">divineddctours.com</strong>
           </p>
           <div class="pt-2 flex gap-2">

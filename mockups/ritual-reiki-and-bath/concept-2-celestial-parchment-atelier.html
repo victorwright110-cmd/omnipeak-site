@@ -123,65 +123,79 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- 1. GRAND ATELIER NAVIGATION & HEIRLOOM EMBLEM -->
+  <!-- 1. GRAND ATELIER NAVIGATION & HEIRLOOM EMBLEM (SOVEREIGN LUXURY HEADER) -->
   <!-- ========================================================================= -->
-  <header class="sticky top-0 z-40 bg-[#FAF6EE]/95 backdrop-blur-md border-b border-parchment-300/80 px-4 sm:px-8 py-3.5 shadow-sm transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+  <header class="sticky top-0 z-40 bg-[#FAF6EE]/98 backdrop-blur-md border-b border-parchment-300/80 transition-all duration-300 shadow-md">
+    
+    <!-- Top Showcase Tier: Pure Grand Client Logo Centerpiece with Generous Whitespace -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-5 sm:py-6 flex items-center justify-between gap-4">
       
-      <!-- Left Editorial Links -->
-      <nav class="hidden lg:flex items-center gap-7 text-xs uppercase tracking-[0.2em] font-medium text-parchment-800">
-        <a href="#apothecary" class="hover:text-amber-700 transition py-1 border-b border-transparent hover:border-amber-700">The Apothecary</a>
-        <a href="#moonshine" class="hover:text-amber-700 transition py-1 text-amber-700 font-semibold border-b border-transparent hover:border-amber-700">Miss Mom's Moonshine</a>
-        <a href="#alchemist" class="hover:text-amber-700 transition py-1 border-b border-transparent hover:border-amber-700">Bath Alchemist</a>
-        <a href="#philosophy" class="hover:text-amber-700 transition py-1 border-b border-transparent hover:border-amber-700">Our Heritage</a>
-      </nav>
+      <!-- Left Utility / Southern Heritage Tag -->
+      <div class="hidden md:flex items-center gap-3 text-parchment-800 font-mono text-[10px] uppercase tracking-[0.25em] w-1/4">
+        <i class="fa-solid fa-seedling text-amber-700"></i>
+        <span>Heirloom Southern Atelier</span>
+      </div>
 
-      <!-- Center Master Brand Logo -->
-      <a href="#" class="flex flex-col items-center group py-1">
-        <div class="h-20 sm:h-24 w-auto flex items-center justify-center">
-          <img src="/mockups/ritual-reiki-and-bath/images/logo-dark.png" alt="Ritual Reiki and Bath" class="h-full w-auto object-contain filter drop-shadow-sm group-hover:scale-105 transition-transform duration-300">
-        </div>
-      </a>
+      <!-- Center Master Brand Logo (Grand, Prominent, Beautifully Spaced in Original Dark Treatment) -->
+      <div class="flex-1 flex justify-center">
+        <a href="#" class="flex flex-col items-center group py-1">
+          <div class="h-32 sm:h-40 md:h-44 w-auto flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.02]">
+            <img src="/mockups/ritual-reiki-and-bath/images/logo-dark.png" alt="Ritual Reiki and Bath" class="h-full w-auto object-contain filter drop-shadow-sm">
+          </div>
+        </a>
+      </div>
 
-      <!-- Right Editorial Links & Atelier Actions -->
-      <div class="flex items-center gap-5 sm:gap-6">
-        <nav class="hidden xl:flex items-center gap-7 text-xs uppercase tracking-[0.2em] font-medium text-parchment-800">
-          <a href="#ritual-guide" class="hover:text-amber-700 transition py-1">Ritual Guide</a>
-          <a href="#jill-alison" class="hover:text-amber-700 transition py-1 text-plum-900 font-semibold">Jill Alison Hatcher</a>
-        </nav>
+      <!-- Right Utility / Alchemist & Basket -->
+      <div class="flex items-center justify-end gap-3 w-1/4">
+        <!-- Alchemist Quick Tool Button -->
+        <a href="#alchemist" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-gold-500/60 bg-white text-parchment-900 hover:border-amber-700 text-xs font-mono transition shadow-sm">
+          <i class="fa-solid fa-wand-magic-sparkles text-amber-700 text-xs"></i>
+          <span class="text-[10px] uppercase tracking-wider font-bold">Custom Soak</span>
+        </a>
 
-        <!-- Right Action Icons -->
-        <div class="flex items-center gap-3">
-          <!-- Alchemist Quick Tool Button -->
-          <a href="#alchemist" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold-500/60 bg-parchment-100 text-parchment-900 hover:border-amber-600 text-xs font-mono transition shadow-sm">
-            <i class="fa-solid fa-wand-magic-sparkles text-amber-600 text-xs"></i>
-            <span class="text-[10px] uppercase tracking-wider font-bold">Custom Soak</span>
-          </a>
+        <!-- Basket Button -->
+        <button onclick="toggleSacredDrawer()" class="relative p-2.5 rounded-full border border-parchment-300 bg-white hover:border-amber-700 text-parchment-900 transition shadow-sm" title="Your Ritual Basket">
+          <i class="fa-solid fa-basket-shopping text-xs"></i>
+          <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-amber-700 text-white font-bold text-[9px] flex items-center justify-center shadow-md">1</span>
+        </button>
 
-          <!-- Basket Button -->
-          <button onclick="toggleSacredDrawer()" class="relative p-2.5 rounded-full border border-parchment-300 bg-white hover:border-amber-600 text-parchment-900 transition shadow-sm" title="Your Ritual Basket">
-            <i class="fa-solid fa-basket-shopping text-xs"></i>
-            <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-amber-600 text-white font-bold text-[9px] flex items-center justify-center shadow-md">1</span>
-          </button>
-
-          <!-- Mobile Nav Toggle -->
-          <button class="lg:hidden p-2 text-parchment-900 hover:text-amber-700" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
-            <i class="fa-solid fa-bars text-lg"></i>
-          </button>
-        </div>
-
+        <!-- Mobile Nav Toggle -->
+        <button class="lg:hidden p-2 text-parchment-900 hover:text-amber-700" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
       </div>
 
     </div>
 
+    <!-- Bottom Ribbon Tier: Refined Centered Navigation Links -->
+    <div class="hidden lg:block border-t border-parchment-300/60 bg-white/60">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-center gap-7 xl:gap-9 text-xs uppercase tracking-[0.22em] font-medium text-parchment-800">
+        <a href="#apothecary" class="hover:text-amber-700 transition-colors py-1">The Dispensary</a>
+        <a href="#moonshine" class="hover:text-amber-700 transition-colors py-1 text-amber-700 font-semibold flex items-center gap-1.5">
+          <i class="fa-solid fa-sparkles text-[10px] text-amber-600"></i>
+          <span>Miss Mom's Moonshine</span>
+        </a>
+        <a href="#apothecary" onclick="filterCategory('bath-milk')" class="hover:text-amber-700 transition-colors py-1">Bath Milks</a>
+        <a href="#apothecary" onclick="filterCategory('bath-salt')" class="hover:text-amber-700 transition-colors py-1">Bath Salts</a>
+        <a href="#apothecary" onclick="filterCategory('bath-tea')" class="hover:text-amber-700 transition-colors py-1">Herbal Bath Teas</a>
+        <a href="#apothecary" onclick="filterCategory('bubble-bath')" class="hover:text-amber-700 transition-colors py-1">Bubble Bath</a>
+        <a href="#alchemist" class="hover:text-amber-700 transition-colors py-1">Bath Alchemist</a>
+        <a href="#philosophy" class="hover:text-amber-700 transition-colors py-1">Our Heritage</a>
+        <a href="#jill-alison" class="hover:text-amber-700 transition-colors py-1 text-plum-900 font-semibold">Jill Alison Hatcher</a>
+      </div>
+    </div>
+
     <!-- Mobile Nav Dropdown -->
-    <div id="mobileMenu" class="hidden lg:hidden border-t border-parchment-300 mt-3 pt-4 pb-2 px-2 text-center space-y-3 bg-[#FAF6EE]">
-      <a href="#apothecary" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700">The Apothecary</a>
-      <a href="#moonshine" class="block text-xs uppercase tracking-widest text-amber-700 font-bold">Miss Mom's Moonshine</a>
-      <a href="#alchemist" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700">Bath Alchemist</a>
-      <a href="#philosophy" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700">Our Heritage</a>
-      <a href="#ritual-guide" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700">Ritual Guide</a>
-      <a href="#jill-alison" class="block text-xs uppercase tracking-widest text-plum-900 font-bold">Jill Alison Hatcher Sanctuary</a>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-parchment-300 py-4 px-4 text-center space-y-3 bg-[#FAF6EE] shadow-2xl">
+      <a href="#apothecary" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700 py-1">The Dispensary</a>
+      <a href="#moonshine" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="block text-xs uppercase tracking-widest text-amber-700 font-bold hover:text-amber-800 py-1">Miss Mom's Moonshine</a>
+      <a href="#apothecary" onclick="document.getElementById('mobileMenu').classList.add('hidden'); filterCategory('bath-milk')" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700 py-1">Bath Milks</a>
+      <a href="#apothecary" onclick="document.getElementById('mobileMenu').classList.add('hidden'); filterCategory('bath-salt')" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700 py-1">Bath Salts</a>
+      <a href="#apothecary" onclick="document.getElementById('mobileMenu').classList.add('hidden'); filterCategory('bath-tea')" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700 py-1">Herbal Bath Teas</a>
+      <a href="#apothecary" onclick="document.getElementById('mobileMenu').classList.add('hidden'); filterCategory('bubble-bath')" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700 py-1">Bubble Bath</a>
+      <a href="#alchemist" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700 py-1">Bath Alchemist</a>
+      <a href="#philosophy" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="block text-xs uppercase tracking-widest text-parchment-800 hover:text-amber-700 py-1">Our Heritage</a>
+      <a href="#jill-alison" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="block text-xs uppercase tracking-widest text-plum-900 font-bold hover:text-amber-700 py-1">Jill Alison Hatcher Sanctuary</a>
     </div>
   </header>
 
@@ -199,16 +213,11 @@
       <!-- Left Column: Editorial Storytelling & Bespoke Action -->
       <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
         
-        <!-- Official Client Brand Emblem in Hero -->
-        <div class="flex justify-center lg:justify-start">
-          <div class="h-28 sm:h-32 w-auto">
-            <img src="/mockups/ritual-reiki-and-bath/images/logo-dark.png" alt="Ritual Reiki & Bath" class="h-full w-auto object-contain filter drop-shadow-sm">
-          </div>
-        </div>
+
         
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-gold-600/50 bg-white/70 backdrop-blur-sm text-parchment-800 text-xs tracking-[0.25em] uppercase font-mono shadow-sm">
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-gold-600/50 bg-white/80 backdrop-blur-sm text-parchment-800 text-xs tracking-[0.25em] uppercase font-mono shadow-sm">
           <i class="fa-solid fa-moon text-amber-600"></i>
-          <span>Heirloom Southern Apothecary &bull; Usui Reiki Attuned</span>
+          <span>The Miss Mom's Moonshine Collection &bull; Heirloom Apothecary</span>
         </div>
 
         <div class="space-y-3">
@@ -552,7 +561,7 @@
   <!-- ========================================================================= -->
   <section id="apothecary" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#FAF6EE] relative">
     
-    <div class="max-w-7xl mx-auto space-y-14">
+    <div class="max-w-7xl mx-auto space-y-12">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-parchment-300">
         <div>
@@ -564,19 +573,31 @@
         </p>
       </div>
 
-      <!-- 6 Grid Products in Parchment Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs uppercase tracking-wider font-mono" id="categoryPillContainer">
+        <button onclick="filterCategory('all')" id="pill-all" class="cat-pill active px-4 py-2 rounded-full bg-amber-700 text-white font-bold shadow-sm transition">All Offerings</button>
+        <button onclick="filterCategory('bubble-bath')" id="pill-bubble-bath" class="cat-pill px-4 py-2 rounded-full bg-white border border-parchment-300 text-parchment-800 hover:border-amber-700 transition">Bubble Bath</button>
+        <button onclick="filterCategory('bath-milk')" id="pill-bath-milk" class="cat-pill px-4 py-2 rounded-full bg-white border border-parchment-300 text-parchment-800 hover:border-amber-700 transition">Bath Milks</button>
+        <button onclick="filterCategory('bath-salt')" id="pill-bath-salt" class="cat-pill px-4 py-2 rounded-full bg-white border border-parchment-300 text-parchment-800 hover:border-amber-700 transition">Bath Salts</button>
+        <button onclick="filterCategory('bath-tea')" id="pill-bath-tea" class="cat-pill px-4 py-2 rounded-full bg-white border border-parchment-300 text-parchment-800 hover:border-amber-700 transition">Herbal Bath Teas</button>
+        <button onclick="filterCategory('aura-mist')" id="pill-aura-mist" class="cat-pill px-4 py-2 rounded-full bg-white border border-parchment-300 text-parchment-800 hover:border-amber-700 transition">Aura Mists</button>
+      </div>
+
+      <!-- 8 Grid Products in Parchment Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="productGrid">
         
-        <!-- Product 1 -->
-        <div class="parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6">
+        <!-- 1. BUBBLE BATH: Miss Mom's Moonshine -->
+        <div data-cat="bubble-bath" class="prod-card parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6 transition-all duration-300">
           <div class="relative aspect-square overflow-hidden bg-white/70 rounded-xl mb-4 p-4 flex items-center justify-center">
-            <img src="images/bottle-moonshine.jpg" alt="Miss Mom's Moonshine" class="h-full w-auto object-contain transform group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-amber-700 text-white font-mono text-[9px] uppercase tracking-wider font-bold">Best Seller</span>
+            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded bg-amber-700 text-white font-mono text-[9px] uppercase tracking-wider font-bold">Best Seller</span>
+            <img src="/mockups/ritual-reiki-and-bath/images/bottle-moonshine.jpg" alt="Miss Mom's Moonshine Bubble Bath" class="h-full w-auto object-contain transform group-hover:scale-105 transition duration-500">
           </div>
-          <div class="space-y-3">
-            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold">Signature Bubble Bath</span>
-            <h3 class="font-serif text-xl font-bold text-plum-950">Miss Mom’s Moonshine</h3>
-            <p class="text-xs text-parchment-800 font-light">Magnolia blossom, mountain lavender, Reiki attuned with amethyst charm.</p>
+          <div class="space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold block mb-1">Signature Bubble Bath</span>
+              <h3 class="font-serif text-xl font-bold text-plum-950 group-hover:text-amber-800 transition">Miss Mom’s Moonshine</h3>
+              <p class="text-xs text-parchment-800 font-light mt-1">Magnolia blossom, mountain lavender, Usui Reiki attuned with real amethyst charm.</p>
+            </div>
             <div class="pt-3 border-t border-parchment-300 flex items-center justify-between">
               <span class="font-serif text-xl font-bold text-plum-950">$48.00</span>
               <button onclick="addToSacredBath('Miss Mom\'s Moonshine', 48)" class="px-4 py-2 rounded-full border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white text-xs font-mono font-bold tracking-wider uppercase transition">
@@ -586,17 +607,43 @@
           </div>
         </div>
 
-        <!-- Product 2 -->
-        <div class="parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6">
+        <!-- 2. BUBBLE BATH: Honeysuckle & Golden Nectar -->
+        <div data-cat="bubble-bath" class="prod-card parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6 transition-all duration-300">
           <div class="relative aspect-square overflow-hidden bg-white/70 rounded-xl mb-4 p-4 flex flex-col items-center justify-center text-center">
+            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded bg-amber-800 text-white font-mono text-[9px] uppercase tracking-wider font-bold">Bubble Bath</span>
+            <i class="fa-solid fa-wine-glass text-4xl text-amber-700/80 mb-2"></i>
+            <span class="font-serif text-xs font-bold uppercase text-plum-950">Honeysuckle Nectar</span>
+            <span class="font-script text-amber-700 text-lg">Bubble Elixir</span>
+          </div>
+          <div class="space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold block mb-1">Sensual Bubble Elixir</span>
+              <h3 class="font-serif text-xl font-bold text-plum-950 group-hover:text-amber-800 transition">Honeysuckle & Nectar</h3>
+              <p class="text-xs text-parchment-800 font-light mt-1">Sweet Southern honeysuckle, wildflower raw honey, and citrine crystal frequency.</p>
+            </div>
+            <div class="pt-3 border-t border-parchment-300 flex items-center justify-between">
+              <span class="font-serif text-xl font-bold text-plum-950">$46.00</span>
+              <button onclick="addToSacredBath('Honeysuckle & Golden Nectar', 46)" class="px-4 py-2 rounded-full border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white text-xs font-mono font-bold tracking-wider uppercase transition">
+                + Add To Bath
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. BATH MILK: Southern Magnolia & Sweet Oat -->
+        <div data-cat="bath-milk" class="prod-card parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6 transition-all duration-300">
+          <div class="relative aspect-square overflow-hidden bg-white/70 rounded-xl mb-4 p-4 flex flex-col items-center justify-center text-center">
+            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded bg-botanical-700 text-white font-mono text-[9px] uppercase tracking-wider font-bold">Bath Milk</span>
             <i class="fa-solid fa-mortar-pestle text-4xl text-amber-700/80 mb-2"></i>
             <span class="font-serif text-xs font-bold uppercase text-plum-950">Southern Magnolia</span>
             <span class="font-script text-amber-700 text-lg">Sweet Oat Milk</span>
           </div>
-          <div class="space-y-3">
-            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold">Soothing Bath Milk</span>
-            <h3 class="font-serif text-xl font-bold text-plum-950">Magnolia & Sweet Oat</h3>
-            <p class="text-xs text-parchment-800 font-light">Organic colloidal oats, coconut cream, and sweet magnolia blossom infusion.</p>
+          <div class="space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold block mb-1">Soothing Bath Milk</span>
+              <h3 class="font-serif text-xl font-bold text-plum-950 group-hover:text-amber-800 transition">Magnolia & Sweet Oat</h3>
+              <p class="text-xs text-parchment-800 font-light mt-1">Organic colloidal oats, coconut cream, and sweet magnolia blossom infusion.</p>
+            </div>
             <div class="pt-3 border-t border-parchment-300 flex items-center justify-between">
               <span class="font-serif text-xl font-bold text-plum-950">$42.00</span>
               <button onclick="addToSacredBath('Magnolia & Sweet Oat Milk', 42)" class="px-4 py-2 rounded-full border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white text-xs font-mono font-bold tracking-wider uppercase transition">
@@ -606,17 +653,43 @@
           </div>
         </div>
 
-        <!-- Product 3 -->
-        <div class="parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6">
+        <!-- 4. BATH MILK: Vanilla Jasmine Silk Milk -->
+        <div data-cat="bath-milk" class="prod-card parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6 transition-all duration-300">
           <div class="relative aspect-square overflow-hidden bg-white/70 rounded-xl mb-4 p-4 flex flex-col items-center justify-center text-center">
+            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded bg-botanical-700 text-white font-mono text-[9px] uppercase tracking-wider font-bold">Bath Milk</span>
+            <i class="fa-solid fa-spa text-4xl text-amber-700/80 mb-2"></i>
+            <span class="font-serif text-xs font-bold uppercase text-plum-950">Vanilla Jasmine</span>
+            <span class="font-script text-amber-700 text-lg">Velvet Silk Milk</span>
+          </div>
+          <div class="space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold block mb-1">Hydrating Milk</span>
+              <h3 class="font-serif text-xl font-bold text-plum-950 group-hover:text-amber-800 transition">Vanilla Jasmine Silk</h3>
+              <p class="text-xs text-parchment-800 font-light mt-1">Bourbon vanilla, night-blooming white jasmine, and sweet almond moisturizing lather.</p>
+            </div>
+            <div class="pt-3 border-t border-parchment-300 flex items-center justify-between">
+              <span class="font-serif text-xl font-bold text-plum-950">$44.00</span>
+              <button onclick="addToSacredBath('Vanilla Jasmine Silk Milk', 44)" class="px-4 py-2 rounded-full border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white text-xs font-mono font-bold tracking-wider uppercase transition">
+                + Add To Bath
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. BATH SALTS: Moonlit Amethyst Aura Salts -->
+        <div data-cat="bath-salt" class="prod-card parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6 transition-all duration-300">
+          <div class="relative aspect-square overflow-hidden bg-white/70 rounded-xl mb-4 p-4 flex flex-col items-center justify-center text-center">
+            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded bg-plum-800 text-white font-mono text-[9px] uppercase tracking-wider font-bold">Bath Salts</span>
             <i class="fa-solid fa-gem text-4xl text-plum-700 mb-2"></i>
             <span class="font-serif text-xs font-bold uppercase text-plum-950">Moonlit Amethyst</span>
-            <span class="font-script text-amber-700 text-lg">Himalayan Crystal Soak</span>
+            <span class="font-script text-amber-700 text-lg">Magnesium & Sea Salt</span>
           </div>
-          <div class="space-y-3">
-            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold">Mineral Salt Soak</span>
-            <h3 class="font-serif text-xl font-bold text-plum-950">Amethyst Aura Bath Salts</h3>
-            <p class="text-xs text-parchment-800 font-light">Cellular magnesium, Dead Sea salt, crushed amethyst, and wild rosemary.</p>
+          <div class="space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold block mb-1">Mineral Salt Soak</span>
+              <h3 class="font-serif text-xl font-bold text-plum-950 group-hover:text-amber-800 transition">Amethyst Aura Salts</h3>
+              <p class="text-xs text-parchment-800 font-light mt-1">Cellular magnesium, Dead Sea salt, crushed amethyst, and wild rosemary.</p>
+            </div>
             <div class="pt-3 border-t border-parchment-300 flex items-center justify-between">
               <span class="font-serif text-xl font-bold text-plum-950">$38.00</span>
               <button onclick="addToSacredBath('Amethyst Aura Salts', 38)" class="px-4 py-2 rounded-full border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white text-xs font-mono font-bold tracking-wider uppercase transition">
@@ -626,17 +699,43 @@
           </div>
         </div>
 
-        <!-- Product 4 -->
-        <div class="parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6">
+        <!-- 6. BATH SALTS: Rose Quartz Heart Soak -->
+        <div data-cat="bath-salt" class="prod-card parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6 transition-all duration-300">
           <div class="relative aspect-square overflow-hidden bg-white/70 rounded-xl mb-4 p-4 flex flex-col items-center justify-center text-center">
+            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded bg-plum-800 text-white font-mono text-[9px] uppercase tracking-wider font-bold">Bath Salts</span>
+            <i class="fa-solid fa-heart text-4xl text-rose-600 mb-2"></i>
+            <span class="font-serif text-xs font-bold uppercase text-plum-950">Rose Quartz Soak</span>
+            <span class="font-script text-amber-700 text-lg">Himalayan Salt & Rose</span>
+          </div>
+          <div class="space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold block mb-1">Mineral Salt Soak</span>
+              <h3 class="font-serif text-xl font-bold text-plum-950 group-hover:text-amber-800 transition">Rose Quartz Heart Soak</h3>
+              <p class="text-xs text-parchment-800 font-light mt-1">Hand-mined pink Himalayan salt crystals with sun-dried organic rose petals and geranium oil.</p>
+            </div>
+            <div class="pt-3 border-t border-parchment-300 flex items-center justify-between">
+              <span class="font-serif text-xl font-bold text-plum-950">$38.00</span>
+              <button onclick="addToSacredBath('Rose Quartz Heart Soak', 38)" class="px-4 py-2 rounded-full border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white text-xs font-mono font-bold tracking-wider uppercase transition">
+                + Add To Bath
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. HERBAL BATH TEA: Celestial Dream Herbal Steep -->
+        <div data-cat="bath-tea" class="prod-card parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6 transition-all duration-300">
+          <div class="relative aspect-square overflow-hidden bg-white/70 rounded-xl mb-4 p-4 flex flex-col items-center justify-center text-center">
+            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded bg-botanical-800 text-white font-mono text-[9px] uppercase tracking-wider font-bold">Bath Tea</span>
             <i class="fa-solid fa-mug-hot text-4xl text-botanical-700 mb-2"></i>
             <span class="font-serif text-xs font-bold uppercase text-plum-950">Celestial Dream</span>
             <span class="font-script text-amber-700 text-lg">Herbal Bath Tea</span>
           </div>
-          <div class="space-y-3">
-            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold">Herbal Tub Infusion</span>
-            <h3 class="font-serif text-xl font-bold text-plum-950">Celestial Dream Bath Tea</h3>
-            <p class="text-xs text-parchment-800 font-light">Whole chamomile blossoms, blue cornflower, and lavender in reusable muslin steep sacks.</p>
+          <div class="space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold block mb-1">Herbal Tub Infusion</span>
+              <h3 class="font-serif text-xl font-bold text-plum-950 group-hover:text-amber-800 transition">Celestial Dream Tea</h3>
+              <p class="text-xs text-parchment-800 font-light mt-1">Whole chamomile blossoms, blue cornflower, and lavender in reusable muslin steep sacks.</p>
+            </div>
             <div class="pt-3 border-t border-parchment-300 flex items-center justify-between">
               <span class="font-serif text-xl font-bold text-plum-950">$34.00</span>
               <button onclick="addToSacredBath('Celestial Dream Tea', 34)" class="px-4 py-2 rounded-full border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white text-xs font-mono font-bold tracking-wider uppercase transition">
@@ -646,17 +745,20 @@
           </div>
         </div>
 
-        <!-- Product 5 -->
-        <div class="parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6">
+        <!-- 8. AURA MIST: Selenite & White Sage Mist -->
+        <div data-cat="aura-mist" class="prod-card parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6 transition-all duration-300">
           <div class="relative aspect-square overflow-hidden bg-white/70 rounded-xl mb-4 p-4 flex flex-col items-center justify-center text-center">
+            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded bg-amber-700 text-white font-mono text-[9px] uppercase tracking-wider font-bold">Sacred Mist</span>
             <i class="fa-solid fa-spray-can text-4xl text-amber-700 mb-2"></i>
             <span class="font-serif text-xs font-bold uppercase text-plum-950">Selenite Clearing</span>
             <span class="font-script text-amber-700 text-lg">Aura & Room Mist</span>
           </div>
-          <div class="space-y-3">
-            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold">Sacred Aura Mist</span>
-            <h3 class="font-serif text-xl font-bold text-plum-950">Selenite & White Sage Mist</h3>
-            <p class="text-xs text-parchment-800 font-light">Cleanses space without smoke. Charged with liquid selenite and organic sage hydrosol.</p>
+          <div class="space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold block mb-1">Sacred Aura Mist</span>
+              <h3 class="font-serif text-xl font-bold text-plum-950 group-hover:text-amber-800 transition">Selenite & Sage Mist</h3>
+              <p class="text-xs text-parchment-800 font-light mt-1">Cleanses space without smoke. Charged with liquid selenite and organic sage hydrosol.</p>
+            </div>
             <div class="pt-3 border-t border-parchment-300 flex items-center justify-between">
               <span class="font-serif text-xl font-bold text-plum-950">$36.00</span>
               <button onclick="addToSacredBath('Selenite Sage Mist', 36)" class="px-4 py-2 rounded-full border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white text-xs font-mono font-bold tracking-wider uppercase transition">
@@ -666,30 +768,9 @@
           </div>
         </div>
 
-        <!-- Product 6 -->
-        <div class="parchment-card rounded-2xl overflow-hidden group flex flex-col justify-between p-6">
-          <div class="relative aspect-square overflow-hidden bg-white/70 rounded-xl mb-4 p-4 flex flex-col items-center justify-center text-center">
-            <i class="fa-solid fa-wine-glass-empty text-4xl text-gold-600 mb-2"></i>
-            <span class="font-serif text-xs font-bold uppercase text-plum-950">Honeysuckle Nectar</span>
-            <span class="font-script text-amber-700 text-lg">Bubble Elixir</span>
-          </div>
-          <div class="space-y-3">
-            <span class="text-[10px] font-mono uppercase tracking-widest text-amber-700 font-bold">Sensual Bubble Elixir</span>
-            <h3 class="font-serif text-xl font-bold text-plum-950">Honeysuckle & Golden Nectar</h3>
-            <p class="text-xs text-parchment-800 font-light">Sweet Southern honeysuckle, wildflower raw honey, and citrine crystal energy.</p>
-            <div class="pt-3 border-t border-parchment-300 flex items-center justify-between">
-              <span class="font-serif text-xl font-bold text-plum-950">$46.00</span>
-              <button onclick="addToSacredBath('Honeysuckle Nectar', 46)" class="px-4 py-2 rounded-full border border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white text-xs font-mono font-bold tracking-wider uppercase transition">
-                + Add To Bath
-              </button>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </div>
-
   </section>
 
   <!-- ========================================================================= -->
@@ -1004,6 +1085,31 @@
 
     // Add To Basket Handler
     let cartTotal = 48;
+    
+    // Category Filtering for Atelier Offerings
+    function filterCategory(cat) {
+      const pills = document.querySelectorAll('.cat-pill');
+      pills.forEach(p => {
+        p.classList.remove('bg-amber-700', 'text-white', 'font-bold', 'shadow-sm');
+        p.classList.add('bg-white', 'border', 'border-parchment-300', 'text-parchment-800');
+      });
+      const targetPill = document.getElementById('pill-' + cat);
+      if (targetPill) {
+        targetPill.classList.add('bg-amber-700', 'text-white', 'font-bold', 'shadow-sm');
+        targetPill.classList.remove('bg-white', 'border', 'border-parchment-300', 'text-parchment-800');
+      }
+
+      const cards = document.querySelectorAll('.prod-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
     function addToSacredBath(name, price) {
       cartTotal += price;
       document.getElementById('basketSubtotal').innerText = '$' + cartTotal.toFixed(2);

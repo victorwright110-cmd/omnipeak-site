@@ -31,6 +31,14 @@
       "destination": "/public/mockups/ritual-reiki-and-bath/index.html"
     },
     {
+      "source": "/mockups/ritual-reiki-and-bath/concept-1-moonlit-botanical-apothecary",
+      "destination": "/public/mockups/ritual-reiki-and-bath/concept-1-moonlit-botanical-apothecary.html"
+    },
+    {
+      "source": "/mockups/ritual-reiki-and-bath/concept-2-celestial-parchment-atelier",
+      "destination": "/public/mockups/ritual-reiki-and-bath/concept-2-celestial-parchment-atelier.html"
+    },
+    {
       "source": "/mockups/ritual-reiki-and-bath/:path*",
       "destination": "/public/mockups/ritual-reiki-and-bath/:path*"
     },
