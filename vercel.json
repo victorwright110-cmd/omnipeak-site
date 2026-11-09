@@ -23,6 +23,14 @@
   ],
   "rewrites": [
     {
+      "source": "/mockups/ritual-reiki-and-bath",
+      "destination": "/public/mockups/ritual-reiki-and-bath/index.html"
+    },
+    {
+      "source": "/mockups/ritual-reiki-and-bath/",
+      "destination": "/public/mockups/ritual-reiki-and-bath/index.html"
+    },
+    {
       "source": "/mockups/devine-dc-tours",
       "destination": "/public/mockups/devine-dc-tours/index.html"
     },
