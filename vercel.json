@@ -31,6 +31,10 @@
       "destination": "/public/mockups/ritual-reiki-and-bath/index.html"
     },
     {
+      "source": "/mockups/ritual-reiki-and-bath/:path*",
+      "destination": "/public/mockups/ritual-reiki-and-bath/:path*"
+    },
+    {
       "source": "/mockups/devine-dc-tours",
       "destination": "/public/mockups/devine-dc-tours/index.html"
     },
