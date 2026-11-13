@@ -24,23 +24,23 @@
   "rewrites": [
     {
       "source": "/mockups/americas-baseball-classic",
-      "destination": "/public/mockups/americas-baseball-classic/index.html"
+      "destination": "/mockups/americas-baseball-classic/index.html"
     },
     {
       "source": "/mockups/americas-baseball-classic/",
-      "destination": "/public/mockups/americas-baseball-classic/index.html"
+      "destination": "/mockups/americas-baseball-classic/index.html"
     },
     {
       "source": "/mockups/americas-baseball-classic/concept-1-grandstand-editorial",
-      "destination": "/public/mockups/americas-baseball-classic/concept-1-grandstand-editorial.html"
+      "destination": "/mockups/americas-baseball-classic/concept-1-grandstand-editorial.html"
     },
     {
       "source": "/mockups/americas-baseball-classic/concept-2-modern-primetime",
-      "destination": "/public/mockups/americas-baseball-classic/concept-2-modern-primetime.html"
+      "destination": "/mockups/americas-baseball-classic/concept-2-modern-primetime.html"
     },
     {
       "source": "/mockups/americas-baseball-classic/:path*",
-      "destination": "/public/mockups/americas-baseball-classic/:path*"
+      "destination": "/mockups/americas-baseball-classic/:path*"
     },
     {
       "source": "/mockups/ritual-reiki-and-bath",

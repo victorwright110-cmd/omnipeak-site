@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/mockups/americas-baseball-classic/">
+  <title>America’s Baseball Classic — 2 High-Fidelity Homepage Concepts | Presented by OmniPeak Digital</title>
+  <meta name="description" content="Complimentary high-fidelity homepage mockup presentation created for America’s Baseball Classic by OmniPeak Digital. Two strategic directions: The Grandstand Editorial & The Modern Primetime Franchise.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            agency: {
+              black: '#07090D',
+              dark: '#0D111A',
+              card: '#141A26',
+              border: '#1F293D',
+              accent: '#D4AF37',
+              omniOrange: '#E05638',
+              silver: '#E2E8F0',
+              muted: '#7A889B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #07090D;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .preview-frame {
+      transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .active-concept-btn {
+      background-color: #1F293D;
+      border-color: #D4AF37;
+      color: #FFFFFF;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+    }
+    .active-concept-btn-crimson {
+      background-color: #1F293D;
+      border-color: #EF233C;
+      color: #FFFFFF;
+      box-shadow: 0 0 20px rgba(239, 35, 60, 0.25);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#07090D]">
+
+  <!-- ========================================================================= -->
+  <!-- AGENCY TOP HEADER / MASTER BAR -->
+  <!-- ========================================================================= -->
+  <header class="border-b border-agency-border bg-[#0D111A]/95 backdrop-blur-md px-4 sm:px-6 py-3 sticky top-0 z-50 shadow-xl">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
+      
+      <!-- Agency & Client Brand Titles -->
+      <div class="flex items-center gap-4">
+        <!-- OmniPeak Badge -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E05638] to-[#992211] flex items-center justify-center font-extrabold text-white text-xs shadow-md border border-white/20">
+            OP
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-[11px] uppercase tracking-widest text-[#E05638] font-bold">OmniPeak Digital</span>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-agency-card text-agency-muted border border-agency-border font-mono">Client Mockup Studio</span>
+            </div>
+            <span class="text-sm font-bold text-white block">Homepage Concept Presentation</span>
+          </div>
+        </div>
+
+        <span class="text-agency-border hidden md:inline">|</span>
+
+        <!-- Client Identity -->
+        <div class="hidden sm:flex items-center gap-3 bg-agency-card px-3.5 py-1.5 rounded-xl border border-agency-border">
+          <img src="/mockups/americas-baseball-classic/images/logo.png" alt="America’s Baseball Classic" class="h-7 w-auto object-contain">
+          <div class="text-xs border-l border-agency-border pl-3">
+            <span class="text-agency-muted text-[10px] block font-mono">Client:</span>
+            <span class="text-white font-semibold">America’s Baseball Classic</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Concept Switcher Tabs -->
+      <div class="flex items-center gap-2 bg-[#07090D] p-1.5 rounded-2xl border border-agency-border">
+        
+        <button id="btnConcept1" onclick="switchConcept('concept1')" class="active-concept-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 border border-transparent">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+          <span>Concept 01: Grandstand Editorial</span>
+        </button>
+
+        <button id="btnConcept2" onclick="switchConcept('concept2')" class="px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white border border-transparent">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+          <span>Concept 02: Modern Primetime</span>
+        </button>
+
+      </div>
+
+      <!-- Action: Viewport Controls & Open Fullscreen -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Viewport Controls -->
+        <div class="hidden md:flex items-center gap-1 bg-agency-card p-1 rounded-xl border border-agency-border text-xs">
+          <button onclick="setViewport('desktop')" id="vpDesk" class="p-1.5 rounded-lg text-white bg-[#1F293D]" title="Desktop (100%)">
+            <i class="fa-solid fa-desktop text-xs"></i>
+          </button>
+          <button onclick="setViewport('laptop')" id="vpLap" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Laptop (1280px)">
+            <i class="fa-solid fa-laptop text-xs"></i>
+          </button>
+          <button onclick="setViewport('tablet')" id="vpTab" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Tablet (768px)">
+            <i class="fa-solid fa-tablet-screen-button text-xs"></i>
+          </button>
+          <button onclick="setViewport('mobile')" id="vpMob" class="p-1.5 rounded-lg text-agency-muted hover:text-white" title="Mobile (390px)">
+            <i class="fa-solid fa-mobile-screen-button text-xs"></i>
+          </button>
+        </div>
+
+        <!-- Strategy Drawer Toggle -->
+        <button onclick="toggleStrategyModal()" class="px-3 py-1.5 rounded-xl bg-agency-card border border-agency-border text-xs font-mono text-agency-silver hover:text-white hover:border-agency-accent transition-all flex items-center gap-1.5">
+          <i class="fa-solid fa-lightbulb text-amber-400 text-xs"></i>
+          <span class="hidden sm:inline">Strategy Brief</span>
+        </button>
+
+        <!-- Direct Standalone Link -->
+        <a id="btnExternal" href="/mockups/americas-baseball-classic/concept-1-grandstand-editorial.html" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all flex items-center gap-1.5 border border-white/20" title="Open Standalone in New Tab">
+          <span>Live View</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- STRATEGY BRIEF MODAL -->
+  <!-- ========================================================================= -->
+  <div id="strategyModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-agency-dark border border-agency-border rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 shadow-2xl relative">
+      <button onclick="toggleStrategyModal()" class="absolute top-5 right-5 text-agency-muted hover:text-white text-base">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-agency-card border border-agency-border text-xs font-mono text-agency-accent font-bold">
+          OmniPeak Digital Strategic Brief
+        </div>
+        <h3 class="text-2xl font-bold text-white">America’s Baseball Classic — Homepage Transformation</h3>
+        <p class="text-xs text-agency-muted leading-relaxed">
+          Comparing the client's current baseline website with the two complimentary executive mockup concepts.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <div class="p-4 rounded-xl bg-agency-card border border-agency-border space-y-2">
+          <div class="flex items-center gap-2 text-amber-400 font-bold font-mono">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            Concept 1: Grandstand Editorial
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            <strong>Theme:</strong> Prestige Championship Heritage & High-Stakes Sports Property.
+          </p>
+          <p class="text-agency-muted leading-relaxed">
+            Cinematic midnight navy, varsity gold accents, classic serif typography (Playfair & Cinzel), asymmetrical layouts, and editorial storytelling. Ideal for high-level sponsor alignment and civic leadership presentations.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-agency-card border border-agency-border space-y-2">
+          <div class="flex items-center gap-2 text-red-500 font-bold font-mono">
+            <span class="w-2 h-2 rounded-full bg-red-500"></span>
+            Concept 2: Modern Primetime
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            <strong>Theme:</strong> Modern High-Energy Sports Media & Broadcast Network.
+          </p>
+          <p class="text-agency-muted leading-relaxed">
+            Carbon obsidian surface, electric patriotic crimson, bold athletic sans-serif (Oswald & Cabinet Grotesk), live telemetry tickers, interactive state switcher, and high-impact broadcast telemetry.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-[#07090D] border border-agency-border/60 text-xs text-slate-300 space-y-1.5">
+        <div class="text-white font-bold font-mono uppercase text-[11px] text-agency-accent">Primary Client Objective Met:</div>
+        <p>
+          Transitions the perception from a <span class="text-slate-400 underline">basic information-heavy website</span> to an <span class="text-white font-bold">investor-ready national sports property</span> ready for funding, media contracts, and civic partnerships.
+        </p>
+      </div>
+
+      <div class="flex justify-end">
+        <button onclick="toggleStrategyModal()" class="px-5 py-2 rounded-xl bg-agency-accent text-black font-bold text-xs uppercase tracking-wider">
+          Close Brief
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN IFRAME VIEWPORT CONTAINER -->
+  <!-- ========================================================================= -->
+  <main class="flex-1 flex flex-col items-center justify-start bg-[#050608] p-2 sm:p-4 overflow-hidden">
+    
+    <div id="viewportContainer" class="preview-frame w-full h-[calc(100vh-84px)] rounded-xl overflow-hidden border border-agency-border shadow-2xl bg-black relative">
+      <iframe id="mockupIframe" 
+              src="/mockups/americas-baseball-classic/concept-1-grandstand-editorial.html" 
+              class="w-full h-full border-0" 
+              title="America’s Baseball Classic Homepage Mockup">
+      </iframe>
+    </div>
+
+  </main>
+
+  <script>
+    let activeConcept = 'concept1';
+    let currentViewport = 'desktop';
+
+    const urls = {
+      concept1: '/mockups/americas-baseball-classic/concept-1-grandstand-editorial.html',
+      concept2: '/mockups/americas-baseball-classic/concept-2-modern-primetime.html'
+    };
+
+    function switchConcept(concept) {
+      activeConcept = concept;
+      const iframe = document.getElementById('mockupIframe');
+      const btn1 = document.getElementById('btnConcept1');
+      const btn2 = document.getElementById('btnConcept2');
+      const btnExt = document.getElementById('btnExternal');
+
+      if (concept === 'concept1') {
+        iframe.src = urls.concept1;
+        btnExt.href = urls.concept1;
+        btn1.className = "active-concept-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 border border-transparent";
+        btn2.className = "px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white border border-transparent";
+      } else {
+        iframe.src = urls.concept2;
+        btnExt.href = urls.concept2;
+        btn2.className = "active-concept-btn-crimson px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 border border-transparent";
+        btn1.className = "px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 text-agency-muted hover:text-white border border-transparent";
+      }
+    }
+
+    function setViewport(mode) {
+      currentViewport = mode;
+      const container = document.getElementById('viewportContainer');
+      const bDesk = document.getElementById('vpDesk');
+      const bLap = document.getElementById('vpLap');
+      const bTab = document.getElementById('vpTab');
+      const bMob = document.getElementById('vpMob');
+
+      [bDesk, bLap, bTab, bMob].forEach(b => {
+        b.className = "p-1.5 rounded-lg text-agency-muted hover:text-white";
+      });
+
+      if (mode === 'desktop') {
+        container.style.width = '100%';
+        bDesk.className = "p-1.5 rounded-lg text-white bg-[#1F293D]";
+      } else if (mode === 'laptop') {
+        container.style.width = '1280px';
+        bLap.className = "p-1.5 rounded-lg text-white bg-[#1F293D]";
+      } else if (mode === 'tablet') {
+        container.style.width = '768px';
+        bTab.className = "p-1.5 rounded-lg text-white bg-[#1F293D]";
+      } else if (mode === 'mobile') {
+        container.style.width = '390px';
+        bMob.className = "p-1.5 rounded-lg text-white bg-[#1F293D]";
+      }
+    }
+
+    function toggleStrategyModal() {
+      const modal = document.getElementById('strategyModal');
+      modal.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
