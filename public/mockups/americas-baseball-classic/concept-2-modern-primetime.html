@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>America’s Baseball Classic — Primetime Franchise Concept</title>
+  <meta name="description" content="America’s Baseball Classic — The Next Era of American Sports Entertainment. State Pride. Professional Baseball. One National Stage.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Oswald"', 'sans-serif'],
+            athletic: ['"Cabinet Grotesk"', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+          colors: {
+            arena: {
+              carbon: '#05070B',
+              night: '#090D16',
+              surface: '#0F1626',
+              elevated: '#162035',
+              border: '#1F2E4D',
+              borderGlow: '#2E436E',
+              crimson: '#EF233C',
+              crimsonDark: '#991122',
+              blue: '#2563EB',
+              cobalt: '#38BDF8',
+              white: '#FFFFFF',
+              silver: '#CBD5E1',
+              muted: '#64748B',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #05070B;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .neon-crimson-glow {
+      box-shadow: 0 0 35px rgba(239, 35, 60, 0.25);
+    }
+    .neon-blue-glow {
+      box-shadow: 0 0 35px rgba(37, 99, 235, 0.25);
+    }
+    .primetime-gradient {
+      background: linear-gradient(180deg, rgba(5, 7, 11, 0.4) 0%, rgba(5, 7, 11, 0.85) 60%, #05070B 100%);
+    }
+    .ticker-wrap {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-move {
+      display: inline-block;
+      white-space: nowrap;
+      animation: ticker 25s linear infinite;
+    }
+    @keyframes ticker {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+    .card-modern-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-modern-hover:hover {
+      transform: translateY(-5px);
+      border-color: #EF233C;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(239, 35, 60, 0.2);
+    }
+  </style>
+</head>
+<body class="selection:bg-arena-crimson selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- LIVE BROADCAST TELEMETRY TICKER -->
+  <!-- ========================================================================= -->
+  <div class="bg-arena-carbon border-b border-arena-border py-2 text-xs font-mono tracking-wider overflow-hidden">
+    <div class="ticker-wrap flex items-center">
+      <div class="ticker-move flex items-center gap-8 text-[11px] text-slate-300 uppercase">
+        <span class="inline-flex items-center gap-1.5 text-arena-crimson font-bold">
+          <span class="w-2 h-2 rounded-full bg-arena-crimson animate-ping"></span>
+          BROADCAST RADAR
+        </span>
+        <span>•</span>
+        <span>2028 INAUGURAL 4-STATE PILOT: CALIFORNIA vs TEXAS • FLORIDA vs GEORGIA</span>
+        <span>•</span>
+        <span class="text-arena-cobalt font-bold">15-GAME ROUND ROBIN CHAMPIONSHIP</span>
+        <span>•</span>
+        <span>GOVERNOR'S CUP NATIONAL TROPHY</span>
+        <span>•</span>
+        <span class="text-white font-bold">TARGET TICKET: ~$30 ACCESSIBLE FAMILY VALUE</span>
+        <span>•</span>
+        <span>MARKET BENCHMARK: REIMAGINED BASEBALL $120M REVENUE PROJECTION</span>
+        <span>•</span>
+        <span>50 STATES • 50 TEAMS • 1 NATIONAL STAGE</span>
+        <span>•</span>
+        <span class="inline-flex items-center gap-1.5 text-arena-crimson font-bold">
+          <span class="w-2 h-2 rounded-full bg-arena-crimson animate-ping"></span>
+          BROADCAST RADAR
+        </span>
+        <span>•</span>
+        <span>2028 INAUGURAL 4-STATE PILOT: CALIFORNIA vs TEXAS • FLORIDA vs GEORGIA</span>
+        <span>•</span>
+        <span class="text-arena-cobalt font-bold">15-GAME ROUND ROBIN CHAMPIONSHIP</span>
+        <span>•</span>
+        <span>GOVERNOR'S CUP NATIONAL TROPHY</span>
+        <span>•</span>
+        <span class="text-white font-bold">TARGET TICKET: ~$30 ACCESSIBLE FAMILY VALUE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODERN ARENA HEADER -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-arena-carbon/95 backdrop-blur-md border-b border-arena-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-12 h-12 rounded-full p-1 bg-arena-surface border border-arena-border flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
+          <img src="/mockups/americas-baseball-classic/images/logo.png" alt="America’s Baseball Classic" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-display tracking-wider text-white text-lg font-bold uppercase leading-none">
+              America’s Baseball Classic
+            </span>
+            <span class="hidden sm:inline-block px-1.5 py-0.5 rounded bg-arena-crimson text-white text-[9px] font-mono font-bold tracking-widest uppercase">
+              Live Media
+            </span>
+          </div>
+          <span class="text-[10px] tracking-widest text-slate-400 font-mono uppercase mt-0.5">
+            National State Championship
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-widest uppercase">
+        <a href="#vision" class="text-slate-300 hover:text-arena-crimson transition-colors">The Vision</a>
+        <a href="#pillars" class="text-slate-300 hover:text-arena-crimson transition-colors">Three Pillars</a>
+        <a href="#matchup" class="text-slate-300 hover:text-arena-crimson transition-colors">State Matchup</a>
+        <a href="#experience" class="text-slate-300 hover:text-arena-crimson transition-colors">The Experience</a>
+        <a href="#economics" class="text-slate-300 hover:text-arena-crimson transition-colors">Economics</a>
+        <a href="#council" class="text-slate-300 hover:text-arena-crimson transition-colors">Leadership</a>
+      </nav>
+
+      <!-- Right CTAs -->
+      <div class="flex items-center gap-3">
+        <a href="#investor" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-arena-crimson hover:bg-arena-crimsonDark text-white text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:shadow-arena-crimson/30">
+          <span>Partner With Us</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <button id="menuBtn" onclick="toggleNav()" class="lg:hidden p-2 text-slate-300 border border-arena-border rounded-lg bg-arena-surface">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="navMobile" class="hidden lg:hidden border-t border-arena-border bg-arena-carbon px-6 py-5 space-y-3 font-mono text-xs uppercase">
+      <a href="#vision" onclick="toggleNav()" class="block py-1 text-slate-300 hover:text-arena-crimson">The Vision</a>
+      <a href="#pillars" onclick="toggleNav()" class="block py-1 text-slate-300 hover:text-arena-crimson">Three Pillars</a>
+      <a href="#matchup" onclick="toggleNav()" class="block py-1 text-slate-300 hover:text-arena-crimson">State Matchup</a>
+      <a href="#experience" onclick="toggleNav()" class="block py-1 text-slate-300 hover:text-arena-crimson">The Experience</a>
+      <a href="#economics" onclick="toggleNav()" class="block py-1 text-slate-300 hover:text-arena-crimson">Economics</a>
+      <a href="#council" onclick="toggleNav()" class="block py-1 text-slate-300 hover:text-arena-crimson">Leadership</a>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO — CINEMATIC FULL-WIDTH -->
+  <!-- ========================================================================= -->
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    
+    <!-- Stadium Backdrop with High-Energy Lighting -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1577223625816-7546f13df256?auto=format&fit=crop&w=2200&q=85" 
+           alt="Major League Night Stadium" 
+           class="w-full h-full object-cover object-center filter brightness-60 contrast-125">
+      <div class="absolute inset-0 primetime-gradient"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-arena-carbon/95 via-transparent to-arena-carbon/95"></div>
+    </div>
+
+    <!-- Red and Blue Ambient Stadium Flares -->
+    <div class="absolute top-1/4 left-1/4 w-[450px] h-[300px] bg-arena-crimson/15 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-1/3 right-1/4 w-[450px] h-[300px] bg-arena-blue/15 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center flex flex-col items-center">
+      
+      <!-- Logo Crest with Modern Outer Ring -->
+      <div class="mb-6 relative group">
+        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-2 bg-gradient-to-b from-white/20 via-arena-surface to-arena-carbon border border-arena-border shadow-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+          <img src="/mockups/americas-baseball-classic/images/logo.png" alt="America’s Baseball Classic" class="w-full h-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.8)]">
+        </div>
+        <div class="absolute -inset-1 rounded-full bg-arena-crimson/20 blur-md -z-10"></div>
+      </div>
+
+      <!-- State League Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-arena-surface/80 border border-arena-border mb-6">
+        <span class="w-2 h-2 rounded-full bg-arena-crimson animate-pulse"></span>
+        <span class="text-xs font-mono uppercase tracking-[0.2em] text-slate-200 font-bold">
+          National Sports Property
+        </span>
+      </div>
+
+      <!-- Primary Headline -->
+      <h1 class="font-display text-4xl sm:text-6xl md:text-8xl font-black text-white tracking-tight uppercase leading-[0.95] mb-5">
+        America’s Baseball Classic
+      </h1>
+
+      <!-- Secondary Headline -->
+      <h2 class="font-display text-2xl sm:text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-white via-arena-silver to-slate-400 font-bold tracking-wide uppercase max-w-4xl leading-tight mb-6">
+        Professional Baseball. State Pride. One National Stage.
+      </h2>
+
+      <!-- Supporting Copy -->
+      <p class="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed mb-10 font-normal">
+        A new national sports property bringing professional-level baseball, state pride, entertainment and opportunity together.
+      </p>
+
+      <!-- Dual Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+        <a href="#vision" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-arena-crimson hover:bg-arena-crimsonDark text-white font-bold text-xs uppercase tracking-widest shadow-xl transition-all hover:scale-105">
+          <span>Explore The Vision</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#investor" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-arena-surface border border-arena-border text-white hover:border-arena-crimson hover:text-arena-crimson font-bold text-xs uppercase tracking-widest transition-all">
+          <span>Partner With Us</span>
+          <i class="fa-solid fa-handshake"></i>
+        </a>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="mt-14 flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+        <span class="text-[10px] font-mono uppercase tracking-[0.25em] text-slate-400">Scroll Down</span>
+        <a href="#stats" class="w-5 h-9 rounded-full border border-slate-500 flex items-start justify-center p-1" aria-label="Scroll down">
+          <div class="w-1 h-2 rounded-full bg-arena-crimson animate-bounce"></div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- STATS / CREDIBILITY STRIP -->
+  <!-- ========================================================================= -->
+  <section id="stats" class="relative z-20 bg-arena-night border-y border-arena-border shadow-2xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 lg:divide-x divide-arena-border/80">
+        
+        <div class="pt-4 sm:pt-0 px-4 text-center">
+          <span class="text-[11px] font-mono text-arena-crimson uppercase tracking-widest font-bold block mb-1">01 / Scope</span>
+          <h3 class="font-display text-xl font-bold text-white uppercase tracking-wider mb-1">National Sports Property</h3>
+          <p class="text-xs text-slate-400">50 states. 50 teams. One national championship stage.</p>
+        </div>
+
+        <div class="pt-4 sm:pt-0 px-4 text-center">
+          <span class="text-[11px] font-mono text-arena-cobalt uppercase tracking-widest font-bold block mb-1">02 / Identity</span>
+          <h3 class="font-display text-xl font-bold text-white uppercase tracking-wider mb-1">State-Based Competition</h3>
+          <p class="text-xs text-slate-400">Zero transfers, zero trades. Pure homegrown state loyalty.</p>
+        </div>
+
+        <div class="pt-4 sm:pt-0 px-4 text-center">
+          <span class="text-[11px] font-mono text-arena-crimson uppercase tracking-widest font-bold block mb-1">03 / Talent</span>
+          <h3 class="font-display text-xl font-bold text-white uppercase tracking-wider mb-1">Professional-Level Talent</h3>
+          <p class="text-xs text-slate-400">Former MLB & elite American players ready for a national stage.</p>
+        </div>
+
+        <div class="pt-4 sm:pt-0 px-4 text-center">
+          <span class="text-[11px] font-mono text-arena-cobalt uppercase tracking-widest font-bold block mb-1">04 / Reach</span>
+          <h3 class="font-display text-xl font-bold text-white uppercase tracking-wider mb-1">Sponsor & Media Opportunity</h3>
+          <p class="text-xs text-slate-400">Multi-state campaigns, streaming rights, and regional pride.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- THE BIG IDEA -->
+  <!-- ========================================================================= -->
+  <section id="vision" class="py-24 bg-arena-carbon relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Large Editorial Headline -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 text-arena-crimson font-mono text-xs uppercase tracking-widest font-bold">
+            <span class="w-6 h-[2px] bg-arena-crimson"></span>
+            The Big Idea
+          </div>
+
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white uppercase leading-[1.05] tracking-tight">
+            Baseball has always been <span class="text-arena-crimson">more than a game.</span>
+          </h2>
+
+          <div class="p-6 rounded-2xl bg-arena-surface border border-arena-border">
+            <p class="text-base sm:text-lg text-slate-200 leading-relaxed italic mb-4 font-serif">
+              “There is an important difference between making a sporting event more entertaining and compromising the sport itself. At America’s Baseball Classic, we believe we can do both well.”
+            </p>
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-white font-bold">KELLY KLEINMAN</span>
+              <span class="text-arena-muted">FOUNDER & MARKETING STRATEGIST</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Business Concept & Image -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p class="text-white font-medium text-lg">
+              The Classic combines six interconnected growth drivers into a cohesive national entertainment property:
+            </p>
+            <div class="grid grid-cols-2 gap-3 font-mono text-xs">
+              <div class="p-3 rounded-lg bg-arena-surface border border-arena-border text-white">
+                <i class="fa-solid fa-baseball text-arena-crimson mr-2"></i> Professional Baseball
+              </div>
+              <div class="p-3 rounded-lg bg-arena-surface border border-arena-border text-white">
+                <i class="fa-solid fa-flag-usa text-arena-cobalt mr-2"></i> Unwavering State Pride
+              </div>
+              <div class="p-3 rounded-lg bg-arena-surface border border-arena-border text-white">
+                <i class="fa-solid fa-guitar text-arena-crimson mr-2"></i> Live Entertainment
+              </div>
+              <div class="p-3 rounded-lg bg-arena-surface border border-arena-border text-white">
+                <i class="fa-solid fa-tv text-arena-cobalt mr-2"></i> Digital & Broadcast Media
+              </div>
+              <div class="p-3 rounded-lg bg-arena-surface border border-arena-border text-white">
+                <i class="fa-solid fa-bullhorn text-arena-crimson mr-2"></i> Civic Sponsorships
+              </div>
+              <div class="p-3 rounded-lg bg-arena-surface border border-arena-border text-white">
+                <i class="fa-solid fa-city text-arena-cobalt mr-2"></i> Local Economic Impact
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Fox Sports Image -->
+          <div class="relative rounded-2xl overflow-hidden border border-arena-border shadow-2xl group">
+            <img src="https://images.squarespace-cdn.com/content/v1/6904f5b31ef8ae0f6f7852af/bdb5a881-1b5d-4049-a0db-f4786c004747/Texas+Tornados+FOX+Sports+Interview.png" 
+                 alt="America’s Baseball Classic Broadcast" 
+                 class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-arena-carbon via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-4 text-xs font-mono text-slate-300">
+              <span class="px-2 py-0.5 rounded bg-arena-crimson text-white font-bold mr-2">BROADCAST</span>
+              Texas Tornados FOX Sports National Segment
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- THREE PILLARS -->
+  <!-- ========================================================================= -->
+  <section id="pillars" class="py-24 bg-arena-night border-y border-arena-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-arena-crimson font-bold">The Triad</span>
+        <h2 class="font-display text-4xl sm:text-5xl font-black text-white uppercase tracking-tight">
+          Three Irreplaceable Pillars
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400">
+          The structural pillars that separate America's Baseball Classic from standard league models.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1 -->
+        <div class="card-modern-hover p-8 rounded-2xl bg-arena-surface border border-arena-border flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-arena-carbon border border-arena-border flex items-center justify-center text-arena-crimson text-xl mb-6">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <span class="text-xs font-mono text-arena-crimson font-bold uppercase tracking-wider block mb-2">Pillar 01</span>
+            <h3 class="font-display text-2xl font-bold text-white uppercase tracking-wide mb-3">State Pride</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              State identity, rivalry and community. Fans already own an emotional stake in their home state. No artificial marketing needed.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-arena-border/80 text-xs font-mono text-slate-400">
+            Homegrown Allegiance
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="card-modern-hover p-8 rounded-2xl bg-arena-surface border border-arena-crimson/50 flex flex-col justify-between neon-crimson-glow">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-arena-carbon border border-arena-crimson/60 flex items-center justify-center text-arena-crimson text-xl mb-6">
+              <i class="fa-solid fa-baseball"></i>
+            </div>
+            <span class="text-xs font-mono text-arena-crimson font-bold uppercase tracking-wider block mb-2">Pillar 02</span>
+            <h3 class="font-display text-2xl font-bold text-white uppercase tracking-wide mb-3">The Game</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Professional-level baseball and authentic competition. The game always comes first. Competitive intensity stays untouched.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-arena-border/80 text-xs font-mono text-arena-crimson font-bold">
+            Championship Standards
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="card-modern-hover p-8 rounded-2xl bg-arena-surface border border-arena-border flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-arena-carbon border border-arena-border flex items-center justify-center text-arena-cobalt text-xl mb-6">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <span class="text-xs font-mono text-arena-cobalt font-bold uppercase tracking-wider block mb-2">Pillar 03</span>
+            <h3 class="font-display text-2xl font-bold text-white uppercase tracking-wide mb-3">The Opportunity</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Entertainment, media, sponsorship and economic impact. A compelling total evening out with accessible ticketing.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-arena-border/80 text-xs font-mono text-slate-400">
+            Multi-Channel Monetization
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- STATE PRIDE FEATURE (Interactive Matchup Simulator) -->
+  <!-- ========================================================================= -->
+  <section id="matchup" class="py-24 bg-arena-carbon relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div class="space-y-3 max-w-2xl">
+          <span class="text-xs font-mono uppercase tracking-widest text-arena-crimson font-bold">National Tournament Scale</span>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white uppercase tracking-tight">
+            Every State Brings Its Own Stage
+          </h2>
+          <p class="text-slate-400 text-sm">
+            Featuring inaugural 2028 competition powerhouses: California, Texas, Florida, and Georgia.
+          </p>
+        </div>
+        <div class="flex items-center gap-2 bg-arena-surface p-1 rounded-xl border border-arena-border font-mono text-xs">
+          <button onclick="filterState('all')" id="btnAll" class="px-3 py-1.5 rounded-lg bg-arena-crimson text-white font-bold">All 4 States</button>
+          <button onclick="filterState('west')" id="btnWest" class="px-3 py-1.5 rounded-lg text-slate-400 hover:text-white">CA vs TX</button>
+          <button onclick="filterState('east')" id="btnEast" class="px-3 py-1.5 rounded-lg text-slate-400 hover:text-white">FL vs GA</button>
+        </div>
+      </div>
+
+      <!-- State Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- California -->
+        <div class="state-card card-modern-hover p-6 rounded-2xl bg-arena-surface border border-arena-border group flex flex-col justify-between">
+          <div>
+            <div class="h-44 rounded-xl bg-arena-carbon mb-5 flex items-center justify-center border border-arena-border/60 overflow-hidden">
+              <img src="https://images.squarespace-cdn.com/content/v1/6904f5b31ef8ae0f6f7852af/9a44e00b-211c-4603-815a-5bc2046d6fa3/California+Baseball+Glove+on+the+Diamond.png" 
+                   alt="California Glove" 
+                   class="max-h-36 w-auto object-contain group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="text-[10px] font-mono text-arena-cobalt font-bold uppercase tracking-widest block mb-1">Pacific Division</span>
+            <h3 class="font-display text-2xl font-bold text-white uppercase mb-2">California</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Unrivaled draft depth, historic ballclubs, and deep regional player communities.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-arena-border text-xs font-mono flex items-center justify-between text-slate-400">
+            <span>Roster: 28 Pro</span>
+            <span class="text-arena-crimson font-bold">Team Gold</span>
+          </div>
+        </div>
+
+        <!-- Texas -->
+        <div class="state-card card-modern-hover p-6 rounded-2xl bg-arena-surface border border-arena-border group flex flex-col justify-between">
+          <div>
+            <div class="h-44 rounded-xl bg-arena-carbon mb-5 flex items-center justify-center border border-arena-border/60 overflow-hidden">
+              <img src="https://images.squarespace-cdn.com/content/v1/6904f5b31ef8ae0f6f7852af/bce18f99-8615-4e07-9fcf-fb932108a371/Texas+Pride+Baseball+Glove.png" 
+                   alt="Texas Glove" 
+                   class="max-h-36 w-auto object-contain group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="text-[10px] font-mono text-arena-crimson font-bold uppercase tracking-widest block mb-1">Southwest Division</span>
+            <h3 class="font-display text-2xl font-bold text-white uppercase mb-2">Texas</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Legendary high-school fervor and fearless championship culture.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-arena-border text-xs font-mono flex items-center justify-between text-slate-400">
+            <span>Roster: 28 Pro</span>
+            <span class="text-arena-crimson font-bold">Tornados</span>
+          </div>
+        </div>
+
+        <!-- Florida -->
+        <div class="state-card card-modern-hover p-6 rounded-2xl bg-arena-surface border border-arena-border group flex flex-col justify-between">
+          <div>
+            <div class="h-44 rounded-xl bg-arena-carbon mb-5 flex items-center justify-center border border-arena-border/60 overflow-hidden">
+              <img src="https://images.squarespace-cdn.com/content/v1/6904f5b31ef8ae0f6f7852af/537bb5c9-061b-461e-bdf9-448b15fe7715/Team+Florida+Coastal+Baseball+Glove.png" 
+                   alt="Florida Glove" 
+                   class="max-h-36 w-auto object-contain group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="text-[10px] font-mono text-arena-cobalt font-bold uppercase tracking-widest block mb-1">Southeast Division</span>
+            <h3 class="font-display text-2xl font-bold text-white uppercase mb-2">Florida</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Year-round diamond hotbed known for blistering velocity and athletic talent.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-arena-border text-xs font-mono flex items-center justify-between text-slate-400">
+            <span>Roster: 28 Pro</span>
+            <span class="text-arena-crimson font-bold">Coastal</span>
+          </div>
+        </div>
+
+        <!-- Georgia -->
+        <div class="state-card card-modern-hover p-6 rounded-2xl bg-arena-surface border border-arena-border group flex flex-col justify-between">
+          <div>
+            <div class="h-44 rounded-xl bg-arena-carbon mb-5 flex items-center justify-center border border-arena-border/60 overflow-hidden">
+              <img src="https://images.squarespace-cdn.com/content/v1/6904f5b31ef8ae0f6f7852af/1f3f3063-04d3-4310-bbe4-c9bd800ef05f/Georgia+Thrashers+Baseball+Glove.png" 
+                   alt="Georgia Glove" 
+                   class="max-h-36 w-auto object-contain group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <span class="text-[10px] font-mono text-arena-crimson font-bold uppercase tracking-widest block mb-1">Southeast Division</span>
+            <h3 class="font-display text-2xl font-bold text-white uppercase mb-2">Georgia</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Powerhouse youth programs and battle-tested hitters ready for primetime.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-arena-border text-xs font-mono flex items-center justify-between text-slate-400">
+            <span>Roster: 28 Pro</span>
+            <span class="text-arena-crimson font-bold">Thrashers</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- THE EXPERIENCE (The Game Always Comes First) -->
+  <!-- ========================================================================= -->
+  <section id="experience" class="py-24 bg-arena-night border-y border-arena-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Action Visual -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-arena-border shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Baseball Pitcher on the Mound" 
+                 class="w-full h-[450px] object-cover object-center filter contrast-115">
+            <div class="absolute inset-0 bg-gradient-to-t from-arena-carbon via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-arena-carbon/90 border border-arena-border backdrop-blur-md">
+              <span class="text-arena-crimson font-mono text-xs font-bold uppercase block mb-1">
+                <i class="fa-solid fa-bolt mr-1"></i> Athletic Pure Core
+              </span>
+              <p class="text-xs text-slate-300">
+                True 9-inning competitive baseball. Managers focused on winning. Authentic pressure and stakes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editorial Content -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-arena-crimson font-bold">Game Philosophy</span>
+          
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white uppercase leading-tight">
+            The Game Always Comes First
+          </h2>
+
+          <p class="text-slate-300 text-base leading-relaxed">
+            The talent on the field, the strategy in the dugout, the tension of a meaningful at-bat, and the pursuit of a championship must stay at the center.
+          </p>
+
+          <p class="text-slate-400 text-sm leading-relaxed">
+            We do not need to change the essential nature of baseball. We need to build a more compelling event around it. Entertainment belongs in pregame celebrations, planned breaks, and postgame spectacles, where it enhances those moments rather than distracting from them.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-arena-border">
+            <div class="p-4 rounded-xl bg-arena-surface border border-arena-border">
+              <h4 class="text-white font-bold text-sm mb-1">Competition Stays Serious</h4>
+              <p class="text-xs text-slate-400">Authentic 90-ft basepaths, real scouting, elite fastballs and defense.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-arena-surface border border-arena-border">
+              <h4 class="text-white font-bold text-sm mb-1">Atmosphere Gets Bigger</h4>
+              <p class="text-xs text-slate-400">Regional concerts, comedians, and state rivalry banter amplify fan energy.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- COMMERCIAL OPPORTUNITY (A More Valuable Ticket) -->
+  <!-- ========================================================================= -->
+  <section id="economics" class="py-24 bg-arena-carbon relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-arena-crimson font-bold">Commercial Architecture</span>
+        <h2 class="font-display text-4xl sm:text-5xl font-black text-white uppercase">
+          A More Valuable Ticket
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400">
+          Delivering unmatched family value at a planned ticket price of approximately ~$30.
+        </p>
+      </div>
+
+      <!-- 5 Compact Points -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        
+        <div class="p-5 rounded-xl bg-arena-surface border border-arena-border">
+          <span class="text-xl font-display font-black text-arena-crimson block mb-2">01</span>
+          <h4 class="text-white font-bold text-sm mb-1">Pro Competition</h4>
+          <p class="text-xs text-slate-400">Meaningful baseball with genuine stakes and high-caliber players.</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-arena-surface border border-arena-border">
+          <span class="text-xl font-display font-black text-arena-cobalt block mb-2">02</span>
+          <h4 class="text-white font-bold text-sm mb-1">Entertainment</h4>
+          <p class="text-xs text-slate-400">Pregame concerts, comedians, and local cultural celebrations.</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-arena-surface border border-arena-border">
+          <span class="text-xl font-display font-black text-arena-crimson block mb-2">03</span>
+          <h4 class="text-white font-bold text-sm mb-1">State Pride</h4>
+          <p class="text-xs text-slate-400">Unfiltered rivalry between state flags that fans carry for life.</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-arena-surface border border-arena-border">
+          <span class="text-xl font-display font-black text-arena-cobalt block mb-2">04</span>
+          <h4 class="text-white font-bold text-sm mb-1">Fan Engagement</h4>
+          <p class="text-xs text-slate-400">Interactive concourse zones, player meet-ups, and family fun.</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-arena-surface border border-arena-border">
+          <span class="text-xl font-display font-black text-arena-crimson block mb-2">05</span>
+          <h4 class="text-white font-bold text-sm mb-1">Sponsor & Media</h4>
+          <p class="text-xs text-slate-400">Narratives and content extending far past the final out.</p>
+        </div>
+
+      </div>
+
+      <!-- Benchmark Card -->
+      <div class="mt-12 p-6 rounded-2xl bg-arena-surface border border-arena-border flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <span class="text-xs font-mono text-arena-crimson uppercase font-bold block mb-1">Surging Category Precedent</span>
+          <h4 class="text-lg font-bold text-white mb-1">Banana Ball & Live Baseball Formats Project $120M in 2027</h4>
+          <p class="text-xs text-slate-400 max-w-xl">
+            Consumer demand for modern, high-energy live sports events is setting revenue records. America's Baseball Classic provides the high-skill, state-rivalry counterpart.
+          </p>
+        </div>
+        <div class="bg-arena-carbon px-6 py-3 rounded-xl border border-arena-border text-center shrink-0">
+          <span class="text-2xl font-display font-black text-white">$120 Million</span>
+          <span class="text-[10px] font-mono text-slate-400 block uppercase">2027 Category Benchmark</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- INVESTOR / SPONSOR SECTION -->
+  <!-- ========================================================================= -->
+  <section id="investor" class="py-24 bg-arena-night border-y border-arena-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-arena-surface via-[#141E33] to-arena-surface border border-arena-border relative overflow-hidden">
+        
+        <div class="max-w-3xl space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-arena-crimson font-bold block">
+            National Scale Platform
+          </span>
+
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white uppercase leading-none">
+            Built For The Next Stage
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-200 leading-relaxed">
+            America’s Baseball Classic is designed to create opportunities across professional baseball, entertainment, sponsorship, media, tourism and local economic impact.
+          </p>
+
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            From stadium venue hosting and municipal economic stimulation to multi-state broadcast streaming rights, our platform delivers unmatched civic and corporate alignment.
+          </p>
+
+          <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+            <a href="mailto:statebaseballclassic@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-arena-crimson hover:bg-arena-crimsonDark text-white font-bold text-xs uppercase tracking-widest transition-all">
+              <span>Explore Partnership Opportunities</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="text-xs font-mono text-slate-400">
+              Direct Phone: <a href="tel:8184485915" class="text-white hover:text-arena-crimson font-bold">818-448-5915</a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOUNDING COUNCIL PREVIEW -->
+  <!-- ========================================================================= -->
+  <section id="council" class="py-24 bg-arena-carbon relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="space-y-3 max-w-2xl">
+          <span class="text-xs font-mono uppercase tracking-widest text-arena-crimson font-bold">Leadership</span>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white uppercase tracking-tight">
+            The People Behind The Vision
+          </h2>
+          <p class="text-slate-400 text-sm">
+            Two World Series MVPs, Emmy and Grammy Award winners, and an NCAA Wrestling Hall of Fame inductee.
+          </p>
+        </div>
+        <a href="#investor" class="text-xs font-mono font-bold uppercase tracking-wider text-arena-crimson hover:text-white transition-colors">
+          Meet The Founding Council →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Member 1: Kelly Kleinman -->
+        <div class="card-modern-hover rounded-2xl bg-arena-surface border border-arena-border overflow-hidden group">
+          <div class="h-64 overflow-hidden bg-arena-carbon">
+            <img src="https://images.squarespace-cdn.com/content/v1/6904f5b31ef8ae0f6f7852af/03c1a8c2-68d6-478c-8923-39e1f06ae8f5/Ryder+Cup+Portrait+with+Golden+Trophy.png" 
+                 alt="Kelly Kleinman" 
+                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-5">
+            <span class="text-[10px] font-mono text-arena-crimson uppercase tracking-widest font-bold block mb-1">Founder / Strategist</span>
+            <h3 class="font-display text-xl font-bold text-white uppercase mb-1">Kelly Kleinman</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Sports Illustrated Best Promotion Award winner (LA Dodgers); founder Cage Baseball HitTrax League.
+            </p>
+          </div>
+        </div>
+
+        <!-- Member 2: Rick Dempsey -->
+        <div class="card-modern-hover rounded-2xl bg-arena-surface border border-arena-crimson/40 overflow-hidden group">
+          <div class="h-64 overflow-hidden bg-arena-carbon">
+            <img src="https://images.squarespace-cdn.com/content/v1/6904f5b31ef8ae0f6f7852af/07d657b9-cbfa-4b6b-ae47-33844176bd20/rick-dempsey-dodgers-getty.0.1503210314.webp" 
+                 alt="Rick Dempsey" 
+                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-5">
+            <span class="text-[10px] font-mono text-arena-crimson uppercase tracking-widest font-bold block mb-1">1983 World Series MVP</span>
+            <h3 class="font-display text-xl font-bold text-white uppercase mb-1">Rick Dempsey</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              24-Yr MLB Veteran Catcher; 2x World Series Champion; iconic Major League broadcaster.
+            </p>
+          </div>
+        </div>
+
+        <!-- Member 3: Jonathan Koch -->
+        <div class="card-modern-hover rounded-2xl bg-arena-surface border border-arena-border overflow-hidden group">
+          <div class="h-64 overflow-hidden bg-arena-carbon">
+            <img src="https://images.squarespace-cdn.com/content/v1/6904f5b31ef8ae0f6f7852af/f58b927c-a70a-4219-b715-147fbbfca713/Jonathan_Koch_-_Select_17-Wikipedia.jpg" 
+                 alt="Jonathan Koch" 
+                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-5">
+            <span class="text-[10px] font-mono text-arena-cobalt uppercase tracking-widest font-bold block mb-1">NCAA Hall of Fame</span>
+            <h3 class="font-display text-xl font-bold text-white uppercase mb-1">Jonathan Koch</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Entertainment Executive, Asylum Entertainment; powerhouse Hollywood media producer.
+            </p>
+          </div>
+        </div>
+
+        <!-- Member 4: Kurt Bevacqua -->
+        <div class="card-modern-hover rounded-2xl bg-arena-surface border border-arena-border overflow-hidden group">
+          <div class="h-64 overflow-hidden bg-arena-carbon">
+            <img src="https://images.squarespace-cdn.com/content/v1/6904f5b31ef8ae0f6f7852af/1f7f1f1e-b0b9-406a-abd5-5ff59ca9c869/F089230C-118B-4C59-8047-E77C01B8B416.PNG" 
+                 alt="Kurt Bevacqua" 
+                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-5">
+            <span class="text-[10px] font-mono text-arena-crimson uppercase tracking-widest font-bold block mb-1">1984 World Series MVP</span>
+            <h3 class="font-display text-xl font-bold text-white uppercase mb-1">Kurt Bevacqua</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              15-Yr MLB Veteran; Padres World Series MVP; Exec. Director MLB Retired Players Assoc.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FINANCIAL IMPACT PREVIEW -->
+  <!-- ========================================================================= -->
+  <section class="py-24 bg-arena-night border-y border-arena-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-14 space-y-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-arena-crimson font-bold">Metrics</span>
+        <h2 class="font-display text-4xl sm:text-5xl font-black text-white uppercase">
+          The Economic Opportunity
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400">
+          Civic economic stimulation, hotel nights, food & beverage surge, and national destination branding.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        
+        <div class="p-6 rounded-2xl bg-arena-surface border border-arena-border">
+          <span class="text-xs font-mono text-arena-crimson block mb-2 uppercase font-bold">Category Market Validation</span>
+          <div class="text-4xl font-display font-black text-white mb-2">$120M+</div>
+          <p class="text-xs text-slate-300">Projected 2027 revenue for high-energy alternative live baseball properties.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-arena-surface border border-arena-border">
+          <span class="text-xs font-mono text-arena-cobalt block mb-2 uppercase font-bold">Accessible Admission</span>
+          <div class="text-4xl font-display font-black text-white mb-2">~$30</div>
+          <p class="text-xs text-slate-300">Target price delivering full evening baseball + concert + festival experience.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-arena-surface border border-arena-border">
+          <span class="text-xs font-mono text-arena-crimson block mb-2 uppercase font-bold">National Tournament Footprint</span>
+          <div class="text-4xl font-display font-black text-white mb-2">4 → 50</div>
+          <p class="text-xs text-slate-300">Inaugural 4-state pilot expanding to all 50 states for the Governor’s Cup.</p>
+        </div>
+
+      </div>
+
+      <div class="text-center">
+        <a href="#investor" class="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-arena-crimson hover:text-white">
+          <span>View The Financial Impact</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FINAL CTA -->
+  <!-- ========================================================================= -->
+  <section class="py-28 bg-arena-carbon relative overflow-hidden text-center">
+    
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=2000&q=80" 
+           alt="Stadium lights" 
+           class="w-full h-full object-cover filter brightness-30 contrast-125">
+      <div class="absolute inset-0 bg-gradient-to-t from-arena-carbon via-arena-carbon/80 to-arena-carbon"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <h2 class="font-display text-4xl sm:text-7xl font-black text-white uppercase leading-none">
+        The Next Chapter of Baseball Starts Here.
+      </h2>
+      <p class="text-sm sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        America’s Baseball Classic is building a national sports experience around competition, state pride, entertainment and opportunity.
+      </p>
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#investor" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-arena-crimson hover:bg-arena-crimsonDark text-white font-bold text-xs uppercase tracking-widest shadow-xl transition-all">
+          <span>Partner With Us</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="mailto:statebaseballclassic@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-arena-surface border border-arena-border text-white hover:text-arena-crimson text-xs font-bold uppercase tracking-widest transition-all">
+          <span>Get In Touch</span>
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER PREVIEW -->
+  <!-- ========================================================================= -->
+  <footer class="bg-black border-t border-arena-border py-12 text-slate-400 text-xs font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-arena-border/60">
+        
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <img src="/mockups/americas-baseball-classic/images/logo.png" alt="ABC Logo" class="w-9 h-9 object-contain">
+            <span class="font-display text-white text-base font-bold uppercase tracking-wider">America’s Baseball Classic</span>
+          </div>
+          <p class="text-xs text-slate-500 font-sans leading-relaxed">
+            State pride meets professional baseball. Fifty states, fifty teams, one national stage.
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <span class="text-white font-bold uppercase block mb-1">Navigation</span>
+          <p><a href="#vision" class="hover:text-white">The Why</a></p>
+          <p><a href="#economics" class="hover:text-white">Financial Impact</a></p>
+          <p><a href="#council" class="hover:text-white">Founding Council</a></p>
+          <p><a href="#matchup" class="hover:text-white">Rivalry Rocks</a></p>
+          <p><a href="mailto:statebaseballclassic@gmail.com" class="hover:text-white">Contact</a></p>
+        </div>
+
+        <div class="md:col-span-4 space-y-2">
+          <span class="text-white font-bold uppercase block mb-1">Official Contact</span>
+          <p>263 Green Heath Plc, Thousand Oaks, CA 91361</p>
+          <p>Direct: 818-448-5915</p>
+          <p>statebaseballclassic@gmail.com</p>
+          <div class="pt-2 flex items-center gap-3 text-slate-300">
+            <a href="https://x.com/ABCCHAMPS" target="_blank" class="hover:text-arena-crimson"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/abcchampionship/" target="_blank" class="hover:text-arena-crimson"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61596194708483" target="_blank" class="hover:text-arena-crimson"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-600">
+        <div>© 2026 America’s Baseball Classic. All Rights Reserved.</div>
+        <div>Complimentary Client Mockup prepared by <span class="text-[#E05638] font-bold">OmniPeak Digital</span></div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navMobile').classList.toggle('hidden');
+    }
+    function filterState(region) {
+      const cards = document.querySelectorAll('.state-card');
+      const bAll = document.getElementById('btnAll');
+      const bWest = document.getElementById('btnWest');
+      const bEast = document.getElementById('btnEast');
+
+      bAll.className = "px-3 py-1.5 rounded-lg text-slate-400 hover:text-white";
+      bWest.className = "px-3 py-1.5 rounded-lg text-slate-400 hover:text-white";
+      bEast.className = "px-3 py-1.5 rounded-lg text-slate-400 hover:text-white";
+
+      if (region === 'all') {
+        bAll.className = "px-3 py-1.5 rounded-lg bg-arena-crimson text-white font-bold";
+        cards.forEach(c => c.style.display = 'flex');
+      } else if (region === 'west') {
+        bWest.className = "px-3 py-1.5 rounded-lg bg-arena-crimson text-white font-bold";
+        cards[0].style.display = 'flex';
+        cards[1].style.display = 'flex';
+        cards[2].style.display = 'none';
+        cards[3].style.display = 'none';
+      } else if (region === 'east') {
+        bEast.className = "px-3 py-1.5 rounded-lg bg-arena-crimson text-white font-bold";
+        cards[0].style.display = 'none';
+        cards[1].style.display = 'none';
+        cards[2].style.display = 'flex';
+        cards[3].style.display = 'flex';
+      }
+    }
+  </script>
+</body>
+</html>
