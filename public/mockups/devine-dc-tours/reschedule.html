@@ -261,7 +261,7 @@
             <div><strong>Tour:</strong> <span id="cardTour"></span></div>
             <div><strong>Scheduled Departure:</strong> <span id="cardDateTime" class="font-bold text-brand-blue font-mono"></span></div>
             <div><strong>Party Size:</strong> <span id="cardGuestsCount" class="font-bold"></span></div>
-            <div class="sm:col-span-2"><strong>Departure Point:</strong> <span id="cardPickup"></span></div>
+            <div class="sm:col-span-2"><strong>Departure Point:</strong> <span id="cardPickup"></span> <a id="cardPickupMapsLink" href="https://www.google.com/maps/search/?api=1&query=444+E+St+NW,+Washington,+DC" target="_blank" rel="noopener noreferrer" class="text-brand-gold font-bold hover:underline ml-1 text-xs">Get Directions ↗</a></div>
           </div>
 
           <!-- Select New Slot Form -->
@@ -326,7 +326,7 @@
           <div><strong>Tour:</strong> <span id="modalUpdTour"></span></div>
           <div><strong>New Departure:</strong> <span id="modalUpdTime" class="font-bold text-brand-blue"></span></div>
           <div><strong>Guests:</strong> <span id="modalUpdGuests"></span></div>
-          <div><strong>Departure Point:</strong> <span id="modalUpdPickup"></span></div>
+          <div><strong>Departure Point:</strong> <span id="modalUpdPickup"></span> <a id="modalUpdPickupMapsLink" href="https://www.google.com/maps/search/?api=1&query=444+E+St+NW,+Washington,+DC" target="_blank" rel="noopener noreferrer" class="text-brand-gold font-bold hover:underline ml-1 text-xs">Get Directions ↗</a></div>
         </div>
         <button onclick="window.print()" class="w-full py-2.5 rounded-xl bg-gray-100 font-bold text-xs text-gray-700 hover:bg-gray-200 transition">
           🖨 Print Updated Boarding Pass
@@ -364,7 +364,21 @@
       document.getElementById('cardTour').textContent = ticket.tour;
       document.getElementById('cardDateTime').textContent = `${ticket.date} • ${ticket.time}`;
       document.getElementById('cardGuestsCount').textContent = `${ticket.guests} Passengers`;
-      document.getElementById('cardPickup').textContent = ticket.pickup;
+      // Normalize legacy pickup address
+      let currentPickup = ticket.pickup || '444 E St NW, Washington, DC';
+      if (currentPickup.includes('National Mall') || currentPickup.includes('Sightseeing Hub')) {
+        currentPickup = '444 E St NW, Washington, DC';
+        ticket.pickup = currentPickup;
+      }
+      document.getElementById('cardPickup').textContent = currentPickup;
+      const cardMaps = document.getElementById('cardPickupMapsLink');
+      if (cardMaps) {
+        if (currentPickup.includes('Hotel Pickup')) {
+          cardMaps.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(currentPickup.replace(/^[^\w]+/, ''));
+        } else {
+          cardMaps.href = 'https://www.google.com/maps/search/?api=1&query=444+E+St+NW,+Washington,+DC';
+        }
+      }
       document.getElementById('newRescheduleDate').value = ticket.date;
       document.getElementById('newRescheduleDate').min = getFormattedDate(0);
 
@@ -463,7 +477,19 @@
       document.getElementById('modalUpdTour').textContent = activeTicket.tour;
       document.getElementById('modalUpdTime').textContent = `${activeTicket.date} • ${activeTicket.time}`;
       document.getElementById('modalUpdGuests').textContent = `${activeTicket.guests} Passengers (${activeTicket.guestName})`;
-      document.getElementById('modalUpdPickup').textContent = activeTicket.pickup;
+      let finalPickup = activeTicket.pickup || '444 E St NW, Washington, DC';
+      if (finalPickup.includes('National Mall') || finalPickup.includes('Sightseeing Hub')) {
+        finalPickup = '444 E St NW, Washington, DC';
+      }
+      document.getElementById('modalUpdPickup').textContent = finalPickup;
+      const modalMaps = document.getElementById('modalUpdPickupMapsLink');
+      if (modalMaps) {
+        if (finalPickup.includes('Hotel Pickup')) {
+          modalMaps.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(finalPickup.replace(/^[^\w]+/, ''));
+        } else {
+          modalMaps.href = 'https://www.google.com/maps/search/?api=1&query=444+E+St+NW,+Washington,+DC';
+        }
+      }
 
       const qr = document.getElementById('modalUpdQr');
       qr.innerHTML = '';
@@ -528,8 +554,8 @@
         <div class="md:col-span-4 space-y-3 text-xs text-gray-400">
           <span class="font-bold uppercase tracking-widest text-brand-gold block">Customer Support & Check-In</span>
           <p>
-            Central Departure: <strong>National Mall & Lincoln Memorial Area</strong><br>
-            Washington, D.C.
+            Pickup & Drop-Off: <strong class="text-white">444 E St NW, Washington, DC</strong><br>
+            <a href="https://www.google.com/maps/search/?api=1&query=444+E+St+NW,+Washington,+DC" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:underline text-[11px] inline-flex items-center gap-0.5 mt-0.5">Get Directions on Google Maps ↗</a>
           </p>
           <p>
             Phone / Reservations: <strong class="text-white">(240) 606-9008</strong><br>

@@ -1072,7 +1072,11 @@
         <!-- Hotel Pickup or Central Departure Location -->
         <div id="ticketPickupInfo" class="text-xs bg-gray-50 p-3 rounded-xl border border-gray-200">
           <span class="text-[10px] text-gray-500 font-bold block uppercase">Boarding Location:</span>
-          <span id="ticketLocationText" class="font-bold text-brand-blue block">National Mall Central Departure • Washington, D.C.</span>
+          <span id="ticketLocationText" class="font-bold text-brand-blue block">444 E St NW, Washington, DC</span>
+          <a id="ticketMapsLink" href="https://www.google.com/maps/search/?api=1&query=444+E+St+NW,+Washington,+DC" target="_blank" rel="noopener noreferrer" class="text-brand-gold font-bold hover:underline text-[11px] inline-flex items-center gap-1 mt-1">
+            <span>Get Directions on Google Maps</span>
+            <span>↗</span>
+          </a>
         </div>
 
         <!-- SCANNABLE QR CODE CONTAINER -->
@@ -1282,8 +1286,8 @@
         <div class="md:col-span-4 space-y-3 text-xs text-gray-400">
           <span class="font-bold uppercase tracking-widest text-brand-gold block">Customer Support & Check-In</span>
           <p>
-            Central Departure: <strong>National Mall & Lincoln Memorial Area</strong><br>
-            Washington, D.C.
+            Pickup & Drop-Off: <strong class="text-white">444 E St NW, Washington, DC</strong><br>
+            <a href="https://www.google.com/maps/search/?api=1&query=444+E+St+NW,+Washington,+DC" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:underline text-[11px] inline-flex items-center gap-0.5 mt-0.5">Get Directions on Google Maps ↗</a>
           </p>
           <p>
             Phone / Reservations: <strong class="text-white">(240) 606-9008</strong><br>
@@ -1560,7 +1564,7 @@
       const ref = 'DDC-2026-' + Math.floor(1000 + Math.random() * 9000);
 
       // Check hotel pickup
-      let pickupLocation = 'National Mall Central Departure • Washington, D.C.';
+      let pickupLocation = '444 E St NW, Washington, DC';
       if (currentPassengerCount === 14) {
         const hotel = document.getElementById('hotelName').value || 'Requested D.C. Hotel';
         const address = document.getElementById('hotelAddress').value || 'Washington, D.C.';
@@ -1597,7 +1601,19 @@
       document.getElementById('ticketTourName').textContent = ticket.tour;
       document.getElementById('ticketDateTime').textContent = `${ticket.date} • ${ticket.time}`;
       document.getElementById('ticketGuests').textContent = `${ticket.guests} Guest(s) (${ticket.guestName})`;
-      document.getElementById('ticketLocationText').textContent = ticket.pickup;
+      let displayLoc = ticket.pickup || '444 E St NW, Washington, DC';
+      if (displayLoc.includes('National Mall') || displayLoc.includes('Sightseeing Hub')) {
+        displayLoc = '444 E St NW, Washington, DC';
+      }
+      document.getElementById('ticketLocationText').textContent = displayLoc;
+      const tMaps = document.getElementById('ticketMapsLink');
+      if (tMaps) {
+        if (displayLoc.includes('Hotel Pickup')) {
+          tMaps.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(displayLoc.replace(/^[^\w]+/, ''));
+        } else {
+          tMaps.href = 'https://www.google.com/maps/search/?api=1&query=444+E+St+NW,+Washington,+DC';
+        }
+      }
 
       // Render live QR Code
       const qrContainer = document.getElementById('ticketQrContainer');

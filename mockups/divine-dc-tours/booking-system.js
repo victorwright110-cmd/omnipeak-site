@@ -17,7 +17,8 @@ const CLIENT_CONTACT = {
   phone: '+1 (240) 606-9008',
   phoneDisplay: '(240) 606-9008',
   email: 'divinedctours@gmail.com',
-  departureArea: 'National Mall Sightseeing Hub, Washington, D.C. (Exact curbside coordinates provided upon booking confirmation)'
+  departureArea: '444 E St NW, Washington, DC',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=444+E+St+NW,+Washington,+DC'
 };
 
 const DEFAULT_SLOTS = [
@@ -37,6 +38,19 @@ function getFormattedDate(offsetDays = 1) {
 // Initialize seed data if not present
 function initializeSystemData() {
   const tomorrowStr = getFormattedDate(1);
+  // Auto-upgrade any legacy stored reservations to confirmed pickup location
+  try {
+    const raw = localStorage.getItem('divine_dc_tickets_v2');
+    if (raw && (raw.includes('National Mall') || raw.includes('Sightseeing Hub'))) {
+      const parsed = JSON.parse(raw);
+      for (const k in parsed) {
+        if (parsed[k].pickup && (parsed[k].pickup.includes('National Mall') || parsed[k].pickup.includes('Sightseeing Hub'))) {
+          parsed[k].pickup = '444 E St NW, Washington, DC';
+        }
+      }
+      localStorage.setItem('divine_dc_tickets_v2', JSON.stringify(parsed));
+    }
+  } catch (e) {}
 
   // 1. Capacity counts per slot
   if (!localStorage.getItem('divine_dc_bookings_v2')) {
@@ -62,7 +76,7 @@ function initializeSystemData() {
         guestEmail: 'eleanor@example.com',
         guestPhone: '(240) 606-9008',
         total: '$98',
-        pickup: 'National Mall Central Departure • Washington, D.C.',
+        pickup: '444 E St NW, Washington, DC',
         status: 'CONFIRMED',
         paymentStatus: 'TEST_MODE_PENDING_GATEWAY',
         created: new Date().toISOString()
@@ -77,7 +91,7 @@ function initializeSystemData() {
         guestEmail: 'marcus.v@example.com',
         guestPhone: '(240) 606-9008',
         total: '$236',
-        pickup: 'National Mall Central Departure • Washington, D.C.',
+        pickup: '444 E St NW, Washington, DC',
         status: 'CONFIRMED',
         paymentStatus: 'TEST_MODE_PENDING_GATEWAY',
         created: new Date().toISOString()
