@@ -5,6 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Divine DC Tours — Washington, D.C. Sightseeing | Official Master Website</title>
   <meta name="description" content="Experience Washington, D.C. with Divine DC Tours. Premium 14-passenger open-glass panoramic sightseeing tours. Daytime tours $49, Moonlight tours $59. U.S. Capitol, Washington Monument, Lincoln Memorial. Free D.C. hotel pickup on full-bus bookings.">
 
@@ -54,6 +55,7 @@
   </script>
 
   <style>
+    html { scroll-behavior: smooth; }
     body {
       background-color: #FAF8F3;
       color: #222B36;
@@ -83,7 +85,7 @@
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
+<body class="overflow-x-hidden min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
 
   <!-- ========================================================================= -->
   <!-- TOP ANNOUNCEMENT BAR: VERIFIED PRICING & 14-PASSENGER GUARANTEE -->
@@ -120,10 +122,10 @@
       <!-- LEFT: CLIENT'S AUTHENTIC BRAND LOGO (HIGH VISIBILITY FIX) -->
       <a href="#hero" class="flex items-center gap-3.5 group py-1">
         <!-- Logo Image: Sharp, tightly cropped, high prominence -->
-        <div class="h-16 sm:h-20 w-auto flex items-center justify-center transition-transform group-hover:scale-105">
+        <div class="h-12 sm:h-16 md:h-20 w-auto flex items-center justify-center transition-transform group-hover:scale-105">
           <img src="/mockups/devine-dc-tours/images/client_logo_transparent.png" 
                alt="Divine DC Tours Authentic Logo" 
-               class="h-16 sm:h-20 w-auto object-contain drop-shadow-sm">
+               class="h-12 sm:h-16 md:h-20 w-auto object-contain drop-shadow-sm">
         </div>
         <div class="flex flex-col border-l-2 border-brand-gold/40 pl-3">
           <span class="font-serif font-black text-brand-blue text-lg sm:text-2xl tracking-tight uppercase leading-none">
@@ -1009,7 +1011,7 @@
             </div>
 
             <button type="submit" id="submitBookingBtn" class="bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy hover:brightness-105 font-black text-xs uppercase tracking-widest px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition flex items-center justify-center gap-2">
-              <span>Complete Reservation & Issue QR Ticket</span>
+              <span>Submit Reservation Request (Preview Demo)</span>
               <span>→</span>
             </button>
           </div>
@@ -1047,9 +1049,13 @@
             <span class="text-[10px] uppercase font-bold text-gray-500 block">Booking Reference</span>
             <span id="ticketRefNumber" class="font-mono font-black text-base text-brand-blue">DDC-2026-8842</span>
           </div>
-          <span class="bg-emerald-100 text-emerald-800 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-emerald-300">
-            ✓ Confirmed Ticket
+          <span class="bg-amber-100 text-amber-800 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-amber-300">
+            Preview / Pending Payment
           </span>
+        </div>
+
+        <div class="p-3 rounded-xl bg-blue-50 border border-blue-200 text-brand-navy text-[11px] leading-relaxed">
+          <strong>Demonstration Notice:</strong> This is a sample reservation request layout for client review. Live confirmed seats and official boarding passes will be generated automatically once online payment processing (Stripe / Square) is activated by Divine DC Tours.
         </div>
 
         <!-- Tour & Schedule -->

@@ -5,6 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Staff Check-In Portal & QR Scanner | Divine DC Tours</title>
   <meta name="description" content="Secure staff-only check-in portal for Divine DC Tours guides and operators. Real-time QR ticket validation, duplicate check-in prevention, and daily departure manifest.">
   
@@ -53,6 +54,7 @@
   </script>
 
   <style>
+    html { scroll-behavior: smooth; }
     body {
       background-color: #FAF8F3;
       color: #222B36;
@@ -86,7 +88,7 @@
   <!-- Shared Booking System & Database Engine -->
   <script src="/mockups/devine-dc-tours/booking-system.js"></script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
+<body class="overflow-x-hidden min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
   <!-- ========================================================================= -->
   <!-- TOP ANNOUNCEMENT BAR: VERIFIED PRICING & 14-PASSENGER GUARANTEE -->
   <!-- ========================================================================= -->
@@ -302,7 +304,7 @@
             <div class="space-y-2">
               <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-400">Scan or Enter Ticket Reference Code</label>
               <div class="flex gap-2">
-                <input type="text" id="staffTicketInput" placeholder="e.g. DDC-2026-7841" class="flex-1 bg-gray-800 border border-gray-700 rounded-xl p-3 text-xs font-mono font-bold uppercase text-white focus:border-emerald-500">
+                <input type="text" id="staffTicketInput" placeholder="Enter Ticket Reference (e.g. DDC-2026-XXXX)" class="flex-1 bg-gray-800 border border-gray-700 rounded-xl p-3 text-xs font-mono font-bold uppercase text-white focus:border-emerald-500">
                 <button type="button" onclick="verifyTicketAction()" class="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 font-black text-xs uppercase tracking-wider rounded-xl transition text-white">
                   Validate
                 </button>

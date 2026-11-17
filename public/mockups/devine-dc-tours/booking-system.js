@@ -77,8 +77,8 @@ function initializeSystemData() {
         guestPhone: '(240) 606-9008',
         total: '$98',
         pickup: '444 E St NW, Washington, DC',
-        status: 'CONFIRMED',
-        paymentStatus: 'TEST_MODE_PENDING_GATEWAY',
+        status: 'REQUEST_PREVIEW',
+        paymentStatus: 'PENDING_CLIENT_GATEWAY_SELECTION',
         created: new Date().toISOString()
       },
       'DDC-2026-5519': {
@@ -92,8 +92,8 @@ function initializeSystemData() {
         guestPhone: '(240) 606-9008',
         total: '$236',
         pickup: '444 E St NW, Washington, DC',
-        status: 'CONFIRMED',
-        paymentStatus: 'TEST_MODE_PENDING_GATEWAY',
+        status: 'REQUEST_PREVIEW',
+        paymentStatus: 'PENDING_CLIENT_GATEWAY_SELECTION',
         created: new Date().toISOString()
       },
       'DDC-2026-9204': {

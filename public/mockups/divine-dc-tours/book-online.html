@@ -5,6 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Book Tour Online — Guaranteed 14-Seat Sightseeing | Divine DC Tours</title>
   <meta name="description" content="Book your Washington D.C. daytime ($49) or moonlight ($59) sightseeing tour online. Guaranteed 14-passenger limit, instant digital QR ticket, and climate-controlled comfort.">
   
@@ -53,6 +54,7 @@
   </script>
 
   <style>
+    html { scroll-behavior: smooth; }
     body {
       background-color: #FAF8F3;
       color: #222B36;
@@ -86,7 +88,7 @@
   <!-- Shared Booking System & Database Engine -->
   <script src="/mockups/devine-dc-tours/booking-system.js"></script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
+<body class="overflow-x-hidden min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
   <!-- ========================================================================= -->
   <!-- TOP ANNOUNCEMENT BAR: VERIFIED PRICING & 14-PASSENGER GUARANTEE -->
   <!-- ========================================================================= -->
@@ -307,9 +309,9 @@
                 <span class="text-xs text-gray-500">Every passenger receives an individual ergonomic seat.</span>
               </div>
               <div class="flex items-center gap-4">
-                <button type="button" onclick="modifyGuests(-1)" class="w-10 h-10 rounded-xl bg-white border border-brand-border text-brand-blue font-bold text-lg hover:bg-gray-100 transition shadow-sm">-</button>
+                <button type="button" onclick="modifyGuests(-1)" class="w-11 h-11 rounded-xl bg-white border border-brand-border text-brand-blue font-bold text-lg hover:bg-gray-100 transition shadow-sm">-</button>
                 <span id="guestCountDisplay" class="font-mono text-2xl font-black text-brand-navy min-w-[2rem] text-center">2</span>
-                <button type="button" onclick="modifyGuests(1)" class="w-10 h-10 rounded-xl bg-white border border-brand-border text-brand-blue font-bold text-lg hover:bg-gray-100 transition shadow-sm">+</button>
+                <button type="button" onclick="modifyGuests(1)" class="w-11 h-11 rounded-xl bg-white border border-brand-border text-brand-blue font-bold text-lg hover:bg-gray-100 transition shadow-sm">+</button>
                 <button type="button" onclick="setGroup14()" class="text-[10px] font-extrabold uppercase px-3 py-2 rounded-xl bg-brand-navy text-brand-gold hover:bg-black transition ml-2">
                   All 14 Seats (Full Bus)
                 </button>
@@ -400,20 +402,20 @@
             </label>
           </div>
 
-          <!-- PAYMENT GATEWAY INTEGRATION CALLOUT (Req 7) -->
-          <div class="p-4 rounded-2xl bg-brand-skyLight border border-brand-border text-xs text-brand-navy space-y-1.5">
-            <div class="flex items-center justify-between font-bold text-[11px] uppercase tracking-wider text-brand-blue">
+          <!-- PAYMENT GATEWAY INTEGRATION CALLOUT (Req 3 & 7) -->
+          <div class="p-4 rounded-2xl bg-amber-50 border border-amber-300 text-xs text-amber-950 space-y-1.5">
+            <div class="flex items-center justify-between font-bold text-[11px] uppercase tracking-wider text-amber-900">
               <span>💳 Payment Gateway Integration (Stripe / Square)</span>
-              <span class="px-2 py-0.5 rounded bg-blue-100 text-brand-blue font-mono text-[10px]">Pending Client Selection</span>
+              <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-950 font-mono text-[10px]">Pending Client Selection</span>
             </div>
-            <p class="text-[11px] text-gray-600 leading-relaxed">
-              Integration ready for Stripe or Square upon client provider confirmation. This checkout operates in prototype reservation request mode (no live credit card charged). A verified digital QR ticket will be issued for check-in demonstration.
+            <p class="text-[11px] text-amber-900 leading-relaxed">
+              Live payment processing is pending client gateway setup (Stripe or Square). This form operates in reservation-request preview mode without charging live payment cards. Confirmed seats and valid boarding tickets will only be issued once live gateway integration is activated.
             </p>
           </div>
 
           <!-- SUBMIT BUTTON -->
           <button type="submit" id="submitOrderBtn" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold text-brand-navy font-black text-xs uppercase tracking-widest hover:brightness-105 transition shadow-xl flex items-center justify-center gap-2">
-            <span>Complete Reservation & Issue Digital QR Ticket</span>
+            <span>Submit Reservation Request (Preview Demonstration)</span>
             <span class="text-base font-bold">→</span>
           </button>
 
@@ -429,8 +431,8 @@
     <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border-4 border-brand-gold relative my-8">
       <div class="bg-brand-navy p-5 text-white flex items-center justify-between">
         <div>
-          <span class="text-xs uppercase tracking-widest text-brand-gold font-bold block">OFFICIAL BOARDING PASS</span>
-          <span class="font-serif font-black text-lg">Divine DC Tours</span>
+          <span class="text-xs uppercase tracking-widest text-brand-gold font-bold block">RESERVATION REQUEST PREVIEW</span>
+          <span class="font-serif font-black text-lg">Divine DC Tours (Demonstration)</span>
         </div>
         <button onclick="closeTicketModal()" class="text-white/70 hover:text-white text-2xl font-bold">×</button>
       </div>
@@ -441,9 +443,13 @@
             <span class="text-[10px] uppercase text-gray-400 font-bold block">Confirmation Code</span>
             <span id="modalTicketRef" class="font-mono font-black text-base text-brand-blue">DDC-2026-XXXX</span>
           </div>
-          <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[10px] uppercase">
-            ✓ Confirmed
+          <span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 border border-amber-300 font-bold text-[10px] uppercase">
+            Preview / Pending Payment
           </span>
+        </div>
+
+        <div class="p-3 rounded-xl bg-blue-50 border border-blue-200 text-brand-navy text-[11px] space-y-1">
+          <strong>Demonstration Notice:</strong> This is a sample reservation request layout for client review. Live confirmed seats and official boarding passes will be generated automatically once online payment processing (Stripe / Square) is activated by Divine DC Tours.
         </div>
 
         <!-- QR Code container -->

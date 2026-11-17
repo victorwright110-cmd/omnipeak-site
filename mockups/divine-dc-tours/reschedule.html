@@ -5,6 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Reschedule Tour Online | Divine DC Tours Washington D.C.</title>
   <meta name="description" content="Self-service online rescheduling for Divine DC Tours. If a guest misses the scheduled departure, their ticket may be used on another tour on the same day, subject to available seats (strict 14-passenger capacity).">
   
@@ -53,6 +54,7 @@
   </script>
 
   <style>
+    html { scroll-behavior: smooth; }
     body {
       background-color: #FAF8F3;
       color: #222B36;
@@ -86,7 +88,7 @@
   <!-- Shared Booking System & Database Engine -->
   <script src="/mockups/devine-dc-tours/booking-system.js"></script>
 </head>
-<body class="min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
+<body class="overflow-x-hidden min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-navy">
   <!-- ========================================================================= -->
   <!-- TOP ANNOUNCEMENT BAR: VERIFIED PRICING & 14-PASSENGER GUARANTEE -->
   <!-- ========================================================================= -->
@@ -222,6 +224,10 @@
   <section class="py-12 bg-[#FAF8F3]">
     <div class="max-w-3xl mx-auto px-4 sm:px-8">
 
+      <div class="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-brand-navy text-xs leading-relaxed mb-6">
+        <strong>Client Review Notice:</strong> Online self-service rescheduling operates in local demonstration mode. Once production database integration is connected, changes will synchronize immediately with live dispatch manifests.
+      </div>
+
       <div class="bg-white rounded-3xl p-6 sm:p-10 border border-brand-border shadow-concierge space-y-6">
 
         <!-- Search Input -->
@@ -230,18 +236,14 @@
             Enter Booking Reference Code
           </label>
           <div class="flex gap-2">
-            <input type="text" id="rescheduleSearchInput" placeholder="e.g. DDC-2026-7841" class="flex-1 p-3.5 rounded-xl border border-brand-border text-sm font-mono font-bold uppercase text-brand-blue focus:ring-1 focus:ring-brand-blue">
+            <input type="text" id="rescheduleSearchInput" placeholder="Enter Reference (e.g. DDC-2026-XXXX)" class="flex-1 p-3.5 rounded-xl border border-brand-border text-sm font-mono font-bold uppercase text-brand-blue focus:ring-1 focus:ring-brand-blue">
             <button type="button" onclick="searchBookingForReschedule()" class="px-6 py-3.5 rounded-xl bg-brand-blue hover:bg-brand-navy text-white font-extrabold uppercase text-xs tracking-wider transition shadow">
               Lookup
             </button>
           </div>
-          <!-- Quick test shortcuts for evaluation -->
-          <div class="flex items-center gap-2 mt-3 text-[11px] text-gray-500">
-            <span>Quick Test Reference:</span>
-            <button type="button" onclick="fillTestRef('DDC-2026-7841')" class="underline text-brand-blue font-mono font-bold hover:text-brand-navy">DDC-2026-7841</button>
-            <span>•</span>
-            <button type="button" onclick="fillTestRef('DDC-2026-5519')" class="underline text-brand-blue font-mono font-bold hover:text-brand-navy">DDC-2026-5519</button>
-          </div>
+          <span class="text-[11px] text-gray-500 block mt-2">
+            Enter the reservation reference number shown on your booking confirmation or boarding pass.
+          </span>
         </div>
 
         <!-- Loaded Reservation Card -->
